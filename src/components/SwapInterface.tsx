@@ -119,7 +119,7 @@ const SwapInterface = () => {
   };
 
   const setDollarAmount = () => {
-    setSolAmount('1.0'); // Placeholder for $1 worth - you'd need to fetch SOL price
+    setSolAmount('0.1'); // Set to 0.1 SOL instead of $1 worth
   };
 
   return (
@@ -134,11 +134,11 @@ const SwapInterface = () => {
             <h2 className="text-4xl font-black text-yellow-900 mb-2" style={{
               fontFamily: 'Comic Sans MS, cursive',
               textShadow: '3px 3px 0px #000000'
-            }}>SWAP TO 1 DOLLAR!</h2>
+            }}>SWAP TO 0.1 SOL!</h2>
             <p className="text-green-900 text-xl font-black transform rotate-1" style={{
               fontFamily: 'Comic Sans MS, cursive',
               textShadow: '2px 2px 0px #000000'
-            }}>SUPER EASY! 💵</p>
+            }}>SUPER EASY! ◎</p>
           </div>
         </div>
 
@@ -199,7 +199,7 @@ const SwapInterface = () => {
                   boxShadow: '3px 3px 0px #000000'
                 }}
               >
-                $1 Worth
+                0.1 SOL
               </Button>
               <Button
                 onClick={setMaxAmount}
@@ -236,7 +236,7 @@ const SwapInterface = () => {
               <span className="text-xl text-yellow-900 font-black" style={{
                 fontFamily: 'Comic Sans MS, cursive',
                 textShadow: '2px 2px 0px #000000'
-              }}>1 Dollar Token</span>
+              }}>0.1 SOL Token</span>
             </div>
             
             <div className="flex items-center space-x-4">
@@ -244,12 +244,12 @@ const SwapInterface = () => {
                 boxShadow: '4px 4px 0px #000000'
               }}>
                 <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-green-500 rounded-full flex items-center justify-center border-2 border-black">
-                  <span className="text-lg font-black text-green-900">$</span>
+                  <span className="text-lg font-black text-green-900">◎</span>
                 </div>
                 <span className="text-green-900 font-black text-xl" style={{
                   fontFamily: 'Comic Sans MS, cursive',
                   textShadow: '1px 1px 0px #000000'
-                }}>1DOLLAR</span>
+                }}>0.1SOL</span>
               </div>
               
               <div className="flex-1 text-right">
@@ -278,7 +278,7 @@ const SwapInterface = () => {
               ? 'CONNECT WALLET!' 
               : isSwapping 
               ? 'SWAPPING...' 
-              : 'SWAP TO 1 DOLLAR! 💵'
+              : 'SWAP TO 0.1 SOL! ◎'
             }
           </Button>
 

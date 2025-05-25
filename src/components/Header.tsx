@@ -10,7 +10,7 @@ const Header = () => {
           <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center border-8 border-green-900 transform rotate-12 shadow-2xl" style={{
             boxShadow: '8px 8px 0px #000000, 4px 4px 0px #22c55e'
           }}>
-            <span className="text-4xl font-black text-green-900 transform -rotate-12">$</span>
+            <span className="text-4xl font-black text-green-900 transform -rotate-12">◎</span>
           </div>
           <div className="transform -rotate-6 bg-yellow-300 p-4 rounded-2xl border-6 border-black border-dashed" style={{
             boxShadow: '6px 6px 0px #000000'
@@ -18,11 +18,11 @@ const Header = () => {
             <h1 className="text-4xl font-black text-green-900" style={{
               fontFamily: 'Comic Sans MS, cursive',
               textShadow: '4px 4px 0px #000000, 2px 2px 0px #fde047'
-            }}>1 DOLLAR</h1>
+            }}>0.1 SOL</h1>
             <p className="text-2xl text-green-800 font-black transform rotate-3" style={{
               fontFamily: 'Comic Sans MS, cursive',
               textShadow: '3px 3px 0px #000000'
-            }}>MEME COIN! 💵</p>
+            }}>MEME COIN! ◎</p>
           </div>
         </div>
         

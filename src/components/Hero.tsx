@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowDown } from 'lucide-react';
 
@@ -13,7 +12,7 @@ const Hero = () => {
             <span className="text-2xl text-green-900 font-black transform rotate-2" style={{
               fontFamily: 'Comic Sans MS, cursive',
               textShadow: '3px 3px 0px #000000'
-            }}>💵 MEME COIN IS HERE!!! 💵</span>
+            }}>◎ MEME COIN IS HERE!!! ◎</span>
           </div>
           
           <h1 className="text-8xl md:text-[12rem] font-black text-yellow-400 mb-8 leading-tight transform -rotate-3" style={{
@@ -24,7 +23,7 @@ const Hero = () => {
             Just Buy
             <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent block transform rotate-4 mt-4" style={{
               WebkitTextStroke: '2px #000000'
-            }}> $1 DOLLAR!!!</span>
+            }}> 0.1 SOL!!!</span>
           </h1>
           
           <div className="bg-green-400 p-8 rounded-3xl border-6 border-black border-dashed transform rotate-2 shadow-2xl max-w-4xl mx-auto" style={{
@@ -34,7 +33,7 @@ const Hero = () => {
               fontFamily: 'Comic Sans MS, cursive',
               textShadow: '4px 4px 0px #000000'
             }}>
-              SUPER SIMPLE!!! Just buy $1 worth!!!
+              SUPER SIMPLE!!! Just buy 0.1 SOL worth!!!
             </p>
             <div className="bg-yellow-300 p-6 rounded-2xl border-4 border-black border-dashed inline-block transform rotate-1" style={{
               boxShadow: '6px 6px 0px #000000'
@@ -43,7 +42,7 @@ const Hero = () => {
                 fontFamily: 'Comic Sans MS, cursive',
                 textShadow: '2px 2px 0px #000000'
               }}>
-                No complicated stuff! Just HODL together! 💵🚀
+                No complicated stuff! Just HODL together! ◎🚀
               </span>
             </div>
           </div>
@@ -54,11 +53,11 @@ const Hero = () => {
             <div className="flex items-center space-x-3 bg-yellow-300 px-8 py-6 rounded-2xl border-6 border-black border-dashed transform rotate-4 shadow-2xl" style={{
               boxShadow: '8px 8px 0px #000000'
             }}>
-              <span className="text-4xl">💵</span>
+              <span className="text-4xl">◎</span>
               <span className="text-green-900 font-black text-2xl" style={{
                 fontFamily: 'Comic Sans MS, cursive',
                 textShadow: '2px 2px 0px #000000'
-              }}>Just $1!</span>
+              }}>Just 0.1 SOL!</span>
             </div>
             <div className="flex items-center space-x-3 bg-green-400 px-8 py-6 rounded-2xl border-6 border-black border-dashed transform -rotate-3 shadow-2xl" style={{
               boxShadow: '8px 8px 0px #000000'
