@@ -16,23 +16,23 @@ const Footer = () => {
               }}>
                 <h3 className="text-yellow-900 font-black text-4xl mb-6 transform -rotate-1" style={{
                   fontFamily: 'Comic Sans MS, cursive',
-                  textShadow: '4px 4px 0px #000000'
+                  textShadow: '2px 2px 0px #000000'
                 }}>About 1 DOLLAR! 💵</h3>
                 <p className="text-green-900 text-2xl leading-relaxed mb-4 font-black" style={{
                   fontFamily: 'Comic Sans MS, cursive',
-                  textShadow: '2px 2px 0px #000000'
+                  textShadow: '1px 1px 0px #000000'
                 }}>
                   This is just a MEME TOKEN called 1 dollar! 💰
                 </p>
                 <p className="text-green-900 text-2xl leading-relaxed mb-4 font-black" style={{
                   fontFamily: 'Comic Sans MS, cursive',
-                  textShadow: '2px 2px 0px #000000'
+                  textShadow: '1px 1px 0px #000000'
                 }}>
                   The idea is SUPER EASY — just buy one dollar worth! That's it! 🚀
                 </p>
                 <p className="text-green-900 text-2xl leading-relaxed mb-6 font-black" style={{
                   fontFamily: 'Comic Sans MS, cursive',
-                  textShadow: '2px 2px 0px #000000'
+                  textShadow: '1px 1px 0px #000000'
                 }}>
                   No complicated stuff! Just holding together as a community! 🤝
                 </p>
@@ -41,7 +41,7 @@ const Footer = () => {
                 }}>
                   <p className="text-yellow-100 text-xl font-black" style={{
                     fontFamily: 'Comic Sans MS, cursive',
-                    textShadow: '3px 3px 0px #000000'
+                    textShadow: '1px 1px 0px #000000'
                   }}>
                     ⚠️ THIS IS A MEME! NOT FINANCIAL ADVICE! ⚠️
                   </p>
@@ -56,11 +56,11 @@ const Footer = () => {
               }}>
                 <h3 className="text-yellow-900 font-black text-4xl mb-6 transform rotate-1" style={{
                   fontFamily: 'Comic Sans MS, cursive',
-                  textShadow: '4px 4px 0px #000000'
+                  textShadow: '2px 2px 0px #000000'
                 }}>Join the FUN! 🎊</h3>
                 <p className="text-green-900 text-2xl mb-6 font-black" style={{
                   fontFamily: 'Comic Sans MS, cursive',
-                  textShadow: '2px 2px 0px #000000'
+                  textShadow: '1px 1px 0px #000000'
                 }}>
                   Come hang out with other $1 holders! 😄
                 </p>
@@ -70,7 +70,7 @@ const Footer = () => {
                   }}>
                     <span className="text-green-900 text-2xl font-black" style={{
                       fontFamily: 'Comic Sans MS, cursive',
-                      textShadow: '2px 2px 0px #000000'
+                      textShadow: '1px 1px 0px #000000'
                     }}>
                       📱 Telegram - LET'S CHAT!
                     </span>
@@ -80,7 +80,7 @@ const Footer = () => {
                   }}>
                     <span className="text-green-900 text-2xl font-black" style={{
                       fontFamily: 'Comic Sans MS, cursive',
-                      textShadow: '2px 2px 0px #000000'
+                      textShadow: '1px 1px 0px #000000'
                     }}>
                       🐦 Twitter - FOLLOW US!
                     </span>
@@ -90,7 +90,7 @@ const Footer = () => {
                   }}>
                     <span className="text-green-900 text-2xl font-black" style={{
                       fontFamily: 'Comic Sans MS, cursive',
-                      textShadow: '2px 2px 0px #000000'
+                      textShadow: '1px 1px 0px #000000'
                     }}>
                       💬 Discord - MEMES HERE!
                     </span>
@@ -106,13 +106,13 @@ const Footer = () => {
             }}>
               <p className="text-yellow-900 text-2xl font-black" style={{
                 fontFamily: 'Comic Sans MS, cursive',
-                textShadow: '3px 3px 0px #000000'
+                textShadow: '1px 1px 0px #000000'
               }}>
                 © 2024 1 DOLLAR MEME TOKEN! Made with ❤️ and MEMES! 💵
               </p>
               <p className="text-green-900 text-xl mt-2 font-black transform -rotate-1" style={{
                 fontFamily: 'Comic Sans MS, cursive',
-                textShadow: '2px 2px 0px #000000'
+                textShadow: '1px 1px 0px #000000'
               }}>
                 ALWAYS DYOR! THIS IS JUST FOR FUN! 🤪
               </p>
