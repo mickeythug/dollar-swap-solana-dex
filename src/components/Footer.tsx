@@ -17,18 +17,18 @@ const Footer = () => {
                 <h3 className="text-yellow-900 font-black text-4xl mb-6 transform -rotate-1" style={{
                   fontFamily: 'Comic Sans MS, cursive',
                   textShadow: '2px 2px 0px #000000'
-                }}>About 1 DOLLAR! 💵</h3>
+                }}>About Just Buy 0.1 SOL! ◎</h3>
                 <p className="text-green-900 text-2xl leading-relaxed mb-4 font-black" style={{
                   fontFamily: 'Comic Sans MS, cursive',
                   textShadow: '1px 1px 0px #000000'
                 }}>
-                  This is just a MEME TOKEN called 1 dollar! 💰
+                  This is just a MEME TOKEN called 0.1 SOL! ◎
                 </p>
                 <p className="text-green-900 text-2xl leading-relaxed mb-4 font-black" style={{
                   fontFamily: 'Comic Sans MS, cursive',
                   textShadow: '1px 1px 0px #000000'
                 }}>
-                  The idea is SUPER EASY — just buy one dollar worth! That's it! 🚀
+                  The idea is SUPER EASY — just buy 0.1 SOL worth! That's it! 🚀
                 </p>
                 <p className="text-green-900 text-2xl leading-relaxed mb-6 font-black" style={{
                   fontFamily: 'Comic Sans MS, cursive',
@@ -62,7 +62,7 @@ const Footer = () => {
                   fontFamily: 'Comic Sans MS, cursive',
                   textShadow: '1px 1px 0px #000000'
                 }}>
-                  Come hang out with other $1 holders! 😄
+                  Come hang out with other 0.1 SOL holders! 😄
                 </p>
                 <div className="space-y-4">
                   <a href="#" className="block bg-yellow-300 p-4 rounded-xl border-4 border-black border-dashed transform hover:rotate-3 hover:scale-110 transition-all shadow-lg" style={{
@@ -108,7 +108,7 @@ const Footer = () => {
                 fontFamily: 'Comic Sans MS, cursive',
                 textShadow: '1px 1px 0px #000000'
               }}>
-                © 2024 1 DOLLAR MEME TOKEN! Made with ❤️ and MEMES! 💵
+                © 2024 0.1 SOL MEME TOKEN! Made with ❤️ and MEMES! ◎
               </p>
               <p className="text-green-900 text-xl mt-2 font-black transform -rotate-1" style={{
                 fontFamily: 'Comic Sans MS, cursive',
