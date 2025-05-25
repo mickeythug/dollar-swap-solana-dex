@@ -63,16 +63,16 @@ const MarketCapCounter = () => {
 
   return (
     <div className="max-w-md mx-auto">
-      <div className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 rounded-full border-12 border-black border-dashed p-8 transform rotate-1 shadow-2xl relative overflow-hidden hover:-rotate-1 hover:scale-105 transition-all duration-700 animate-pulse" style={{
+      <div className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 rounded-full border-12 border-black border-dashed p-8 transform rotate-1 shadow-2xl relative overflow-hidden" style={{
         boxShadow: '20px 20px 0px #000000, 15px 15px 0px #16a34a, 10px 10px 0px #dc2626'
       }}>
         {/* Celebration overlay */}
         {showCelebration && (
-          <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-red-500 to-yellow-600 rounded-full flex items-center justify-center z-20 border-12 border-red-500 animate-bounce" style={{
-            animation: 'bounce 0.5s infinite, pulse 0.3s infinite, spin 2s linear infinite'
+          <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-red-500 to-yellow-600 rounded-full flex items-center justify-center z-20 border-12 border-red-500" style={{
+            
           }}>
             <div className="text-center transform rotate-12">
-              <div className="text-8xl mb-4 animate-spin">🎉</div>
+              <div className="text-8xl mb-4">🎉</div>
               <div className="text-5xl font-black text-green-900" style={{
                 fontFamily: 'Comic Sans MS, cursive',
                 textShadow: '4px 4px 0px #000000, 2px 2px 0px #fbbf24'
@@ -83,15 +83,15 @@ const MarketCapCounter = () => {
           </div>
         )}
 
-        <div className="text-center mb-8 transform -rotate-2 hover:rotate-2 transition-all duration-500">
-          <div className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 rounded-3xl border-6 border-black p-6 inline-block transform rotate-3 shadow-lg hover:-rotate-3 hover:scale-110 transition-all duration-500 animate-bounce" style={{
+        <div className="text-center mb-8 transform -rotate-2">
+          <div className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 rounded-3xl border-6 border-black p-6 inline-block transform rotate-3 shadow-lg" style={{
             boxShadow: '10px 10px 0px #000000, 6px 6px 0px #fbbf24'
           }}>
             <h2 className="text-4xl font-black text-yellow-100 mb-4" style={{
               fontFamily: 'Comic Sans MS, cursive',
               textShadow: '3px 3px 0px #000000'
             }}>MARKETCAP ROCKET! 🚀 💎</h2>
-            <p className="text-green-100 text-2xl font-black transform -rotate-1 animate-pulse" style={{
+            <p className="text-green-100 text-2xl font-black transform -rotate-1" style={{
               fontFamily: 'Comic Sans MS, cursive',
               textShadow: '2px 2px 0px #000000'
             }}>TO THE MOON! 💵 🌙</p>
@@ -99,23 +99,23 @@ const MarketCapCounter = () => {
         </div>
 
         {/* Current marketcap display */}
-        <div className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 rounded-3xl p-8 border-8 border-black transform -rotate-1 mb-8 hover:rotate-1 hover:scale-105 transition-all duration-500" style={{
+        <div className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 rounded-3xl p-8 border-8 border-black transform -rotate-1 mb-8" style={{
           boxShadow: '12px 12px 0px #000000, 8px 8px 0px #fbbf24'
         }}>
           <div className="text-center">
-            <div className="text-yellow-100 text-2xl font-black mb-4 animate-bounce" style={{
+            <div className="text-yellow-100 text-2xl font-black mb-4" style={{
               fontFamily: 'Comic Sans MS, cursive',
               textShadow: '2px 2px 0px #000000'
             }}>
               CURRENT MARKETCAP! 💰 ⭐
             </div>
-            <div className="text-7xl font-black text-yellow-100 mb-4 transform rotate-2 animate-pulse" style={{
+            <div className="text-7xl font-black text-yellow-100 mb-4 transform rotate-2" style={{
               fontFamily: 'Comic Sans MS, cursive',
               textShadow: '4px 4px 0px #000000, 2px 2px 0px #16a34a'
             }}>
               {formatMarketCap(currentMarketCap)}
             </div>
-            <div className="text-green-100 text-lg font-black animate-bounce" style={{
+            <div className="text-green-100 text-lg font-black" style={{
               fontFamily: 'Comic Sans MS, cursive',
               textShadow: '2px 2px 0px #000000'
             }}>
@@ -125,11 +125,11 @@ const MarketCapCounter = () => {
         </div>
 
         {/* Progress bar */}
-        <div className="bg-gradient-to-r from-green-500 via-green-600 to-green-700 rounded-2xl p-6 border-6 border-black transform rotate-1 mb-6 hover:-rotate-1 transition-all duration-500" style={{
+        <div className="bg-gradient-to-r from-green-500 via-green-600 to-green-700 rounded-2xl p-6 border-6 border-black transform rotate-1 mb-6" style={{
           boxShadow: '10px 10px 0px #000000, 6px 6px 0px #fbbf24'
         }}>
           <div className="mb-4">
-            <span className="text-yellow-100 font-black text-2xl animate-pulse" style={{
+            <span className="text-yellow-100 font-black text-2xl" style={{
               fontFamily: 'Comic Sans MS, cursive',
               textShadow: '2px 2px 0px #000000'
             }}>
@@ -142,17 +142,17 @@ const MarketCapCounter = () => {
               className="h-8 bg-yellow-200 border-4 border-black rounded-full"
             />
             <div 
-              className="absolute top-0 left-0 h-8 bg-gradient-to-r from-green-400 via-yellow-400 to-green-500 rounded-full border-4 border-black transition-all duration-300 animate-pulse"
+              className="absolute top-0 left-0 h-8 bg-gradient-to-r from-green-400 via-yellow-400 to-green-500 rounded-full border-4 border-black transition-all duration-300"
               style={{ width: `${progressPercentage}%` }}
             />
           </div>
         </div>
 
         {/* Milestones */}
-        <div className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 rounded-2xl p-6 border-6 border-black transform -rotate-1 hover:rotate-1 transition-all duration-500" style={{
+        <div className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 rounded-2xl p-6 border-6 border-black transform -rotate-1" style={{
           boxShadow: '10px 10px 0px #000000, 6px 6px 0px #16a34a'
         }}>
-          <div className="text-green-900 font-black text-2xl mb-4 animate-bounce" style={{
+          <div className="text-green-900 font-black text-2xl mb-4" style={{
             fontFamily: 'Comic Sans MS, cursive',
             textShadow: '2px 2px 0px #000000'
           }}>
@@ -162,20 +162,16 @@ const MarketCapCounter = () => {
             {milestones.slice(0, 6).map((milestone, index) => (
               <div 
                 key={milestone.value}
-                className={`p-4 rounded-2xl border-4 border-black text-center transform transition-all duration-500 ${
+                className={`p-4 rounded-2xl border-4 border-black text-center transform ${
                   reachedMilestones.includes(milestone.value) 
-                    ? 'bg-gradient-to-r from-green-500 to-green-700 text-yellow-100 rotate-6 scale-125 animate-bounce' 
-                    : 'bg-gradient-to-r from-yellow-200 to-yellow-300 text-green-900 -rotate-2 hover:rotate-2 hover:scale-110'
+                    ? 'bg-gradient-to-r from-green-500 to-green-700 text-yellow-100 rotate-6 scale-125' 
+                    : 'bg-gradient-to-r from-yellow-200 to-yellow-300 text-green-900 -rotate-2'
                 }`}
                 style={{
                   boxShadow: '6px 6px 0px #000000, 3px 3px 0px #16a34a'
                 }}
               >
-                <div className="text-2xl font-black mb-2" style={{
-                  animation: reachedMilestones.includes(milestone.value) 
-                    ? 'bounce 1s infinite, spin 2s linear infinite' 
-                    : 'pulse 2s infinite'
-                }}>
+                <div className="text-2xl font-black mb-2">
                   {milestone.emoji}
                 </div>
                 <div className="text-lg font-black" style={{
@@ -192,10 +188,9 @@ const MarketCapCounter = () => {
         {/* Loading indicator */}
         {isLoading && (
           <div className="mt-6 text-center">
-            <div className="text-green-900 font-black text-2xl animate-bounce" style={{
+            <div className="text-green-900 font-black text-2xl" style={{
               fontFamily: 'Comic Sans MS, cursive',
-              textShadow: '2px 2px 0px #000000',
-              animation: 'bounce 1s infinite, pulse 2s infinite'
+              textShadow: '2px 2px 0px #000000'
             }}>
               LOADING... 🔄 MEME POWER! ⚡ 💫
             </div>
