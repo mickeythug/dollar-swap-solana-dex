@@ -15,11 +15,9 @@ const Footer = () => {
                 transform: 'rotate(-1deg) skew(-0.5deg)',
                 boxShadow: '6px 6px 0px #000000'
               }}>
-                <h3 className="text-yellow-900 font-black text-2xl sm:text-3xl lg:text-4xl mb-3 sm:mb-4 lg:mb-6" style={{
-                  fontFamily: '"Comic Sans MS", "Chalkduster", "Bradley Hand", cursive',
+                <h3 className="text-yellow-900 crayon-text super-thick text-2xl sm:text-3xl lg:text-4xl mb-3 sm:mb-4 lg:mb-6" style={{
                   transform: 'rotate(-1deg) skew(1deg)',
-                  textShadow: '2px 2px 0px #000000',
-                  letterSpacing: '2px'
+                  letterSpacing: '3px'
                 }}>
                   <span style={{
                     transform: 'rotate(2deg) translateY(-1px)',
@@ -199,11 +197,9 @@ const Footer = () => {
                   transform: 'rotate(-2deg) skew(1deg)',
                   boxShadow: '4px 4px 0px #000000'
                 }}>
-                  <p className="text-yellow-100 text-lg sm:text-xl font-black" style={{
-                    fontFamily: '"Comic Sans MS", "Chalkduster", "Bradley Hand", cursive',
-                    textShadow: '1px 1px 0px #000000',
+                  <p className="text-yellow-100 text-lg sm:text-xl crayon-text super-thick" style={{
                     transform: 'rotate(1deg) skew(-0.5deg)',
-                    letterSpacing: '2px'
+                    letterSpacing: '3px'
                   }}>
                     <span style={{
                       transform: 'rotate(-2deg) scale(1.1)',
@@ -252,11 +248,9 @@ const Footer = () => {
                 transform: 'rotate(1deg) skew(-0.5deg)',
                 boxShadow: '6px 6px 0px #000000'
               }}>
-                <h3 className="text-yellow-900 font-black text-2xl sm:text-3xl lg:text-4xl mb-3 sm:mb-4 lg:mb-6" style={{
-                  fontFamily: '"Comic Sans MS", "Chalkduster", "Bradley Hand", cursive',
+                <h3 className="text-yellow-900 crayon-text super-thick text-2xl sm:text-3xl lg:text-4xl mb-3 sm:mb-4 lg:mb-6" style={{
                   transform: 'rotate(1deg) skew(-0.5deg)',
-                  textShadow: '2px 2px 0px #000000',
-                  letterSpacing: '2px'
+                  letterSpacing: '3px'
                 }}>Join the FUN! 🎊</h3>
                 <p className="text-green-900 text-lg sm:text-xl lg:text-2xl mb-3 sm:mb-4 lg:mb-6 font-black" style={{
                   fontFamily: '"Comic Sans MS", "Chalkduster", "Bradley Hand", cursive',
@@ -305,13 +299,11 @@ const Footer = () => {
                   <a href="#" className="block bg-yellow-300 p-2 sm:p-3 lg:p-4 rounded-lg sm:rounded-xl border-3 sm:border-4 border-black border-dashed transition-all shadow-lg hover:scale-110" style={{
                     boxShadow: '4px 4px 0px #000000',
                     transform: 'rotate(1deg) skew(-0.5deg)',
-                    letterSpacing: '2px'
+                    letterSpacing: '3px'
                   }}>
-                    <span className="text-green-900 text-lg sm:text-xl lg:text-2xl font-black" style={{
-                      fontFamily: '"Comic Sans MS", "Chalkduster", "Bradley Hand", cursive',
-                      textShadow: '1px 1px 0px #000000',
+                    <span className="text-green-900 text-lg sm:text-xl lg:text-2xl crayon-text super-thick" style={{
                       transform: 'rotate(0.5deg) skew(-0.5deg)',
-                      letterSpacing: '1px'
+                      letterSpacing: '2px'
                     }}>
                       📱 Telegram - LET'S CHAT!
                     </span>
@@ -319,13 +311,11 @@ const Footer = () => {
                   <a href="#" className="block bg-yellow-300 p-2 sm:p-3 lg:p-4 rounded-lg sm:rounded-xl border-3 sm:border-4 border-black border-dashed transition-all shadow-lg hover:scale-110" style={{
                     boxShadow: '4px 4px 0px #000000',
                     transform: 'rotate(-1deg) skew(-0.5deg)',
-                    letterSpacing: '2px'
+                    letterSpacing: '3px'
                   }}>
-                    <span className="text-green-900 text-lg sm:text-xl lg:text-2xl font-black" style={{
-                      fontFamily: '"Comic Sans MS", "Chalkduster", "Bradley Hand", cursive',
-                      textShadow: '1px 1px 0px #000000',
+                    <span className="text-green-900 text-lg sm:text-xl lg:text-2xl crayon-text super-thick" style={{
                       transform: 'rotate(0.5deg) skew(-0.5deg)',
-                      letterSpacing: '1px'
+                      letterSpacing: '2px'
                     }}>
                       🐦 Twitter - FOLLOW US!
                     </span>
@@ -333,13 +323,11 @@ const Footer = () => {
                   <a href="#" className="block bg-yellow-300 p-2 sm:p-3 lg:p-4 rounded-lg sm:rounded-xl border-3 sm:border-4 border-black border-dashed transition-all shadow-lg hover:scale-110" style={{
                     boxShadow: '4px 4px 0px #000000',
                     transform: 'rotate(0.5deg) skew(-0.5deg)',
-                    letterSpacing: '2px'
+                    letterSpacing: '3px'
                   }}>
-                    <span className="text-green-900 text-lg sm:text-xl lg:text-2xl font-black" style={{
-                      fontFamily: '"Comic Sans MS", "Chalkduster", "Bradley Hand", cursive',
-                      textShadow: '1px 1px 0px #000000',
+                    <span className="text-green-900 text-lg sm:text-xl lg:text-2xl crayon-text super-thick" style={{
                       transform: 'rotate(0.5deg) skew(-0.5deg)',
-                      letterSpacing: '1px'
+                      letterSpacing: '2px'
                     }}>
                       💬 Discord - MEMES HERE!
                     </span>
@@ -354,19 +342,15 @@ const Footer = () => {
               transform: 'rotate(-1deg) skew(-0.5deg)',
               boxShadow: '6px 6px 0px #000000'
             }}>
-              <p className="text-yellow-900 text-lg sm:text-xl lg:text-2xl font-black" style={{
-                fontFamily: '"Comic Sans MS", "Chalkduster", "Bradley Hand", cursive',
-                textShadow: '1px 1px 0px #000000',
+              <p className="text-yellow-900 text-lg sm:text-xl lg:text-2xl crayon-text super-thick" style={{
                 transform: 'rotate(0.5deg) skew(-0.5deg)',
-                letterSpacing: '1px'
+                letterSpacing: '2px'
               }}>
                 © 2024 0.1 SOL MEME TOKEN! Made with ❤️ and MEMES! ◎
               </p>
-              <p className="text-green-900 text-base sm:text-lg lg:text-xl mt-1 sm:mt-2 font-black" style={{
-                fontFamily: '"Comic Sans MS", "Chalkduster", "Bradley Hand", cursive',
+              <p className="text-green-900 text-base sm:text-lg lg:text-xl mt-1 sm:mt-2 crayon-text super-thick" style={{
                 transform: 'rotate(-1deg) skew(-0.5deg)',
-                textShadow: '1px 1px 0px #000000',
-                letterSpacing: '1px'
+                letterSpacing: '2px'
               }}>
                 ALWAYS DYOR! THIS IS JUST FOR FUN! 🤪
               </p>

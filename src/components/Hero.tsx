@@ -8,23 +8,20 @@ const Hero = () => {
       <div className="max-w-4xl mx-auto">
         <div className="mb-6 sm:mb-8">
           <div className="inline-flex items-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 bg-yellow-300 rounded-2xl sm:rounded-3xl border-4 sm:border-6 border-black border-dashed mb-4 sm:mb-6 lg:mb-8 shadow-xl sm:shadow-2xl" style={{
-            transform: 'rotate(-2deg) skew(-1deg) scale(1.05)',
-            animation: 'wiggle 3s ease-in-out infinite'
+            transform: 'rotate(-2deg) skew(-1deg) scale(1.05)'
           }}>
-            <span className="text-lg sm:text-xl lg:text-2xl text-green-900 font-black" style={{
-              fontFamily: '"Comic Sans MS", "Chalkduster", "Bradley Hand", cursive',
+            <span className="text-lg sm:text-xl lg:text-2xl text-green-900 crayon-text super-thick" style={{
               transform: 'rotate(3deg) translateY(-1px)',
               display: 'inline-block',
-              letterSpacing: '2px'
+              letterSpacing: '3px'
             }}>
               ◎ MEME COIN IS HERE!!! ◎
             </span>
           </div>
           
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-yellow-400 mb-4 sm:mb-6 lg:mb-8 leading-tight drop-shadow-lg" style={{
-            fontFamily: '"Comic Sans MS", "Chalkduster", "Bradley Hand", cursive',
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl crayon-text super-thick text-yellow-400 mb-4 sm:mb-6 lg:mb-8 leading-tight drop-shadow-lg" style={{
             transform: 'rotate(-1deg) skew(-0.5deg)',
-            letterSpacing: '3px'
+            letterSpacing: '4px'
           }}>
             <span style={{
               transform: 'rotate(-2deg) translateX(-5px)',
@@ -36,7 +33,7 @@ const Hero = () => {
             }}>Buy</span>
             <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent block mt-2 sm:mt-4" style={{
               transform: 'rotate(2deg) skew(1deg) translateX(10px)',
-              letterSpacing: '4px'
+              letterSpacing: '5px'
             }}>
               <span style={{
                 transform: 'rotate(-1deg)',
@@ -53,10 +50,9 @@ const Hero = () => {
             transform: 'rotate(1deg) skew(-0.5deg)',
             position: 'relative'
           }}>
-            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-yellow-900 mb-3 sm:mb-4 lg:mb-6 leading-relaxed font-black" style={{
-              fontFamily: '"Comic Sans MS", "Chalkduster", "Bradley Hand", cursive',
+            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-yellow-900 mb-3 sm:mb-4 lg:mb-6 leading-relaxed crayon-text super-thick" style={{
               transform: 'rotate(-1deg) skew(0.5deg)',
-              letterSpacing: '2px'
+              letterSpacing: '3px'
             }}>
               <span style={{
                 transform: 'rotate(2deg) translateY(-2px)',
@@ -91,11 +87,10 @@ const Hero = () => {
               transform: 'rotate(-2deg) skew(1deg)',
               position: 'relative'
             }}>
-              <span className="text-lg sm:text-xl lg:text-2xl text-green-900 font-black" style={{
-                fontFamily: '"Comic Sans MS", "Chalkduster", "Bradley Hand", cursive',
+              <span className="text-lg sm:text-xl lg:text-2xl text-green-900 crayon-text super-thick" style={{
                 transform: 'rotate(1deg) translateX(-1px)',
                 display: 'inline-block',
-                letterSpacing: '1px'
+                letterSpacing: '2px'
               }}>
                 <span style={{
                   transform: 'rotate(-1deg)',
@@ -129,49 +124,43 @@ const Hero = () => {
         <div className="flex flex-col items-center space-y-6 sm:space-y-8">
           <div className="flex flex-wrap justify-center gap-3 sm:gap-6 lg:gap-8 text-sm">
             <div className="flex items-center space-x-2 sm:space-x-3 bg-yellow-300 px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 rounded-xl sm:rounded-2xl border-4 sm:border-6 border-black border-dashed shadow-xl sm:shadow-2xl" style={{
-              transform: 'rotate(-3deg) skew(-1deg)',
-              animation: 'bounce 2s infinite'
+              transform: 'rotate(-3deg) skew(-1deg)'
             }}>
               <span className="text-2xl sm:text-3xl lg:text-4xl" style={{
                 transform: 'rotate(5deg)',
                 display: 'inline-block'
               }}>◎</span>
-              <span className="text-green-900 font-black text-lg sm:text-xl lg:text-2xl" style={{
-                fontFamily: '"Comic Sans MS", "Chalkduster", "Bradley Hand", cursive',
+              <span className="text-green-900 crayon-text super-thick text-lg sm:text-xl lg:text-2xl" style={{
                 transform: 'rotate(1deg) translateY(-1px)',
-                letterSpacing: '1px'
+                letterSpacing: '2px'
               }}>
                 Just 0.1 SOL!
               </span>
             </div>
             <div className="flex items-center space-x-2 sm:space-x-3 bg-green-400 px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 rounded-xl sm:rounded-2xl border-4 sm:border-6 border-black border-dashed shadow-xl sm:shadow-2xl" style={{
-              transform: 'rotate(2deg) skew(1deg)',
-              animation: 'wiggle 2.5s ease-in-out infinite'
+              transform: 'rotate(2deg) skew(1deg)'
             }}>
               <span className="text-2xl sm:text-3xl lg:text-4xl" style={{
                 transform: 'rotate(-3deg)',
                 display: 'inline-block'
               }}>🤝</span>
-              <span className="text-yellow-900 font-black text-lg sm:text-xl lg:text-2xl" style={{
-                fontFamily: '"Comic Sans MS", "Chalkduster", "Bradley Hand", cursive',
+              <span className="text-yellow-900 crayon-text super-thick text-lg sm:text-xl lg:text-2xl" style={{
                 transform: 'rotate(-1deg) translateX(1px)',
-                letterSpacing: '1px'
+                letterSpacing: '2px'
               }}>
                 Community!
               </span>
             </div>
             <div className="flex items-center space-x-2 sm:space-x-3 bg-yellow-400 px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 rounded-xl sm:rounded-2xl border-4 sm:border-6 border-black border-dashed shadow-xl sm:shadow-2xl" style={{
-              transform: 'rotate(-1deg) skew(-0.5deg)',
-              animation: 'pulse 2s infinite'
+              transform: 'rotate(-1deg) skew(-0.5deg)'
             }}>
               <span className="text-2xl sm:text-3xl lg:text-4xl" style={{
                 transform: 'rotate(4deg)',
                 display: 'inline-block'
               }}>💎</span>
-              <span className="text-green-900 font-black text-lg sm:text-xl lg:text-2xl" style={{
-                fontFamily: '"Comic Sans MS", "Chalkduster", "Bradley Hand", cursive',
+              <span className="text-green-900 crayon-text super-thick text-lg sm:text-xl lg:text-2xl" style={{
                 transform: 'rotate(2deg) translateY(1px)',
-                letterSpacing: '2px'
+                letterSpacing: '3px'
               }}>
                 HODL!
               </span>
@@ -179,8 +168,7 @@ const Hero = () => {
           </div>
 
           <div className="flex items-center text-yellow-400 drop-shadow-lg" style={{
-            transform: 'rotate(-2deg)',
-            animation: 'bounce 1.5s infinite'
+            transform: 'rotate(-2deg)'
           }}>
             <ArrowDown size={48} strokeWidth={4} className="sm:w-16 sm:h-16" />
           </div>

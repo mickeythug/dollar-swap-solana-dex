@@ -86,74 +86,28 @@
   }
 }
 
-/* Meme-style animations for childish/sloppy look */
-@keyframes wiggle {
-  0%, 100% { 
-    transform: rotate(-1deg) skew(-0.5deg); 
-  }
-  25% { 
-    transform: rotate(1deg) skew(0.5deg) translateY(-1px); 
-  }
-  50% { 
-    transform: rotate(-0.5deg) skew(-0.25deg) translateX(1px); 
-  }
-  75% { 
-    transform: rotate(0.5deg) skew(0.25deg) translateY(1px); 
-  }
+/* Kid's drawing style text */
+.kid-text {
+  font-family: "Kalam", "Schoolbell", "Caveat", "Permanent Marker", "Fredoka One", "Bangers", "Comic Sans MS", cursive;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.4);
 }
 
-@keyframes childish-bounce {
-  0%, 100% { 
-    transform: translateY(0) rotate(-1deg) scale(1); 
-  }
-  50% { 
-    transform: translateY(-10px) rotate(1deg) scale(1.02); 
-  }
+.super-thick {
+  font-weight: 900;
+  -webkit-text-stroke: 2px black;
+  text-stroke: 2px black;
 }
 
-@keyframes sloppy-pulse {
-  0%, 100% { 
-    transform: scale(1) rotate(-0.5deg) skew(-0.25deg); 
-  }
-  50% { 
-    transform: scale(1.05) rotate(0.5deg) skew(0.25deg); 
-  }
-}
-
-/* Apply childish animations */
-.animate-wiggle {
-  animation: wiggle 2s ease-in-out infinite;
-}
-
-.animate-childish-bounce {
-  animation: childish-bounce 1.5s ease-in-out infinite;
-}
-
-.animate-sloppy-pulse {
-  animation: sloppy-pulse 2s ease-in-out infinite;
-}
-
-/* Sloppy text effects */
-.sloppy-text {
-  font-family: "Comic Sans MS", "Chalkduster", "Bradley Hand", cursive;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
-}
-
-.super-sloppy {
-  transform: rotate(-1deg) skew(-0.5deg);
-  position: relative;
-}
-
-.super-sloppy::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: inherit;
-  z-index: -1;
-  transform: rotate(1deg) skew(0.5deg);
-  opacity: 0.7;
+.crayon-text {
+  font-family: "Kalam", "Schoolbell", "Caveat", "Permanent Marker", cursive;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-shadow: 
+    2px 2px 0px #000,
+    -1px -1px 0px #000,
+    1px -1px 0px #000,
+    -1px 1px 0px #000,
+    4px 4px 8px rgba(0,0,0,0.3);
 }
