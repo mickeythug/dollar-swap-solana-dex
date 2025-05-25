@@ -5,7 +5,6 @@ import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
 import { 
   PhantomWalletAdapter,
   SolflareWalletAdapter,
-  BackpackWalletAdapter,
 } from '@solana/wallet-adapter-wallets';
 import { clusterApiUrl } from '@solana/web3.js';
 import SwapInterface from '../components/SwapInterface';
@@ -21,7 +20,6 @@ const Index = () => {
   const wallets = [
     new PhantomWalletAdapter(),
     new SolflareWalletAdapter(),
-    new BackpackWalletAdapter(),
   ];
 
   const endpoint = clusterApiUrl('mainnet-beta');
