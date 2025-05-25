@@ -61,17 +61,17 @@ const MarketCapCounter = () => {
   const progressPercentage = (currentMarketCap / targetMarketCap) * 100;
 
   return (
-    <div className="max-w-md mx-auto">
-      <div className="bg-yellow-300 rounded-3xl border-8 border-black border-dashed p-6 transform rotate-1 shadow-2xl relative overflow-hidden" style={{
-        boxShadow: '16px 16px 0px #000000'
+    <div className="max-w-md mx-auto w-full">
+      <div className="bg-yellow-300 rounded-2xl sm:rounded-3xl border-4 sm:border-6 lg:border-8 border-black border-dashed p-3 sm:p-4 lg:p-6 transform rotate-1 shadow-xl sm:shadow-2xl relative overflow-hidden" style={{
+        boxShadow: '8px 8px 0px #000000'
       }}>
         {/* Celebration overlay */}
         {showCelebration && (
-          <div className="absolute inset-0 bg-yellow-400 rounded-3xl flex items-center justify-center z-20 animate-pulse border-8 border-red-500">
+          <div className="absolute inset-0 bg-yellow-400 rounded-2xl sm:rounded-3xl flex items-center justify-center z-20 border-4 sm:border-6 lg:border-8 border-red-500">
             <div className="text-center transform rotate-12">
-              <div className="text-6xl mb-2">🎉</div>
-              <div className="text-4xl font-black text-green-900" style={{
-                fontFamily: 'Comic Sans MS, cursive',
+              <div className="text-4xl sm:text-5xl lg:text-6xl mb-2">🎉</div>
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-green-900" style={{
+                fontFamily: '"Trebuchet MS", Arial, sans-serif',
                 textShadow: '3px 3px 0px #000000'
               }}>
                 {celebrationText}
@@ -80,40 +80,40 @@ const MarketCapCounter = () => {
           </div>
         )}
 
-        <div className="text-center mb-6 transform -rotate-2">
-          <div className="bg-green-400 rounded-2xl border-4 border-black p-4 inline-block transform rotate-3" style={{
-            boxShadow: '6px 6px 0px #000000'
+        <div className="text-center mb-3 sm:mb-4 lg:mb-6 transform -rotate-2">
+          <div className="bg-green-400 rounded-xl sm:rounded-2xl border-3 sm:border-4 border-black p-2 sm:p-3 lg:p-4 inline-block transform rotate-3" style={{
+            boxShadow: '4px 4px 0px #000000'
           }}>
-            <h2 className="text-3xl font-black text-yellow-900 mb-2" style={{
-              fontFamily: 'Comic Sans MS, cursive',
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-yellow-900 mb-1 sm:mb-2" style={{
+              fontFamily: '"Trebuchet MS", Arial, sans-serif',
               textShadow: '2px 2px 0px #000000'
             }}>MARKETCAP ROCKET! 🚀</h2>
-            <p className="text-green-900 text-lg font-black transform -rotate-1" style={{
-              fontFamily: 'Comic Sans MS, cursive',
+            <p className="text-green-900 text-sm sm:text-base lg:text-lg font-black transform -rotate-1" style={{
+              fontFamily: '"Trebuchet MS", Arial, sans-serif',
               textShadow: '1px 1px 0px #000000'
             }}>TO THE MOON! 💵</p>
           </div>
         </div>
 
         {/* Current marketcap display */}
-        <div className="bg-green-400 rounded-2xl p-6 border-6 border-black transform -rotate-1 mb-6" style={{
-          boxShadow: '8px 8px 0px #000000'
+        <div className="bg-green-400 rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border-4 sm:border-6 border-black transform -rotate-1 mb-3 sm:mb-4 lg:mb-6" style={{
+          boxShadow: '6px 6px 0px #000000'
         }}>
           <div className="text-center">
-            <div className="text-yellow-900 text-lg font-black mb-2" style={{
-              fontFamily: 'Comic Sans MS, cursive',
+            <div className="text-yellow-900 text-sm sm:text-base lg:text-lg font-black mb-1 sm:mb-2" style={{
+              fontFamily: '"Trebuchet MS", Arial, sans-serif',
               textShadow: '1px 1px 0px #000000'
             }}>
               CURRENT MARKETCAP! 💰
             </div>
-            <div className="text-6xl font-black text-yellow-900 mb-2 transform rotate-2" style={{
-              fontFamily: 'Comic Sans MS, cursive',
-              textShadow: '3px 3px 0px #000000'
+            <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-yellow-900 mb-1 sm:mb-2 transform rotate-2" style={{
+              fontFamily: '"Trebuchet MS", Arial, sans-serif',
+              textShadow: '2px 2px 0px #000000'
             }}>
               {formatMarketCap(currentMarketCap)}
             </div>
-            <div className="text-green-900 text-sm font-black" style={{
-              fontFamily: 'Comic Sans MS, cursive',
+            <div className="text-green-900 text-xs sm:text-sm font-black" style={{
+              fontFamily: '"Trebuchet MS", Arial, sans-serif',
               textShadow: '1px 1px 0px #000000'
             }}>
               TARGET: {formatMarketCap(targetMarketCap)} 🎯
@@ -122,12 +122,12 @@ const MarketCapCounter = () => {
         </div>
 
         {/* Progress bar */}
-        <div className="bg-green-500 rounded-xl p-4 border-4 border-black transform rotate-1 mb-4" style={{
-          boxShadow: '6px 6px 0px #000000'
+        <div className="bg-green-500 rounded-lg sm:rounded-xl p-2 sm:p-3 lg:p-4 border-3 sm:border-4 border-black transform rotate-1 mb-2 sm:mb-3 lg:mb-4" style={{
+          boxShadow: '4px 4px 0px #000000'
         }}>
-          <div className="mb-3">
-            <span className="text-yellow-100 font-black text-lg" style={{
-              fontFamily: 'Comic Sans MS, cursive',
+          <div className="mb-2 sm:mb-3">
+            <span className="text-yellow-100 font-black text-sm sm:text-base lg:text-lg" style={{
+              fontFamily: '"Trebuchet MS", Arial, sans-serif',
               textShadow: '1px 1px 0px #000000'
             }}>
               PROGRESS: {progressPercentage.toFixed(1)}% 📈
@@ -136,46 +136,46 @@ const MarketCapCounter = () => {
           <div className="relative">
             <Progress 
               value={progressPercentage} 
-              className="h-6 bg-yellow-200 border-3 border-black rounded-full"
+              className="h-4 sm:h-5 lg:h-6 bg-yellow-200 border-2 sm:border-3 border-black rounded-full"
             />
             <div 
-              className="absolute top-0 left-0 h-6 bg-gradient-to-r from-green-400 via-yellow-400 to-green-500 rounded-full border-3 border-black transition-all duration-300"
+              className="absolute top-0 left-0 h-4 sm:h-5 lg:h-6 bg-gradient-to-r from-green-400 via-yellow-400 to-green-500 rounded-full border-2 sm:border-3 border-black transition-all duration-300"
               style={{ width: `${progressPercentage}%` }}
             />
           </div>
         </div>
 
         {/* Milestones */}
-        <div className="bg-yellow-400 rounded-xl p-4 border-4 border-black transform -rotate-1" style={{
-          boxShadow: '6px 6px 0px #000000'
+        <div className="bg-yellow-400 rounded-lg sm:rounded-xl p-2 sm:p-3 lg:p-4 border-3 sm:border-4 border-black transform -rotate-1" style={{
+          boxShadow: '4px 4px 0px #000000'
         }}>
-          <div className="text-green-900 font-black text-lg mb-3" style={{
-            fontFamily: 'Comic Sans MS, cursive',
+          <div className="text-green-900 font-black text-sm sm:text-base lg:text-lg mb-2 sm:mb-3" style={{
+            fontFamily: '"Trebuchet MS", Arial, sans-serif',
             textShadow: '1px 1px 0px #000000'
           }}>
             MILESTONES! 🏆
           </div>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 sm:gap-2">
             {milestones.slice(0, 6).map((milestone, index) => (
               <div 
                 key={milestone.value}
-                className={`p-2 rounded-lg border-3 border-black text-center transform ${
+                className={`p-1 sm:p-2 rounded-md sm:rounded-lg border-2 sm:border-3 border-black text-center transform ${
                   reachedMilestones.includes(milestone.value) 
                     ? 'bg-green-500 text-yellow-100 rotate-3 scale-110' 
                     : 'bg-yellow-200 text-green-900 -rotate-1'
                 } transition-all duration-500`}
                 style={{
-                  boxShadow: '3px 3px 0px #000000'
+                  boxShadow: '2px 2px 0px #000000'
                 }}
               >
-                <div className="text-lg font-black" style={{
-                  fontFamily: 'Comic Sans MS, cursive',
+                <div className="text-sm sm:text-base lg:text-lg font-black" style={{
+                  fontFamily: '"Trebuchet MS", Arial, sans-serif',
                   textShadow: '1px 1px 0px #000000'
                 }}>
                   {milestone.emoji}
                 </div>
-                <div className="text-sm font-black" style={{
-                  fontFamily: 'Comic Sans MS, cursive',
+                <div className="text-xs sm:text-sm font-black" style={{
+                  fontFamily: '"Trebuchet MS", Arial, sans-serif',
                   textShadow: '1px 1px 0px #000000'
                 }}>
                   {formatMarketCap(milestone.value)}
@@ -187,9 +187,9 @@ const MarketCapCounter = () => {
 
         {/* Loading indicator */}
         {isLoading && (
-          <div className="mt-4 text-center">
-            <div className="text-green-900 font-black text-lg animate-bounce" style={{
-              fontFamily: 'Comic Sans MS, cursive',
+          <div className="mt-2 sm:mt-3 lg:mt-4 text-center">
+            <div className="text-green-900 font-black text-sm sm:text-base lg:text-lg" style={{
+              fontFamily: '"Trebuchet MS", Arial, sans-serif',
               textShadow: '1px 1px 0px #000000'
             }}>
               LOADING... 🔄 MEME POWER! ⚡
