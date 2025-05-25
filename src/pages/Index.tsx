@@ -30,7 +30,7 @@ const Index = () => {
     <WalletProvider wallets={wallets} autoConnect>
       <WalletModalProvider>
         <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Cdefs%3E%3CradialGradient id="a" cx="50" cy="50" r="50"%3E%3Cstop offset="0" stop-color="%23ffffff" stop-opacity="0.1"/%3E%3Cstop offset="1" stop-color="%23ffffff" stop-opacity="0"/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx="20" cy="20" r="2" fill="url(%23a)"/%3E%3Ccircle cx="80" cy="40" r="1.5" fill="url(%23a)"/%3E%3Ccircle cx="40" cy="80" r="1" fill="url(%23a)"/%3E%3Ccircle cx="90" cy="90" r="1.5" fill="url(%23a)"/%3E%3Ccircle cx="10" cy="60" r="1" fill="url(%23a)"/%3E%3C/svg%3E')] opacity-20"></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Cdefs%3E%3CradialGradient id=%22a%22 cx=%2250%22 cy=%2250%22 r=%2250%22%3E%3Cstop offset=%220%22 stop-color=%22%23ffffff%22 stop-opacity=%220.1%22/%3E%3Cstop offset=%221%22 stop-color=%22%23ffffff%22 stop-opacity=%220%22/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx=%2220%22 cy=%2220%22 r=%222%22 fill=%22url(%23a)%22/%3E%3Ccircle cx=%2280%22 cy=%2240%22 r=%221.5%22 fill=%22url(%23a)%22/%3E%3Ccircle cx=%2240%22 cy=%2280%22 r=%221%22 fill=%22url(%23a)%22/%3E%3Ccircle cx=%2290%22 cy=%2290%22 r=%221.5%22 fill=%22url(%23a)%22/%3E%3Ccircle cx=%2210%22 cy=%2260%22 r=%221%22 fill=%22url(%23a)%22/%3E%3C/svg%3E')] opacity-20"></div>
           
           <Header />
           <Hero />
