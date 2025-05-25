@@ -1,10 +1,23 @@
-
 import React from 'react';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
 const Header = () => {
   return (
     <header className="relative z-10 px-4 py-6">
+      {/* WAGMI Sign at the very top */}
+      <div className="w-full text-center mb-6">
+        <div className="inline-block bg-red-500 px-8 py-4 rounded-3xl border-8 border-black transform -rotate-2 shadow-2xl" style={{
+          boxShadow: '12px 12px 0px #000000'
+        }}>
+          <span className="text-white font-black text-3xl" style={{
+            fontFamily: 'Comic Sans MS, cursive',
+            textShadow: '4px 4px 0px #000000'
+          }}>
+            🚨 BRING BACK WAGMI 🚨
+          </span>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center border-8 border-green-900 transform rotate-12 shadow-2xl" style={{
