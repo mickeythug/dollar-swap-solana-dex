@@ -27,13 +27,14 @@ const Index = () => {
   return (
     <WalletProvider wallets={wallets} autoConnect>
       <WalletModalProvider>
-        <div className="min-h-screen bg-gradient-to-br from-pink-500 via-purple-500 to-blue-500">
-          <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/10 via-green-400/10 to-blue-400/10"></div>
+        <div className="min-h-screen bg-gradient-to-br from-green-600 via-green-500 to-green-400">
+          <div className="absolute inset-0 bg-gradient-to-r from-yellow-200/20 via-green-300/20 to-emerald-400/20"></div>
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              radial-gradient(circle at 20% 20%, rgba(255, 107, 107, 0.3) 0%, transparent 50%),
-              radial-gradient(circle at 80% 80%, rgba(78, 205, 196, 0.3) 0%, transparent 50%),
-              radial-gradient(circle at 40% 60%, rgba(255, 193, 7, 0.3) 0%, transparent 50%)
+              radial-gradient(circle at 15% 25%, rgba(34, 197, 94, 0.4) 0%, transparent 40%),
+              radial-gradient(circle at 85% 75%, rgba(253, 224, 71, 0.4) 0%, transparent 40%),
+              radial-gradient(circle at 50% 10%, rgba(20, 83, 45, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 20% 80%, rgba(187, 247, 208, 0.3) 0%, transparent 40%)
             `
           }}></div>
           
