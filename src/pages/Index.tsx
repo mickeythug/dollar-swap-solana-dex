@@ -27,14 +27,22 @@ const Index = () => {
   return (
     <WalletProvider wallets={wallets} autoConnect>
       <WalletModalProvider>
-        <div className="min-h-screen bg-gradient-to-br from-green-600 via-green-500 to-green-400">
-          <div className="absolute inset-0 bg-gradient-to-r from-yellow-200/20 via-green-300/20 to-emerald-400/20"></div>
+        <div className="min-h-screen bg-green-800" style={{
+          backgroundImage: `
+            linear-gradient(45deg, #166534 25%, transparent 25%),
+            linear-gradient(-45deg, #166534 25%, transparent 25%),
+            linear-gradient(45deg, transparent 75%, #166534 75%),
+            linear-gradient(-45deg, transparent 75%, #166534 75%)
+          `,
+          backgroundSize: '60px 60px',
+          backgroundPosition: '0 0, 0 30px, 30px -30px, -30px 0px'
+        }}>
+          <div className="absolute inset-0 bg-gradient-to-br from-green-900/80 via-yellow-600/30 to-green-700/80"></div>
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              radial-gradient(circle at 15% 25%, rgba(34, 197, 94, 0.4) 0%, transparent 40%),
-              radial-gradient(circle at 85% 75%, rgba(253, 224, 71, 0.4) 0%, transparent 40%),
-              radial-gradient(circle at 50% 10%, rgba(20, 83, 45, 0.3) 0%, transparent 50%),
-              radial-gradient(circle at 20% 80%, rgba(187, 247, 208, 0.3) 0%, transparent 40%)
+              radial-gradient(circle at 10% 20%, rgba(0, 100, 0, 0.8) 0%, transparent 50%),
+              radial-gradient(circle at 90% 80%, rgba(255, 215, 0, 0.6) 0%, transparent 50%),
+              radial-gradient(circle at 40% 40%, rgba(34, 139, 34, 0.7) 0%, transparent 40%)
             `
           }}></div>
           

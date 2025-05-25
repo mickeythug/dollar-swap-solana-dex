@@ -126,135 +126,203 @@ const SwapInterface = () => {
   return (
     <section id="swap" className="relative z-10 px-4 py-16">
       <div className="max-w-md mx-auto">
-        <Card className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl">
-          <div className="p-6">
-            <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-white mb-2">Swap to 1 Dollar</h2>
-              <p className="text-purple-200 text-sm">Simple, fast, and secure</p>
+        <div className="bg-yellow-300 rounded-3xl border-8 border-black border-dashed p-8 transform -rotate-2 shadow-2xl" style={{
+          boxShadow: '16px 16px 0px #000000'
+        }}>
+          <div className="text-center mb-8 transform rotate-1">
+            <div className="bg-green-400 rounded-2xl border-4 border-black p-4 inline-block transform -rotate-1" style={{
+              boxShadow: '6px 6px 0px #000000'
+            }}>
+              <h2 className="text-4xl font-black text-yellow-900 mb-2" style={{
+                fontFamily: 'Comic Sans MS, cursive',
+                textShadow: '3px 3px 0px #000000'
+              }}>SWAP TO 1 DOLLAR!</h2>
+              <p className="text-green-900 text-xl font-black transform rotate-1" style={{
+                fontFamily: 'Comic Sans MS, cursive',
+                textShadow: '2px 2px 0px #000000'
+              }}>SUPER EASY! 💵</p>
+            </div>
+          </div>
+
+          {/* From Section */}
+          <div className="space-y-6">
+            <div className="bg-green-400 rounded-2xl p-6 border-6 border-black transform rotate-1" style={{
+              boxShadow: '8px 8px 0px #000000'
+            }}>
+              <div className="flex justify-between items-center mb-4">
+                <span className="text-2xl text-yellow-900 font-black" style={{
+                  fontFamily: 'Comic Sans MS, cursive',
+                  textShadow: '2px 2px 0px #000000'
+                }}>From</span>
+                <span className="text-xl text-yellow-900 font-black" style={{
+                  fontFamily: 'Comic Sans MS, cursive',
+                  textShadow: '2px 2px 0px #000000'
+                }}>
+                  Balance: {solBalance.toFixed(4)} SOL
+                </span>
+              </div>
+              
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-3 bg-yellow-300 rounded-xl px-4 py-3 border-4 border-black transform -rotate-1" style={{
+                  boxShadow: '4px 4px 0px #000000'
+                }}>
+                  <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full border-2 border-black"></div>
+                  <span className="text-green-900 font-black text-xl" style={{
+                    fontFamily: 'Comic Sans MS, cursive',
+                    textShadow: '1px 1px 0px #000000'
+                  }}>SOL</span>
+                </div>
+                
+                <div className="flex-1">
+                  <Input
+                    type="number"
+                    placeholder="0.00"
+                    value={solAmount}
+                    onChange={(e) => setSolAmount(e.target.value)}
+                    className="bg-yellow-200 border-4 border-black text-green-900 text-2xl font-black text-right p-4 rounded-xl"
+                    style={{
+                      fontFamily: 'Comic Sans MS, cursive',
+                      textShadow: '1px 1px 0px #000000',
+                      boxShadow: 'inset 4px 4px 0px #000000'
+                    }}
+                    step="0.0001"
+                    min="0"
+                  />
+                </div>
+              </div>
+              
+              <div className="flex justify-end space-x-3 mt-4">
+                <Button
+                  onClick={setDollarAmount}
+                  className="bg-yellow-400 hover:bg-yellow-500 text-green-900 font-black px-4 py-2 rounded-lg border-3 border-black transform rotate-2 hover:rotate-3 hover:scale-110 transition-all"
+                  style={{
+                    fontFamily: 'Comic Sans MS, cursive',
+                    textShadow: '1px 1px 0px #000000',
+                    boxShadow: '3px 3px 0px #000000'
+                  }}
+                >
+                  $1 Worth
+                </Button>
+                <Button
+                  onClick={setMaxAmount}
+                  className="bg-green-500 hover:bg-green-600 text-yellow-100 font-black px-4 py-2 rounded-lg border-3 border-black transform -rotate-1 hover:-rotate-2 hover:scale-110 transition-all"
+                  style={{
+                    fontFamily: 'Comic Sans MS, cursive',
+                    textShadow: '1px 1px 0px #000000',
+                    boxShadow: '3px 3px 0px #000000'
+                  }}
+                >
+                  MAX
+                </Button>
+              </div>
             </div>
 
-            {/* From Section */}
-            <div className="space-y-4">
-              <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm text-purple-200">From</span>
-                  <span className="text-sm text-purple-200">
-                    Balance: {solBalance.toFixed(4)} SOL
+            {/* Swap Arrow */}
+            <div className="flex justify-center">
+              <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center border-6 border-black transform rotate-12 shadow-lg" style={{
+                boxShadow: '6px 6px 0px #000000'
+              }}>
+                <ArrowDown size={32} className="text-green-900" strokeWidth={4} />
+              </div>
+            </div>
+
+            {/* To Section */}
+            <div className="bg-green-400 rounded-2xl p-6 border-6 border-black transform -rotate-1" style={{
+              boxShadow: '8px 8px 0px #000000'
+            }}>
+              <div className="flex justify-between items-center mb-4">
+                <span className="text-2xl text-yellow-900 font-black" style={{
+                  fontFamily: 'Comic Sans MS, cursive',
+                  textShadow: '2px 2px 0px #000000'
+                }}>To</span>
+                <span className="text-xl text-yellow-900 font-black" style={{
+                  fontFamily: 'Comic Sans MS, cursive',
+                  textShadow: '2px 2px 0px #000000'
+                }}>1 Dollar Token</span>
+              </div>
+              
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-3 bg-yellow-300 rounded-xl px-4 py-3 border-4 border-black transform rotate-1" style={{
+                  boxShadow: '4px 4px 0px #000000'
+                }}>
+                  <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-green-500 rounded-full flex items-center justify-center border-2 border-black">
+                    <span className="text-lg font-black text-green-900">$</span>
+                  </div>
+                  <span className="text-green-900 font-black text-xl" style={{
+                    fontFamily: 'Comic Sans MS, cursive',
+                    textShadow: '1px 1px 0px #000000'
+                  }}>1DOLLAR</span>
+                </div>
+                
+                <div className="flex-1 text-right">
+                  <span className="text-yellow-900 text-2xl font-black" style={{
+                    fontFamily: 'Comic Sans MS, cursive',
+                    textShadow: '2px 2px 0px #000000'
+                  }}>
+                    {solAmount ? '≈ ' + (parseFloat(solAmount) * 1000).toFixed(0) : '0'}
                   </span>
                 </div>
-                
-                <div className="flex items-center space-x-3">
-                  <div className="flex items-center space-x-2 bg-white/5 rounded-lg px-3 py-2 border border-white/10">
-                    <div className="w-6 h-6 bg-gradient-to-r from-green-400 to-blue-500 rounded-full"></div>
-                    <span className="text-white font-semibold">SOL</span>
-                  </div>
-                  
-                  <div className="flex-1">
-                    <Input
-                      type="number"
-                      placeholder="0.00"
-                      value={solAmount}
-                      onChange={(e) => setSolAmount(e.target.value)}
-                      className="bg-transparent border-0 text-white text-xl font-semibold text-right p-0 focus:ring-0"
-                      step="0.0001"
-                      min="0"
-                    />
-                  </div>
-                </div>
-                
-                <div className="flex justify-end space-x-2 mt-2">
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={setDollarAmount}
-                    className="text-xs text-purple-300 hover:text-white"
-                  >
-                    $1 Worth
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={setMaxAmount}
-                    className="text-xs text-purple-300 hover:text-white"
-                  >
-                    MAX
-                  </Button>
-                </div>
-              </div>
-
-              {/* Swap Arrow */}
-              <div className="flex justify-center">
-                <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center">
-                  <ArrowDown size={20} className="text-white" />
-                </div>
-              </div>
-
-              {/* To Section */}
-              <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm text-purple-200">To</span>
-                  <span className="text-sm text-purple-200">1 Dollar Token</span>
-                </div>
-                
-                <div className="flex items-center space-x-3">
-                  <div className="flex items-center space-x-2 bg-white/5 rounded-lg px-3 py-2 border border-white/10">
-                    <div className="w-6 h-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-                      <span className="text-xs font-bold text-white">$</span>
-                    </div>
-                    <span className="text-white font-semibold">1DOLLAR</span>
-                  </div>
-                  
-                  <div className="flex-1 text-right">
-                    <span className="text-white text-xl font-semibold">
-                      {solAmount ? '≈ ' + (parseFloat(solAmount) * 1000).toFixed(0) : '0'}
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Swap Button */}
-              <Button
-                onClick={executeSwap}
-                disabled={!publicKey || !solAmount || isSwapping || parseFloat(solAmount) <= 0}
-                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-4 rounded-xl transition-all duration-200 transform hover:scale-105 disabled:hover:scale-100 disabled:opacity-50"
-              >
-                {!publicKey 
-                  ? 'Connect Wallet' 
-                  : isSwapping 
-                  ? 'Swapping...' 
-                  : 'Swap to 1 Dollar'
-                }
-              </Button>
-
-              {/* Info */}
-              <div className="text-center text-xs text-purple-300 space-y-1">
-                <p>Slippage: 10% • Priority Fee: 0.0001 SOL</p>
-                <p>Powered by PumpPortal • Auto Pool Selection</p>
               </div>
             </div>
+
+            {/* Swap Button */}
+            <Button
+              onClick={executeSwap}
+              disabled={!publicKey || !solAmount || isSwapping || parseFloat(solAmount) <= 0}
+              className="w-full bg-yellow-400 hover:bg-yellow-500 text-green-900 font-black py-6 rounded-2xl transition-all duration-200 transform hover:scale-105 hover:rotate-1 disabled:hover:scale-100 disabled:opacity-50 border-6 border-black text-2xl"
+              style={{
+                fontFamily: 'Comic Sans MS, cursive',
+                textShadow: '2px 2px 0px #000000',
+                boxShadow: '8px 8px 0px #000000'
+              }}
+            >
+              {!publicKey 
+                ? 'CONNECT WALLET!' 
+                : isSwapping 
+                ? 'SWAPPING...' 
+                : 'SWAP TO 1 DOLLAR! 💵'
+              }
+            </Button>
+
+            {/* Info */}
+            <div className="text-center bg-green-500 p-4 rounded-xl border-4 border-black transform rotate-1" style={{
+              boxShadow: '6px 6px 0px #000000'
+            }}>
+              <p className="text-yellow-100 font-black text-lg" style={{
+                fontFamily: 'Comic Sans MS, cursive',
+                textShadow: '2px 2px 0px #000000'
+              }}>Slippage: 10% • Priority Fee: 0.0001 SOL</p>
+              <p className="text-yellow-100 font-black text-lg" style={{
+                fontFamily: 'Comic Sans MS, cursive',
+                textShadow: '2px 2px 0px #000000'
+              }}>Powered by PumpPortal • Auto Pool</p>
+            </div>
           </div>
-        </Card>
+        </div>
 
         {/* Token Info */}
-        <Card className="mt-6 bg-white/5 backdrop-blur-xl border border-white/10">
-          <div className="p-4">
-            <h3 className="text-white font-semibold mb-3">Token Information</h3>
-            <div className="space-y-2 text-sm">
-              <div className="flex justify-between text-purple-200">
-                <span>Contract:</span>
-                <span className="font-mono text-xs">3o8h...pump</span>
-              </div>
-              <div className="flex justify-between text-purple-200">
-                <span>Network:</span>
-                <span>Solana</span>
-              </div>
-              <div className="flex justify-between text-purple-200">
-                <span>Type:</span>
-                <span>Community Token</span>
-              </div>
+        <div className="mt-8 bg-yellow-300 rounded-2xl border-6 border-black p-6 transform rotate-2 shadow-2xl" style={{
+          boxShadow: '8px 8px 0px #000000'
+        }}>
+          <h3 className="text-green-900 font-black mb-4 text-2xl" style={{
+            fontFamily: 'Comic Sans MS, cursive',
+            textShadow: '2px 2px 0px #000000'
+          }}>TOKEN INFO! 📊</h3>
+          <div className="space-y-3 text-lg">
+            <div className="flex justify-between text-green-800 font-black" style={{fontFamily: 'Comic Sans MS, cursive'}}>
+              <span>Contract:</span>
+              <span className="font-mono text-sm bg-green-400 px-2 py-1 rounded border-2 border-black">3o8h...pump</span>
+            </div>
+            <div className="flex justify-between text-green-800 font-black" style={{fontFamily: 'Comic Sans MS, cursive'}}>
+              <span>Network:</span>
+              <span>Solana</span>
+            </div>
+            <div className="flex justify-between text-green-800 font-black" style={{fontFamily: 'Comic Sans MS, cursive'}}>
+              <span>Type:</span>
+              <span>MEME TOKEN! 🚀</span>
             </div>
           </div>
-        </Card>
+        </div>
       </div>
     </section>
   );
