@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { WalletProvider } from '@solana/wallet-adapter-react';
 import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
@@ -48,8 +49,17 @@ const Index = () => {
           
           <Header />
           <Hero />
-          <MarketCapCounter />
-          <SwapInterface />
+          
+          {/* Side by side layout for MarketCap and Swap */}
+          <section className="relative z-10 px-4 py-16">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                <MarketCapCounter />
+                <SwapInterface />
+              </div>
+            </div>
+          </section>
+          
           <Footer />
         </div>
       </WalletModalProvider>
