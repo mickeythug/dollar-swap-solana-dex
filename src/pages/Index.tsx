@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { WalletProvider } from '@solana/wallet-adapter-react';
 import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
@@ -11,6 +10,7 @@ import SwapInterface from '../components/SwapInterface';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
+import MarketCapCounter from '../components/MarketCapCounter';
 
 // Import wallet adapter CSS
 import '@solana/wallet-adapter-react-ui/styles.css';
@@ -48,6 +48,7 @@ const Index = () => {
           
           <Header />
           <Hero />
+          <MarketCapCounter />
           <SwapInterface />
           <Footer />
         </div>
