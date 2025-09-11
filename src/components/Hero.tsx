@@ -23,14 +23,8 @@ const Hero = () => {
                 <div className="holographic-layer-2"></div>
                 <div className="holographic-layer-3"></div>
                 
-                {/* Energy Ring Effects */}
-                <div className="energy-ring ring-1"></div>
-                <div className="energy-ring ring-2"></div>
-                <div className="energy-ring ring-3"></div>
               </div>
               
-              {/* Morphing Border Effect */}
-              <div className="morphing-border"></div>
             </div>
           </div>
           
