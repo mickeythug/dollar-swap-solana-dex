@@ -22,7 +22,8 @@ const Hero = () => {
           </div>
           
           {/* Enhanced Main Title */}
-          <h1 className="inline-block mx-auto bg-yellow-400 text-black px-4 sm:px-6 py-2 sm:py-3 rounded-2xl border-4 border-black text-responsive-2xl crayon-text super-thick mb-4 sm:mb-6 lg:mb-8 leading-tight drop-shadow-lg animate-bounce-in glow-effect" style={{
+          <div className="flex justify-center">
+            <h1 className="inline-block bg-yellow-400 text-black px-4 sm:px-6 py-2 sm:py-3 rounded-2xl border-4 border-black text-responsive-2xl crayon-text super-thick mb-4 sm:mb-6 lg:mb-8 leading-tight drop-shadow-lg animate-bounce-in glow-effect" style={{
             transform: 'rotate(-1deg) skew(-0.5deg)',
             letterSpacing: '4px',
             animationDelay: '0.2s'
@@ -49,6 +50,7 @@ const Hero = () => {
               }}>SOL!!!</span>
             </span>
           </h1>
+          </div>
           
           {/* Enhanced Description Box */}
           <div className="meme-card bg-green-400 p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl brutal-shadow-xl max-w-4xl mx-auto transition-bounce hover:scale-105 hover:rotate-1 animate-bounce-in" style={{
