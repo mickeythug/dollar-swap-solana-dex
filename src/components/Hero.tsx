@@ -7,18 +7,40 @@ const Hero = () => {
     <section className="relative z-10 px-2 sm:px-4 lg:px-8 py-8 sm:py-12 lg:py-16 text-center">
       <div className="max-w-6xl mx-auto">
         <div className="mb-6 sm:mb-8">
-          {/* Floating Logo - 3x Bigger */}
+          {/* Advanced 3D Holographic Logo with Particle Effects */}
           <div className="flex justify-center mb-8 sm:mb-12 lg:mb-16">
-            <div className="relative">
-              <img 
-                src="/lovable-uploads/a2925ada-d9a1-4459-b346-251f5ca5b59d.png" 
-                alt="0.1 SOL Community Logo"
-                className="w-[60rem] h-auto sm:w-[72rem] lg:w-[84rem] xl:w-[96rem] transform transition-all duration-300 hover:scale-110 hover:rotate-2 drop-shadow-2xl"
-                style={{
-                  filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3))',
-                  animation: 'float 3s ease-in-out infinite'
-                }}
-              />
+            <div className="relative perspective-1000">
+              {/* Particle Background */}
+              <div className="absolute inset-0 w-full h-full pointer-events-none">
+                <div className="particle-1"></div>
+                <div className="particle-2"></div>
+                <div className="particle-3"></div>
+                <div className="particle-4"></div>
+                <div className="particle-5"></div>
+                <div className="particle-6"></div>
+              </div>
+              
+              {/* Main Logo with Advanced Effects */}
+              <div className="logo-container">
+                <img 
+                  src="/lovable-uploads/a2925ada-d9a1-4459-b346-251f5ca5b59d.png" 
+                  alt="0.1 SOL Community Logo"
+                  className="logo-holographic w-[60rem] h-auto sm:w-[72rem] lg:w-[84rem] xl:w-[96rem]"
+                />
+                
+                {/* Holographic Overlay Layers */}
+                <div className="holographic-layer-1"></div>
+                <div className="holographic-layer-2"></div>
+                <div className="holographic-layer-3"></div>
+                
+                {/* Energy Ring Effects */}
+                <div className="energy-ring ring-1"></div>
+                <div className="energy-ring ring-2"></div>
+                <div className="energy-ring ring-3"></div>
+              </div>
+              
+              {/* Morphing Border Effect */}
+              <div className="morphing-border"></div>
             </div>
           </div>
           
