@@ -4,8 +4,8 @@ import { ArrowDown } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative z-10 px-2 sm:px-4 py-8 sm:py-12 lg:py-16 text-center animate-slide-up">
-      <div className="max-w-4xl mx-auto">
+    <section className="relative z-10 px-2 sm:px-4 lg:px-8 py-8 sm:py-12 lg:py-16 text-center animate-slide-up">
+      <div className="max-w-6xl mx-auto">
         <div className="mb-6 sm:mb-8">
           {/* Enhanced Top Banner */}
           <div className="inline-flex items-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 meme-card rounded-2xl sm:rounded-3xl mb-4 sm:mb-6 lg:mb-8 brutal-shadow-lg transition-bounce hover:scale-105 hover:rotate-1 animate-bounce-in" style={{

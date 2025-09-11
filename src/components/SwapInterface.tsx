@@ -289,9 +289,18 @@ const SwapInterface = () => {
       <div className="mt-8 meme-card rounded-2xl border-6 border-black p-6 transform rotate-2 brutal-shadow-xl transition-bounce hover:scale-105 hover:rotate-3">
         <h3 className="text-black font-black mb-4 text-responsive-sm crayon-text animate-wiggle" style={{textShadow: '1px 1px 0px #ffffff'}}>TOKEN INFO! 📊</h3>
         <div className="space-y-3 text-lg">
-          <div className="flex justify-between text-green-800 font-black text-responsive-xs" style={{fontFamily: 'Comic Sans MS, cursive'}}>
-            <span>Contract:</span>
-            <span className="font-mono text-sm bg-green-400 px-2 py-1 rounded border-2 border-black">3o8h...pump</span>
+          <div className="text-green-800 font-black text-responsive-xs" style={{fontFamily: 'Comic Sans MS, cursive'}}>
+            <div className="mb-2">Contract:</div>
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(DOLLAR_TOKEN_MINT);
+                toast.success('Contract address copied! 📋');
+              }}
+              className="font-mono text-xs bg-green-400 hover:bg-green-500 px-3 py-2 rounded border-2 border-black transition-bounce hover:scale-105 w-full text-left break-all"
+              style={{wordBreak: 'break-all'}}
+            >
+              {DOLLAR_TOKEN_MINT}
+            </button>
           </div>
           <div className="flex justify-between text-green-800 font-black text-responsive-xs" style={{fontFamily: 'Comic Sans MS, cursive'}}>
             <span>Network:</span>

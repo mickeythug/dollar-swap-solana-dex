@@ -21,7 +21,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-full mx-auto px-4 lg:px-8 xl:px-12">
         {/* Mobile menu button */}
         <div className="flex justify-end mb-4 md:hidden">
           <button
@@ -62,9 +62,9 @@ const Header = () => {
           </div>
           
           {/* Navigation & Wallet Section - Enhanced Responsive */}
-          <div className={`flex items-center space-x-2 sm:space-x-4 ${isMenuOpen ? 'flex-col space-y-4 w-full md:flex-row md:space-y-0 md:w-auto' : 'hidden md:flex'} transition-smooth`}>
+          <div className={`flex items-center space-x-4 lg:space-x-8 xl:space-x-12 ${isMenuOpen ? 'flex-col space-y-4 w-full md:flex-row md:space-y-0 md:w-auto' : 'hidden md:flex'} transition-smooth`}>
             {/* Navigation Links - Enhanced */}
-            <div className={`flex items-center space-x-3 lg:space-x-6 ${isMenuOpen ? 'flex-col space-y-3 space-x-0' : 'hidden lg:flex'}`}>
+            <div className={`flex items-center space-x-6 lg:space-x-8 xl:space-x-12 ${isMenuOpen ? 'flex-col space-y-3 space-x-0' : 'flex'}`}>
               <a 
                 href="#swap" 
                 className="meme-button px-3 sm:px-4 lg:px-6 py-2 sm:py-2 lg:py-3 rounded-lg sm:rounded-xl text-responsive-xs transition-bounce hover:scale-110 hover:rotate-2" 
