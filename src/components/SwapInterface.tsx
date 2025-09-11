@@ -296,12 +296,14 @@ const SwapInterface = () => {
                 navigator.clipboard.writeText(DOLLAR_TOKEN_MINT);
                 toast.success('Contract address copied! 📋');
               }}
-              className="font-mono text-lg sm:text-xl lg:text-2xl bg-green-400 hover:bg-green-500 p-4 sm:p-6 rounded-xl border-4 border-black transition-bounce hover:scale-105 w-full text-center break-all brutal-shadow-lg glow-effect"
+              className="font-mono text-sm sm:text-lg lg:text-xl bg-green-400 hover:bg-green-500 p-4 sm:p-6 rounded-xl border-4 border-black transition-bounce hover:scale-105 w-full text-center brutal-shadow-lg glow-effect overflow-x-auto"
               style={{
-                wordBreak: 'break-all',
+                whiteSpace: 'nowrap',
                 letterSpacing: '1px',
                 fontWeight: '900',
-                textShadow: '1px 1px 0px #000000'
+                textShadow: '1px 1px 0px #000000',
+                wordBreak: 'keep-all',
+                overflowWrap: 'normal'
               }}
             >
               {DOLLAR_TOKEN_MINT}
