@@ -151,8 +151,8 @@ const SwapInterface = () => {
         {/* Enhanced Header */}
         <div className="text-center mb-6 sm:mb-8 transform rotate-1 animate-bounce-in">
           <div className="bg-green-400 hover:bg-green-500 rounded-2xl border-4 border-black p-4 inline-block transform -rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:rotate-2">
-            <h2 className="text-responsive-lg font-black text-yellow-900 mb-2 crayon-text super-thick">SWAP TO 0.1 SOL!</h2>
-            <p className="text-green-900 text-responsive-sm font-black transform rotate-1 crayon-text super-thick">SUPER EASY! ◎</p>
+            <h2 className="text-responsive-lg font-black text-white mb-2 crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>SWAP TO 0.1 SOL!</h2>
+            <p className="text-white text-responsive-sm font-black transform rotate-1 crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>SUPER EASY! ◎</p>
           </div>
         </div>
 
@@ -160,8 +160,8 @@ const SwapInterface = () => {
         <div className="space-y-6">
           <div className="bg-green-400 hover:bg-green-500 rounded-2xl p-4 sm:p-6 border-6 border-black transform rotate-1 brutal-shadow-lg transition-bounce hover:scale-105 hover:rotate-2">
             <div className="flex justify-between items-center mb-4">
-              <span className="text-responsive-sm text-yellow-900 font-black crayon-text super-thick">From</span>
-              <span className="text-responsive-xs text-yellow-900 font-black crayon-text super-thick">
+              <span className="text-responsive-sm text-white font-black crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>From</span>
+              <span className="text-responsive-xs text-white font-black crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>
                 Balance: {isLoading ? '...' : solBalance.toFixed(4)} SOL
               </span>
             </div>
@@ -169,7 +169,7 @@ const SwapInterface = () => {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-3 meme-card rounded-xl px-4 py-3 border-4 border-black transform -rotate-1 brutal-shadow transition-bounce hover:scale-105">
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-400 via-blue-500 to-purple-500 rounded-full border-2 border-black glow-effect animate-wiggle"></div>
-                <span className="text-green-900 font-black text-responsive-sm crayon-text super-thick">SOL</span>
+                <span className="text-black font-black text-responsive-sm crayon-text" style={{textShadow: '1px 1px 0px #ffffff'}}>SOL</span>
               </div>
               
               <div className="flex-1">
@@ -215,8 +215,8 @@ const SwapInterface = () => {
           {/* Enhanced To Section */}
           <div className="bg-green-400 hover:bg-green-500 rounded-2xl p-4 sm:p-6 border-6 border-black transform -rotate-1 brutal-shadow-lg transition-bounce hover:scale-105 hover:-rotate-2">
             <div className="flex justify-between items-center mb-4">
-              <span className="text-responsive-sm text-yellow-900 font-black crayon-text super-thick">To</span>
-              <span className="text-responsive-xs text-yellow-900 font-black crayon-text super-thick">0.1 SOL Token</span>
+              <span className="text-responsive-sm text-white font-black crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>To</span>
+              <span className="text-responsive-xs text-white font-black crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>0.1 SOL Token</span>
             </div>
             
             <div className="flex items-center space-x-4">
@@ -224,11 +224,11 @@ const SwapInterface = () => {
                 <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-green-500 rounded-full flex items-center justify-center border-2 border-black glow-effect animate-wiggle">
                   <span className="text-lg font-black text-green-900">◎</span>
                 </div>
-                <span className="text-green-900 font-black text-responsive-sm crayon-text super-thick">0.1SOL</span>
+                <span className="text-black font-black text-responsive-sm crayon-text" style={{textShadow: '1px 1px 0px #ffffff'}}>0.1SOL</span>
               </div>
               
               <div className="flex-1 text-right">
-                <span className="text-yellow-900 text-responsive-sm font-black crayon-text super-thick">
+                <span className="text-white text-responsive-sm font-black crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>
                   {solAmount ? '≈ ' + (parseFloat(solAmount) * 1000).toFixed(0) : '0'}
                 </span>
               </div>
@@ -279,15 +279,15 @@ const SwapInterface = () => {
 
           {/* Enhanced Info */}
           <div className="text-center bg-green-500 hover:bg-green-600 p-4 rounded-xl border-4 border-black transform rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:rotate-2">
-            <p className="text-yellow-100 font-black text-responsive-xs crayon-text super-thick">Slippage: 10% • Priority Fee: 0.0001 SOL</p>
-            <p className="text-yellow-100 font-black text-responsive-xs crayon-text super-thick">Powered by PumpPortal • Auto Pool</p>
+            <p className="text-white font-black text-responsive-xs crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>Slippage: 10% • Priority Fee: 0.0001 SOL</p>
+            <p className="text-white font-black text-responsive-xs crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>Powered by PumpPortal • Auto Pool</p>
           </div>
         </div>
       </div>
 
       {/* Enhanced Token Info */}
       <div className="mt-8 meme-card rounded-2xl border-6 border-black p-6 transform rotate-2 brutal-shadow-xl transition-bounce hover:scale-105 hover:rotate-3">
-        <h3 className="text-green-900 font-black mb-4 text-responsive-sm crayon-text super-thick animate-wiggle">TOKEN INFO! 📊</h3>
+        <h3 className="text-black font-black mb-4 text-responsive-sm crayon-text animate-wiggle" style={{textShadow: '1px 1px 0px #ffffff'}}>TOKEN INFO! 📊</h3>
         <div className="space-y-3 text-lg">
           <div className="flex justify-between text-green-800 font-black text-responsive-xs" style={{fontFamily: 'Comic Sans MS, cursive'}}>
             <span>Contract:</span>

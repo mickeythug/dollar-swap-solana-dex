@@ -89,23 +89,23 @@ const MarketCapCounter = () => {
         {/* Enhanced Header */}
         <div className="text-center mb-3 sm:mb-4 lg:mb-6 transform -rotate-2 animate-bounce-in">
           <div className="bg-green-400 hover:bg-green-500 rounded-xl sm:rounded-2xl border-3 sm:border-4 border-black p-2 sm:p-3 lg:p-4 inline-block transform rotate-3 brutal-shadow transition-bounce hover:scale-105 hover:rotate-6">
-            <h2 className="text-responsive-md font-black text-yellow-900 mb-1 sm:mb-2 crayon-text super-thick animate-wiggle">MARKETCAP ROCKET! 🚀</h2>
-            <p className="text-green-900 text-responsive-xs font-black transform -rotate-1 crayon-text super-thick">TO THE MOON! 💵</p>
+            <h2 className="text-responsive-md font-black text-white mb-1 sm:mb-2 crayon-text animate-wiggle" style={{textShadow: '2px 2px 0px #000000'}}>MARKETCAP ROCKET! 🚀</h2>
+            <p className="text-white text-responsive-xs font-black transform -rotate-1 crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>TO THE MOON! 💵</p>
           </div>
         </div>
 
         {/* Enhanced Current marketcap display */}
         <div className="bg-green-400 hover:bg-green-500 rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border-4 sm:border-6 border-black transform -rotate-1 mb-3 sm:mb-4 lg:mb-6 brutal-shadow-lg transition-bounce hover:scale-105 hover:-rotate-2">
           <div className="text-center">
-            <div className="text-yellow-900 text-responsive-xs font-black mb-1 sm:mb-2 crayon-text super-thick">
+            <div className="text-white text-responsive-xs font-black mb-1 sm:mb-2 crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>
               CURRENT MARKETCAP! 💰
             </div>
-            <div className="text-responsive-xl font-black text-yellow-900 mb-1 sm:mb-2 transform rotate-2 crayon-text super-thick glow-effect animate-bounce-in" style={{
-              textShadow: '2px 2px 0px #000000'
+            <div className="text-responsive-xl font-black text-white mb-1 sm:mb-2 transform rotate-2 crayon-text glow-effect animate-bounce-in" style={{
+              textShadow: '3px 3px 0px #000000'
             }}>
               {formatMarketCap(currentMarketCap)}
             </div>
-            <div className="text-green-900 text-responsive-xs font-black crayon-text super-thick">
+            <div className="text-white text-responsive-xs font-black crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>
               TARGET: {formatMarketCap(targetMarketCap)} 🎯
             </div>
           </div>
@@ -114,7 +114,7 @@ const MarketCapCounter = () => {
         {/* Enhanced Progress bar */}
         <div className="bg-green-500 hover:bg-green-600 rounded-lg sm:rounded-xl p-2 sm:p-3 lg:p-4 border-3 sm:border-4 border-black transform rotate-1 mb-2 sm:mb-3 lg:mb-4 brutal-shadow transition-bounce hover:scale-105 hover:rotate-2">
           <div className="mb-2 sm:mb-3">
-            <span className="text-yellow-100 font-black text-responsive-xs crayon-text super-thick">
+            <span className="text-white font-black text-responsive-xs crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>
               PROGRESS: {progressPercentage.toFixed(1)}% 📈
             </span>
           </div>
@@ -132,7 +132,7 @@ const MarketCapCounter = () => {
 
         {/* Enhanced Milestones with better responsiveness */}
         <div className="bg-yellow-400 hover:bg-yellow-500 rounded-lg sm:rounded-xl p-2 sm:p-3 lg:p-4 border-3 sm:border-4 border-black transform -rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:-rotate-2">
-          <div className="text-green-900 font-black text-responsive-xs mb-2 sm:mb-3 crayon-text super-thick animate-wiggle">
+          <div className="text-black font-black text-responsive-xs mb-2 sm:mb-3 crayon-text animate-wiggle" style={{textShadow: '1px 1px 0px #ffffff'}}>
             MILESTONES! 🏆
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 sm:gap-2">
@@ -149,10 +149,10 @@ const MarketCapCounter = () => {
                   animationDelay: `${index * 0.1}s`
                 }}
               >
-                <div className="text-responsive-xs font-black crayon-text super-thick animate-wiggle">
+                <div className="text-responsive-xs font-black crayon-text animate-wiggle">
                   {milestone.emoji}
                 </div>
-                <div className="text-xs sm:text-sm font-black crayon-text super-thick">
+                <div className="text-xs sm:text-sm font-black crayon-text" style={{textShadow: reachedMilestones.includes(milestone.value) ? '1px 1px 0px #000000' : '1px 1px 0px #ffffff'}}>
                   {formatMarketCap(milestone.value)}
                 </div>
               </div>
@@ -163,7 +163,7 @@ const MarketCapCounter = () => {
         {/* Enhanced Loading indicator */}
         {isLoading && (
           <div className="mt-2 sm:mt-3 lg:mt-4 text-center animate-bounce-in">
-            <div className="text-green-900 font-black text-responsive-xs crayon-text super-thick animate-wiggle">
+            <div className="text-black font-black text-responsive-xs crayon-text animate-wiggle" style={{textShadow: '1px 1px 0px #ffffff'}}>
               <span className="animate-spin inline-block">🔄</span> LOADING... MEME POWER! ⚡
             </div>
           </div>

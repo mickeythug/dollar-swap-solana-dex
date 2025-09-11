@@ -11,10 +11,11 @@ const Hero = () => {
           <div className="inline-flex items-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 meme-card rounded-2xl sm:rounded-3xl mb-4 sm:mb-6 lg:mb-8 brutal-shadow-lg transition-bounce hover:scale-105 hover:rotate-1 animate-bounce-in" style={{
             transform: 'rotate(-2deg) skew(-1deg) scale(1.05)'
           }}>
-            <span className="text-responsive-sm text-green-900 crayon-text super-thick animate-wiggle" style={{
+            <span className="text-responsive-sm text-black crayon-text animate-wiggle" style={{
               transform: 'rotate(3deg) translateY(-1px)',
               display: 'inline-block',
-              letterSpacing: '3px'
+              letterSpacing: '3px',
+              textShadow: '2px 2px 0px #ffffff'
             }}>
               ◎ MEME COIN IS HERE!!! ◎
             </span>
@@ -55,9 +56,10 @@ const Hero = () => {
             position: 'relative',
             animationDelay: '0.4s'
           }}>
-            <p className="text-responsive-lg text-yellow-900 mb-3 sm:mb-4 lg:mb-6 leading-relaxed crayon-text super-thick" style={{
+            <p className="text-responsive-lg text-white mb-3 sm:mb-4 lg:mb-6 leading-relaxed crayon-text" style={{
               transform: 'rotate(-1deg) skew(0.5deg)',
-              letterSpacing: '3px'
+              letterSpacing: '3px',
+              textShadow: '3px 3px 0px #000000'
             }}>
               <span className="transition-bounce hover:scale-110 inline-block" style={{
                 transform: 'rotate(2deg) translateY(-2px)'
@@ -87,10 +89,11 @@ const Hero = () => {
               transform: 'rotate(-2deg) skew(1deg)',
               position: 'relative'
             }}>
-              <span className="text-responsive-sm text-green-900 crayon-text super-thick" style={{
+              <span className="text-responsive-sm text-black crayon-text" style={{
                 transform: 'rotate(1deg) translateX(-1px)',
                 display: 'inline-block',
-                letterSpacing: '2px'
+                letterSpacing: '2px',
+                textShadow: '2px 2px 0px #ffffff'
               }}>
                 <span className="transition-bounce hover:scale-110 inline-block" style={{
                   transform: 'rotate(-1deg)'
@@ -126,9 +129,10 @@ const Hero = () => {
                 transform: 'rotate(5deg)',
                 display: 'inline-block'
               }}>◎</span>
-              <span className="text-green-900 crayon-text super-thick text-responsive-sm" style={{
+              <span className="text-black crayon-text text-responsive-sm" style={{
                 transform: 'rotate(1deg) translateY(-1px)',
-                letterSpacing: '2px'
+                letterSpacing: '2px',
+                textShadow: '1px 1px 0px #ffffff'
               }}>
                 Just 0.1 SOL!
               </span>
@@ -142,9 +146,10 @@ const Hero = () => {
                 transform: 'rotate(-3deg)',
                 display: 'inline-block'
               }}>🤝</span>
-              <span className="text-yellow-900 crayon-text super-thick text-responsive-sm" style={{
+              <span className="text-white crayon-text text-responsive-sm" style={{
                 transform: 'rotate(-1deg) translateX(1px)',
-                letterSpacing: '2px'
+                letterSpacing: '2px',
+                textShadow: '2px 2px 0px #000000'
               }}>
                 Community!
               </span>
@@ -158,9 +163,10 @@ const Hero = () => {
                 transform: 'rotate(4deg)',
                 display: 'inline-block'
               }}>💎</span>
-              <span className="text-green-900 crayon-text super-thick text-responsive-sm" style={{
+              <span className="text-black crayon-text text-responsive-sm" style={{
                 transform: 'rotate(2deg) translateY(1px)',
-                letterSpacing: '3px'
+                letterSpacing: '3px',
+                textShadow: '1px 1px 0px #ffffff'
               }}>
                 HODL!
               </span>
