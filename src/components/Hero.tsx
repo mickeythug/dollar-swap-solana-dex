@@ -7,25 +7,13 @@ const Hero = () => {
     <section className="relative z-10 px-2 sm:px-4 lg:px-8 py-8 sm:py-12 lg:py-16 text-center">
       <div className="max-w-6xl mx-auto">
         <div className="mb-6 sm:mb-8">
-          {/* Advanced 3D Holographic Logo with Particle Effects */}
+          {/* Static Logo */}
           <div className="flex justify-center mb-8 sm:mb-12 lg:mb-16">
-            <div className="relative perspective-1000">
-              {/* Main Logo with Advanced Effects */}
-              <div className="logo-container">
-                <img 
-                  src="/lovable-uploads/a2925ada-d9a1-4459-b346-251f5ca5b59d.png" 
-                  alt="0.1 SOL Community Logo"
-                  className="logo-holographic w-[60rem] h-auto sm:w-[72rem] lg:w-[84rem] xl:w-[96rem]"
-                />
-                
-                {/* Holographic Overlay Layers */}
-                <div className="holographic-layer-1"></div>
-                <div className="holographic-layer-2"></div>
-                <div className="holographic-layer-3"></div>
-                
-              </div>
-              
-            </div>
+            <img 
+              src="/lovable-uploads/a2925ada-d9a1-4459-b346-251f5ca5b59d.png" 
+              alt="0.1 SOL Community Logo"
+              className="w-[60rem] h-auto sm:w-[72rem] lg:w-[84rem] xl:w-[96rem]"
+            />
           </div>
           
           {/* Enhanced Main Title */}
