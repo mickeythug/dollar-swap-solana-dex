@@ -1,33 +1,16 @@
 
 import React from 'react';
-import { WalletProvider } from '@solana/wallet-adapter-react';
-import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
-import { 
-  PhantomWalletAdapter,
-  SolflareWalletAdapter,
-} from '@solana/wallet-adapter-wallets';
-import { clusterApiUrl } from '@solana/web3.js';
+import { ConnectionProvider } from '@solana/wallet-adapter-react';
+import { WalletContextProvider } from '../contexts/WalletContextProvider';
 import SwapInterface from '../components/SwapInterface';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import MarketCapCounter from '../components/MarketCapCounter';
 
-// Import wallet adapter CSS
-import '@solana/wallet-adapter-react-ui/styles.css';
-
 const Index = () => {
-  // Configure supported wallets
-  const wallets = [
-    new PhantomWalletAdapter(),
-    new SolflareWalletAdapter(),
-  ];
-
-  const endpoint = clusterApiUrl('mainnet-beta');
-
   return (
-    <WalletProvider wallets={wallets} autoConnect>
-      <WalletModalProvider>
+    <WalletContextProvider>
         <div className="min-h-screen bg-green-800 px-2 lg:px-6 xl:px-8" style={{
           backgroundImage: `
             linear-gradient(45deg, #166534 25%, transparent 25%),
@@ -130,8 +113,7 @@ const Index = () => {
           
           <Footer />
         </div>
-      </WalletModalProvider>
-    </WalletProvider>
+    </WalletContextProvider>
   );
 };
 

@@ -1,12 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
 import { useWalletModal } from '@solana/wallet-adapter-react-ui';
-import { VersionedTransaction } from '@solana/web3.js';
-import { Card } from '@/components/ui/card';
+import { LAMPORTS_PER_SOL } from '@solana/web3.js';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
 import { ArrowDown } from 'lucide-react';
+import { JupiterSwapService } from '@/services/jupiterSwap';
+import { UserService } from '@/services/userService';
+
+// Token addresses on Solana
+const TOKENS = {
+  SOL: 'So11111111111111111111111111111111111111112',
+  USDC: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
+  USDT: 'Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB',
+  BONK: 'DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263',
+};
 
 const DOLLAR_TOKEN_MINT = '3o8h4sjvLtxxPmVx9boN7yC4Tzd6zse5Ycb6VUHbpump';
 
@@ -18,12 +27,23 @@ const SwapInterface = () => {
   const [isSwapping, setIsSwapping] = useState(false);
   const [solBalance, setSolBalance] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
+  const [quote, setQuote] = useState<any>(null);
+  const [swapService, setSwapService] = useState<JupiterSwapService | null>(null);
+  const [userService] = useState(new UserService());
+
+  useEffect(() => {
+    // Initialize Jupiter swap service
+    const rpcEndpoint = process.env.VITE_RPC_ENDPOINT || 'https://api.mainnet-beta.solana.com';
+    setSwapService(new JupiterSwapService(rpcEndpoint));
+  }, []);
 
   useEffect(() => {
     if (publicKey) {
       fetchSolBalance();
+      // Create or update user profile when wallet connects
+      userService.createOrUpdateUser(publicKey.toBase58());
     }
-  }, [publicKey, connection]);
+  }, [publicKey, connection, userService]);
 
   const fetchSolBalance = async () => {
     if (!publicKey) return;
@@ -40,8 +60,32 @@ const SwapInterface = () => {
     }
   };
 
+  // Get quote from Jupiter
+  const fetchQuote = async () => {
+    if (!swapService || !solAmount || parseFloat(solAmount) <= 0) return;
+
+    try {
+      setIsLoading(true);
+      const inputAmount = parseFloat(solAmount) * LAMPORTS_PER_SOL;
+      
+      const quoteData = await swapService.getQuote({
+        inputMint: TOKENS.SOL,
+        outputMint: DOLLAR_TOKEN_MINT,
+        amount: inputAmount,
+        userPublicKey: publicKey?.toBase58() || '',
+      });
+
+      setQuote(quoteData);
+    } catch (error) {
+      console.error('Error fetching quote:', error);
+      toast.error('Failed to get quote');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const executeSwap = async () => {
-    if (!publicKey || !signTransaction) {
+    if (!publicKey || !signTransaction || !swapService) {
       toast.error('Please connect your wallet first');
       return;
     }
@@ -59,58 +103,48 @@ const SwapInterface = () => {
     setIsSwapping(true);
 
     try {
-      // Call PumpPortal API
-      const response = await fetch('https://pumpportal.fun/api/trade-local', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          publicKey: publicKey.toString(),
-          action: 'buy',
-          mint: DOLLAR_TOKEN_MINT,
-          denominatedInSol: 'true',
-          amount: parseFloat(solAmount),
-          slippage: 10,
-          priorityFee: 0.0001,
-          pool: 'auto'
-        }),
-      });
+      const inputAmount = parseFloat(solAmount) * LAMPORTS_PER_SOL;
+      
+      const result = await swapService.executeSwap(
+        { publicKey, signTransaction, connected } as any,
+        {
+          inputMint: TOKENS.SOL,
+          outputMint: DOLLAR_TOKEN_MINT,
+          amount: inputAmount,
+          userPublicKey: publicKey.toBase58(),
+        }
+      );
 
-      if (response.status === 200) {
-        const data = await response.arrayBuffer();
-        const tx = VersionedTransaction.deserialize(new Uint8Array(data));
-        
-        // Sign the transaction
-        const signedTx = await signTransaction(tx);
-        
-        // Send the transaction
-        const signature = await connection.sendTransaction(signedTx);
-        
-        // Wait for confirmation
-        await connection.confirmTransaction(signature, 'confirmed');
-        
+      if (result.success) {
+        // Record transaction in Supabase
+        const user = await userService.getUserByWallet(publicKey.toBase58());
+        if (user) {
+          await userService.recordSwapTransaction(
+            user.id,
+            publicKey.toBase58(),
+            result.signature,
+            'SOL',
+            '0.1SOL',
+            parseFloat(solAmount),
+            quote?.outAmount || 0
+          );
+        }
+
         toast.success('Swap completed successfully!', {
-          description: `Transaction: ${signature.slice(0, 8)}...`,
+          description: `Transaction: ${result.signature.slice(0, 8)}...`,
           action: {
             label: 'View on Solscan',
-            onClick: () => window.open(`https://solscan.io/tx/${signature}`, '_blank'),
+            onClick: () => window.open(result.explorerUrl, '_blank'),
           },
         });
 
         // Reset form and refresh balance
         setSolAmount('');
+        setQuote(null);
         fetchSolBalance();
-        
-      } else {
-        const errorText = await response.text();
-        console.error('Swap error:', errorText);
-        toast.error('Swap failed', {
-          description: 'Please try again or check your input values',
-        });
       }
     } catch (error) {
-      console.error('Swap error:', error);
+      console.error('Swap failed:', error);
       toast.error('Swap failed', {
         description: error instanceof Error ? error.message : 'An unexpected error occurred',
       });
@@ -178,6 +212,7 @@ const SwapInterface = () => {
                   placeholder="0.00"
                   value={solAmount}
                   onChange={(e) => setSolAmount(e.target.value)}
+                  onBlur={fetchQuote}
                   className="meme-input text-base font-black text-right p-4 rounded-xl"
                   step="0.0001"
                   min="0"
@@ -228,7 +263,7 @@ const SwapInterface = () => {
               
               <div className="flex-1 text-right">
                 <span className="text-white text-base font-black crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>
-                  {solAmount ? '≈ ' + (parseFloat(solAmount) * 1000).toFixed(0) : '0'}
+                  {quote ? (quote.outAmount / 1000000).toFixed(6) : (solAmount ? '≈ ' + (parseFloat(solAmount) * 1000).toFixed(0) : '0')}
                 </span>
               </div>
             </div>
@@ -275,10 +310,22 @@ const SwapInterface = () => {
             </div>
           )}
 
+          {/* Quote Info */}
+          {quote && (
+            <div className="bg-blue-600 hover:bg-blue-700 p-4 rounded-xl border-4 border-black transform rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:rotate-2">
+              <p className="text-white font-black text-base crayon-text mb-2" style={{textShadow: '1px 1px 0px #000000'}}>
+                You'll receive: {(quote.outAmount / 1000000).toFixed(6)} 0.1SOL
+              </p>
+              <p className="text-white font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>
+                Price Impact: {quote.priceImpactPct}%
+              </p>
+            </div>
+          )}
+
           {/* Enhanced Info */}
           <div className="text-center bg-green-700 hover:bg-green-800 p-4 rounded-xl border-4 border-black transform rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:rotate-2">
-            <p className="text-white font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>Slippage: 10% • Priority Fee: 0.0001 SOL</p>
-            <p className="text-white font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>Powered by PumpPortal • Auto Pool</p>
+            <p className="text-white font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>Slippage: 0.5% • Auto Priority Fee</p>
+            <p className="text-white font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>Powered by Jupiter Aggregator</p>
           </div>
         </div>
       </div>
