@@ -143,14 +143,14 @@ const Index = () => {
           <Footer />
           
           {/* Luxury Framed Dollar Bill - Very Bottom */}
-          <section className="relative z-10 px-2 sm:px-4 lg:px-8 py-8 sm:py-16">
-            <div className="max-w-4xl mx-auto flex justify-center">
-              <div className="luxury-bill-frame" style={{ transform: 'scale(1.5)' }}>
+          <section className="relative z-10 px-2 sm:px-4 lg:px-8 py-16 sm:py-24">
+            <div className="max-w-3xl mx-auto flex justify-center">
+              <div className="luxury-bill-frame transform scale-125 sm:scale-150">
                 <div className="luxury-frame-inner">
                   <img 
                     src="/lovable-uploads/c8cb0411-d729-422a-917f-f1e1c941f14b.png"
                     alt="0.1 SOL United Degen Community"
-                    className="w-full h-auto"
+                    className="w-full h-auto max-w-full"
                   />
                 </div>
               </div>
