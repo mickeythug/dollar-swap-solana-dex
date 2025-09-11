@@ -73,7 +73,9 @@ const SwapInterface = () => {
       setQuote(quoteData.quote);
     } catch (error) {
       console.error('Error fetching quote:', error);
-      toast.error('Failed to get quote');
+      toast.error('Misslyckades att hämta quote', {
+        description: error instanceof Error ? error.message : 'Okänt fel'
+      });
     } finally {
       setIsLoading(false);
     }

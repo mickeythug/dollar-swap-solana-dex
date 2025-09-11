@@ -53,13 +53,11 @@ export class PumpFunService {
     
     const response = await fetch(url, {
       method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
     });
 
     if (!response.ok) {
-      throw new Error(`Failed to get quote: ${response.statusText}`);
+      const text = await response.text().catch(() => '');
+      throw new Error(`Pump.fun quote failed (${response.status}): ${text || response.statusText}`);
     }
 
     return await response.json();
@@ -83,7 +81,8 @@ export class PumpFunService {
     });
 
     if (!response.ok) {
-      throw new Error(`Failed to get swap transaction: ${response.statusText}`);
+      const text = await response.text().catch(() => '');
+      throw new Error(`Pump.fun swap failed (${response.status}): ${text || response.statusText}`);
     }
 
     return await response.json();
