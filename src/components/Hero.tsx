@@ -21,6 +21,21 @@ const Hero = () => {
             </span>
           </div>
           
+          {/* Floating Logo */}
+          <div className="flex justify-center mb-8 sm:mb-12 lg:mb-16">
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/a2925ada-d9a1-4459-b346-251f5ca5b59d.png" 
+                alt="0.1 SOL Community Logo"
+                className="w-80 h-auto sm:w-96 lg:w-[28rem] xl:w-[32rem] transform transition-all duration-300 hover:scale-110 hover:rotate-2 drop-shadow-2xl"
+                style={{
+                  filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3))',
+                  animation: 'float 3s ease-in-out infinite'
+                }}
+              />
+            </div>
+          </div>
+          
           {/* Enhanced Main Title */}
           <div className="flex justify-center">
             <h1 className="inline-block bg-yellow-400 text-black px-4 sm:px-6 py-2 sm:py-3 rounded-2xl border-4 border-black crayon-text super-thick mb-4 sm:mb-6 lg:mb-8 leading-tight drop-shadow-lg glow-effect" style={{
