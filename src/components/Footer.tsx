@@ -13,7 +13,7 @@ const Footer = () => {
               transform: 'rotate(2deg) skew(0.5deg)',
               animationDelay: '0.2s'
             }}>
-              <div className="bg-green-400 hover:bg-green-500 rounded-xl sm:rounded-2xl border-4 sm:border-6 border-black p-3 sm:p-4 lg:p-6 brutal-shadow-lg transition-bounce hover:scale-105 hover:rotate-2" style={{
+              <div className="bg-green-600 hover:bg-green-700 rounded-xl sm:rounded-2xl border-4 sm:border-6 border-black p-3 sm:p-4 lg:p-6 brutal-shadow-lg transition-bounce hover:scale-105 hover:rotate-2" style={{
                 transform: 'rotate(-1deg) skew(-0.5deg)'
               }}>
                 <h3 className="text-yellow-900 crayon-text super-thick text-responsive-lg mb-3 sm:mb-4 lg:mb-6 animate-wiggle">
@@ -24,13 +24,13 @@ const Footer = () => {
                     This is just a MEME TOKEN called 0.1 SOL! ◎
                   </p>
                   <p className="text-green-900 leading-relaxed font-black crayon-text super-thick">
-                    The idea is SUPER EASY — just buy 0.1 SOL worth! That's it! 🚀
+                    The idea is SUPER EASY — just buy 0.1 SOL worth! That's it!
                   </p>
                   <p className="text-green-900 leading-relaxed font-black crayon-text super-thick">
-                    No complicated stuff! Just holding together as a community! 🤝
+                    No complicated stuff! Just holding together as a community!
                   </p>
                 </div>
-                <div className="bg-red-400 hover:bg-red-500 p-3 sm:p-4 lg:p-6 rounded-lg sm:rounded-xl border-4 sm:border-6 border-black border-dashed brutal-shadow mt-4 transition-bounce hover:scale-105 hover:rotate-3" style={{
+                <div className="bg-red-600 hover:bg-red-700 p-3 sm:p-4 lg:p-6 rounded-lg sm:rounded-xl border-4 sm:border-6 border-black border-dashed brutal-shadow mt-4 transition-bounce hover:scale-105 hover:rotate-3" style={{
                   transform: 'rotate(-2deg) skew(1deg)'
                 }}>
                   <p className="text-yellow-100 text-responsive-sm crayon-text super-thick animate-wiggle">
@@ -45,20 +45,20 @@ const Footer = () => {
               transform: 'rotate(-1deg) skew(0.5deg)',
               animationDelay: '0.4s'
             }}>
-              <div className="bg-green-400 hover:bg-green-500 rounded-xl sm:rounded-2xl border-4 sm:border-6 border-black p-3 sm:p-4 lg:p-6 brutal-shadow-lg transition-bounce hover:scale-105 hover:-rotate-2" style={{
+              <div className="bg-green-600 hover:bg-green-700 rounded-xl sm:rounded-2xl border-4 sm:border-6 border-black p-3 sm:p-4 lg:p-6 brutal-shadow-lg transition-bounce hover:scale-105 hover:-rotate-2" style={{
                 transform: 'rotate(1deg) skew(-0.5deg)'
               }}>
                 <h3 className="text-yellow-900 crayon-text super-thick text-responsive-lg mb-3 sm:mb-4 lg:mb-6 animate-wiggle">
-                  Join the FUN! 🎊
+                  Join the FUN!
                 </h3>
                 <p className="text-green-900 text-responsive-sm mb-3 sm:mb-4 lg:mb-6 font-black crayon-text super-thick">
-                  Come hang out with other 0.1 SOL holders! 😄
+                  Come hang out with other 0.1 SOL holders!
                 </p>
                 <div className="space-y-2 sm:space-y-3 lg:space-y-4">
                   {[
-                    { icon: '📱', text: 'Telegram - LET\'S CHAT!', delay: '0.6s' },
-                    { icon: '🐦', text: 'Twitter - FOLLOW US!', delay: '0.8s' },
-                    { icon: '💬', text: 'Discord - MEMES HERE!', delay: '1s' }
+                    { icon: '', text: 'Telegram - LET\'S CHAT!', delay: '0.6s' },
+                    { icon: '', text: 'Twitter - FOLLOW US!', delay: '0.8s' },
+                    { icon: '', text: 'Discord - MEMES HERE!', delay: '1s' }
                   ].map((social, index) => (
                     <a 
                       key={index}
@@ -70,7 +70,7 @@ const Footer = () => {
                       }}
                     >
                       <span className="text-green-900 text-responsive-sm crayon-text super-thick">
-                        {social.icon} {social.text}
+                        {social.text}
                       </span>
                     </a>
                   ))}
@@ -84,14 +84,14 @@ const Footer = () => {
             transform: 'rotate(1deg)',
             animationDelay: '1.2s'
           }}>
-            <div className="bg-green-400 hover:bg-green-500 p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl border-3 sm:border-4 border-black inline-block brutal-shadow-lg transition-bounce hover:scale-105 hover:rotate-3" style={{
+            <div className="bg-green-600 hover:bg-green-700 p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl border-3 sm:border-4 border-black inline-block brutal-shadow-lg transition-bounce hover:scale-105 hover:rotate-3" style={{
               transform: 'rotate(-1deg) skew(-0.5deg)'
             }}>
               <p className="text-yellow-900 text-responsive-sm crayon-text super-thick animate-wiggle">
-                © 2024 0.1 SOL MEME TOKEN! Made with ❤️ and MEMES! ◎
+                © 2024 0.1 SOL MEME TOKEN! Made with LOVE and MEMES! ◎
               </p>
               <p className="text-green-900 text-responsive-xs mt-1 sm:mt-2 crayon-text super-thick">
-                ALWAYS DYOR! THIS IS JUST FOR FUN! 🤪
+                ALWAYS DYOR! THIS IS JUST FOR FUN!
               </p>
             </div>
           </div>

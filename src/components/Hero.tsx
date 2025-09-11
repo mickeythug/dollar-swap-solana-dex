@@ -54,7 +54,7 @@ const Hero = () => {
           </div>
           
           {/* Enhanced Description Box */}
-          <div className="meme-card bg-green-400 p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl brutal-shadow-xl max-w-4xl mx-auto transition-bounce hover:scale-105 hover:rotate-1 animate-bounce-in" style={{
+          <div className="meme-card bg-green-600 p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl brutal-shadow-xl max-w-4xl mx-auto transition-bounce hover:scale-105 hover:rotate-1 animate-bounce-in" style={{
             transform: 'rotate(1deg) skew(-0.5deg)',
             position: 'relative',
             animationDelay: '0.4s'
@@ -88,7 +88,7 @@ const Hero = () => {
             </p>
             
             {/* Enhanced Sub-description */}
-            <div className="bg-yellow-300 p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl border-4 border-black border-dashed inline-block brutal-shadow transition-bounce hover:scale-105 hover:rotate-2" style={{
+            <div className="bg-yellow-600 p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl border-4 border-black border-dashed inline-block brutal-shadow transition-bounce hover:scale-105 hover:rotate-2" style={{
               transform: 'rotate(-2deg) skew(1deg)',
               position: 'relative'
             }}>
@@ -115,7 +115,7 @@ const Hero = () => {
                 }}>HODL</span>{' '}
                 <span className="transition-bounce hover:scale-110 inline-block" style={{
                   transform: 'rotate(2deg)'
-                }}>together!</span> ◎🚀
+                }}>together!</span> ◎
               </span>
             </div>
           </div>
@@ -141,14 +141,11 @@ const Hero = () => {
               </span>
             </div>
             
-            <div className="flex items-center space-x-2 sm:space-x-3 bg-green-400 hover:bg-green-500 px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 rounded-xl sm:rounded-2xl border-4 border-black border-dashed brutal-shadow-lg transition-bounce hover:scale-110 hover:rotate-3 animate-bounce-in" style={{
-              transform: 'rotate(2deg) skew(1deg)',
-              animationDelay: '0.8s'
-            }}>
+            <div className="bg-green-600 hover:bg-green-700 p-4 rounded-xl border-4 border-black transform -rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:-rotate-2 text-center">
               <span className="text-2xl sm:text-3xl lg:text-4xl transition-bounce hover:scale-125 animate-wiggle" style={{
                 transform: 'rotate(-3deg)',
                 display: 'inline-block'
-              }}>🤝</span>
+              }}>👥</span>
               <span className="text-white crayon-text text-responsive-sm" style={{
                 transform: 'rotate(-1deg) translateX(1px)',
                 letterSpacing: '2px',
@@ -158,14 +155,11 @@ const Hero = () => {
               </span>
             </div>
             
-            <div className="flex items-center space-x-2 sm:space-x-3 bg-yellow-400 hover:bg-yellow-500 px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 rounded-xl sm:rounded-2xl border-4 border-black border-dashed brutal-shadow-lg transition-bounce hover:scale-110 hover:rotate-3 animate-bounce-in" style={{
-              transform: 'rotate(-1deg) skew(-0.5deg)',
-              animationDelay: '1s'
-            }}>
+            <div className="bg-yellow-600 hover:bg-yellow-700 p-4 rounded-xl border-4 border-black transform rotate-2 brutal-shadow transition-bounce hover:scale-105 hover:rotate-3 text-center">
               <span className="text-2xl sm:text-3xl lg:text-4xl transition-bounce hover:scale-125 animate-wiggle" style={{
                 transform: 'rotate(4deg)',
                 display: 'inline-block'
-              }}>💎</span>
+              }}>⭐</span>
               <span className="text-black crayon-text text-responsive-sm" style={{
                 transform: 'rotate(2deg) translateY(1px)',
                 letterSpacing: '3px',

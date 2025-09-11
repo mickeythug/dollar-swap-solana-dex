@@ -77,11 +77,11 @@ const Index = () => {
                   </p>
                   
                   <p className="text-responsive-md font-black leading-relaxed">
-                    The idea is SUPER EASY — just buy 0.1 SOL worth! That's it! 🚀
+                    The idea is SUPER EASY — just buy 0.1 SOL worth! That's it!
                   </p>
                   
                   <p className="text-responsive-md font-black leading-relaxed">
-                    No complicated stuff! Just holding together as a community! 🤝
+                    No complicated stuff! Just holding together as a community!
                   </p>
                   
                   <div className="bg-red-500 p-4 sm:p-6 rounded-2xl border-4 border-black transform -rotate-1 brutal-shadow-lg">
@@ -91,27 +91,24 @@ const Index = () => {
                   </div>
                   
                   <p className="text-responsive-md font-black leading-relaxed">
-                    Join the FUN! 🎊<br />
-                    Come hang out with other 0.1 SOL holders! 😄
+                    Join the FUN!<br />
+                    Come hang out with other 0.1 SOL holders!
                   </p>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-6 sm:mt-8">
-                    <div className="bg-blue-400 hover:bg-blue-500 p-4 rounded-xl border-4 border-black transform rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:rotate-2 text-center">
-                      <div className="text-2xl sm:text-3xl mb-2">📱</div>
+                    <div className="bg-blue-600 hover:bg-blue-700 p-4 rounded-xl border-4 border-black transform rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:rotate-2 text-center">
                       <div className="font-black text-white text-responsive-xs" style={{textShadow: '1px 1px 0px #000000'}}>
                         Telegram - LET'S CHAT!
                       </div>
                     </div>
                     
-                    <div className="bg-sky-400 hover:bg-sky-500 p-4 rounded-xl border-4 border-black transform -rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:-rotate-2 text-center">
-                      <div className="text-2xl sm:text-3xl mb-2">🐦</div>
+                    <div className="bg-sky-600 hover:bg-sky-700 p-4 rounded-xl border-4 border-black transform -rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:-rotate-2 text-center">
                       <div className="font-black text-white text-responsive-xs" style={{textShadow: '1px 1px 0px #000000'}}>
                         Twitter - FOLLOW US!
                       </div>
                     </div>
                     
-                    <div className="bg-purple-400 hover:bg-purple-500 p-4 rounded-xl border-4 border-black transform rotate-2 brutal-shadow transition-bounce hover:scale-105 hover:rotate-3 text-center">
-                      <div className="text-2xl sm:text-3xl mb-2">💬</div>
+                    <div className="bg-purple-600 hover:bg-purple-700 p-4 rounded-xl border-4 border-black transform rotate-2 brutal-shadow transition-bounce hover:scale-105 hover:rotate-3 text-center">
                       <div className="font-black text-white text-responsive-xs" style={{textShadow: '1px 1px 0px #000000'}}>
                         Discord - MEMES HERE!
                       </div>
@@ -120,10 +117,10 @@ const Index = () => {
                   
                   <div className="text-center mt-8 sm:mt-12">
                     <p className="text-responsive-xs font-black mb-4">
-                      © 2024 0.1 SOL MEME TOKEN! Made with ❤️ and MEMES! ◎
+                      © 2024 0.1 SOL MEME TOKEN! Made with LOVE and MEMES! ◎
                     </p>
-                    <p className="text-responsive-xs font-black bg-yellow-400 hover:bg-yellow-500 p-3 rounded-lg border-3 border-black inline-block brutal-shadow">
-                      ALWAYS DYOR! THIS IS JUST FOR FUN! 🤪
+                    <p className="text-responsive-xs font-black bg-yellow-600 hover:bg-yellow-700 p-3 rounded-lg border-3 border-black inline-block brutal-shadow">
+                      ALWAYS DYOR! THIS IS JUST FOR FUN!
                     </p>
                   </div>
                 </div>

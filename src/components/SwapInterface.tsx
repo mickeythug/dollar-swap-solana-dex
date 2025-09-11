@@ -158,7 +158,7 @@ const SwapInterface = () => {
 
         {/* Enhanced From Section */}
         <div className="space-y-6">
-          <div className="bg-green-400 hover:bg-green-500 rounded-2xl p-4 sm:p-6 border-6 border-black transform rotate-1 brutal-shadow-lg transition-bounce hover:scale-105 hover:rotate-2">
+          <div className="bg-green-600 hover:bg-green-700 rounded-2xl p-4 sm:p-6 border-6 border-black transform rotate-1 brutal-shadow-lg transition-bounce hover:scale-105 hover:rotate-2">
             <div className="flex justify-between items-center mb-4">
               <span className="text-base text-white font-black crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>From</span>
               <span className="text-base text-white font-black crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>
@@ -207,13 +207,13 @@ const SwapInterface = () => {
 
           {/* Enhanced Swap Arrow */}
           <div className="flex justify-center">
-            <div className="w-16 h-16 bg-yellow-400 hover:bg-yellow-500 rounded-full flex items-center justify-center border-6 border-black transform rotate-12 brutal-shadow transition-bounce hover:scale-125 hover:rotate-45 glow-effect animate-wiggle">
+            <div className="w-16 h-16 bg-yellow-600 hover:bg-yellow-700 rounded-full flex items-center justify-center border-6 border-black transform rotate-12 brutal-shadow transition-bounce hover:scale-125 hover:rotate-45 glow-effect animate-wiggle">
               <ArrowDown size={32} className="text-green-900" strokeWidth={4} />
             </div>
           </div>
 
           {/* Enhanced To Section */}
-          <div className="bg-green-400 hover:bg-green-500 rounded-2xl p-4 sm:p-6 border-6 border-black transform -rotate-1 brutal-shadow-lg transition-bounce hover:scale-105 hover:-rotate-2">
+          <div className="bg-green-600 hover:bg-green-700 rounded-2xl p-4 sm:p-6 border-6 border-black transform -rotate-1 brutal-shadow-lg transition-bounce hover:scale-105 hover:-rotate-2">
             <div className="flex justify-between items-center mb-4">
               <span className="text-base text-white font-black crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>To</span>
               <span className="text-base text-white font-black crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>0.1 SOL Token</span>
@@ -278,7 +278,7 @@ const SwapInterface = () => {
           )}
 
           {/* Enhanced Info */}
-          <div className="text-center bg-green-500 hover:bg-green-600 p-4 rounded-xl border-4 border-black transform rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:rotate-2">
+          <div className="text-center bg-green-700 hover:bg-green-800 p-4 rounded-xl border-4 border-black transform rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:rotate-2">
             <p className="text-white font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>Slippage: 10% • Priority Fee: 0.0001 SOL</p>
             <p className="text-white font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>Powered by PumpPortal • Auto Pool</p>
           </div>
@@ -287,7 +287,7 @@ const SwapInterface = () => {
 
       {/* Contract Address Only - Properly Fitted Container */}
       <div className="mt-8 w-full">
-        <div className="bg-yellow-400 hover:bg-yellow-500 rounded-2xl border-6 border-black p-6 sm:p-8 lg:p-10 transform rotate-1 brutal-shadow-xl transition-bounce hover:scale-105 hover:-rotate-1 overflow-hidden w-full mx-auto" style={{maxWidth: '200rem'}}>
+        <div className="bg-yellow-600 hover:bg-yellow-700 rounded-2xl border-6 border-black p-6 sm:p-8 lg:p-10 transform rotate-1 brutal-shadow-xl transition-bounce hover:scale-105 hover:-rotate-1 overflow-hidden w-full mx-auto" style={{maxWidth: '200rem'}}>
           <div className="text-center mb-3">
             <h3 className="text-black font-black text-base crayon-text animate-wiggle" style={{textShadow: '1px 1px 0px #ffffff'}}>
               CONTRACT ADDRESS 📋
@@ -299,7 +299,7 @@ const SwapInterface = () => {
                 navigator.clipboard.writeText(DOLLAR_TOKEN_MINT);
                 toast.success('Contract address copied! 📋');
               }}
-              className="font-mono text-base bg-green-400 hover:bg-green-500 px-2 py-3 rounded-lg border-3 border-black transition-bounce hover:scale-105 min-w-full brutal-shadow-lg glow-effect block"
+              className="font-mono text-base bg-green-600 hover:bg-green-700 px-2 py-3 rounded-lg border-3 border-black transition-bounce hover:scale-105 min-w-full brutal-shadow-lg glow-effect block"
               style={{
                 fontWeight: '900',
                 textShadow: '1px 1px 0px #000000',

@@ -9,13 +9,13 @@ const MarketCapCounter = () => {
 
   // Enhanced Milestones for celebrations
   const milestones = [
-    { value: 1_000_000, label: '1M! 🚀', emoji: '🎉', color: 'bg-green-500' },
-    { value: 5_000_000, label: '5M! 💎', emoji: '💎', color: 'bg-blue-500' },
-    { value: 10_000_000, label: '10M! 🔥', emoji: '🔥', color: 'bg-red-500' },
-    { value: 25_000_000, label: '25M! 🌙', emoji: '🌙', color: 'bg-purple-500' },
-    { value: 50_000_000, label: '50M! ⭐', emoji: '⭐', color: 'bg-yellow-500' },
-    { value: 75_000_000, label: '75M! 🎊', emoji: '🎊', color: 'bg-pink-500' },
-    { value: 100_000_000, label: '100M! 👑', emoji: '👑', color: 'bg-gradient-to-r from-yellow-400 to-yellow-600' }
+    { value: 1_000_000, label: '1M!', emoji: '', color: 'bg-green-500' },
+    { value: 5_000_000, label: '5M!', emoji: '', color: 'bg-blue-500' },
+    { value: 10_000_000, label: '10M!', emoji: '', color: 'bg-red-500' },
+    { value: 25_000_000, label: '25M!', emoji: '', color: 'bg-purple-500' },
+    { value: 50_000_000, label: '50M!', emoji: '', color: 'bg-yellow-500' },
+    { value: 75_000_000, label: '75M!', emoji: '', color: 'bg-pink-500' },
+    { value: 100_000_000, label: '100M!', emoji: '', color: 'bg-gradient-to-r from-yellow-400 to-yellow-600' }
   ];
 
   const [reachedMilestones, setReachedMilestones] = useState<number[]>([]);
@@ -72,30 +72,29 @@ const MarketCapCounter = () => {
         {/* Enhanced Celebration overlay */}
         {showCelebration && (
           <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-green-400 to-blue-400 rounded-2xl sm:rounded-3xl flex items-center justify-center z-20 border-4 sm:border-6 lg:border-8 border-red-500 animate-bounce-in glow-strong">
-            <div className="text-center transform rotate-12 animate-wiggle">
-              <div className="text-4xl sm:text-5xl lg:text-6xl mb-2 animate-bounce-in">{celebrationEmoji}</div>
-              <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-green-900 crayon-text super-thick animate-glow-pulse" style={{
-                textShadow: '3px 3px 0px #000000'
-              }}>
-                {celebrationText}
+              <div className="text-center transform rotate-12 animate-wiggle">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-green-900 crayon-text super-thick animate-glow-pulse" style={{
+                  textShadow: '3px 3px 0px #000000'
+                }}>
+                  {celebrationText}
+                </div>
+                <div className="text-lg sm:text-xl mt-2 font-black text-red-600 crayon-text">
+                  MILESTONE REACHED!
+                </div>
               </div>
-              <div className="text-lg sm:text-xl mt-2 font-black text-red-600 crayon-text">
-                MILESTONE REACHED! 🎊
-              </div>
-            </div>
           </div>
         )}
 
         {/* Enhanced Header */}
         <div className="text-center mb-3 sm:mb-4 lg:mb-6 transform -rotate-2 animate-bounce-in">
-          <div className="bg-green-400 hover:bg-green-500 rounded-xl sm:rounded-2xl border-3 sm:border-4 border-black p-2 sm:p-3 lg:p-4 inline-block transform rotate-3 brutal-shadow transition-bounce hover:scale-105 hover:rotate-6">
-            <h2 className="text-responsive-md font-black text-white mb-1 sm:mb-2 crayon-text animate-wiggle" style={{textShadow: '2px 2px 0px #000000'}}>MARKETCAP ROCKET! 🚀</h2>
-            <p className="text-white text-responsive-xs font-black transform -rotate-1 crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>TO THE MOON! 💵</p>
+          <div className="bg-green-600 hover:bg-green-700 rounded-xl sm:rounded-2xl border-3 sm:border-4 border-black p-2 sm:p-3 lg:p-4 inline-block transform rotate-3 brutal-shadow transition-bounce hover:scale-105 hover:rotate-6">
+            <h2 className="text-responsive-md font-black text-white mb-1 sm:mb-2 crayon-text animate-wiggle" style={{textShadow: '2px 2px 0px #000000'}}>MARKETCAP COUNTER!</h2>
+            <p className="text-white text-responsive-xs font-black transform -rotate-1 crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>TO THE MOON!</p>
           </div>
         </div>
 
         {/* Enhanced Current marketcap display */}
-        <div className="bg-green-400 hover:bg-green-500 rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border-4 sm:border-6 border-black transform -rotate-1 mb-3 sm:mb-4 lg:mb-6 brutal-shadow-lg transition-bounce hover:scale-105 hover:-rotate-2">
+        <div className="bg-green-600 hover:bg-green-700 rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border-4 sm:border-6 border-black transform -rotate-1 mb-3 sm:mb-4 lg:mb-6 brutal-shadow-lg transition-bounce hover:scale-105 hover:-rotate-2">
           <div className="text-center">
             <div className="text-white text-responsive-xs font-black mb-1 sm:mb-2 crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>
               CURRENT MARKETCAP! 💰
@@ -112,7 +111,7 @@ const MarketCapCounter = () => {
         </div>
 
         {/* Enhanced Progress bar */}
-        <div className="bg-green-500 hover:bg-green-600 rounded-lg sm:rounded-xl p-2 sm:p-3 lg:p-4 border-3 sm:border-4 border-black transform rotate-1 mb-2 sm:mb-3 lg:mb-4 brutal-shadow transition-bounce hover:scale-105 hover:rotate-2">
+        <div className="bg-green-700 hover:bg-green-800 rounded-lg sm:rounded-xl p-2 sm:p-3 lg:p-4 border-3 sm:border-4 border-black transform rotate-1 mb-2 sm:mb-3 lg:mb-4 brutal-shadow transition-bounce hover:scale-105 hover:rotate-2">
           <div className="mb-2 sm:mb-3">
             <span className="text-white font-black text-responsive-xs crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>
               PROGRESS: {progressPercentage.toFixed(1)}% 📈
@@ -131,9 +130,9 @@ const MarketCapCounter = () => {
         </div>
 
         {/* Enhanced Milestones with better responsiveness */}
-        <div className="bg-yellow-400 hover:bg-yellow-500 rounded-lg sm:rounded-xl p-2 sm:p-3 lg:p-4 border-3 sm:border-4 border-black transform -rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:-rotate-2">
+        <div className="bg-yellow-600 hover:bg-yellow-700 rounded-lg sm:rounded-xl p-2 sm:p-3 lg:p-4 border-3 sm:border-4 border-black transform -rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:-rotate-2">
           <div className="text-black font-black text-responsive-xs mb-2 sm:mb-3 crayon-text animate-wiggle" style={{textShadow: '1px 1px 0px #ffffff'}}>
-            MILESTONES! 🏆
+            MILESTONES!
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 sm:gap-2">
             {milestones.slice(0, 6).map((milestone, index) => (
@@ -149,9 +148,6 @@ const MarketCapCounter = () => {
                   animationDelay: `${index * 0.1}s`
                 }}
               >
-                <div className="text-responsive-xs font-black crayon-text animate-wiggle">
-                  {milestone.emoji}
-                </div>
                 <div className="text-xs sm:text-sm font-black crayon-text" style={{textShadow: reachedMilestones.includes(milestone.value) ? '1px 1px 0px #000000' : '1px 1px 0px #ffffff'}}>
                   {formatMarketCap(milestone.value)}
                 </div>
@@ -162,11 +158,11 @@ const MarketCapCounter = () => {
 
         {/* Enhanced Loading indicator */}
         {isLoading && (
-          <div className="mt-2 sm:mt-3 lg:mt-4 text-center animate-bounce-in">
-            <div className="text-black font-black text-responsive-xs crayon-text animate-wiggle" style={{textShadow: '1px 1px 0px #ffffff'}}>
-              <span className="animate-spin inline-block">🔄</span> LOADING... MEME POWER! ⚡
-            </div>
-          </div>
+              <div className="mt-2 text-center animate-bounce-in">
+                <div className="text-black font-black text-responsive-xs crayon-text animate-wiggle" style={{textShadow: '1px 1px 0px #ffffff'}}>
+                  <span className="animate-spin inline-block">🔄</span> LOADING... MEME POWER!
+                </div>
+              </div>
         )}
 
         {/* Speed Control - Hidden but functional */}
