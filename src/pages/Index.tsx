@@ -18,6 +18,13 @@ const Index = () => {
       backgroundSize: '60px 60px',
       backgroundPosition: '0 0, 0 30px, 30px -30px, -30px 0px'
     }}>
+          {/* Raining Money Background */}
+          <div className="money-rain">
+            {[...Array(10)].map((_, i) => (
+              <div key={i} className="falling-money"></div>
+            ))}
+          </div>
+          
           <div className="absolute inset-0 bg-gradient-to-br from-green-900/80 via-yellow-600/30 to-green-700/80"></div>
           <div className="absolute inset-0" style={{
         backgroundImage: `

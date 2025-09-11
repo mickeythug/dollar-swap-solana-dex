@@ -361,6 +361,36 @@
   100% { transform: translate(0); }
 }
 
+/* Raining Money Animation */
+@keyframes fall-money {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 0.8;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes sway-money {
+  0%, 100% {
+    transform: translateX(0) rotateZ(0deg);
+  }
+  25% {
+    transform: translateX(-20px) rotateZ(-5deg);
+  }
+  75% {
+    transform: translateX(20px) rotateZ(5deg);
+  }
+}
+
 .animate-wiggle {
   animation: wiggle 2s ease-in-out infinite;
 }
@@ -375,6 +405,90 @@
 
 .animate-glow-pulse {
   animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* Raining Money Classes */
+.money-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.falling-money {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  background-image: url('/lovable-uploads/108e4062-8027-405e-bc3e-524cb27198d3.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+  animation: fall-money linear infinite, sway-money ease-in-out infinite;
+}
+
+.falling-money:nth-child(1) {
+  left: 5%;
+  animation-duration: 8s, 3s;
+  animation-delay: 0s, 0s;
+}
+
+.falling-money:nth-child(2) {
+  left: 15%;
+  animation-duration: 10s, 4s;
+  animation-delay: 2s, 1s;
+}
+
+.falling-money:nth-child(3) {
+  left: 25%;
+  animation-duration: 7s, 2.5s;
+  animation-delay: 4s, 0.5s;
+}
+
+.falling-money:nth-child(4) {
+  left: 35%;
+  animation-duration: 9s, 3.5s;
+  animation-delay: 1s, 2s;
+}
+
+.falling-money:nth-child(5) {
+  left: 45%;
+  animation-duration: 11s, 4.5s;
+  animation-delay: 3s, 1.5s;
+}
+
+.falling-money:nth-child(6) {
+  left: 55%;
+  animation-duration: 8.5s, 3s;
+  animation-delay: 5s, 0s;
+}
+
+.falling-money:nth-child(7) {
+  left: 65%;
+  animation-duration: 7.5s, 2s;
+  animation-delay: 0.5s, 2.5s;
+}
+
+.falling-money:nth-child(8) {
+  left: 75%;
+  animation-duration: 9.5s, 3.8s;
+  animation-delay: 2.5s, 1.2s;
+}
+
+.falling-money:nth-child(9) {
+  left: 85%;
+  animation-duration: 10.5s, 4.2s;
+  animation-delay: 4.5s, 0.8s;
+}
+
+.falling-money:nth-child(10) {
+  left: 95%;
+  animation-duration: 8.8s, 3.3s;
+  animation-delay: 1.5s, 2.2s;
 }
 
 /* Advanced 3D Holographic Effect Classes */
