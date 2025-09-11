@@ -18,10 +18,10 @@ const Index = () => {
       backgroundSize: '60px 60px',
       backgroundPosition: '0 0, 0 30px, 30px -30px, -30px 0px'
     }}>
-          {/* Raining Money Background */}
-          <div className="money-rain">
-            {[...Array(10)].map((_, i) => (
-              <div key={i} className="falling-money"></div>
+          {/* Static Money Background */}
+          <div className="money-background">
+            {[...Array(25)].map((_, i) => (
+              <div key={i} className="static-money"></div>
             ))}
           </div>
           
