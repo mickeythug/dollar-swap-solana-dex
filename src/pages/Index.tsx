@@ -34,30 +34,18 @@ const Index = () => {
           <section id="swap" className="relative z-10 px-2 sm:px-4 lg:px-8 py-8 sm:py-16">
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 xl:gap-16 items-start">
-                <div className="space-y-8">
-                  <MarketCapCounter />
-                </div>
-                
-                <div className="space-y-8">
-                  <SwapInterface />
-                  
-                  {/* Contract Address Box */}
-                  <div className="meme-card p-6 rounded-2xl brutal-shadow-lg transform rotate-1 hover:scale-105 transition-all duration-300">
-                    <h3 className="text-responsive-md crayon-text super-thick text-center mb-4 text-black" style={{
-                      textShadow: '1px 1px 0px #ffffff',
-                      letterSpacing: '2px'
-                    }}>
-                      CONTRACT ADDRESS
-                    </h3>
-                    <div className="bg-black/10 p-4 rounded-xl border-2 border-black/20">
-                      <p className="text-xs sm:text-sm font-mono break-all text-center text-black font-bold">
-                        Coming Soon...
-                      </p>
-                      <button className="meme-button w-full mt-3 px-4 py-2 rounded-lg text-xs">
-                        COPY ADDRESS
-                      </button>
-                    </div>
-                  </div>
+                <MarketCapCounter />
+                <SwapInterface />
+              </div>
+              
+              {/* Transparent Dollar Bill Image with Modern Padding */}
+              <div className="mt-12 lg:mt-16 flex justify-center">
+                <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 sm:p-12 lg:p-16 border border-white/20 shadow-2xl transform hover:scale-105 transition-all duration-300">
+                  <img 
+                    src="/lovable-uploads/c8cb0411-d729-422a-917f-f1e1c941f14b.png"
+                    alt="0.1 SOL United Degen Community"
+                    className="w-full max-w-2xl h-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
+                  />
                 </div>
               </div>
             </div>
@@ -141,21 +129,6 @@ const Index = () => {
           </section>
           
           <Footer />
-          
-          {/* Luxury Framed Dollar Bill - Very Bottom */}
-          <section className="relative z-10 px-2 sm:px-4 lg:px-8 py-16 sm:py-24">
-            <div className="max-w-3xl mx-auto flex justify-center">
-              <div className="luxury-bill-frame transform scale-125 sm:scale-150">
-                <div className="luxury-frame-inner">
-                  <img 
-                    src="/lovable-uploads/c8cb0411-d729-422a-917f-f1e1c941f14b.png"
-                    alt="0.1 SOL United Degen Community"
-                    className="w-full h-auto max-w-full"
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
         </div>
     </WalletContextProvider>;
 };
