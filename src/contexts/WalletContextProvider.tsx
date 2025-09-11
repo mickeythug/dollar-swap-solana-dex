@@ -21,7 +21,7 @@ interface Props {
 }
 
 export const WalletContextProvider: FC<Props> = ({ children }) => {
-  const [endpoint, setEndpoint] = useState(clusterApiUrl('mainnet-beta'));
+  const [endpoint, setEndpoint] = useState('https://small-evocative-diamond.solana-mainnet.quiknode.pro/2ed30cf5e6e264547ca0fac87762184bfdb2a995/');
   
   useEffect(() => {
     const fetchRpcConfig = async () => {

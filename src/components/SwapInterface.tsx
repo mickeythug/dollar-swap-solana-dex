@@ -31,7 +31,7 @@ const SwapInterface = () => {
 
   useEffect(() => {
     // Initialize Jupiter swap service
-    const rpcEndpoint = import.meta.env.VITE_RPC_ENDPOINT || 'https://api.mainnet-beta.solana.com';
+    const rpcEndpoint = 'https://small-evocative-diamond.solana-mainnet.quiknode.pro/2ed30cf5e6e264547ca0fac87762184bfdb2a995/';
     setSwapService(new JupiterSwapService(rpcEndpoint));
   }, []);
 
