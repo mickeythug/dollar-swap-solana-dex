@@ -457,49 +457,6 @@
 .static-money:nth-child(24) { top: 88%; left: 75%; transform: rotate(-14deg); }
 .static-money:nth-child(25) { top: 92%; left: 95%; transform: rotate(19deg); }
 
-/* Jupiter Terminal Custom Styling */
-.jupiter-terminal-container {
-  border-radius: 1rem !important;
-  border: 4px solid #000000 !important;
-  box-shadow: var(--shadow-brutal) !important;
-  background: linear-gradient(135deg, #fef3c7, #fde047) !important;
-  overflow: hidden !important;
-}
-
-/* Override Jupiter Terminal internal styles to match our theme */
-#jupiter-terminal .jupiter-swap-input,
-#jupiter-terminal .jupiter-swap-output,
-#jupiter-terminal .jupiter-swap-button {
-  font-family: "Comic Sans MS", cursive !important;
-  font-weight: 900 !important;
-  border-radius: 0.75rem !important;
-  border: 3px solid #000000 !important;
-}
-
-#jupiter-terminal .jupiter-swap-button {
-  background: linear-gradient(135deg, #fde047, #f59e0b) !important;
-  color: #000000 !important;
-  text-shadow: 1px 1px 0px #ffffff !important;
-  box-shadow: 6px 6px 0px #000000 !important;
-  transition: var(--transition-bounce) !important;
-}
-
-#jupiter-terminal .jupiter-swap-button:hover {
-  transform: scale(1.05) rotate(1deg) !important;
-  box-shadow: 8px 8px 0px #000000 !important;
-}
-
-/* Style Jupiter Terminal background */
-#jupiter-terminal > div {
-  background: transparent !important;
-}
-
-#jupiter-terminal .jupiter-container {
-  background: linear-gradient(135deg, rgba(254, 243, 199, 0.95), rgba(253, 224, 71, 0.95)) !important;
-  border-radius: 1rem !important;
-  padding: 1.5rem !important;
-}
-
 /* Advanced 3D Holographic Effect Classes */
 .perspective-1000 {
   perspective: 1000px;
