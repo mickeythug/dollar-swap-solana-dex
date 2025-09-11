@@ -37,17 +37,6 @@ const Index = () => {
                 <MarketCapCounter />
                 <SwapInterface />
               </div>
-              
-              {/* Transparent Dollar Bill Image with Modern Padding */}
-              <div className="mt-12 lg:mt-16 flex justify-center">
-                <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 sm:p-12 lg:p-16 border border-white/20 shadow-2xl transform hover:scale-105 transition-all duration-300">
-                  <img 
-                    src="/lovable-uploads/c8cb0411-d729-422a-917f-f1e1c941f14b.png"
-                    alt="0.1 SOL United Degen Community"
-                    className="w-full max-w-2xl h-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
-                  />
-                </div>
-              </div>
             </div>
           </section>
 
