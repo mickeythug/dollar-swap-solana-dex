@@ -421,13 +421,13 @@
 
 .static-money {
   position: absolute;
-  width: 50px;
-  height: 25px;
+  width: 120px;
+  height: 60px;
   background-image: url('/lovable-uploads/108e4062-8027-405e-bc3e-524cb27198d3.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.15;
+  opacity: 0.8;
 }
 
 /* Position bills throughout the entire background */
