@@ -285,31 +285,34 @@ const SwapInterface = () => {
         </div>
       </div>
 
-      {/* Contract Address Only - Wide Format */}
-      <div className="mt-8 w-full max-w-4xl mx-auto">
-        <div className="bg-yellow-400 hover:bg-yellow-500 rounded-2xl border-6 border-black p-6 transform rotate-1 brutal-shadow-xl transition-bounce hover:scale-105 hover:-rotate-1">
-          <div className="text-center mb-4">
-            <h3 className="text-black font-black text-responsive-sm crayon-text animate-wiggle" style={{textShadow: '1px 1px 0px #ffffff'}}>
+      {/* Contract Address Only - Properly Fitted Container */}
+      <div className="mt-8 w-full">
+        <div className="bg-yellow-400 hover:bg-yellow-500 rounded-2xl border-6 border-black p-4 transform rotate-1 brutal-shadow-xl transition-bounce hover:scale-105 hover:-rotate-1 overflow-hidden">
+          <div className="text-center mb-3">
+            <h3 className="text-black font-black text-lg crayon-text animate-wiggle" style={{textShadow: '1px 1px 0px #ffffff'}}>
               CONTRACT ADDRESS 📋
             </h3>
           </div>
-          <button
-            onClick={() => {
-              navigator.clipboard.writeText(DOLLAR_TOKEN_MINT);
-              toast.success('Contract address copied! 📋');
-            }}
-            className="font-mono text-lg sm:text-xl lg:text-2xl bg-green-400 hover:bg-green-500 p-4 sm:p-6 rounded-xl border-4 border-black transition-bounce hover:scale-105 w-full text-center brutal-shadow-lg glow-effect"
-            style={{
-              fontWeight: '900',
-              textShadow: '2px 2px 0px #000000',
-              letterSpacing: '1px',
-              whiteSpace: 'nowrap',
-              overflow: 'visible'
-            }}
-          >
-            {DOLLAR_TOKEN_MINT}
-          </button>
-          <div className="mt-3 text-center text-sm text-black font-black crayon-text animate-wiggle">
+          <div className="w-full overflow-x-auto">
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(DOLLAR_TOKEN_MINT);
+                toast.success('Contract address copied! 📋');
+              }}
+              className="font-mono text-xs sm:text-sm md:text-base lg:text-lg bg-green-400 hover:bg-green-500 px-2 py-3 rounded-lg border-3 border-black transition-bounce hover:scale-105 min-w-full brutal-shadow-lg glow-effect block"
+              style={{
+                fontWeight: '900',
+                textShadow: '1px 1px 0px #000000',
+                letterSpacing: '0.5px',
+                whiteSpace: 'nowrap',
+                width: 'max-content',
+                minWidth: '100%'
+              }}
+            >
+              {DOLLAR_TOKEN_MINT}
+            </button>
+          </div>
+          <div className="mt-2 text-center text-xs text-black font-black crayon-text animate-wiggle">
             👆 CLICK TO COPY! 👆
           </div>
         </div>
