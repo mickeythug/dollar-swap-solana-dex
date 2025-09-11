@@ -36,17 +36,6 @@ const Index = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 xl:gap-16 items-start">
                 <div className="space-y-8">
                   <MarketCapCounter />
-                  
-                  {/* Luxury Framed Dollar Bill */}
-                  <div className="luxury-bill-frame">
-                    <div className="luxury-frame-inner">
-                      <img 
-                        src="/lovable-uploads/c8cb0411-d729-422a-917f-f1e1c941f14b.png"
-                        alt="0.1 SOL United Degen Community"
-                        className="w-full h-auto"
-                      />
-                    </div>
-                  </div>
                 </div>
                 
                 <div className="space-y-8">
@@ -146,6 +135,21 @@ const Index = () => {
                       ALWAYS DYOR! THIS IS JUST FOR FUN!
                     </p>
                   </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          {/* Luxury Framed Dollar Bill - Bottom Center */}
+          <section className="relative z-10 px-2 sm:px-4 lg:px-8 py-8 sm:py-16">
+            <div className="max-w-4xl mx-auto flex justify-center">
+              <div className="luxury-bill-frame" style={{ transform: 'scale(1.5)' }}>
+                <div className="luxury-frame-inner">
+                  <img 
+                    src="/lovable-uploads/c8cb0411-d729-422a-917f-f1e1c941f14b.png"
+                    alt="0.1 SOL United Degen Community"
+                    className="w-full h-auto"
+                  />
                 </div>
               </div>
             </div>
