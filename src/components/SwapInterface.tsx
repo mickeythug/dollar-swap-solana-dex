@@ -36,7 +36,7 @@ const SwapInterface = () => {
   const [quote, setQuote] = useState<any>(null);
   const [swapService, setSwapService] = useState<PumpFunService | null>(null);
 
-  // Initialize PumpFunService when RPC endpoint is available
+  // Initialize PumpFunService with correct Jupiter API endpoint
   useEffect(() => {
     const initializeService = async () => {
       try {
@@ -47,8 +47,11 @@ const SwapInterface = () => {
         const {
           rpcEndpoint
         } = await response.json();
-        console.log('Using secure RPC endpoint');
-        setSwapService(new PumpFunService(rpcEndpoint, rpcEndpoint));
+        console.log('Using secure RPC endpoint for connections');
+        
+        // Use the correct Jupiter API endpoint for pump-fun operations
+        const jupiterApiEndpoint = 'https://jupiter-swap-api.quiknode.pro/2ed30cf5e6e264547ca0fac87762184bfdb2a995';
+        setSwapService(new PumpFunService(jupiterApiEndpoint, rpcEndpoint));
       } catch (error) {
         console.error('Failed to initialize PumpFunService:', error);
         toast.error('Failed to initialize swap service');
