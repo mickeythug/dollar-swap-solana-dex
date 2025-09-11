@@ -23,7 +23,8 @@ const Hero = () => {
           
           {/* Enhanced Main Title */}
           <div className="flex justify-center">
-            <h1 className="inline-block bg-yellow-400 text-black px-4 sm:px-6 py-2 sm:py-3 rounded-2xl border-4 border-black text-responsive-2xl crayon-text super-thick mb-4 sm:mb-6 lg:mb-8 leading-tight drop-shadow-lg animate-bounce-in glow-effect" style={{
+            <h1 className="inline-block bg-yellow-400 text-black px-4 sm:px-6 py-2 sm:py-3 rounded-2xl border-4 border-black crayon-text super-thick mb-4 sm:mb-6 lg:mb-8 leading-tight drop-shadow-lg animate-bounce-in glow-effect" style={{
+              fontSize: 'clamp(3rem, 8vw, 8rem)',
             transform: 'rotate(-1deg) skew(-0.5deg)',
             letterSpacing: '4px',
             animationDelay: '0.2s'
