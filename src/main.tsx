@@ -1,5 +1,9 @@
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import { createRoot } from 'react-dom/client';
+import { Buffer } from 'buffer';
+import App from './App.tsx';
+import './index.css';
+
+// Make Buffer available globally for Solana libraries
+window.Buffer = Buffer;
 
 createRoot(document.getElementById("root")!).render(<App />);
