@@ -17,11 +17,11 @@ const Footer = () => {
                 transform: 'rotate(-1deg) skew(-0.5deg)'
               }}>
                 <h3 className="text-yellow-900 crayon-text super-thick text-responsive-lg mb-3 sm:mb-4 lg:mb-6">
-                  About Just Buy 0.1 SOL! ◎
+                  About Just Buy 0.1 SOL!
                 </h3>
                 <div className="space-y-3 text-responsive-sm">
                   <p className="text-green-900 leading-relaxed font-black crayon-text super-thick">
-                    This is just a MEME TOKEN called 0.1 SOL! ◎
+                    This is just a MEME TOKEN called 0.1 SOL!
                   </p>
                   <p className="text-green-900 leading-relaxed font-black crayon-text super-thick">
                     The idea is SUPER EASY — just buy 0.1 SOL worth! That's it!
@@ -88,7 +88,7 @@ const Footer = () => {
               transform: 'rotate(-1deg) skew(-0.5deg)'
             }}>
               <p className="text-yellow-900 text-responsive-sm crayon-text super-thick">
-                © 2024 0.1 SOL MEME TOKEN! Made with LOVE and MEMES! ◎
+                © 2024 0.1 SOL MEME TOKEN! Made with LOVE and MEMES!
               </p>
               <p className="text-green-900 text-responsive-xs mt-1 sm:mt-2 crayon-text super-thick">
                 ALWAYS DYOR! THIS IS JUST FOR FUN!

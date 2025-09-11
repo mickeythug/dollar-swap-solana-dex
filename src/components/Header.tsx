@@ -38,9 +38,6 @@ const Header = () => {
             <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 rounded-full flex items-center justify-center border-4 sm:border-6 lg:border-8 border-green-900 brutal-shadow-lg transition-bounce hover:scale-110 hover:rotate-12 glow-effect" style={{
               transform: 'rotate(-5deg) scale(1.05)'
             }}>
-              <span className="text-2xl sm:text-3xl lg:text-4xl font-black text-green-900" style={{
-                transform: 'rotate(10deg)'
-              }}>◎</span>
             </div>
             <div className="meme-card p-2 sm:p-3 lg:p-4 rounded-xl sm:rounded-2xl transition-bounce hover:scale-105 hover:rotate-2" style={{
               transform: 'rotate(2deg) skew(1deg)',
@@ -56,7 +53,7 @@ const Header = () => {
                 transform: 'rotate(3deg) translateX(-2px)',
                 letterSpacing: '3px'
               }}>
-                MEME COIN! ◎
+                MEME COIN!
               </p>
             </div>
           </div>

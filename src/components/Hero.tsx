@@ -17,7 +17,7 @@ const Hero = () => {
               letterSpacing: '3px',
               textShadow: '2px 2px 0px #ffffff'
             }}>
-              ◎ MEME COIN IS HERE!!! ◎
+              MEME COIN IS HERE!!!
             </span>
           </div>
           
@@ -115,7 +115,7 @@ const Hero = () => {
                 }}>HODL</span>{' '}
                 <span className="transition-bounce hover:scale-110 inline-block" style={{
                   transform: 'rotate(2deg)'
-                }}>together!</span> ◎
+                }}>together!</span>
               </span>
             </div>
           </div>
@@ -128,10 +128,10 @@ const Hero = () => {
               transform: 'rotate(-3deg) skew(-1deg)',
               animationDelay: '0.6s'
             }}>
-              <span className="text-2xl sm:text-3xl lg:text-4xl transition-bounce hover:scale-125" style={{
-                transform: 'rotate(5deg)',
-                display: 'inline-block'
-              }}>◎</span>
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 rounded-full flex items-center justify-center border-4 sm:border-6 lg:border-8 border-green-900 brutal-shadow-lg transition-bounce hover:scale-110 hover:rotate-12 glow-effect" style={{
+                transform: 'rotate(-5deg) scale(1.05)'
+              }}>
+              </div>
               <span className="text-black crayon-text text-responsive-sm" style={{
                 transform: 'rotate(1deg) translateY(-1px)',
                 letterSpacing: '2px',

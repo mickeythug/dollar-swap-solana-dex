@@ -152,7 +152,7 @@ const SwapInterface = () => {
         <div className="text-center mb-6 sm:mb-8 transform rotate-1">
           <div className="bg-green-400 hover:bg-green-500 rounded-2xl border-4 border-black p-4 inline-block transform -rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:rotate-2">
             <h2 className="text-base font-black text-white mb-2 crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>SWAP TO 0.1 SOL!</h2>
-            <p className="text-white text-base font-black transform rotate-1 crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>SUPER EASY! ◎</p>
+            <p className="text-white text-base font-black transform rotate-1 crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>SUPER EASY!</p>
           </div>
         </div>
 
@@ -222,7 +222,6 @@ const SwapInterface = () => {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-3 meme-card rounded-xl px-4 py-3 border-4 border-black transform rotate-1 brutal-shadow transition-bounce hover:scale-105">
                 <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-green-500 rounded-full flex items-center justify-center border-2 border-black glow-effect">
-                  <span className="text-lg font-black text-green-900">◎</span>
                 </div>
                 <span className="text-black font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #ffffff'}}>0.1SOL</span>
               </div>
@@ -252,24 +251,23 @@ const SwapInterface = () => {
               <Button
                 onClick={executeSwap}
                 disabled={!solAmount || isSwapping || parseFloat(solAmount) <= 0}
-                className="w-full meme-button py-6 rounded-2xl text-base brutal-shadow-lg transition-bounce hover:scale-105 hover:rotate-1 disabled:hover:scale-100 disabled:opacity-50 glow-effect"
+                className="w-full bg-green-600 hover:bg-green-700 text-white font-black py-6 rounded-2xl border-4 border-black brutal-shadow-lg transition-bounce hover:scale-105 hover:rotate-1 disabled:hover:scale-100 disabled:opacity-50 text-base crayon-text"
                 style={{
-                  fontFamily: 'Comic Sans MS, cursive',
                   textShadow: '2px 2px 0px #000000'
                 }}
               >
                 {isSwapping ? (
                   <span>🔄 SWAPPING...</span>
                 ) : (
-                  'SWAP TO 0.1 SOL! ◎'
+                  'SWAP TO 0.1 SOL!'
                 )}
               </Button>
               <Button
                 onClick={handleDisconnect}
                 variant="outline"
-                className="w-full bg-red-100 hover:bg-red-200 text-red-600 font-semibold py-3 rounded-xl border-2 border-red-300 hover:border-red-400 transition-bounce text-base"
+                className="w-full bg-red-600 hover:bg-red-700 text-white font-black py-3 rounded-xl border-4 border-black transition-bounce text-base crayon-text"
                 style={{
-                  fontFamily: 'system-ui, -apple-system, sans-serif'
+                  textShadow: '2px 2px 0px #000000'
                 }}
               >
                 Disconnect Wallet

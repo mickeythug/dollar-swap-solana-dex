@@ -68,12 +68,12 @@ const Index = () => {
                   textShadow: '2px 2px 0px #ffffff',
                   transform: 'rotate(-2deg)'
                 }}>
-                  About Just Buy 0.1 SOL! ◎
+                  About Just Buy 0.1 SOL!
                 </h2>
                 
                 <div className="space-y-4 sm:space-y-6 text-black crayon-text" style={{textShadow: '1px 1px 0px #ffffff'}}>
                   <p className="text-responsive-md font-black leading-relaxed">
-                    This is just a MEME TOKEN called 0.1 SOL! ◎
+                    This is just a MEME TOKEN called 0.1 SOL!
                   </p>
                   
                   <p className="text-responsive-md font-black leading-relaxed">
@@ -117,7 +117,7 @@ const Index = () => {
                   
                   <div className="text-center mt-8 sm:mt-12">
                     <p className="text-responsive-xs font-black mb-4">
-                      © 2024 0.1 SOL MEME TOKEN! Made with LOVE and MEMES! ◎
+                      © 2024 0.1 SOL MEME TOKEN! Made with LOVE and MEMES!
                     </p>
                     <p className="text-responsive-xs font-black bg-yellow-600 hover:bg-yellow-700 p-3 rounded-lg border-3 border-black inline-block brutal-shadow">
                       ALWAYS DYOR! THIS IS JUST FOR FUN!
