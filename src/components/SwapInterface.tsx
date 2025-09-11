@@ -29,10 +29,27 @@ const SwapInterface = () => {
   const [quote, setQuote] = useState<any>(null);
   const [swapService, setSwapService] = useState<PumpFunService | null>(null);
 
+  // Initialize PumpFunService when RPC endpoint is available
   useEffect(() => {
-    // Initialize Pump.fun swap service
-    const rpcEndpoint = 'https://small-evocative-diamond.solana-mainnet.quiknode.pro/2ed30cf5e6e264547ca0fac87762184bfdb2a995/';
-    setSwapService(new PumpFunService(rpcEndpoint));
+    const initializeService = async () => {
+      try {
+        const response = await fetch('/api/get-rpc-config');
+        
+        if (!response.ok) {
+          throw new Error(`Failed to get RPC config: ${response.status}`);
+        }
+
+        const { rpcEndpoint } = await response.json();
+        console.log('Using secure RPC endpoint');
+        
+        setSwapService(new PumpFunService(rpcEndpoint, rpcEndpoint));
+      } catch (error) {
+        console.error('Failed to initialize PumpFunService:', error);
+        toast.error('Failed to initialize swap service');
+      }
+    };
+
+    initializeService();
   }, []);
 
   useEffect(() => {
@@ -64,13 +81,13 @@ const SwapInterface = () => {
       setIsLoading(true);
       const inputAmount = parseFloat(solAmount) * LAMPORTS_PER_SOL;
       
-      const quoteData = await swapService.getQuote({
-        mint: DOLLAR_TOKEN_MINT,
+      const quote = await swapService.getQuote({
         type: 'BUY',
+        mint: DOLLAR_TOKEN_MINT,
         amount: inputAmount.toString(),
       });
 
-      setQuote(quoteData.quote);
+      setQuote(quote);
     } catch (error) {
       console.error('Error fetching quote:', error);
       toast.error('Misslyckades att hämta quote', {
@@ -104,13 +121,10 @@ const SwapInterface = () => {
       
       const result = await swapService.executeSwap(
         { publicKey, signTransaction, connected } as any,
-        {
-          wallet: publicKey.toBase58(),
-          type: 'BUY',
-          mint: DOLLAR_TOKEN_MINT,
-          inAmount: inputAmount.toString(),
-          priorityFeeLevel: 'high',
-        }
+        'BUY',
+        DOLLAR_TOKEN_MINT,
+        inputAmount.toString(),
+        'high'
       );
 
       if (result.success) {
