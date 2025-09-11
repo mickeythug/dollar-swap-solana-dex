@@ -5,6 +5,7 @@
 
 @layer base {
   :root {
+    /* Enhanced Design System */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -34,6 +35,35 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    /* MEME Color Palette */
+    --meme-yellow: 45 100% 60%;
+    --meme-yellow-dark: 45 100% 45%;
+    --meme-green: 120 60% 50%;
+    --meme-green-dark: 120 60% 35%;
+    --meme-red: 0 80% 60%;
+    --meme-blue: 220 80% 60%;
+    --meme-purple: 280 60% 60%;
+
+    /* Enhanced Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(45, 100%, 70%), hsl(45, 100%, 55%));
+    --gradient-success: linear-gradient(135deg, hsl(120, 60%, 60%), hsl(120, 60%, 45%));
+    --gradient-danger: linear-gradient(135deg, hsl(0, 80%, 70%), hsl(0, 80%, 55%));
+    --gradient-meme: linear-gradient(135deg, hsl(45, 100%, 65%), hsl(120, 60%, 55%), hsl(220, 80%, 65%));
+    --gradient-glow: radial-gradient(circle at center, hsl(45, 100%, 80%), transparent);
+
+    /* Enhanced Shadows */
+    --shadow-brutal: 8px 8px 0px #000000;
+    --shadow-brutal-lg: 12px 12px 0px #000000;
+    --shadow-brutal-xl: 16px 16px 0px #000000;
+    --shadow-glow: 0 0 20px hsl(45, 100%, 70%);
+    --shadow-glow-strong: 0 0 40px hsl(45, 100%, 60%);
+    --shadow-inset-brutal: inset 4px 4px 0px #000000;
+
+    /* Enhanced Animations */
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-elastic: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -86,7 +116,7 @@
   }
 }
 
-/* Kid's drawing style text */
+/* Enhanced Typography and Text Effects */
 .kid-text {
   font-family: "Kalam", "Schoolbell", "Caveat", "Permanent Marker", "Fredoka One", "Bangers", "Comic Sans MS", cursive;
   font-weight: 900;
@@ -110,4 +140,179 @@
     1px -1px 0px #000,
     -1px 1px 0px #000,
     4px 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Enhanced Utility Classes */
+.brutal-shadow {
+  box-shadow: var(--shadow-brutal);
+}
+
+.brutal-shadow-lg {
+  box-shadow: var(--shadow-brutal-lg);
+}
+
+.brutal-shadow-xl {
+  box-shadow: var(--shadow-brutal-xl);
+}
+
+.glow-effect {
+  box-shadow: var(--shadow-glow);
+}
+
+.glow-strong {
+  box-shadow: var(--shadow-glow-strong);
+}
+
+.transition-bounce {
+  transition: var(--transition-bounce);
+}
+
+.transition-smooth {
+  transition: var(--transition-smooth);
+}
+
+.transition-elastic {
+  transition: var(--transition-elastic);
+}
+
+/* Enhanced Interactive Elements */
+.meme-button {
+  @apply bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600;
+  @apply text-green-900 font-black;
+  @apply border-4 border-black;
+  @apply brutal-shadow;
+  @apply transition-bounce;
+  @apply transform hover:scale-105 active:scale-95;
+  font-family: "Comic Sans MS", cursive;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+.meme-button:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: var(--shadow-brutal-lg);
+}
+
+.meme-card {
+  @apply bg-yellow-300 border-4 border-black border-dashed;
+  @apply brutal-shadow;
+  @apply transition-smooth;
+  @apply transform hover:scale-102;
+}
+
+.meme-card:hover {
+  box-shadow: var(--shadow-brutal-lg);
+  transform: scale(1.02) rotate(0.5deg);
+}
+
+/* Enhanced Input Styles */
+.meme-input {
+  @apply bg-yellow-200 border-4 border-black;
+  @apply text-green-900 font-black;
+  @apply transition-smooth;
+  font-family: "Comic Sans MS", cursive;
+  text-shadow: 1px 1px 0px #000000;
+  box-shadow: var(--shadow-inset-brutal);
+}
+
+.meme-input:focus {
+  @apply ring-4 ring-yellow-400;
+  box-shadow: var(--shadow-inset-brutal), 0 0 0 4px hsl(45, 100%, 70%);
+}
+
+/* Responsive Typography */
+.text-responsive-xs {
+  @apply text-sm sm:text-base md:text-lg;
+}
+
+.text-responsive-sm {
+  @apply text-base sm:text-lg md:text-xl lg:text-2xl;
+}
+
+.text-responsive-md {
+  @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl;
+}
+
+.text-responsive-lg {
+  @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
+}
+
+.text-responsive-xl {
+  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+}
+
+.text-responsive-2xl {
+  @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
+}
+
+/* Enhanced Animations */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-1deg); }
+  50% { transform: rotate(1deg); }
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px hsl(45, 100%, 70%); }
+  50% { box-shadow: 0 0 40px hsl(45, 100%, 60%); }
+}
+
+.animate-wiggle {
+  animation: wiggle 2s ease-in-out infinite;
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.6s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s ease-out;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 640px) {
+  .mobile-compact {
+    @apply px-2 py-1 text-sm;
+  }
+  
+  .mobile-stack {
+    @apply flex-col space-y-2 space-x-0;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  .transition-bounce,
+  .transition-smooth,
+  .transition-elastic {
+    transition: none !important;
+  }
+  
+  .animate-wiggle,
+  .animate-bounce-in,
+  .animate-slide-up,
+  .animate-glow-pulse {
+    animation: none !important;
+  }
 }

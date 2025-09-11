@@ -5,36 +5,41 @@ const MarketCapCounter = () => {
   const [currentMarketCap, setCurrentMarketCap] = useState(0);
   const [targetMarketCap] = useState(100_000_000); // 100M target
   const [isLoading, setIsLoading] = useState(true);
+  const [animationSpeed, setAnimationSpeed] = useState(100);
 
-  // Milestones for celebrations
+  // Enhanced Milestones for celebrations
   const milestones = [
-    { value: 1_000_000, label: '1M! 🚀', emoji: '🎉' },
-    { value: 5_000_000, label: '5M! 💎', emoji: '💎' },
-    { value: 10_000_000, label: '10M! 🔥', emoji: '🔥' },
-    { value: 25_000_000, label: '25M! 🌙', emoji: '🌙' },
-    { value: 50_000_000, label: '50M! ⭐', emoji: '⭐' },
-    { value: 75_000_000, label: '75M! 🎊', emoji: '🎊' },
-    { value: 100_000_000, label: '100M! 👑', emoji: '👑' }
+    { value: 1_000_000, label: '1M! 🚀', emoji: '🎉', color: 'bg-green-500' },
+    { value: 5_000_000, label: '5M! 💎', emoji: '💎', color: 'bg-blue-500' },
+    { value: 10_000_000, label: '10M! 🔥', emoji: '🔥', color: 'bg-red-500' },
+    { value: 25_000_000, label: '25M! 🌙', emoji: '🌙', color: 'bg-purple-500' },
+    { value: 50_000_000, label: '50M! ⭐', emoji: '⭐', color: 'bg-yellow-500' },
+    { value: 75_000_000, label: '75M! 🎊', emoji: '🎊', color: 'bg-pink-500' },
+    { value: 100_000_000, label: '100M! 👑', emoji: '👑', color: 'bg-gradient-to-r from-yellow-400 to-yellow-600' }
   ];
 
   const [reachedMilestones, setReachedMilestones] = useState<number[]>([]);
   const [showCelebration, setShowCelebration] = useState(false);
   const [celebrationText, setCelebrationText] = useState('');
+  const [celebrationEmoji, setCelebrationEmoji] = useState('');
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentMarketCap(prev => {
-        // Simulate realistic market cap growth with some randomness
-        const increment = Math.floor(Math.random() * 50000) + 10000; // 10k-60k increments
+        // Enhanced realistic market cap growth with dynamic speed
+        const baseIncrement = Math.floor(Math.random() * 50000) + 10000; // 10k-60k increments
+        const speedMultiplier = prev < 10_000_000 ? 1.5 : prev < 50_000_000 ? 1.2 : 1;
+        const increment = baseIncrement * speedMultiplier;
         const newValue = Math.min(prev + increment, targetMarketCap);
         
-        // Check for milestone achievements
+        // Check for milestone achievements with enhanced celebration
         milestones.forEach(milestone => {
           if (newValue >= milestone.value && !reachedMilestones.includes(milestone.value)) {
             setReachedMilestones(prevReached => [...prevReached, milestone.value]);
             setCelebrationText(milestone.label);
+            setCelebrationEmoji(milestone.emoji);
             setShowCelebration(true);
-            setTimeout(() => setShowCelebration(false), 2000);
+            setTimeout(() => setShowCelebration(false), 3000); // Longer celebration
           }
         });
 
@@ -44,10 +49,10 @@ const MarketCapCounter = () => {
 
         return newValue;
       });
-    }, 100); // Update every 100ms for smooth animation
+    }, animationSpeed);
 
     return () => clearInterval(interval);
-  }, [reachedMilestones, targetMarketCap]);
+  }, [reachedMilestones, targetMarketCap, animationSpeed]);
 
   const formatMarketCap = (value: number) => {
     if (value >= 1_000_000) {
@@ -61,123 +66,93 @@ const MarketCapCounter = () => {
   const progressPercentage = (currentMarketCap / targetMarketCap) * 100;
 
   return (
-    <div className="max-w-md mx-auto w-full">
-      <div className="bg-yellow-300 rounded-2xl sm:rounded-3xl border-4 sm:border-6 lg:border-8 border-black border-dashed p-3 sm:p-4 lg:p-6 transform rotate-1 shadow-xl sm:shadow-2xl relative overflow-hidden" style={{
-        boxShadow: '8px 8px 0px #000000'
-      }}>
-        {/* Celebration overlay */}
+    <div className="max-w-md mx-auto w-full animate-slide-up">
+      <div className="meme-card rounded-2xl sm:rounded-3xl border-4 sm:border-6 lg:border-8 border-black border-dashed p-3 sm:p-4 lg:p-6 transform rotate-1 brutal-shadow-xl relative overflow-hidden transition-bounce hover:scale-102 hover:rotate-2">
+        
+        {/* Enhanced Celebration overlay */}
         {showCelebration && (
-          <div className="absolute inset-0 bg-yellow-400 rounded-2xl sm:rounded-3xl flex items-center justify-center z-20 border-4 sm:border-6 lg:border-8 border-red-500">
-            <div className="text-center transform rotate-12">
-              <div className="text-4xl sm:text-5xl lg:text-6xl mb-2">🎉</div>
-              <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-green-900" style={{
-                fontFamily: '"Trebuchet MS", Arial, sans-serif',
+          <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-green-400 to-blue-400 rounded-2xl sm:rounded-3xl flex items-center justify-center z-20 border-4 sm:border-6 lg:border-8 border-red-500 animate-bounce-in glow-strong">
+            <div className="text-center transform rotate-12 animate-wiggle">
+              <div className="text-4xl sm:text-5xl lg:text-6xl mb-2 animate-bounce-in">{celebrationEmoji}</div>
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-green-900 crayon-text super-thick animate-glow-pulse" style={{
                 textShadow: '3px 3px 0px #000000'
               }}>
                 {celebrationText}
+              </div>
+              <div className="text-lg sm:text-xl mt-2 font-black text-red-600 crayon-text">
+                MILESTONE REACHED! 🎊
               </div>
             </div>
           </div>
         )}
 
-        <div className="text-center mb-3 sm:mb-4 lg:mb-6 transform -rotate-2">
-          <div className="bg-green-400 rounded-xl sm:rounded-2xl border-3 sm:border-4 border-black p-2 sm:p-3 lg:p-4 inline-block transform rotate-3" style={{
-            boxShadow: '4px 4px 0px #000000'
-          }}>
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-yellow-900 mb-1 sm:mb-2" style={{
-              fontFamily: '"Trebuchet MS", Arial, sans-serif',
-              textShadow: '2px 2px 0px #000000'
-            }}>MARKETCAP ROCKET! 🚀</h2>
-            <p className="text-green-900 text-sm sm:text-base lg:text-lg font-black transform -rotate-1" style={{
-              fontFamily: '"Trebuchet MS", Arial, sans-serif',
-              textShadow: '1px 1px 0px #000000'
-            }}>TO THE MOON! 💵</p>
+        {/* Enhanced Header */}
+        <div className="text-center mb-3 sm:mb-4 lg:mb-6 transform -rotate-2 animate-bounce-in">
+          <div className="bg-green-400 hover:bg-green-500 rounded-xl sm:rounded-2xl border-3 sm:border-4 border-black p-2 sm:p-3 lg:p-4 inline-block transform rotate-3 brutal-shadow transition-bounce hover:scale-105 hover:rotate-6">
+            <h2 className="text-responsive-md font-black text-yellow-900 mb-1 sm:mb-2 crayon-text super-thick animate-wiggle">MARKETCAP ROCKET! 🚀</h2>
+            <p className="text-green-900 text-responsive-xs font-black transform -rotate-1 crayon-text super-thick">TO THE MOON! 💵</p>
           </div>
         </div>
 
-        {/* Current marketcap display */}
-        <div className="bg-green-400 rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border-4 sm:border-6 border-black transform -rotate-1 mb-3 sm:mb-4 lg:mb-6" style={{
-          boxShadow: '6px 6px 0px #000000'
-        }}>
+        {/* Enhanced Current marketcap display */}
+        <div className="bg-green-400 hover:bg-green-500 rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border-4 sm:border-6 border-black transform -rotate-1 mb-3 sm:mb-4 lg:mb-6 brutal-shadow-lg transition-bounce hover:scale-105 hover:-rotate-2">
           <div className="text-center">
-            <div className="text-yellow-900 text-sm sm:text-base lg:text-lg font-black mb-1 sm:mb-2" style={{
-              fontFamily: '"Trebuchet MS", Arial, sans-serif',
-              textShadow: '1px 1px 0px #000000'
-            }}>
+            <div className="text-yellow-900 text-responsive-xs font-black mb-1 sm:mb-2 crayon-text super-thick">
               CURRENT MARKETCAP! 💰
             </div>
-            <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-yellow-900 mb-1 sm:mb-2 transform rotate-2" style={{
-              fontFamily: '"Trebuchet MS", Arial, sans-serif',
+            <div className="text-responsive-xl font-black text-yellow-900 mb-1 sm:mb-2 transform rotate-2 crayon-text super-thick glow-effect animate-bounce-in" style={{
               textShadow: '2px 2px 0px #000000'
             }}>
               {formatMarketCap(currentMarketCap)}
             </div>
-            <div className="text-green-900 text-xs sm:text-sm font-black" style={{
-              fontFamily: '"Trebuchet MS", Arial, sans-serif',
-              textShadow: '1px 1px 0px #000000'
-            }}>
+            <div className="text-green-900 text-responsive-xs font-black crayon-text super-thick">
               TARGET: {formatMarketCap(targetMarketCap)} 🎯
             </div>
           </div>
         </div>
 
-        {/* Progress bar */}
-        <div className="bg-green-500 rounded-lg sm:rounded-xl p-2 sm:p-3 lg:p-4 border-3 sm:border-4 border-black transform rotate-1 mb-2 sm:mb-3 lg:mb-4" style={{
-          boxShadow: '4px 4px 0px #000000'
-        }}>
+        {/* Enhanced Progress bar */}
+        <div className="bg-green-500 hover:bg-green-600 rounded-lg sm:rounded-xl p-2 sm:p-3 lg:p-4 border-3 sm:border-4 border-black transform rotate-1 mb-2 sm:mb-3 lg:mb-4 brutal-shadow transition-bounce hover:scale-105 hover:rotate-2">
           <div className="mb-2 sm:mb-3">
-            <span className="text-yellow-100 font-black text-sm sm:text-base lg:text-lg" style={{
-              fontFamily: '"Trebuchet MS", Arial, sans-serif',
-              textShadow: '1px 1px 0px #000000'
-            }}>
+            <span className="text-yellow-100 font-black text-responsive-xs crayon-text super-thick">
               PROGRESS: {progressPercentage.toFixed(1)}% 📈
             </span>
           </div>
           <div className="relative">
             <Progress 
               value={progressPercentage} 
-              className="h-4 sm:h-5 lg:h-6 bg-yellow-200 border-2 sm:border-3 border-black rounded-full"
+              className="h-4 sm:h-5 lg:h-6 bg-yellow-200 border-2 sm:border-3 border-black rounded-full transition-smooth"
             />
             <div 
-              className="absolute top-0 left-0 h-4 sm:h-5 lg:h-6 bg-gradient-to-r from-green-400 via-yellow-400 to-green-500 rounded-full border-2 sm:border-3 border-black transition-all duration-300"
+              className="absolute top-0 left-0 h-4 sm:h-5 lg:h-6 bg-gradient-to-r from-green-400 via-yellow-400 to-green-500 rounded-full border-2 sm:border-3 border-black transition-elastic glow-effect"
               style={{ width: `${progressPercentage}%` }}
             />
           </div>
         </div>
 
-        {/* Milestones */}
-        <div className="bg-yellow-400 rounded-lg sm:rounded-xl p-2 sm:p-3 lg:p-4 border-3 sm:border-4 border-black transform -rotate-1" style={{
-          boxShadow: '4px 4px 0px #000000'
-        }}>
-          <div className="text-green-900 font-black text-sm sm:text-base lg:text-lg mb-2 sm:mb-3" style={{
-            fontFamily: '"Trebuchet MS", Arial, sans-serif',
-            textShadow: '1px 1px 0px #000000'
-          }}>
+        {/* Enhanced Milestones with better responsiveness */}
+        <div className="bg-yellow-400 hover:bg-yellow-500 rounded-lg sm:rounded-xl p-2 sm:p-3 lg:p-4 border-3 sm:border-4 border-black transform -rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:-rotate-2">
+          <div className="text-green-900 font-black text-responsive-xs mb-2 sm:mb-3 crayon-text super-thick animate-wiggle">
             MILESTONES! 🏆
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 sm:gap-2">
             {milestones.slice(0, 6).map((milestone, index) => (
               <div 
                 key={milestone.value}
-                className={`p-1 sm:p-2 rounded-md sm:rounded-lg border-2 sm:border-3 border-black text-center transform ${
+                className={`p-1 sm:p-2 rounded-md sm:rounded-lg border-2 sm:border-3 border-black text-center transform transition-all duration-500 ${
                   reachedMilestones.includes(milestone.value) 
-                    ? 'bg-green-500 text-yellow-100 rotate-3 scale-110' 
-                    : 'bg-yellow-200 text-green-900 -rotate-1'
-                } transition-all duration-500`}
+                    ? `${milestone.color} text-yellow-100 rotate-3 scale-110 glow-effect animate-bounce-in` 
+                    : 'bg-yellow-200 text-green-900 -rotate-1 hover:scale-105'
+                } transition-bounce hover:rotate-6`}
                 style={{
-                  boxShadow: '2px 2px 0px #000000'
+                  boxShadow: '2px 2px 0px #000000',
+                  animationDelay: `${index * 0.1}s`
                 }}
               >
-                <div className="text-sm sm:text-base lg:text-lg font-black" style={{
-                  fontFamily: '"Trebuchet MS", Arial, sans-serif',
-                  textShadow: '1px 1px 0px #000000'
-                }}>
+                <div className="text-responsive-xs font-black crayon-text super-thick animate-wiggle">
                   {milestone.emoji}
                 </div>
-                <div className="text-xs sm:text-sm font-black" style={{
-                  fontFamily: '"Trebuchet MS", Arial, sans-serif',
-                  textShadow: '1px 1px 0px #000000'
-                }}>
+                <div className="text-xs sm:text-sm font-black crayon-text super-thick">
                   {formatMarketCap(milestone.value)}
                 </div>
               </div>
@@ -185,17 +160,21 @@ const MarketCapCounter = () => {
           </div>
         </div>
 
-        {/* Loading indicator */}
+        {/* Enhanced Loading indicator */}
         {isLoading && (
-          <div className="mt-2 sm:mt-3 lg:mt-4 text-center">
-            <div className="text-green-900 font-black text-sm sm:text-base lg:text-lg" style={{
-              fontFamily: '"Trebuchet MS", Arial, sans-serif',
-              textShadow: '1px 1px 0px #000000'
-            }}>
-              LOADING... 🔄 MEME POWER! ⚡
+          <div className="mt-2 sm:mt-3 lg:mt-4 text-center animate-bounce-in">
+            <div className="text-green-900 font-black text-responsive-xs crayon-text super-thick animate-wiggle">
+              <span className="animate-spin inline-block">🔄</span> LOADING... MEME POWER! ⚡
             </div>
           </div>
         )}
+
+        {/* Speed Control - Hidden but functional */}
+        <div className="hidden">
+          <button onClick={() => setAnimationSpeed(50)} className="text-xs">Fast</button>
+          <button onClick={() => setAnimationSpeed(100)} className="text-xs">Normal</button>
+          <button onClick={() => setAnimationSpeed(200)} className="text-xs">Slow</button>
+        </div>
       </div>
     </div>
   );

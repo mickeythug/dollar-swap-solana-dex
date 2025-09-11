@@ -4,13 +4,14 @@ import { ArrowDown } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative z-10 px-2 sm:px-4 py-8 sm:py-12 lg:py-16 text-center">
+    <section className="relative z-10 px-2 sm:px-4 py-8 sm:py-12 lg:py-16 text-center animate-slide-up">
       <div className="max-w-4xl mx-auto">
         <div className="mb-6 sm:mb-8">
-          <div className="inline-flex items-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 bg-yellow-300 rounded-2xl sm:rounded-3xl border-4 sm:border-6 border-black border-dashed mb-4 sm:mb-6 lg:mb-8 shadow-xl sm:shadow-2xl" style={{
+          {/* Enhanced Top Banner */}
+          <div className="inline-flex items-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 meme-card rounded-2xl sm:rounded-3xl mb-4 sm:mb-6 lg:mb-8 brutal-shadow-lg transition-bounce hover:scale-105 hover:rotate-1 animate-bounce-in" style={{
             transform: 'rotate(-2deg) skew(-1deg) scale(1.05)'
           }}>
-            <span className="text-lg sm:text-xl lg:text-2xl text-green-900 crayon-text super-thick" style={{
+            <span className="text-responsive-sm text-green-900 crayon-text super-thick animate-wiggle" style={{
               transform: 'rotate(3deg) translateY(-1px)',
               display: 'inline-block',
               letterSpacing: '3px'
@@ -19,19 +20,21 @@ const Hero = () => {
             </span>
           </div>
           
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl crayon-text super-thick text-yellow-400 mb-4 sm:mb-6 lg:mb-8 leading-tight drop-shadow-lg" style={{
+          {/* Enhanced Main Title */}
+          <h1 className="text-responsive-2xl crayon-text super-thick text-yellow-400 mb-4 sm:mb-6 lg:mb-8 leading-tight drop-shadow-lg animate-bounce-in glow-effect" style={{
             transform: 'rotate(-1deg) skew(-0.5deg)',
-            letterSpacing: '4px'
+            letterSpacing: '4px',
+            animationDelay: '0.2s'
           }}>
-            <span style={{
+            <span className="block transition-bounce hover:scale-110" style={{
               transform: 'rotate(-2deg) translateX(-5px)',
               display: 'inline-block'
             }}>Just</span>{' '}
-            <span style={{
+            <span className="block transition-bounce hover:scale-110" style={{
               transform: 'rotate(1deg) translateY(-3px)',
               display: 'inline-block'
             }}>Buy</span>
-            <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent block mt-2 sm:mt-4" style={{
+            <span className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 bg-clip-text text-transparent block mt-2 sm:mt-4 transition-bounce hover:scale-110" style={{
               transform: 'rotate(2deg) skew(1deg) translateX(10px)',
               letterSpacing: '5px'
             }}>
@@ -46,119 +49,116 @@ const Hero = () => {
             </span>
           </h1>
           
-          <div className="bg-green-400 p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl border-4 sm:border-6 border-black border-dashed shadow-xl sm:shadow-2xl max-w-4xl mx-auto" style={{
+          {/* Enhanced Description Box */}
+          <div className="meme-card bg-green-400 p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl brutal-shadow-xl max-w-4xl mx-auto transition-bounce hover:scale-102 hover:rotate-1 animate-bounce-in" style={{
             transform: 'rotate(1deg) skew(-0.5deg)',
-            position: 'relative'
+            position: 'relative',
+            animationDelay: '0.4s'
           }}>
-            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-yellow-900 mb-3 sm:mb-4 lg:mb-6 leading-relaxed crayon-text super-thick" style={{
+            <p className="text-responsive-lg text-yellow-900 mb-3 sm:mb-4 lg:mb-6 leading-relaxed crayon-text super-thick" style={{
               transform: 'rotate(-1deg) skew(0.5deg)',
               letterSpacing: '3px'
             }}>
-              <span style={{
-                transform: 'rotate(2deg) translateY(-2px)',
-                display: 'inline-block'
+              <span className="transition-bounce hover:scale-110 inline-block" style={{
+                transform: 'rotate(2deg) translateY(-2px)'
               }}>SUPER</span>{' '}
-              <span style={{
-                transform: 'rotate(-1deg) translateX(3px)',
-                display: 'inline-block'
+              <span className="transition-bounce hover:scale-110 inline-block" style={{
+                transform: 'rotate(-1deg) translateX(3px)'
               }}>SIMPLE!!!</span>{' '}
-              <span style={{
-                transform: 'rotate(1deg) translateY(1px)',
-                display: 'inline-block'
+              <span className="transition-bounce hover:scale-110 inline-block" style={{
+                transform: 'rotate(1deg) translateY(1px)'
               }}>Just</span>{' '}
-              <span style={{
-                transform: 'rotate(-2deg) scale(1.1)',
-                display: 'inline-block'
+              <span className="transition-bounce hover:scale-110 inline-block" style={{
+                transform: 'rotate(-2deg) scale(1.1)'
               }}>buy</span>{' '}
-              <span style={{
-                transform: 'rotate(2deg) translateX(-2px)',
-                display: 'inline-block'
+              <span className="transition-bounce hover:scale-110 inline-block" style={{
+                transform: 'rotate(2deg) translateX(-2px)'
               }}>0.1</span>{' '}
-              <span style={{
-                transform: 'rotate(-1deg) translateY(-1px)',
-                display: 'inline-block'
+              <span className="transition-bounce hover:scale-110 inline-block" style={{
+                transform: 'rotate(-1deg) translateY(-1px)'
               }}>SOL</span>{' '}
-              <span style={{
-                transform: 'rotate(3deg) scale(1.05)',
-                display: 'inline-block'
+              <span className="transition-bounce hover:scale-110 inline-block" style={{
+                transform: 'rotate(3deg) scale(1.05)'
               }}>worth!!!</span>
             </p>
-            <div className="bg-yellow-300 p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl border-4 border-black border-dashed inline-block shadow-lg" style={{
+            
+            {/* Enhanced Sub-description */}
+            <div className="bg-yellow-300 p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl border-4 border-black border-dashed inline-block brutal-shadow transition-bounce hover:scale-105 hover:rotate-2" style={{
               transform: 'rotate(-2deg) skew(1deg)',
               position: 'relative'
             }}>
-              <span className="text-lg sm:text-xl lg:text-2xl text-green-900 crayon-text super-thick" style={{
+              <span className="text-responsive-sm text-green-900 crayon-text super-thick" style={{
                 transform: 'rotate(1deg) translateX(-1px)',
                 display: 'inline-block',
                 letterSpacing: '2px'
               }}>
-                <span style={{
-                  transform: 'rotate(-1deg)',
-                  display: 'inline-block'
+                <span className="transition-bounce hover:scale-110 inline-block" style={{
+                  transform: 'rotate(-1deg)'
                 }}>No</span>{' '}
-                <span style={{
-                  transform: 'rotate(2deg) translateY(-1px)',
-                  display: 'inline-block'
+                <span className="transition-bounce hover:scale-110 inline-block" style={{
+                  transform: 'rotate(2deg) translateY(-1px)'
                 }}>complicated</span>{' '}
-                <span style={{
-                  transform: 'rotate(-1deg) scale(1.05)',
-                  display: 'inline-block'
+                <span className="transition-bounce hover:scale-110 inline-block" style={{
+                  transform: 'rotate(-1deg) scale(1.05)'
                 }}>stuff!</span>{' '}
-                <span style={{
-                  transform: 'rotate(1deg) translateX(2px)',
-                  display: 'inline-block'
+                <span className="transition-bounce hover:scale-110 inline-block" style={{
+                  transform: 'rotate(1deg) translateX(2px)'
                 }}>Just</span>{' '}
-                <span style={{
-                  transform: 'rotate(-2deg) translateY(1px)',
-                  display: 'inline-block'
+                <span className="transition-bounce hover:scale-110 inline-block" style={{
+                  transform: 'rotate(-2deg) translateY(1px)'
                 }}>HODL</span>{' '}
-                <span style={{
-                  transform: 'rotate(2deg)',
-                  display: 'inline-block'
+                <span className="transition-bounce hover:scale-110 inline-block" style={{
+                  transform: 'rotate(2deg)'
                 }}>together!</span> ◎🚀
               </span>
             </div>
           </div>
         </div>
 
+        {/* Enhanced Feature Cards */}
         <div className="flex flex-col items-center space-y-6 sm:space-y-8">
           <div className="flex flex-wrap justify-center gap-3 sm:gap-6 lg:gap-8 text-sm">
-            <div className="flex items-center space-x-2 sm:space-x-3 bg-yellow-300 px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 rounded-xl sm:rounded-2xl border-4 sm:border-6 border-black border-dashed shadow-xl sm:shadow-2xl" style={{
-              transform: 'rotate(-3deg) skew(-1deg)'
+            <div className="flex items-center space-x-2 sm:space-x-3 meme-card px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 rounded-xl sm:rounded-2xl brutal-shadow-lg transition-bounce hover:scale-110 hover:rotate-3 animate-bounce-in" style={{
+              transform: 'rotate(-3deg) skew(-1deg)',
+              animationDelay: '0.6s'
             }}>
-              <span className="text-2xl sm:text-3xl lg:text-4xl" style={{
+              <span className="text-2xl sm:text-3xl lg:text-4xl transition-bounce hover:scale-125 animate-wiggle" style={{
                 transform: 'rotate(5deg)',
                 display: 'inline-block'
               }}>◎</span>
-              <span className="text-green-900 crayon-text super-thick text-lg sm:text-xl lg:text-2xl" style={{
+              <span className="text-green-900 crayon-text super-thick text-responsive-sm" style={{
                 transform: 'rotate(1deg) translateY(-1px)',
                 letterSpacing: '2px'
               }}>
                 Just 0.1 SOL!
               </span>
             </div>
-            <div className="flex items-center space-x-2 sm:space-x-3 bg-green-400 px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 rounded-xl sm:rounded-2xl border-4 sm:border-6 border-black border-dashed shadow-xl sm:shadow-2xl" style={{
-              transform: 'rotate(2deg) skew(1deg)'
+            
+            <div className="flex items-center space-x-2 sm:space-x-3 bg-green-400 hover:bg-green-500 px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 rounded-xl sm:rounded-2xl border-4 border-black border-dashed brutal-shadow-lg transition-bounce hover:scale-110 hover:rotate-3 animate-bounce-in" style={{
+              transform: 'rotate(2deg) skew(1deg)',
+              animationDelay: '0.8s'
             }}>
-              <span className="text-2xl sm:text-3xl lg:text-4xl" style={{
+              <span className="text-2xl sm:text-3xl lg:text-4xl transition-bounce hover:scale-125 animate-wiggle" style={{
                 transform: 'rotate(-3deg)',
                 display: 'inline-block'
               }}>🤝</span>
-              <span className="text-yellow-900 crayon-text super-thick text-lg sm:text-xl lg:text-2xl" style={{
+              <span className="text-yellow-900 crayon-text super-thick text-responsive-sm" style={{
                 transform: 'rotate(-1deg) translateX(1px)',
                 letterSpacing: '2px'
               }}>
                 Community!
               </span>
             </div>
-            <div className="flex items-center space-x-2 sm:space-x-3 bg-yellow-400 px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 rounded-xl sm:rounded-2xl border-4 sm:border-6 border-black border-dashed shadow-xl sm:shadow-2xl" style={{
-              transform: 'rotate(-1deg) skew(-0.5deg)'
+            
+            <div className="flex items-center space-x-2 sm:space-x-3 bg-yellow-400 hover:bg-yellow-500 px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 rounded-xl sm:rounded-2xl border-4 border-black border-dashed brutal-shadow-lg transition-bounce hover:scale-110 hover:rotate-3 animate-bounce-in" style={{
+              transform: 'rotate(-1deg) skew(-0.5deg)',
+              animationDelay: '1s'
             }}>
-              <span className="text-2xl sm:text-3xl lg:text-4xl" style={{
+              <span className="text-2xl sm:text-3xl lg:text-4xl transition-bounce hover:scale-125 animate-wiggle" style={{
                 transform: 'rotate(4deg)',
                 display: 'inline-block'
               }}>💎</span>
-              <span className="text-green-900 crayon-text super-thick text-lg sm:text-xl lg:text-2xl" style={{
+              <span className="text-green-900 crayon-text super-thick text-responsive-sm" style={{
                 transform: 'rotate(2deg) translateY(1px)',
                 letterSpacing: '3px'
               }}>
@@ -167,10 +167,12 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="flex items-center text-yellow-400 drop-shadow-lg" style={{
-            transform: 'rotate(-2deg)'
+          {/* Enhanced Arrow */}
+          <div className="flex items-center text-yellow-400 drop-shadow-lg transition-bounce hover:scale-125 animate-bounce-in" style={{
+            transform: 'rotate(-2deg)',
+            animationDelay: '1.2s'
           }}>
-            <ArrowDown size={48} strokeWidth={4} className="sm:w-16 sm:h-16" />
+            <ArrowDown size={48} strokeWidth={4} className="sm:w-16 sm:h-16 animate-wiggle glow-effect" />
           </div>
         </div>
       </div>
