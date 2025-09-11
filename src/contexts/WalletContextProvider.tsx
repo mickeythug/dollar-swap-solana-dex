@@ -20,9 +20,9 @@ interface Props {
 }
 
 export const WalletContextProvider: FC<Props> = ({ children }) => {
-  // Use mainnet-beta endpoint
+  // Use mainnet-beta endpoint 
   const endpoint = useMemo(
-    () => process.env.VITE_RPC_ENDPOINT || clusterApiUrl('mainnet-beta'),
+    () => import.meta.env.VITE_RPC_ENDPOINT || clusterApiUrl('mainnet-beta'),
     []
   );
 

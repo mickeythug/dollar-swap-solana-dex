@@ -7,7 +7,6 @@ import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
 import { ArrowDown } from 'lucide-react';
 import { JupiterSwapService } from '@/services/jupiterSwap';
-import { UserService } from '@/services/userService';
 
 // Token addresses on Solana
 const TOKENS = {
@@ -29,21 +28,18 @@ const SwapInterface = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [quote, setQuote] = useState<any>(null);
   const [swapService, setSwapService] = useState<JupiterSwapService | null>(null);
-  const [userService] = useState(new UserService());
 
   useEffect(() => {
     // Initialize Jupiter swap service
-    const rpcEndpoint = process.env.VITE_RPC_ENDPOINT || 'https://api.mainnet-beta.solana.com';
+    const rpcEndpoint = import.meta.env.VITE_RPC_ENDPOINT || 'https://api.mainnet-beta.solana.com';
     setSwapService(new JupiterSwapService(rpcEndpoint));
   }, []);
 
   useEffect(() => {
     if (publicKey) {
       fetchSolBalance();
-      // Create or update user profile when wallet connects
-      userService.createOrUpdateUser(publicKey.toBase58());
     }
-  }, [publicKey, connection, userService]);
+  }, [publicKey, connection]);
 
   const fetchSolBalance = async () => {
     if (!publicKey) return;
@@ -116,20 +112,6 @@ const SwapInterface = () => {
       );
 
       if (result.success) {
-        // Record transaction in Supabase
-        const user = await userService.getUserByWallet(publicKey.toBase58());
-        if (user) {
-          await userService.recordSwapTransaction(
-            user.id,
-            publicKey.toBase58(),
-            result.signature,
-            'SOL',
-            '0.1SOL',
-            parseFloat(solAmount),
-            quote?.outAmount || 0
-          );
-        }
-
         toast.success('Swap completed successfully!', {
           description: `Transaction: ${result.signature.slice(0, 8)}...`,
           action: {
