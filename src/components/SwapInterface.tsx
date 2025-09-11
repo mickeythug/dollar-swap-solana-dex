@@ -16,7 +16,7 @@ const TOKENS = {
   BONK: 'DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263',
 };
 
-const DOLLAR_TOKEN_MINT = '3o8h4sjvLtxxPmVx9boN7yC4Tzd6zse5Ycb6VUHbpump';
+const DOLLAR_TOKEN_MINT = 'AkKKEZCQt75pm9JwughvPcVXLvXSraVGWbqwNB9Ppump';
 
 const SwapInterface = () => {
   const { connection } = useConnection();
