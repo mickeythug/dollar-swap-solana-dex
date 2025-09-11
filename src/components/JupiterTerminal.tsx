@@ -14,9 +14,13 @@ const JupiterTerminal = () => {
   useEffect(() => {
     // Load Jupiter Terminal script
     const script = document.createElement('script');
-    script.src = 'https://terminal.jup.ag/main-v1.0.0.js';
+    script.src = 'https://terminal.jup.ag/main-v2.js';
+    script.id = 'jupiter-terminal-script';
+    script.async = true;
     script.onload = () => {
+      console.log('[Jupiter] script loaded');
       if (window.Jupiter && terminalRef.current) {
+        console.log('[Jupiter] initializing terminal');
         window.Jupiter.init({
           displayMode: 'integrated',
           integratedTargetId: 'jupiter-terminal',
@@ -26,15 +30,18 @@ const JupiterTerminal = () => {
           formProps: {
             initialAmount: '0.1',
             initialInputMint: 'So11111111111111111111111111111111111111112',
-            initialOutputMint: '9bb876876c4B2d7896F12C73F0e50e22D4dE75uG4FqK3StXJ9WJ7Cu',
+            initialOutputMint: 'EPjFWdd5AufqSSqeM2qN1xzybapC8t1HqbyCMBhhKe3',
           },
           containerStyles: {
             maxHeight: '90vh',
           },
           containerClassName: 'jupiter-terminal-container',
         });
+      } else {
+        console.error('[Jupiter] window.Jupiter not available or container missing');
       }
     };
+    script.onerror = (e) => console.error('[Jupiter] failed to load script', e);
     document.head.appendChild(script);
 
     return () => {
