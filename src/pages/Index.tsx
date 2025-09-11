@@ -140,7 +140,9 @@ const Index = () => {
             </div>
           </section>
           
-          {/* Luxury Framed Dollar Bill - Bottom Center */}
+          <Footer />
+          
+          {/* Luxury Framed Dollar Bill - Very Bottom */}
           <section className="relative z-10 px-2 sm:px-4 lg:px-8 py-8 sm:py-16">
             <div className="max-w-4xl mx-auto flex justify-center">
               <div className="luxury-bill-frame" style={{ transform: 'scale(1.5)' }}>
@@ -154,8 +156,6 @@ const Index = () => {
               </div>
             </div>
           </section>
-          
-          <Footer />
         </div>
     </WalletContextProvider>;
 };
