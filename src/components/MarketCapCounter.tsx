@@ -99,7 +99,7 @@ const MarketCapCounter = () => {
             <div className="text-white text-responsive-xs font-black mb-1 sm:mb-2 crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>
               CURRENT MARKETCAP! 💰
             </div>
-            <div className="text-responsive-xl font-black text-white mb-1 sm:mb-2 transform rotate-2 crayon-text glow-effect" style={{
+            <div className="text-responsive-xl font-black text-white mb-1 sm:mb-2 transform rotate-2 crayon-text" style={{
               textShadow: '3px 3px 0px #000000'
             }}>
               {formatMarketCap(currentMarketCap)}
