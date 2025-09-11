@@ -245,7 +245,7 @@ const SwapInterface = () => {
               
               <div className="flex-1 text-right">
                 <span className="text-white text-base font-black crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>
-                  {quote ? (quote.outAmount / 1000000).toFixed(6) : (solAmount ? '≈ ' + (parseFloat(solAmount) * 1000).toFixed(0) : '0')}
+                  {quote && quote.outAmount ? (quote.outAmount / 1000000).toFixed(6) : (solAmount ? '≈ ' + (parseFloat(solAmount) * 1000).toFixed(0) : '0')}
                 </span>
               </div>
             </div>
@@ -293,13 +293,13 @@ const SwapInterface = () => {
           )}
 
           {/* Quote Info */}
-          {quote && (
+          {quote && quote.outAmount && (
             <div className="bg-blue-600 hover:bg-blue-700 p-4 rounded-xl border-4 border-black transform rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:rotate-2">
               <p className="text-white font-black text-base crayon-text mb-2" style={{textShadow: '1px 1px 0px #000000'}}>
                 You'll receive: {(quote.outAmount / 1000000).toFixed(6)} 0.1SOL
               </p>
               <p className="text-white font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>
-                Price Impact: {quote.priceImpactPct}%
+                Price Impact: {quote.priceImpactPct ? `${quote.priceImpactPct}%` : 'N/A'}
               </p>
             </div>
           )}
