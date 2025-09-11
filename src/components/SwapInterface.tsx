@@ -285,52 +285,32 @@ const SwapInterface = () => {
         </div>
       </div>
 
-      {/* Enhanced Token Info */}
-      <div className="mt-8 meme-card rounded-2xl border-6 border-black p-6 transform rotate-2 brutal-shadow-xl transition-bounce hover:scale-105 hover:rotate-3">
-        <h3 className="text-black font-black mb-6 text-responsive-sm crayon-text animate-wiggle text-center" style={{textShadow: '1px 1px 0px #ffffff'}}>TOKEN INFO! 📊</h3>
-        <div className="space-y-6">
-          <div className="text-green-800 font-black text-responsive-xs text-center" style={{fontFamily: 'Comic Sans MS, cursive'}}>
-            <div className="mb-4 text-responsive-sm">Contract Address:</div>
-            <button
-              onClick={() => {
-                navigator.clipboard.writeText(DOLLAR_TOKEN_MINT);
-                toast.success('Contract address copied! 📋');
-              }}
-              className="font-mono text-sm sm:text-lg lg:text-xl bg-green-400 hover:bg-green-500 p-4 sm:p-6 rounded-xl border-4 border-black transition-bounce hover:scale-105 w-full text-center brutal-shadow-lg glow-effect overflow-x-auto"
-              style={{
-                whiteSpace: 'nowrap',
-                letterSpacing: '1px',
-                fontWeight: '900',
-                textShadow: '1px 1px 0px #000000',
-                wordBreak: 'keep-all',
-                overflowWrap: 'normal'
-              }}
-            >
-              {DOLLAR_TOKEN_MINT}
-            </button>
-            <div className="mt-3 text-xs text-green-700 font-black">
-              👆 CLICK TO COPY! 👆
-            </div>
+      {/* Contract Address Only - Wide Format */}
+      <div className="mt-8 w-full max-w-4xl mx-auto">
+        <div className="bg-yellow-400 hover:bg-yellow-500 rounded-2xl border-6 border-black p-6 transform rotate-1 brutal-shadow-xl transition-bounce hover:scale-105 hover:-rotate-1">
+          <div className="text-center mb-4">
+            <h3 className="text-black font-black text-responsive-sm crayon-text animate-wiggle" style={{textShadow: '1px 1px 0px #ffffff'}}>
+              CONTRACT ADDRESS 📋
+            </h3>
           </div>
-          
-          <div className="grid grid-cols-2 gap-4 text-center">
-            <div className="bg-yellow-400 hover:bg-yellow-500 p-4 rounded-xl border-3 border-black brutal-shadow transition-bounce hover:scale-105">
-              <div className="text-green-800 font-black text-responsive-xs mb-2" style={{fontFamily: 'Comic Sans MS, cursive'}}>
-                Network:
-              </div>
-              <div className="text-green-900 font-black text-responsive-sm crayon-text">
-                Solana
-              </div>
-            </div>
-            
-            <div className="bg-green-400 hover:bg-green-500 p-4 rounded-xl border-3 border-black brutal-shadow transition-bounce hover:scale-105">
-              <div className="text-yellow-900 font-black text-responsive-xs mb-2" style={{fontFamily: 'Comic Sans MS, cursive'}}>
-                Type:
-              </div>
-              <div className="text-yellow-900 font-black text-responsive-sm crayon-text animate-wiggle">
-                MEME TOKEN! 🚀
-              </div>
-            </div>
+          <button
+            onClick={() => {
+              navigator.clipboard.writeText(DOLLAR_TOKEN_MINT);
+              toast.success('Contract address copied! 📋');
+            }}
+            className="font-mono text-lg sm:text-xl lg:text-2xl bg-green-400 hover:bg-green-500 p-4 sm:p-6 rounded-xl border-4 border-black transition-bounce hover:scale-105 w-full text-center brutal-shadow-lg glow-effect"
+            style={{
+              fontWeight: '900',
+              textShadow: '2px 2px 0px #000000',
+              letterSpacing: '1px',
+              whiteSpace: 'nowrap',
+              overflow: 'visible'
+            }}
+          >
+            {DOLLAR_TOKEN_MINT}
+          </button>
+          <div className="mt-3 text-center text-sm text-black font-black crayon-text animate-wiggle">
+            👆 CLICK TO COPY! 👆
           </div>
         </div>
       </div>
