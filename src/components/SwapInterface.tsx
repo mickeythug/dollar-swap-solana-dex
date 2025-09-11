@@ -238,10 +238,10 @@ const SwapInterface = () => {
           {!connected ? (
             <Button
               onClick={handleConnectWallet}
-              className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold py-6 rounded-xl transition-bounce transform hover:scale-105 border-0 text-base brutal-shadow glow-effect"
+              className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-black py-6 rounded-xl transition-bounce transform hover:scale-105 border-0 text-base brutal-shadow crayon-text"
               style={{
                 background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
-                fontFamily: 'system-ui, -apple-system, sans-serif'
+                textShadow: '2px 2px 0px #000000'
               }}
             >
               Connect Wallet
