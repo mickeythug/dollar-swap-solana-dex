@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
+import { useWalletModal } from '@solana/wallet-adapter-react-ui';
 import { VersionedTransaction } from '@solana/web3.js';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -11,7 +12,8 @@ const DOLLAR_TOKEN_MINT = '3o8h4sjvLtxxPmVx9boN7yC4Tzd6zse5Ycb6VUHbpump';
 
 const SwapInterface = () => {
   const { connection } = useConnection();
-  const { publicKey, signTransaction } = useWallet();
+  const { publicKey, signTransaction, disconnect, connected } = useWallet();
+  const { setVisible } = useWalletModal();
   const [solAmount, setSolAmount] = useState('');
   const [isSwapping, setIsSwapping] = useState(false);
   const [solBalance, setSolBalance] = useState(0);
@@ -120,6 +122,22 @@ const SwapInterface = () => {
 
   const setDollarAmount = () => {
     setSolAmount('0.1'); // Set to 0.1 SOL instead of $1 worth
+  };
+
+  const handleConnectWallet = () => {
+    setVisible(true);
+  };
+
+  const handleDisconnect = async () => {
+    try {
+      await disconnect();
+      setSolAmount('');
+      setSolBalance(0);
+      toast.success('Wallet disconnected successfully!');
+    } catch (error) {
+      console.error('Error disconnecting wallet:', error);
+      toast.error('Failed to disconnect wallet');
+    }
   };
 
   return (
@@ -263,24 +281,44 @@ const SwapInterface = () => {
             </div>
           </div>
 
-          {/* Swap Button */}
-          <Button
-            onClick={executeSwap}
-            disabled={!publicKey || !solAmount || isSwapping || parseFloat(solAmount) <= 0}
-            className="w-full bg-yellow-400 hover:bg-yellow-500 text-green-900 font-black py-6 rounded-2xl transition-all duration-200 transform hover:scale-105 hover:rotate-1 disabled:hover:scale-100 disabled:opacity-50 border-6 border-black text-2xl"
-            style={{
-              fontFamily: 'Comic Sans MS, cursive',
-              textShadow: '2px 2px 0px #000000',
-              boxShadow: '8px 8px 0px #000000'
-            }}
-          >
-            {!publicKey 
-              ? 'CONNECT WALLET!' 
-              : isSwapping 
-              ? 'SWAPPING...' 
-              : 'SWAP TO 0.1 SOL! ◎'
-            }
-          </Button>
+          {/* Swap/Connect Button */}
+          {!connected ? (
+            <Button
+              onClick={handleConnectWallet}
+              className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold py-6 rounded-xl transition-all duration-200 transform hover:scale-105 border-0 text-xl shadow-lg hover:shadow-xl"
+              style={{
+                background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
+                fontFamily: 'system-ui, -apple-system, sans-serif'
+              }}
+            >
+              Connect Wallet
+            </Button>
+          ) : (
+            <div className="space-y-3">
+              <Button
+                onClick={executeSwap}
+                disabled={!solAmount || isSwapping || parseFloat(solAmount) <= 0}
+                className="w-full bg-yellow-400 hover:bg-yellow-500 text-green-900 font-black py-6 rounded-2xl transition-all duration-200 transform hover:scale-105 hover:rotate-1 disabled:hover:scale-100 disabled:opacity-50 border-6 border-black text-2xl"
+                style={{
+                  fontFamily: 'Comic Sans MS, cursive',
+                  textShadow: '2px 2px 0px #000000',
+                  boxShadow: '8px 8px 0px #000000'
+                }}
+              >
+                {isSwapping ? 'SWAPPING...' : 'SWAP TO 0.1 SOL! ◎'}
+              </Button>
+              <Button
+                onClick={handleDisconnect}
+                variant="outline"
+                className="w-full bg-red-100 hover:bg-red-200 text-red-600 font-semibold py-3 rounded-xl border-2 border-red-300 hover:border-red-400 transition-all duration-200"
+                style={{
+                  fontFamily: 'system-ui, -apple-system, sans-serif'
+                }}
+              >
+                Disconnect Wallet
+              </Button>
+            </div>
+          )}
 
           {/* Info */}
           <div className="text-center bg-green-500 p-4 rounded-xl border-4 border-black transform rotate-1" style={{
