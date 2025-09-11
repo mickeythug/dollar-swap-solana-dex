@@ -1,7 +1,7 @@
 import React from 'react';
 import { ConnectionProvider } from '@solana/wallet-adapter-react';
 import { WalletContextProvider } from '../contexts/WalletContextProvider';
-import SwapInterface from '../components/SwapInterface';
+import JupiterTerminal from '../components/JupiterTerminal';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
@@ -36,7 +36,7 @@ const Index = () => {
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 xl:gap-16 items-start">
                 <MarketCapCounter />
-                <SwapInterface />
+                <JupiterTerminal />
               </div>
             </div>
           </section>
