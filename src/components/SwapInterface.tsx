@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
 import { ArrowDown } from 'lucide-react';
-import { JupiterSwapService } from '@/services/jupiterSwap';
+import { PumpFunService } from '@/services/pumpFunService';
 
 // Token addresses on Solana
 const TOKENS = {
@@ -27,12 +27,12 @@ const SwapInterface = () => {
   const [solBalance, setSolBalance] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [quote, setQuote] = useState<any>(null);
-  const [swapService, setSwapService] = useState<JupiterSwapService | null>(null);
+  const [swapService, setSwapService] = useState<PumpFunService | null>(null);
 
   useEffect(() => {
-    // Initialize Jupiter swap service
+    // Initialize Pump.fun swap service
     const rpcEndpoint = 'https://small-evocative-diamond.solana-mainnet.quiknode.pro/2ed30cf5e6e264547ca0fac87762184bfdb2a995/';
-    setSwapService(new JupiterSwapService(rpcEndpoint));
+    setSwapService(new PumpFunService(rpcEndpoint));
   }, []);
 
   useEffect(() => {
@@ -56,7 +56,7 @@ const SwapInterface = () => {
     }
   };
 
-  // Get quote from Jupiter
+  // Get quote from Pump.fun
   const fetchQuote = async () => {
     if (!swapService || !solAmount || parseFloat(solAmount) <= 0) return;
 
@@ -65,13 +65,12 @@ const SwapInterface = () => {
       const inputAmount = parseFloat(solAmount) * LAMPORTS_PER_SOL;
       
       const quoteData = await swapService.getQuote({
-        inputMint: TOKENS.SOL,
-        outputMint: DOLLAR_TOKEN_MINT,
-        amount: inputAmount,
-        userPublicKey: publicKey?.toBase58() || '',
+        mint: DOLLAR_TOKEN_MINT,
+        type: 'BUY',
+        amount: inputAmount.toString(),
       });
 
-      setQuote(quoteData);
+      setQuote(quoteData.quote);
     } catch (error) {
       console.error('Error fetching quote:', error);
       toast.error('Failed to get quote');
@@ -104,10 +103,11 @@ const SwapInterface = () => {
       const result = await swapService.executeSwap(
         { publicKey, signTransaction, connected } as any,
         {
-          inputMint: TOKENS.SOL,
-          outputMint: DOLLAR_TOKEN_MINT,
-          amount: inputAmount,
-          userPublicKey: publicKey.toBase58(),
+          wallet: publicKey.toBase58(),
+          type: 'BUY',
+          mint: DOLLAR_TOKEN_MINT,
+          inAmount: inputAmount.toString(),
+          priorityFeeLevel: 'high',
         }
       );
 
@@ -245,7 +245,7 @@ const SwapInterface = () => {
               
               <div className="flex-1 text-right">
                 <span className="text-white text-base font-black crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>
-                  {quote && quote.outAmount ? (quote.outAmount / 1000000).toFixed(6) : (solAmount ? '≈ ' + (parseFloat(solAmount) * 1000).toFixed(0) : '0')}
+                  {quote && quote.outAmount ? (parseFloat(quote.outAmount) / Math.pow(10, quote.meta?.outDecimals || 6)).toFixed(6) : (solAmount ? '≈ ' + (parseFloat(solAmount) * 1000).toFixed(0) : '0')}
                 </span>
               </div>
             </div>
@@ -296,18 +296,21 @@ const SwapInterface = () => {
           {quote && quote.outAmount && (
             <div className="bg-blue-600 hover:bg-blue-700 p-4 rounded-xl border-4 border-black transform rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:rotate-2">
               <p className="text-white font-black text-base crayon-text mb-2" style={{textShadow: '1px 1px 0px #000000'}}>
-                You'll receive: {(quote.outAmount / 1000000).toFixed(6)} 0.1SOL
+                You'll receive: {(parseFloat(quote.outAmount) / Math.pow(10, quote.meta?.outDecimals || 6)).toFixed(6)} 0.1SOL
               </p>
               <p className="text-white font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>
-                Price Impact: {quote.priceImpactPct ? `${quote.priceImpactPct}%` : 'N/A'}
+                Market Cap: {quote.meta?.currentMarketCapInSol?.toFixed(4)} SOL
+              </p>
+              <p className="text-white font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>
+                Bonding Complete: {quote.meta?.isCompleted ? '✅ Yes' : '❌ No'}
               </p>
             </div>
           )}
 
           {/* Enhanced Info */}
           <div className="text-center bg-green-700 hover:bg-green-800 p-4 rounded-xl border-4 border-black transform rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:rotate-2">
-            <p className="text-white font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>Slippage: 0.5% • Auto Priority Fee</p>
-            <p className="text-white font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>Powered by Jupiter Aggregator</p>
+            <p className="text-white font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>High Priority Fee • Pump.fun Protocol</p>
+            <p className="text-white font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>Powered by QuickNode Pump.fun</p>
           </div>
         </div>
       </div>
