@@ -7,27 +7,13 @@ const Hero = () => {
     <section className="relative z-10 px-2 sm:px-4 lg:px-8 py-8 sm:py-12 lg:py-16 text-center">
       <div className="max-w-6xl mx-auto">
         <div className="mb-6 sm:mb-8">
-          {/* Enhanced Top Banner */}
-          <div className="inline-flex items-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 meme-card rounded-2xl sm:rounded-3xl mb-4 sm:mb-6 lg:mb-8 brutal-shadow-lg transition-bounce hover:scale-105 hover:rotate-1" style={{
-            transform: 'rotate(-2deg) skew(-1deg) scale(1.05)'
-          }}>
-            <span className="text-responsive-sm text-black crayon-text" style={{
-              transform: 'rotate(3deg) translateY(-1px)',
-              display: 'inline-block',
-              letterSpacing: '3px',
-              textShadow: '2px 2px 0px #ffffff'
-            }}>
-              MEME COIN IS HERE!!!
-            </span>
-          </div>
-          
-          {/* Floating Logo */}
+          {/* Floating Logo - 3x Bigger */}
           <div className="flex justify-center mb-8 sm:mb-12 lg:mb-16">
             <div className="relative">
               <img 
                 src="/lovable-uploads/a2925ada-d9a1-4459-b346-251f5ca5b59d.png" 
                 alt="0.1 SOL Community Logo"
-                className="w-80 h-auto sm:w-96 lg:w-[28rem] xl:w-[32rem] transform transition-all duration-300 hover:scale-110 hover:rotate-2 drop-shadow-2xl"
+                className="w-[60rem] h-auto sm:w-[72rem] lg:w-[84rem] xl:w-[96rem] transform transition-all duration-300 hover:scale-110 hover:rotate-2 drop-shadow-2xl"
                 style={{
                   filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3))',
                   animation: 'float 3s ease-in-out infinite'
