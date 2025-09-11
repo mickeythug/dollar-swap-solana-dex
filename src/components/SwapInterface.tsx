@@ -151,8 +151,8 @@ const SwapInterface = () => {
         {/* Enhanced Header */}
         <div className="text-center mb-6 sm:mb-8 transform rotate-1 animate-bounce-in">
           <div className="bg-green-400 hover:bg-green-500 rounded-2xl border-4 border-black p-4 inline-block transform -rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:rotate-2">
-            <h2 className="text-responsive-lg font-black text-white mb-2 crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>SWAP TO 0.1 SOL!</h2>
-            <p className="text-white text-responsive-sm font-black transform rotate-1 crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>SUPER EASY! ◎</p>
+            <h2 className="text-base font-black text-white mb-2 crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>SWAP TO 0.1 SOL!</h2>
+            <p className="text-white text-base font-black transform rotate-1 crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>SUPER EASY! ◎</p>
           </div>
         </div>
 
@@ -160,8 +160,8 @@ const SwapInterface = () => {
         <div className="space-y-6">
           <div className="bg-green-400 hover:bg-green-500 rounded-2xl p-4 sm:p-6 border-6 border-black transform rotate-1 brutal-shadow-lg transition-bounce hover:scale-105 hover:rotate-2">
             <div className="flex justify-between items-center mb-4">
-              <span className="text-responsive-sm text-white font-black crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>From</span>
-              <span className="text-responsive-xs text-white font-black crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>
+              <span className="text-base text-white font-black crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>From</span>
+              <span className="text-base text-white font-black crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>
                 Balance: {isLoading ? '...' : solBalance.toFixed(4)} SOL
               </span>
             </div>
@@ -169,7 +169,7 @@ const SwapInterface = () => {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-3 meme-card rounded-xl px-4 py-3 border-4 border-black transform -rotate-1 brutal-shadow transition-bounce hover:scale-105">
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-400 via-blue-500 to-purple-500 rounded-full border-2 border-black glow-effect animate-wiggle"></div>
-                <span className="text-black font-black text-responsive-sm crayon-text" style={{textShadow: '1px 1px 0px #ffffff'}}>SOL</span>
+                <span className="text-black font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #ffffff'}}>SOL</span>
               </div>
               
               <div className="flex-1">
@@ -178,7 +178,7 @@ const SwapInterface = () => {
                   placeholder="0.00"
                   value={solAmount}
                   onChange={(e) => setSolAmount(e.target.value)}
-                  className="meme-input text-2xl font-black text-right p-4 rounded-xl text-responsive-sm"
+                  className="meme-input text-base font-black text-right p-4 rounded-xl"
                   step="0.0001"
                   min="0"
                 />
@@ -188,13 +188,13 @@ const SwapInterface = () => {
             <div className="flex justify-end space-x-3 mt-4">
               <Button
                 onClick={setDollarAmount}
-                className="meme-button px-4 py-2 rounded-lg text-responsive-xs transition-bounce hover:scale-110 hover:rotate-3"
+                className="meme-button px-4 py-2 rounded-lg text-base transition-bounce hover:scale-110 hover:rotate-3"
               >
                 0.1 SOL
               </Button>
               <Button
                 onClick={setMaxAmount}
-                className="bg-green-500 hover:bg-green-600 text-yellow-100 font-black px-4 py-2 rounded-lg border-3 border-black transform -rotate-1 transition-bounce hover:scale-110 hover:-rotate-2 brutal-shadow text-responsive-xs"
+                className="bg-green-500 hover:bg-green-600 text-yellow-100 font-black px-4 py-2 rounded-lg border-3 border-black transform -rotate-1 transition-bounce hover:scale-110 hover:-rotate-2 brutal-shadow text-base"
                 style={{
                   fontFamily: 'Comic Sans MS, cursive',
                   textShadow: '1px 1px 0px #000000'
@@ -215,8 +215,8 @@ const SwapInterface = () => {
           {/* Enhanced To Section */}
           <div className="bg-green-400 hover:bg-green-500 rounded-2xl p-4 sm:p-6 border-6 border-black transform -rotate-1 brutal-shadow-lg transition-bounce hover:scale-105 hover:-rotate-2">
             <div className="flex justify-between items-center mb-4">
-              <span className="text-responsive-sm text-white font-black crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>To</span>
-              <span className="text-responsive-xs text-white font-black crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>0.1 SOL Token</span>
+              <span className="text-base text-white font-black crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>To</span>
+              <span className="text-base text-white font-black crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>0.1 SOL Token</span>
             </div>
             
             <div className="flex items-center space-x-4">
@@ -224,11 +224,11 @@ const SwapInterface = () => {
                 <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-green-500 rounded-full flex items-center justify-center border-2 border-black glow-effect animate-wiggle">
                   <span className="text-lg font-black text-green-900">◎</span>
                 </div>
-                <span className="text-black font-black text-responsive-sm crayon-text" style={{textShadow: '1px 1px 0px #ffffff'}}>0.1SOL</span>
+                <span className="text-black font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #ffffff'}}>0.1SOL</span>
               </div>
               
               <div className="flex-1 text-right">
-                <span className="text-white text-responsive-sm font-black crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>
+                <span className="text-white text-base font-black crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>
                   {solAmount ? '≈ ' + (parseFloat(solAmount) * 1000).toFixed(0) : '0'}
                 </span>
               </div>
@@ -239,7 +239,7 @@ const SwapInterface = () => {
           {!connected ? (
             <Button
               onClick={handleConnectWallet}
-              className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold py-6 rounded-xl transition-bounce transform hover:scale-105 border-0 text-responsive-sm brutal-shadow glow-effect animate-bounce-in"
+              className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold py-6 rounded-xl transition-bounce transform hover:scale-105 border-0 text-base brutal-shadow glow-effect animate-bounce-in"
               style={{
                 background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
                 fontFamily: 'system-ui, -apple-system, sans-serif'
@@ -252,7 +252,7 @@ const SwapInterface = () => {
               <Button
                 onClick={executeSwap}
                 disabled={!solAmount || isSwapping || parseFloat(solAmount) <= 0}
-                className="w-full meme-button py-6 rounded-2xl text-responsive-sm brutal-shadow-lg transition-bounce hover:scale-105 hover:rotate-1 disabled:hover:scale-100 disabled:opacity-50 glow-effect"
+                className="w-full meme-button py-6 rounded-2xl text-base brutal-shadow-lg transition-bounce hover:scale-105 hover:rotate-1 disabled:hover:scale-100 disabled:opacity-50 glow-effect"
                 style={{
                   fontFamily: 'Comic Sans MS, cursive',
                   textShadow: '2px 2px 0px #000000'
@@ -267,7 +267,7 @@ const SwapInterface = () => {
               <Button
                 onClick={handleDisconnect}
                 variant="outline"
-                className="w-full bg-red-100 hover:bg-red-200 text-red-600 font-semibold py-3 rounded-xl border-2 border-red-300 hover:border-red-400 transition-bounce text-responsive-xs"
+                className="w-full bg-red-100 hover:bg-red-200 text-red-600 font-semibold py-3 rounded-xl border-2 border-red-300 hover:border-red-400 transition-bounce text-base"
                 style={{
                   fontFamily: 'system-ui, -apple-system, sans-serif'
                 }}
@@ -279,8 +279,8 @@ const SwapInterface = () => {
 
           {/* Enhanced Info */}
           <div className="text-center bg-green-500 hover:bg-green-600 p-4 rounded-xl border-4 border-black transform rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:rotate-2">
-            <p className="text-white font-black text-responsive-xs crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>Slippage: 10% • Priority Fee: 0.0001 SOL</p>
-            <p className="text-white font-black text-responsive-xs crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>Powered by PumpPortal • Auto Pool</p>
+            <p className="text-white font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>Slippage: 10% • Priority Fee: 0.0001 SOL</p>
+            <p className="text-white font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>Powered by PumpPortal • Auto Pool</p>
           </div>
         </div>
       </div>
@@ -289,7 +289,7 @@ const SwapInterface = () => {
       <div className="mt-8 w-full">
         <div className="bg-yellow-400 hover:bg-yellow-500 rounded-2xl border-6 border-black p-6 sm:p-8 lg:p-10 transform rotate-1 brutal-shadow-xl transition-bounce hover:scale-105 hover:-rotate-1 overflow-hidden w-full mx-auto" style={{maxWidth: '200rem'}}>
           <div className="text-center mb-3">
-            <h3 className="text-black font-black text-lg crayon-text animate-wiggle" style={{textShadow: '1px 1px 0px #ffffff'}}>
+            <h3 className="text-black font-black text-base crayon-text animate-wiggle" style={{textShadow: '1px 1px 0px #ffffff'}}>
               CONTRACT ADDRESS 📋
             </h3>
           </div>
@@ -299,7 +299,7 @@ const SwapInterface = () => {
                 navigator.clipboard.writeText(DOLLAR_TOKEN_MINT);
                 toast.success('Contract address copied! 📋');
               }}
-              className="font-mono text-xs sm:text-sm md:text-base lg:text-lg bg-green-400 hover:bg-green-500 px-2 py-3 rounded-lg border-3 border-black transition-bounce hover:scale-105 min-w-full brutal-shadow-lg glow-effect block"
+              className="font-mono text-base bg-green-400 hover:bg-green-500 px-2 py-3 rounded-lg border-3 border-black transition-bounce hover:scale-105 min-w-full brutal-shadow-lg glow-effect block"
               style={{
                 fontWeight: '900',
                 textShadow: '1px 1px 0px #000000',
@@ -312,7 +312,7 @@ const SwapInterface = () => {
               {DOLLAR_TOKEN_MINT}
             </button>
           </div>
-          <div className="mt-2 text-center text-xs text-black font-black crayon-text animate-wiggle">
+          <div className="mt-2 text-center text-base text-black font-black crayon-text animate-wiggle">
             👆 CLICK TO COPY! 👆
           </div>
         </div>
