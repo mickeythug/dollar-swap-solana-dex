@@ -146,10 +146,10 @@ const SwapInterface = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto w-full animate-slide-up">
+    <div className="max-w-md mx-auto w-full">
       <div className="meme-card rounded-3xl p-4 sm:p-6 lg:p-8 transform -rotate-2 brutal-shadow-xl transition-bounce hover:scale-105 hover:rotate-1">
         {/* Enhanced Header */}
-        <div className="text-center mb-6 sm:mb-8 transform rotate-1 animate-bounce-in">
+        <div className="text-center mb-6 sm:mb-8 transform rotate-1">
           <div className="bg-green-400 hover:bg-green-500 rounded-2xl border-4 border-black p-4 inline-block transform -rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:rotate-2">
             <h2 className="text-base font-black text-white mb-2 crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>SWAP TO 0.1 SOL!</h2>
             <p className="text-white text-base font-black transform rotate-1 crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>SUPER EASY! ◎</p>
@@ -168,7 +168,7 @@ const SwapInterface = () => {
             
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-3 meme-card rounded-xl px-4 py-3 border-4 border-black transform -rotate-1 brutal-shadow transition-bounce hover:scale-105">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-400 via-blue-500 to-purple-500 rounded-full border-2 border-black glow-effect animate-wiggle"></div>
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-400 via-blue-500 to-purple-500 rounded-full border-2 border-black glow-effect"></div>
                 <span className="text-black font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #ffffff'}}>SOL</span>
               </div>
               
@@ -207,7 +207,7 @@ const SwapInterface = () => {
 
           {/* Enhanced Swap Arrow */}
           <div className="flex justify-center">
-            <div className="w-16 h-16 bg-yellow-600 hover:bg-yellow-700 rounded-full flex items-center justify-center border-6 border-black transform rotate-12 brutal-shadow transition-bounce hover:scale-125 hover:rotate-45 glow-effect animate-wiggle">
+            <div className="w-16 h-16 bg-yellow-600 hover:bg-yellow-700 rounded-full flex items-center justify-center border-6 border-black transform rotate-12 brutal-shadow transition-bounce hover:scale-125 hover:rotate-45 glow-effect">
               <ArrowDown size={32} className="text-green-900" strokeWidth={4} />
             </div>
           </div>
@@ -221,7 +221,7 @@ const SwapInterface = () => {
             
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-3 meme-card rounded-xl px-4 py-3 border-4 border-black transform rotate-1 brutal-shadow transition-bounce hover:scale-105">
-                <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-green-500 rounded-full flex items-center justify-center border-2 border-black glow-effect animate-wiggle">
+                <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-green-500 rounded-full flex items-center justify-center border-2 border-black glow-effect">
                   <span className="text-lg font-black text-green-900">◎</span>
                 </div>
                 <span className="text-black font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #ffffff'}}>0.1SOL</span>
@@ -239,7 +239,7 @@ const SwapInterface = () => {
           {!connected ? (
             <Button
               onClick={handleConnectWallet}
-              className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold py-6 rounded-xl transition-bounce transform hover:scale-105 border-0 text-base brutal-shadow glow-effect animate-bounce-in"
+              className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold py-6 rounded-xl transition-bounce transform hover:scale-105 border-0 text-base brutal-shadow glow-effect"
               style={{
                 background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
                 fontFamily: 'system-ui, -apple-system, sans-serif'
@@ -259,7 +259,7 @@ const SwapInterface = () => {
                 }}
               >
                 {isSwapping ? (
-                  <span className="animate-wiggle">🔄 SWAPPING...</span>
+                  <span>🔄 SWAPPING...</span>
                 ) : (
                   'SWAP TO 0.1 SOL! ◎'
                 )}
@@ -289,7 +289,7 @@ const SwapInterface = () => {
       <div className="mt-8 w-full">
         <div className="bg-yellow-600 hover:bg-yellow-700 rounded-2xl border-6 border-black p-6 sm:p-8 lg:p-10 transform rotate-1 brutal-shadow-xl transition-bounce hover:scale-105 hover:-rotate-1 overflow-hidden w-full mx-auto" style={{maxWidth: '200rem'}}>
           <div className="text-center mb-3">
-            <h3 className="text-black font-black text-base crayon-text animate-wiggle" style={{textShadow: '1px 1px 0px #ffffff'}}>
+            <h3 className="text-black font-black text-base crayon-text" style={{textShadow: '1px 1px 0px #ffffff'}}>
               CONTRACT ADDRESS 📋
             </h3>
           </div>
@@ -312,7 +312,7 @@ const SwapInterface = () => {
               {DOLLAR_TOKEN_MINT}
             </button>
           </div>
-          <div className="mt-2 text-center text-base text-black font-black crayon-text animate-wiggle">
+          <div className="mt-2 text-center text-base text-black font-black crayon-text">
             👆 CLICK TO COPY! 👆
           </div>
         </div>

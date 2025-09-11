@@ -63,8 +63,8 @@ const Index = () => {
           {/* About Section */}
           <section id="about" className="relative z-10 px-2 sm:px-4 lg:px-8 py-8 sm:py-16">
             <div className="max-w-7xl mx-auto">
-              <div className="meme-card rounded-3xl p-6 sm:p-8 lg:p-12 transform rotate-1 brutal-shadow-xl transition-bounce hover:scale-105 hover:-rotate-1 animate-slide-up">
-                <h2 className="text-responsive-xl font-black text-black mb-6 sm:mb-8 crayon-text animate-wiggle text-center" style={{
+              <div className="meme-card rounded-3xl p-6 sm:p-8 lg:p-12 transform rotate-1 brutal-shadow-xl transition-bounce hover:scale-105 hover:-rotate-1">
+                <h2 className="text-responsive-xl font-black text-black mb-6 sm:mb-8 crayon-text text-center" style={{
                   textShadow: '2px 2px 0px #ffffff',
                   transform: 'rotate(-2deg)'
                 }}>

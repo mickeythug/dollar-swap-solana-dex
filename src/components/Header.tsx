@@ -6,13 +6,13 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="relative z-10 px-2 sm:px-4 py-3 sm:py-6 animate-slide-up">
+    <header className="relative z-10 px-2 sm:px-4 py-3 sm:py-6">
       {/* WAGMI Sign at the very top - enhanced responsive */}
-      <div className="w-full text-center mb-3 sm:mb-6 animate-bounce-in">
+      <div className="w-full text-center mb-3 sm:mb-6">
         <div className="inline-block bg-red-500 hover:bg-red-600 px-3 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-2xl sm:rounded-3xl border-4 sm:border-6 lg:border-8 border-black brutal-shadow transition-bounce transform hover:scale-105 hover:rotate-1" style={{
           transform: 'rotate(-3deg) skew(-2deg)'
         }}>
-          <span className="text-white kid-text super-thick text-responsive-sm animate-wiggle" style={{
+          <span className="text-white kid-text super-thick text-responsive-sm" style={{
             transform: 'rotate(2deg) scale(1.1)',
             display: 'inline-block'
           }}>
@@ -34,11 +34,11 @@ const Header = () => {
 
         <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
           {/* Logo Section - Enhanced */}
-          <div className="flex items-center space-x-2 sm:space-x-3 animate-bounce-in">
+          <div className="flex items-center space-x-2 sm:space-x-3">
             <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 rounded-full flex items-center justify-center border-4 sm:border-6 lg:border-8 border-green-900 brutal-shadow-lg transition-bounce hover:scale-110 hover:rotate-12 glow-effect" style={{
               transform: 'rotate(-5deg) scale(1.05)'
             }}>
-              <span className="text-2xl sm:text-3xl lg:text-4xl font-black text-green-900 animate-wiggle" style={{
+              <span className="text-2xl sm:text-3xl lg:text-4xl font-black text-green-900" style={{
                 transform: 'rotate(10deg)'
               }}>◎</span>
             </div>

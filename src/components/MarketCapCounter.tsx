@@ -66,14 +66,14 @@ const MarketCapCounter = () => {
   const progressPercentage = (currentMarketCap / targetMarketCap) * 100;
 
   return (
-    <div className="max-w-md mx-auto w-full animate-slide-up">
+    <div className="max-w-md mx-auto w-full">
       <div className="meme-card rounded-2xl sm:rounded-3xl border-4 sm:border-6 lg:border-8 border-black border-dashed p-3 sm:p-4 lg:p-6 transform rotate-1 brutal-shadow-xl relative overflow-hidden transition-bounce hover:scale-105 hover:rotate-2">
         
         {/* Enhanced Celebration overlay */}
         {showCelebration && (
-          <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-green-400 to-blue-400 rounded-2xl sm:rounded-3xl flex items-center justify-center z-20 border-4 sm:border-6 lg:border-8 border-red-500 animate-bounce-in glow-strong">
-              <div className="text-center transform rotate-12 animate-wiggle">
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-green-900 crayon-text super-thick animate-glow-pulse" style={{
+          <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-green-400 to-blue-400 rounded-2xl sm:rounded-3xl flex items-center justify-center z-20 border-4 sm:border-6 lg:border-8 border-red-500 glow-strong">
+              <div className="text-center transform rotate-12">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-green-900 crayon-text super-thick" style={{
                   textShadow: '3px 3px 0px #000000'
                 }}>
                   {celebrationText}
@@ -86,9 +86,9 @@ const MarketCapCounter = () => {
         )}
 
         {/* Enhanced Header */}
-        <div className="text-center mb-3 sm:mb-4 lg:mb-6 transform -rotate-2 animate-bounce-in">
+        <div className="text-center mb-3 sm:mb-4 lg:mb-6 transform -rotate-2">
           <div className="bg-green-600 hover:bg-green-700 rounded-xl sm:rounded-2xl border-3 sm:border-4 border-black p-2 sm:p-3 lg:p-4 inline-block transform rotate-3 brutal-shadow transition-bounce hover:scale-105 hover:rotate-6">
-            <h2 className="text-responsive-md font-black text-white mb-1 sm:mb-2 crayon-text animate-wiggle" style={{textShadow: '2px 2px 0px #000000'}}>MARKETCAP COUNTER!</h2>
+            <h2 className="text-responsive-md font-black text-white mb-1 sm:mb-2 crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>MARKETCAP COUNTER!</h2>
             <p className="text-white text-responsive-xs font-black transform -rotate-1 crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>TO THE MOON!</p>
           </div>
         </div>
@@ -99,7 +99,7 @@ const MarketCapCounter = () => {
             <div className="text-white text-responsive-xs font-black mb-1 sm:mb-2 crayon-text" style={{textShadow: '2px 2px 0px #000000'}}>
               CURRENT MARKETCAP! 💰
             </div>
-            <div className="text-responsive-xl font-black text-white mb-1 sm:mb-2 transform rotate-2 crayon-text glow-effect animate-bounce-in" style={{
+            <div className="text-responsive-xl font-black text-white mb-1 sm:mb-2 transform rotate-2 crayon-text glow-effect" style={{
               textShadow: '3px 3px 0px #000000'
             }}>
               {formatMarketCap(currentMarketCap)}
@@ -131,7 +131,7 @@ const MarketCapCounter = () => {
 
         {/* Enhanced Milestones with better responsiveness */}
         <div className="bg-yellow-600 hover:bg-yellow-700 rounded-lg sm:rounded-xl p-2 sm:p-3 lg:p-4 border-3 sm:border-4 border-black transform -rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:-rotate-2">
-          <div className="text-black font-black text-responsive-xs mb-2 sm:mb-3 crayon-text animate-wiggle" style={{textShadow: '1px 1px 0px #ffffff'}}>
+          <div className="text-black font-black text-responsive-xs mb-2 sm:mb-3 crayon-text" style={{textShadow: '1px 1px 0px #ffffff'}}>
             MILESTONES!
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 sm:gap-2">
@@ -140,7 +140,7 @@ const MarketCapCounter = () => {
                 key={milestone.value}
                 className={`p-1 sm:p-2 rounded-md sm:rounded-lg border-2 sm:border-3 border-black text-center transform transition-all duration-500 ${
                   reachedMilestones.includes(milestone.value) 
-                    ? `${milestone.color} text-yellow-100 rotate-3 scale-110 glow-effect animate-bounce-in` 
+                    ? `${milestone.color} text-yellow-100 rotate-3 scale-110 glow-effect` 
                     : 'bg-yellow-200 text-green-900 -rotate-1 hover:scale-105'
                 } transition-bounce hover:rotate-6`}
                 style={{
@@ -158,8 +158,8 @@ const MarketCapCounter = () => {
 
         {/* Enhanced Loading indicator */}
         {isLoading && (
-              <div className="mt-2 text-center animate-bounce-in">
-                <div className="text-black font-black text-responsive-xs crayon-text animate-wiggle" style={{textShadow: '1px 1px 0px #ffffff'}}>
+              <div className="mt-2 text-center">
+                <div className="text-black font-black text-responsive-xs crayon-text" style={{textShadow: '1px 1px 0px #ffffff'}}>
                   <span className="animate-spin inline-block">🔄</span> LOADING... MEME POWER!
                 </div>
               </div>
