@@ -50,7 +50,7 @@ const Hero = () => {
           </h1>
           
           {/* Enhanced Description Box */}
-          <div className="meme-card bg-green-400 p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl brutal-shadow-xl max-w-4xl mx-auto transition-bounce hover:scale-102 hover:rotate-1 animate-bounce-in" style={{
+          <div className="meme-card bg-green-400 p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl brutal-shadow-xl max-w-4xl mx-auto transition-bounce hover:scale-105 hover:rotate-1 animate-bounce-in" style={{
             transform: 'rotate(1deg) skew(-0.5deg)',
             position: 'relative',
             animationDelay: '0.4s'

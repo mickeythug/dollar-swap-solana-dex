@@ -67,7 +67,7 @@ const MarketCapCounter = () => {
 
   return (
     <div className="max-w-md mx-auto w-full animate-slide-up">
-      <div className="meme-card rounded-2xl sm:rounded-3xl border-4 sm:border-6 lg:border-8 border-black border-dashed p-3 sm:p-4 lg:p-6 transform rotate-1 brutal-shadow-xl relative overflow-hidden transition-bounce hover:scale-102 hover:rotate-2">
+      <div className="meme-card rounded-2xl sm:rounded-3xl border-4 sm:border-6 lg:border-8 border-black border-dashed p-3 sm:p-4 lg:p-6 transform rotate-1 brutal-shadow-xl relative overflow-hidden transition-bounce hover:scale-105 hover:rotate-2">
         
         {/* Enhanced Celebration overlay */}
         {showCelebration && (

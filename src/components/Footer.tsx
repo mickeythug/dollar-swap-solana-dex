@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="relative z-10 px-2 sm:px-4 py-8 sm:py-12 mt-8 sm:mt-16 animate-slide-up">
       <div className="max-w-6xl mx-auto">
-        <div className="meme-card rounded-2xl sm:rounded-3xl border-4 sm:border-6 lg:border-8 border-black border-dashed p-4 sm:p-6 lg:p-10 brutal-shadow-xl transition-bounce hover:scale-102 hover:rotate-1" style={{
+        <div className="meme-card rounded-2xl sm:rounded-3xl border-4 sm:border-6 lg:border-8 border-black border-dashed p-4 sm:p-6 lg:p-10 brutal-shadow-xl transition-bounce hover:scale-105 hover:rotate-1" style={{
           transform: 'rotate(-1deg) skew(-0.5deg)'
         }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">

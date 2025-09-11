@@ -147,7 +147,7 @@ const SwapInterface = () => {
 
   return (
     <div className="max-w-md mx-auto w-full animate-slide-up">
-      <div className="meme-card rounded-3xl p-4 sm:p-6 lg:p-8 transform -rotate-2 brutal-shadow-xl transition-bounce hover:scale-102 hover:rotate-1">
+      <div className="meme-card rounded-3xl p-4 sm:p-6 lg:p-8 transform -rotate-2 brutal-shadow-xl transition-bounce hover:scale-105 hover:rotate-1">
         {/* Enhanced Header */}
         <div className="text-center mb-6 sm:mb-8 transform rotate-1 animate-bounce-in">
           <div className="bg-green-400 hover:bg-green-500 rounded-2xl border-4 border-black p-4 inline-block transform -rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:rotate-2">
