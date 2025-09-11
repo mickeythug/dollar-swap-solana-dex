@@ -306,35 +306,7 @@ const SwapInterface = () => {
 
       {/* Contract Address Only - Properly Fitted Container */}
       <div className="mt-8 w-full">
-        <div className="bg-yellow-600 hover:bg-yellow-700 rounded-2xl border-6 border-black p-6 sm:p-8 lg:p-10 transform rotate-1 brutal-shadow-xl transition-bounce hover:scale-105 hover:-rotate-1 overflow-hidden w-full mx-auto" style={{
-        maxWidth: '200rem'
-      }}>
-          <div className="text-center mb-3">
-            <h3 className="text-black font-black text-base crayon-text" style={{
-            textShadow: '1px 1px 0px #ffffff'
-          }}>
-              CONTRACT ADDRESS 📋
-            </h3>
-          </div>
-          <div className="w-full overflow-x-auto">
-            <button onClick={() => {
-            navigator.clipboard.writeText(DOLLAR_TOKEN_MINT);
-            toast.success('Contract address copied! 📋');
-          }} className="font-mono text-base bg-green-600 hover:bg-green-700 px-2 py-3 rounded-lg border-3 border-black transition-bounce hover:scale-105 min-w-full brutal-shadow-lg glow-effect block" style={{
-            fontWeight: '900',
-            textShadow: '1px 1px 0px #000000',
-            letterSpacing: '0.5px',
-            whiteSpace: 'nowrap',
-            width: 'max-content',
-            minWidth: '100%'
-          }}>
-              {DOLLAR_TOKEN_MINT}
-            </button>
-          </div>
-          <div className="mt-2 text-center text-base text-black font-black crayon-text">
-            👆 CLICK TO COPY! 👆
-          </div>
-        </div>
+        
       </div>
     </div>;
 };
