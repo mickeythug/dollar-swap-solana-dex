@@ -287,7 +287,7 @@ const SwapInterface = () => {
 
       {/* Contract Address Only - Properly Fitted Container */}
       <div className="mt-8 w-full">
-        <div className="bg-yellow-400 hover:bg-yellow-500 rounded-2xl border-6 border-black p-6 sm:p-8 lg:p-10 transform rotate-1 brutal-shadow-xl transition-bounce hover:scale-105 hover:-rotate-1 overflow-hidden w-full mx-auto" style={{maxWidth: '108rem'}}>
+        <div className="bg-yellow-400 hover:bg-yellow-500 rounded-2xl border-6 border-black p-6 sm:p-8 lg:p-10 transform rotate-1 brutal-shadow-xl transition-bounce hover:scale-105 hover:-rotate-1 overflow-hidden w-full mx-auto" style={{maxWidth: '200rem'}}>
           <div className="text-center mb-3">
             <h3 className="text-black font-black text-lg crayon-text animate-wiggle" style={{textShadow: '1px 1px 0px #ffffff'}}>
               CONTRACT ADDRESS 📋
