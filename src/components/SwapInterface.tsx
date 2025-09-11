@@ -287,28 +287,48 @@ const SwapInterface = () => {
 
       {/* Enhanced Token Info */}
       <div className="mt-8 meme-card rounded-2xl border-6 border-black p-6 transform rotate-2 brutal-shadow-xl transition-bounce hover:scale-105 hover:rotate-3">
-        <h3 className="text-black font-black mb-4 text-responsive-sm crayon-text animate-wiggle" style={{textShadow: '1px 1px 0px #ffffff'}}>TOKEN INFO! 📊</h3>
-        <div className="space-y-3 text-lg">
-          <div className="text-green-800 font-black text-responsive-xs" style={{fontFamily: 'Comic Sans MS, cursive'}}>
-            <div className="mb-2">Contract:</div>
+        <h3 className="text-black font-black mb-6 text-responsive-sm crayon-text animate-wiggle text-center" style={{textShadow: '1px 1px 0px #ffffff'}}>TOKEN INFO! 📊</h3>
+        <div className="space-y-6">
+          <div className="text-green-800 font-black text-responsive-xs text-center" style={{fontFamily: 'Comic Sans MS, cursive'}}>
+            <div className="mb-4 text-responsive-sm">Contract Address:</div>
             <button
               onClick={() => {
                 navigator.clipboard.writeText(DOLLAR_TOKEN_MINT);
                 toast.success('Contract address copied! 📋');
               }}
-              className="font-mono text-xs bg-green-400 hover:bg-green-500 px-3 py-2 rounded border-2 border-black transition-bounce hover:scale-105 w-full text-left break-all"
-              style={{wordBreak: 'break-all'}}
+              className="font-mono text-lg sm:text-xl lg:text-2xl bg-green-400 hover:bg-green-500 p-4 sm:p-6 rounded-xl border-4 border-black transition-bounce hover:scale-105 w-full text-center break-all brutal-shadow-lg glow-effect"
+              style={{
+                wordBreak: 'break-all',
+                letterSpacing: '1px',
+                fontWeight: '900',
+                textShadow: '1px 1px 0px #000000'
+              }}
             >
               {DOLLAR_TOKEN_MINT}
             </button>
+            <div className="mt-3 text-xs text-green-700 font-black">
+              👆 CLICK TO COPY! 👆
+            </div>
           </div>
-          <div className="flex justify-between text-green-800 font-black text-responsive-xs" style={{fontFamily: 'Comic Sans MS, cursive'}}>
-            <span>Network:</span>
-            <span>Solana</span>
-          </div>
-          <div className="flex justify-between text-green-800 font-black text-responsive-xs" style={{fontFamily: 'Comic Sans MS, cursive'}}>
-            <span>Type:</span>
-            <span className="animate-wiggle">MEME TOKEN! 🚀</span>
+          
+          <div className="grid grid-cols-2 gap-4 text-center">
+            <div className="bg-yellow-400 hover:bg-yellow-500 p-4 rounded-xl border-3 border-black brutal-shadow transition-bounce hover:scale-105">
+              <div className="text-green-800 font-black text-responsive-xs mb-2" style={{fontFamily: 'Comic Sans MS, cursive'}}>
+                Network:
+              </div>
+              <div className="text-green-900 font-black text-responsive-sm crayon-text">
+                Solana
+              </div>
+            </div>
+            
+            <div className="bg-green-400 hover:bg-green-500 p-4 rounded-xl border-3 border-black brutal-shadow transition-bounce hover:scale-105">
+              <div className="text-yellow-900 font-black text-responsive-xs mb-2" style={{fontFamily: 'Comic Sans MS, cursive'}}>
+                Type:
+              </div>
+              <div className="text-yellow-900 font-black text-responsive-sm crayon-text animate-wiggle">
+                MEME TOKEN! 🚀
+              </div>
+            </div>
           </div>
         </div>
       </div>
