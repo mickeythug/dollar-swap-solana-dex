@@ -49,7 +49,11 @@ export class PumpFunService {
   }
 
   async getQuote(params: PumpFunQuoteParams): Promise<PumpFunQuoteResponse> {
-    const url = `${this.rpcEndpoint}pump-fun/quote?mint=${params.mint}&type=${params.type}&amount=${params.amount}`;
+    // Ensure clean URL construction - remove any trailing slash and add proper path
+    const baseUrl = this.rpcEndpoint.replace(/\/+$/, '');
+    const url = `${baseUrl}/pump-fun/quote?mint=${encodeURIComponent(params.mint)}&type=${encodeURIComponent(params.type)}&amount=${encodeURIComponent(params.amount)}`;
+    
+    console.log('Pump.fun quote URL:', url);
     
     const response = await fetch(url, {
       method: 'GET',
@@ -57,6 +61,7 @@ export class PumpFunService {
 
     if (!response.ok) {
       const text = await response.text().catch(() => '');
+      console.error('Pump.fun quote error:', response.status, text);
       throw new Error(`Pump.fun quote failed (${response.status}): ${text || response.statusText}`);
     }
 
@@ -64,7 +69,11 @@ export class PumpFunService {
   }
 
   async getSwapTransaction(params: PumpFunSwapParams): Promise<PumpFunSwapResponse> {
-    const url = `${this.rpcEndpoint}pump-fun/swap`;
+    // Ensure clean URL construction - remove any trailing slash and add proper path
+    const baseUrl = this.rpcEndpoint.replace(/\/+$/, '');
+    const url = `${baseUrl}/pump-fun/swap`;
+    
+    console.log('Pump.fun swap URL:', url);
     
     const response = await fetch(url, {
       method: 'POST',
@@ -82,6 +91,7 @@ export class PumpFunService {
 
     if (!response.ok) {
       const text = await response.text().catch(() => '');
+      console.error('Pump.fun swap error:', response.status, text);
       throw new Error(`Pump.fun swap failed (${response.status}): ${text || response.statusText}`);
     }
 
