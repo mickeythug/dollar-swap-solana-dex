@@ -10,16 +10,6 @@ const Hero = () => {
           {/* Advanced 3D Holographic Logo with Particle Effects */}
           <div className="flex justify-center mb-8 sm:mb-12 lg:mb-16">
             <div className="relative perspective-1000">
-              {/* Particle Background */}
-              <div className="absolute inset-0 w-full h-full pointer-events-none">
-                <div className="particle-1"></div>
-                <div className="particle-2"></div>
-                <div className="particle-3"></div>
-                <div className="particle-4"></div>
-                <div className="particle-5"></div>
-                <div className="particle-6"></div>
-              </div>
-              
               {/* Main Logo with Advanced Effects */}
               <div className="logo-container">
                 <img 
