@@ -14,7 +14,86 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      swap_transactions: {
+        Row: {
+          created_at: string
+          id: string
+          input_amount: number
+          input_token: string
+          output_amount: number
+          output_token: string
+          status: string
+          swap_rate: number
+          transaction_signature: string
+          user_id: string
+          wallet_address: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          input_amount: number
+          input_token: string
+          output_amount: number
+          output_token: string
+          status?: string
+          swap_rate: number
+          transaction_signature: string
+          user_id: string
+          wallet_address: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          input_amount?: number
+          input_token?: string
+          output_amount?: number
+          output_token?: string
+          status?: string
+          swap_rate?: number
+          transaction_signature?: string
+          user_id?: string
+          wallet_address?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "fk_user_profiles"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      user_profiles: {
+        Row: {
+          created_at: string
+          id: string
+          total_swaps: number
+          total_volume: number
+          updated_at: string
+          username: string | null
+          wallet_address: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          total_swaps?: number
+          total_volume?: number
+          updated_at?: string
+          username?: string | null
+          wallet_address: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          total_swaps?: number
+          total_volume?: number
+          updated_at?: string
+          username?: string | null
+          wallet_address?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
