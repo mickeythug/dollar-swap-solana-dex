@@ -86,7 +86,7 @@ const Header = () => {
             </div>
             
             {/* Mobile Navigation */}
-            <div className="flex flex-col space-y-3 w-full max-w-xs">
+            <div className="flex items-center space-x-3 w-full justify-center">
               <button className="meme-button px-4 py-2 rounded-lg text-sm">
                 SWAP!
               </button>
@@ -97,7 +97,7 @@ const Header = () => {
               }}>
                 ABOUT!
               </button>
-              <WalletMultiButton className="!bg-gradient-to-r !from-yellow-400 !to-yellow-500 hover:!from-yellow-500 hover:!to-yellow-600 !border-4 !border-black !rounded-lg crayon-text super-thick !px-4 !py-2 !text-sm !text-green-900 brutal-shadow transition-all hover:!scale-105 !w-full" style={{
+              <WalletMultiButton className="!bg-gradient-to-r !from-yellow-400 !to-yellow-500 hover:!from-yellow-500 hover:!to-yellow-600 !border-4 !border-black !rounded-lg crayon-text super-thick !px-4 !py-2 !text-sm !text-green-900 brutal-shadow transition-all hover:!scale-105" style={{
                 letterSpacing: '1px',
                 textShadow: '1px 1px 0px #000000'
               }} />
