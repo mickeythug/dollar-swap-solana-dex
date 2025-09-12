@@ -18,48 +18,90 @@ const MobileAbout = () => {
         </p>
       </div>
 
-      {/* Main description card - mobile-friendly font */}
-      <div className="meme-card rounded-3xl p-4 transform rotate-1 brutal-shadow-xl transition-bounce hover:scale-105 hover:-rotate-1 mb-6 max-w-sm mx-auto">
-        <div className="space-y-3 text-black font-black">
-          <div className="text-center mb-4">
-            <span className="bg-yellow-500 px-3 py-1 rounded-full text-xs border-2 border-black">
-              💎 THE VISION 💎
-            </span>
+      {/* Animated cartoon boxes */}
+      <div className="space-y-4 mb-6 max-w-sm mx-auto">
+        {/* Vision Box */}
+        <div className="bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-2xl p-4 border-4 border-black transform rotate-1 brutal-shadow-xl animate-pulse hover:scale-105 hover:-rotate-1 transition-all duration-300">
+          <div className="text-center mb-3">
+            <div className="bg-black text-yellow-300 px-3 py-1 rounded-full text-xs font-black inline-block">
+              THE VISION
+            </div>
           </div>
-          
-          <p className="text-sm leading-relaxed">
-            This is <span className="text-red-600">0.1 SOL TOKEN</span> - the most democratic meme on Solana!
+          <p className="text-black font-black text-sm leading-relaxed text-center">
+            This is <span className="text-red-700">0.1 SOL TOKEN</span> - the most democratic meme on Solana!
           </p>
-          
-          <p className="text-sm leading-relaxed">
-            <span className="text-green-700">🎯 THE RULE:</span> Everyone ONLY buys exactly 0.1 SOL worth to minimize risk!
-          </p>
-          
-          <p className="text-sm leading-relaxed">
-            <span className="text-blue-700">🚀 THE DREAM:</span> Through unity and diamond hands, we're taking this to MILLIONS in market cap!
-          </p>
-          
-          <div className="bg-red-100 p-3 rounded-xl border-2 border-red-500 my-3">
-            <p className="text-red-700 text-center text-sm font-black">
-              📈 INSPIRED BY GAMESTOP 📈<br/>
-              "Buy 0.1 SOL & FORGET for 2-3 YEARS!"
-            </p>
+        </div>
+
+        {/* Rule Box */}
+        <div className="bg-gradient-to-br from-green-300 to-green-500 rounded-2xl p-4 border-4 border-black transform -rotate-1 brutal-shadow-xl hover:scale-105 hover:rotate-1 transition-all duration-300">
+          <div className="text-center mb-3">
+            <div className="bg-black text-green-300 px-3 py-1 rounded-full text-xs font-black inline-block">
+              THE RULE
+            </div>
           </div>
-          
-          <p className="text-sm leading-relaxed">
-            <span className="text-purple-700">💪 THE PLAN:</span> We work together for our bags and prove all doubters WRONG!
+          <p className="text-black font-black text-sm leading-relaxed text-center">
+            Everyone ONLY buys exactly 0.1 SOL worth to minimize risk!
           </p>
-          
-          <p className="text-sm leading-relaxed">
-            <span className="text-orange-700">🔥 WHY WE'LL WIN:</span> Low individual risk + massive community power = MOON MISSION! 🌙
-          </p>
-          
-          <div className="bg-green-100 p-3 rounded-xl border-2 border-green-500 text-center">
-            <p className="text-green-800 text-xs font-black">
-              "0.1 SOL today, millionaire tomorrow!"<br/>
-              💎🙌 DIAMOND HANDS ONLY 🙌💎
-            </p>
+        </div>
+
+        {/* Dream Box */}
+        <div className="bg-gradient-to-br from-blue-300 to-blue-500 rounded-2xl p-4 border-4 border-black transform rotate-2 brutal-shadow-xl hover:scale-105 hover:-rotate-2 transition-all duration-300">
+          <div className="text-center mb-3">
+            <div className="bg-black text-blue-300 px-3 py-1 rounded-full text-xs font-black inline-block">
+              THE DREAM
+            </div>
           </div>
+          <p className="text-black font-black text-sm leading-relaxed text-center">
+            Through unity and diamond hands, we're taking this to MILLIONS in market cap!
+          </p>
+        </div>
+
+        {/* GameStop Inspiration Box */}
+        <div className="bg-gradient-to-br from-red-300 to-red-500 rounded-2xl p-4 border-4 border-black transform -rotate-2 brutal-shadow-xl hover:scale-105 hover:rotate-2 transition-all duration-300 animate-bounce">
+          <div className="text-center mb-3">
+            <div className="bg-black text-red-300 px-3 py-1 rounded-full text-xs font-black inline-block">
+              GAMESTOP INSPIRED
+            </div>
+          </div>
+          <p className="text-black font-black text-sm leading-relaxed text-center">
+            "Buy 0.1 SOL & FORGET for 2-3 YEARS!"
+          </p>
+        </div>
+
+        {/* Plan Box */}
+        <div className="bg-gradient-to-br from-purple-300 to-purple-500 rounded-2xl p-4 border-4 border-black transform rotate-1 brutal-shadow-xl hover:scale-105 hover:-rotate-1 transition-all duration-300">
+          <div className="text-center mb-3">
+            <div className="bg-black text-purple-300 px-3 py-1 rounded-full text-xs font-black inline-block">
+              THE PLAN
+            </div>
+          </div>
+          <p className="text-black font-black text-sm leading-relaxed text-center">
+            We work together for our bags and prove all doubters WRONG!
+          </p>
+        </div>
+
+        {/* Why We'll Win Box */}
+        <div className="bg-gradient-to-br from-orange-300 to-orange-500 rounded-2xl p-4 border-4 border-black transform -rotate-1 brutal-shadow-xl hover:scale-105 hover:rotate-1 transition-all duration-300">
+          <div className="text-center mb-3">
+            <div className="bg-black text-orange-300 px-3 py-1 rounded-full text-xs font-black inline-block">
+              WHY WE'LL WIN
+            </div>
+          </div>
+          <p className="text-black font-black text-sm leading-relaxed text-center">
+            Low individual risk + massive community power = MOON MISSION!
+          </p>
+        </div>
+
+        {/* Diamond Hands Box */}
+        <div className="bg-gradient-to-br from-emerald-300 to-emerald-500 rounded-2xl p-4 border-4 border-black transform rotate-2 brutal-shadow-xl hover:scale-105 hover:-rotate-2 transition-all duration-300 animate-pulse">
+          <div className="text-center mb-3">
+            <div className="bg-black text-emerald-300 px-3 py-1 rounded-full text-xs font-black inline-block">
+              DIAMOND HANDS
+            </div>
+          </div>
+          <p className="text-black font-black text-sm leading-relaxed text-center">
+            "0.1 SOL today, millionaire tomorrow!"
+          </p>
         </div>
       </div>
 
