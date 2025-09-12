@@ -62,18 +62,12 @@ const MobileCommunity = () => {
         {/* Title */}
         <div className="text-center mb-6">
           <div className="bg-yellow-400 inline-block px-4 py-3 rounded-2xl border-4 border-black brutal-shadow transform -rotate-1">
-            <h2 className="text-lg font-black text-black crayon-text super-thick" style={{
-              textShadow: '2px 2px 0px #ffffff',
-              letterSpacing: '2px'
-            }}>
+            <h2 className="text-lg font-black text-black crayon-text">
               WE WELCOME ALL COMMUNITIES!
             </h2>
           </div>
           <div className="mt-4 bg-green-600 inline-block px-3 py-2 rounded-xl border-3 border-black brutal-shadow transform rotate-1">
-            <p className="text-sm font-black text-white crayon-text" style={{
-              textShadow: '1px 1px 0px #000000',
-              letterSpacing: '1px'
-            }}>
+            <p className="text-sm font-black text-white crayon-text">
               Come HODL with us! 🚀
             </p>
           </div>
@@ -158,15 +152,10 @@ const MobileCommunity = () => {
         {/* Bottom message */}
         <div className="text-center mt-6">
           <div className="bg-gradient-to-r from-green-500 via-yellow-500 to-green-500 inline-block px-4 py-3 rounded-xl border-4 border-black brutal-shadow transform hover:scale-105 transition-all duration-300">
-            <p className="text-sm font-black text-black crayon-text super-thick" style={{
-              textShadow: '1px 1px 0px #ffffff',
-              letterSpacing: '1px'
-            }}>
+            <p className="text-sm font-black text-black crayon-text">
               🤝 UNITED WE HODL! 🤝
             </p>
-            <p className="text-xs font-black text-black mt-1" style={{
-              textShadow: '1px 1px 0px #ffffff'
-            }}>
+            <p className="text-xs font-black text-black mt-1 crayon-text">
               Everyone is welcome in our 0.1 SOL family!
             </p>
           </div>
@@ -174,7 +163,7 @@ const MobileCommunity = () => {
 
         {/* Swipe instruction */}
         <div className="text-center mt-4">
-          <p className="text-xs text-white/80 font-medium">
+          <p className="text-xs text-white font-black crayon-text">
             👆 Swipe to see more or wait for auto-scroll
           </p>
         </div>
