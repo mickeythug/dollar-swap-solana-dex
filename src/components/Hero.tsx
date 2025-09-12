@@ -45,6 +45,14 @@ const Hero = () => {
                 display: 'inline-block'
               }}>SOL!!!</span>
             </span>
+            <span className="block mt-3 sm:mt-4 text-black bg-white px-3 py-2 rounded-xl border-3 border-black inline-block transition-bounce hover:scale-110" style={{
+              transform: 'rotate(-1deg) translateX(-10px)',
+              fontSize: 'clamp(1.5rem, 4vw, 3rem)',
+              letterSpacing: '2px',
+              textShadow: '2px 2px 0px rgba(0,0,0,0.3)'
+            }}>
+              It's not that big of a deal!
+            </span>
           </h1>
           </div>
           
