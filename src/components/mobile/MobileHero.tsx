@@ -14,17 +14,31 @@ const MobileHero = () => {
       backgroundPosition: '0 0, 0 20px, 20px -20px, -20px 0px'
     }}>
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4">
-        {/* Animated cartoon message box */}
+        {/* Modern 2D cartoon message box */}
         <div className="mb-8 max-w-sm relative z-20">
-          <div className="bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-2xl p-4 border-4 border-black transform rotate-2 brutal-shadow-xl animate-bounce hover:scale-105 hover:-rotate-1 transition-all duration-300">
-            <div className="text-center mb-2">
-              <div className="bg-black text-yellow-300 px-3 py-1 rounded-full text-xs font-black inline-block">
-                THE MESSAGE
-              </div>
+          <div className="relative bg-gradient-to-br from-yellow-300 via-yellow-400 to-orange-400 rounded-3xl p-6 border-4 border-black transform rotate-1 brutal-shadow-xl hover:scale-105 hover:-rotate-1 transition-all duration-500 ease-out">
+            {/* Speech bubble tail */}
+            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
+              <div className="w-8 h-8 bg-yellow-400 border-l-4 border-b-4 border-black transform rotate-45"></div>
             </div>
-            <p className="text-black font-black text-sm leading-relaxed text-center">
-              "Just buy 0.1 SOL worth of it - it's not that big of a deal!"
-            </p>
+            
+            {/* Inner glow effect */}
+            <div className="absolute inset-2 bg-gradient-to-br from-white/30 to-transparent rounded-2xl pointer-events-none"></div>
+            
+            {/* Content */}
+            <div className="relative z-10">
+              <div className="text-center mb-3">
+                <div className="bg-black text-yellow-300 px-4 py-2 rounded-full text-xs font-black inline-block shadow-lg transform -rotate-2">
+                  💡 THE MESSAGE
+                </div>
+              </div>
+              <p className="text-black font-black text-base leading-relaxed text-center transform rotate-1" style={{
+                textShadow: '2px 2px 0px rgba(255,255,255,0.8)',
+                letterSpacing: '0.5px'
+              }}>
+                "Just buy 0.1 SOL worth of it - it's not that big of a deal!"
+              </p>
+            </div>
           </div>
         </div>
         
