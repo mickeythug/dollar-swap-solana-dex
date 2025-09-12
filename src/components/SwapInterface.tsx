@@ -239,7 +239,8 @@ const SwapInterface = () => {
             
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-3 meme-card rounded-xl px-4 py-3 border-4 border-black transform rotate-1 brutal-shadow transition-bounce hover:scale-105">
-                <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-green-500 rounded-full flex items-center justify-center border-2 border-black glow-effect">
+                <div className="w-8 h-8 rounded-full flex items-center justify-center border-2 border-black glow-effect overflow-hidden">
+                  <img src="/src/assets/logo.png" alt="0.1 SOL Logo" className="w-full h-full object-cover" />
                 </div>
                 <span className="text-black font-black text-base crayon-text" style={{
                 textShadow: '1px 1px 0px #ffffff'

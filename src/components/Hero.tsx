@@ -131,9 +131,10 @@ const Hero = () => {
               transform: 'rotate(-3deg) skew(-1deg)',
               animationDelay: '0.6s'
             }}>
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 rounded-full flex items-center justify-center border-4 sm:border-6 lg:border-8 border-green-900 brutal-shadow-lg transition-bounce hover:scale-110 hover:rotate-12 glow-effect" style={{
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full flex items-center justify-center border-4 sm:border-6 lg:border-8 border-green-900 brutal-shadow-lg transition-bounce hover:scale-110 hover:rotate-12 glow-effect overflow-hidden" style={{
                 transform: 'rotate(-5deg) scale(1.05)'
               }}>
+                <img src="/src/assets/logo.png" alt="0.1 SOL Logo" className="w-full h-full object-cover" />
               </div>
               <span className="text-black crayon-text text-responsive-sm" style={{
                 transform: 'rotate(1deg) translateY(-1px)',

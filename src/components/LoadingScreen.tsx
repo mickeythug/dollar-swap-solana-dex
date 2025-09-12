@@ -62,13 +62,8 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
         {/* Cartoon Logo Placeholder */}
         <div className="mb-8 sm:mb-12">
           <div className="loading-logo-container">
-            <div className="w-32 h-32 sm:w-48 sm:h-48 lg:w-64 lg:h-64 mx-auto bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 rounded-full flex items-center justify-center border-8 border-black brutal-shadow-xl transition-bounce hover:scale-110">
-              <span className="text-4xl sm:text-6xl lg:text-8xl font-black crayon-text text-green-900" style={{
-                textShadow: '4px 4px 0px #ffffff',
-                animation: 'loading-bounce 1s ease-in-out infinite alternate'
-              }}>
-                0.1
-              </span>
+            <div className="w-32 h-32 sm:w-48 sm:h-48 lg:w-64 lg:h-64 mx-auto rounded-full flex items-center justify-center border-8 border-black brutal-shadow-xl transition-bounce hover:scale-110 overflow-hidden">
+              <img src="/src/assets/logo.png" alt="0.1 SOL Logo" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

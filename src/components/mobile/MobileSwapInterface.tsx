@@ -66,7 +66,9 @@ const MobileSwapInterface = () => {
           <div className="bg-yellow-100 rounded-2xl p-3 border-4 border-black brutal-shadow transform rotate-1">
             <div className="flex items-center gap-2">
               <div className="flex items-center gap-1 bg-green-600 rounded-full px-2 py-1 border-2 border-black flex-shrink-0">
-                <div className="w-5 h-5 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full border-2 border-black"></div>
+                <div className="w-5 h-5 rounded-full border-2 border-black overflow-hidden">
+                  <img src="/src/assets/logo.png" alt="0.1 SOL Logo" className="w-full h-full object-cover" />
+                </div>
                 <span className="text-white font-black text-xs">0.1SOL</span>
               </div>
               
