@@ -195,20 +195,17 @@ const Index = () => {
                   <span className="inline-block transform hover:-rotate-1 transition-transform duration-200">holders!</span>
                 </h3>
                 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
                   <button className="bg-blue-600 hover:bg-blue-700 border-4 border-black rounded-xl p-6 lg:p-8 flex flex-col items-center gap-4 brutal-shadow transition-bounce hover:scale-105 transform rotate-1 hover:rotate-2">
+                    <img src="/social/telegram.png" alt="Telegram" className="w-12 h-12 lg:w-16 lg:h-16" />
                     <div className="text-white font-black text-lg lg:text-xl">Telegram</div>
                     <div className="text-white/80 text-sm lg:text-base font-black">LET'S CHAT!</div>
                   </button>
                   
-                  <button className="bg-sky-600 hover:bg-sky-700 border-4 border-black rounded-xl p-6 lg:p-8 flex flex-col items-center gap-4 brutal-shadow transition-bounce hover:scale-105 transform -rotate-1 hover:-rotate-2">
-                    <div className="text-white font-black text-lg lg:text-xl">Twitter</div>
+                  <button className="bg-black hover:bg-gray-800 border-4 border-black rounded-xl p-6 lg:p-8 flex flex-col items-center gap-4 brutal-shadow transition-bounce hover:scale-105 transform -rotate-1 hover:-rotate-2">
+                    <img src="/social/twitter.png" alt="Twitter/X" className="w-12 h-12 lg:w-16 lg:h-16" />
+                    <div className="text-white font-black text-lg lg:text-xl">Twitter/X</div>
                     <div className="text-white/80 text-sm lg:text-base font-black">FOLLOW US!</div>
-                  </button>
-                  
-                  <button className="bg-purple-600 hover:bg-purple-700 border-4 border-black rounded-xl p-6 lg:p-8 flex flex-col items-center gap-4 brutal-shadow transition-bounce hover:scale-105 transform rotate-2 hover:rotate-3">
-                    <div className="text-white font-black text-lg lg:text-xl">Discord</div>
-                    <div className="text-white/80 text-sm lg:text-base font-black">MEMES HERE!</div>
                   </button>
                 </div>
               </div>

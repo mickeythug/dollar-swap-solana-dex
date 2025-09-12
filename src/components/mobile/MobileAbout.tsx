@@ -1,5 +1,4 @@
 import React from 'react';
-import { MessageCircle, Twitter, Hash, ExternalLink } from 'lucide-react';
 
 const MobileAbout = () => {
   return (
@@ -144,30 +143,19 @@ const MobileAbout = () => {
         
         <div className="space-y-3 max-w-sm mx-auto">
           <button className="w-full bg-blue-600 hover:bg-blue-700 border-4 border-black rounded-xl p-3 flex items-center gap-3 brutal-shadow transition-bounce hover:scale-105 transform rotate-1 hover:rotate-2">
-            <MessageCircle className="w-5 h-5 text-white flex-shrink-0" strokeWidth={3} />
+            <img src="/social/telegram.png" alt="Telegram" className="w-8 h-8 flex-shrink-0" />
             <div className="text-left flex-1 min-w-0">
               <div className="text-white font-black text-sm">Telegram</div>
               <div className="text-white/80 text-xs font-black">LET&apos;S CHAT!</div>
             </div>
-            <ExternalLink className="w-4 h-4 text-white flex-shrink-0" strokeWidth={3} />
           </button>
           
-          <button className="w-full bg-sky-600 hover:bg-sky-700 border-4 border-black rounded-xl p-3 flex items-center gap-3 brutal-shadow transition-bounce hover:scale-105 transform -rotate-1 hover:-rotate-2">
-            <Twitter className="w-5 h-5 text-white flex-shrink-0" strokeWidth={3} />
+          <button className="w-full bg-black hover:bg-gray-800 border-4 border-black rounded-xl p-3 flex items-center gap-3 brutal-shadow transition-bounce hover:scale-105 transform -rotate-1 hover:-rotate-2">
+            <img src="/social/twitter.png" alt="Twitter/X" className="w-8 h-8 flex-shrink-0" />
             <div className="text-left flex-1 min-w-0">
-              <div className="text-white font-black text-sm">Twitter</div>
+              <div className="text-white font-black text-sm">Twitter/X</div>
               <div className="text-white/80 text-xs font-black">FOLLOW US!</div>
             </div>
-            <ExternalLink className="w-4 h-4 text-white flex-shrink-0" strokeWidth={3} />
-          </button>
-          
-          <button className="w-full bg-purple-600 hover:bg-purple-700 border-4 border-black rounded-xl p-3 flex items-center gap-3 brutal-shadow transition-bounce hover:scale-105 transform rotate-2 hover:rotate-3">
-            <Hash className="w-5 h-5 text-white flex-shrink-0" strokeWidth={3} />
-            <div className="text-left flex-1 min-w-0">
-              <div className="text-white font-black text-sm">Discord</div>
-              <div className="text-white/80 text-xs font-black">MEMES HERE!</div>
-            </div>
-            <ExternalLink className="w-4 h-4 text-white flex-shrink-0" strokeWidth={3} />
           </button>
         </div>
       </div>
