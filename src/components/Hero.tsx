@@ -62,7 +62,7 @@ const Hero = () => {
             position: 'relative',
             animationDelay: '0.4s'
           }}>
-            <p className="text-responsive-lg text-white mb-3 sm:mb-4 lg:mb-6 leading-relaxed crayon-text" style={{
+            <p className="text-responsive-lg text-black mb-3 sm:mb-4 lg:mb-6 leading-relaxed crayon-text" style={{
               transform: 'rotate(-1deg) skew(0.5deg)',
               letterSpacing: '3px',
               textShadow: '3px 3px 0px #000000'
