@@ -67,7 +67,7 @@ const MobileCommunity = () => {
             </h2>
           </div>
           <div className="mt-4 bg-green-600 inline-block px-3 py-2 rounded-xl border-3 border-black brutal-shadow transform rotate-1">
-            <p className="text-responsive-sm text-white crayon-text super-thick">
+            <p className="text-responsive-sm text-white font-black">
               Come HODL with us! 🚀
             </p>
           </div>
@@ -115,8 +115,8 @@ const MobileCommunity = () => {
 
                     {/* Community label */}
                     <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-black text-white px-2 py-1 rounded-lg border-2 border-white brutal-shadow-sm">
-                        <span className="text-responsive-xs text-white crayon-text super-thick">
+                      <div className="bg-black text-yellow-400 px-2 py-1 rounded-lg border-2 border-white brutal-shadow-sm">
+                        <span className="text-responsive-xs text-yellow-400 font-black">
                           {community.name}
                         </span>
                       </div>
@@ -163,7 +163,7 @@ const MobileCommunity = () => {
 
         {/* Swipe instruction */}
         <div className="text-center mt-4">
-          <p className="text-responsive-xs text-white crayon-text super-thick">
+          <p className="text-responsive-xs text-white font-black">
             👆 Swipe to see more or wait for auto-scroll
           </p>
         </div>
