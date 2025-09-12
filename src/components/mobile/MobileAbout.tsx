@@ -21,17 +21,45 @@ const MobileAbout = () => {
       {/* Main description card - mobile-friendly font */}
       <div className="meme-card rounded-3xl p-4 transform rotate-1 brutal-shadow-xl transition-bounce hover:scale-105 hover:-rotate-1 mb-6 max-w-sm mx-auto">
         <div className="space-y-3 text-black font-black">
-          <p className="text-base leading-relaxed">
-            This is just a MEME TOKEN called 0.1 SOL!
+          <div className="text-center mb-4">
+            <span className="bg-yellow-500 px-3 py-1 rounded-full text-xs border-2 border-black">
+              💎 THE VISION 💎
+            </span>
+          </div>
+          
+          <p className="text-sm leading-relaxed">
+            This is <span className="text-red-600">0.1 SOL TOKEN</span> - the most democratic meme on Solana!
           </p>
           
-          <p className="text-base leading-relaxed">
-            The idea is SUPER EASY — just buy 0.1 SOL worth! That&apos;s it!
+          <p className="text-sm leading-relaxed">
+            <span className="text-green-700">🎯 THE RULE:</span> Everyone ONLY buys exactly 0.1 SOL worth to minimize risk!
           </p>
           
-          <p className="text-base leading-relaxed">
-            No complicated stuff! Just holding together as a community!
+          <p className="text-sm leading-relaxed">
+            <span className="text-blue-700">🚀 THE DREAM:</span> Through unity and diamond hands, we're taking this to MILLIONS in market cap!
           </p>
+          
+          <div className="bg-red-100 p-3 rounded-xl border-2 border-red-500 my-3">
+            <p className="text-red-700 text-center text-sm font-black">
+              📈 INSPIRED BY GAMESTOP 📈<br/>
+              "Buy 0.1 SOL & FORGET for 2-3 YEARS!"
+            </p>
+          </div>
+          
+          <p className="text-sm leading-relaxed">
+            <span className="text-purple-700">💪 THE PLAN:</span> We work together for our bags and prove all doubters WRONG!
+          </p>
+          
+          <p className="text-sm leading-relaxed">
+            <span className="text-orange-700">🔥 WHY WE'LL WIN:</span> Low individual risk + massive community power = MOON MISSION! 🌙
+          </p>
+          
+          <div className="bg-green-100 p-3 rounded-xl border-2 border-green-500 text-center">
+            <p className="text-green-800 text-xs font-black">
+              "0.1 SOL today, millionaire tomorrow!"<br/>
+              💎🙌 DIAMOND HANDS ONLY 🙌💎
+            </p>
+          </div>
         </div>
       </div>
 
