@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import MobileNavigation from './MobileNavigation';
 import MobileHero from './MobileHero';
 import MobileSwapInterface from './MobileSwapInterface';
 import MobileAbout from './MobileAbout';
 
 const MobileApp = () => {
+  const [activeSection, setActiveSection] = useState<'hero' | 'swap' | 'about'>('hero');
+
+  const scrollToSection = (section: 'hero' | 'swap' | 'about') => {
+    setActiveSection(section);
+    const element = document.getElementById(`mobile-${section}`);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-green-800 overflow-x-hidden" style={{
       backgroundImage: `
@@ -25,15 +36,27 @@ const MobileApp = () => {
         `
       }}></div>
 
-      <div className="relative z-10">
+      {/* Mobile Navigation */}
+      <MobileNavigation 
+        activeSection={activeSection} 
+        onSectionChange={scrollToSection} 
+      />
+
+      <div className="relative z-10 pt-16">
         {/* Hero Section */}
-        <MobileHero />
+        <div id="mobile-hero">
+          <MobileHero />
+        </div>
         
         {/* Swap Section */}
-        <MobileSwapInterface />
+        <div id="mobile-swap">
+          <MobileSwapInterface />
+        </div>
         
         {/* About Section */}
-        <MobileAbout />
+        <div id="mobile-about">
+          <MobileAbout />
+        </div>
         
         {/* Bottom safe area */}
         <div className="h-8"></div>

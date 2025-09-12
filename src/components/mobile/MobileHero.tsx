@@ -25,116 +25,122 @@ const MobileHero = () => {
 
       {/* Main content */}
       <div className="relative z-10 px-4 py-8 flex flex-col items-center text-center">
-        {/* Logo section - same as desktop but smaller */}
-        <div className="mb-8 mt-12">
-          <div className="flex justify-center">
+        {/* Logo section - 2x bigger */}
+        <div className="mb-8 mt-16">
+          <div className="flex justify-center px-4">
             <img 
               src="/lovable-uploads/a2925ada-d9a1-4459-b346-251f5ca5b59d.png" 
               alt="0.1 SOL Community Logo"
-              className="w-48 h-auto"
+              className="w-96 h-auto max-w-full"
             />
           </div>
         </div>
 
-        {/* Title - same cartoon style as desktop */}
-        <div className="mb-8">
+        {/* Title - fixed text overflow and better responsive */}
+        <div className="mb-8 px-2">
           <div className="flex justify-center">
-            <h1 className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-2xl border-4 border-black crayon-text super-thick mb-6 leading-tight drop-shadow-lg glow-effect" style={{
-              fontSize: 'clamp(2rem, 6vw, 4rem)',
-              transform: 'rotate(-1deg) skew(-0.5deg)',
-              letterSpacing: '3px'
-            }}>
-              <span className="block transition-bounce hover:scale-110" style={{
-                transform: 'rotate(-2deg) translateX(-3px)',
-                display: 'inline-block'
-              }}>Just</span>{' '}
-              <span className="block transition-bounce hover:scale-110" style={{
-                transform: 'rotate(1deg) translateY(-2px)',
-                display: 'inline-block'
-              }}>Buy</span>
-              <span className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 bg-clip-text text-transparent block mt-2 transition-bounce hover:scale-110" style={{
-                transform: 'rotate(2deg) skew(1deg) translateX(5px)',
-                letterSpacing: '4px'
+            <div className="max-w-sm w-full">
+              <h1 className="inline-block bg-yellow-400 text-black px-4 py-3 rounded-2xl border-4 border-black crayon-text super-thick mb-6 leading-tight drop-shadow-lg glow-effect text-center w-full" style={{
+                fontSize: 'clamp(1.5rem, 5vw, 2.5rem)',
+                transform: 'rotate(-1deg) skew(-0.5deg)',
+                letterSpacing: '2px'
               }}>
-                <span style={{
-                  transform: 'rotate(-1deg)',
+                <span className="block transition-bounce hover:scale-110" style={{
+                  transform: 'rotate(-2deg) translateX(-2px)',
                   display: 'inline-block'
-                }}>0.1</span>{' '}
-                <span style={{
-                  transform: 'rotate(3deg) translateY(-1px)',
+                }}>Just</span>{' '}
+                <span className="block transition-bounce hover:scale-110" style={{
+                  transform: 'rotate(1deg) translateY(-1px)',
                   display: 'inline-block'
-                }}>SOL!!!</span>
-              </span>
-            </h1>
+                }}>Buy</span>
+                <span className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 bg-clip-text text-transparent block mt-2 transition-bounce hover:scale-110" style={{
+                  transform: 'rotate(2deg) skew(1deg) translateX(3px)',
+                  letterSpacing: '3px'
+                }}>
+                  <span style={{
+                    transform: 'rotate(-1deg)',
+                    display: 'inline-block'
+                  }}>0.1</span>{' '}
+                  <span style={{
+                    transform: 'rotate(3deg) translateY(-1px)',
+                    display: 'inline-block'
+                  }}>SOL!!!</span>
+                </span>
+              </h1>
+            </div>
           </div>
         </div>
 
-        {/* Description card - same meme style as desktop */}
-        <div className="meme-card bg-green-600 p-6 rounded-2xl brutal-shadow-xl max-w-lg mx-auto transition-bounce hover:scale-105 hover:rotate-1" style={{
+        {/* Description card - fixed container overflow */}
+        <div className="meme-card bg-green-600 p-4 rounded-2xl brutal-shadow-xl max-w-xs mx-auto mb-8 transition-bounce hover:scale-105 hover:rotate-1" style={{
           transform: 'rotate(1deg) skew(-0.5deg)'
         }}>
-          <p className="text-white mb-4 leading-relaxed crayon-text text-lg" style={{
+          <div className="text-white leading-relaxed crayon-text text-base overflow-hidden" style={{
             transform: 'rotate(-1deg) skew(0.5deg)',
-            letterSpacing: '2px',
+            letterSpacing: '1px',
             textShadow: '2px 2px 0px #000000'
           }}>
-            <span className="transition-bounce hover:scale-110 inline-block" style={{
-              transform: 'rotate(2deg) translateY(-1px)'
-            }}>SUPER</span>{' '}
-            <span className="transition-bounce hover:scale-110 inline-block" style={{
-              transform: 'rotate(-1deg) translateX(2px)'
-            }}>SIMPLE!!!</span>{' '}
-            <span className="transition-bounce hover:scale-110 inline-block" style={{
-              transform: 'rotate(1deg)'
-            }}>Just</span>{' '}
-            <span className="transition-bounce hover:scale-110 inline-block" style={{
-              transform: 'rotate(-2deg) scale(1.05)'
-            }}>buy</span>{' '}
-            <span className="transition-bounce hover:scale-110 inline-block" style={{
-              transform: 'rotate(2deg) translateX(-1px)'
-            }}>0.1</span>{' '}
-            <span className="transition-bounce hover:scale-110 inline-block" style={{
-              transform: 'rotate(-1deg)'
-            }}>SOL</span>{' '}
-            <span className="transition-bounce hover:scale-110 inline-block" style={{
-              transform: 'rotate(3deg) scale(1.02)'
-            }}>worth!!!</span>
-          </p>
+            <p className="mb-3">
+              <span className="transition-bounce hover:scale-110 inline-block" style={{
+                transform: 'rotate(2deg) translateY(-1px)'
+              }}>SUPER</span>{' '}
+              <span className="transition-bounce hover:scale-110 inline-block" style={{
+                transform: 'rotate(-1deg) translateX(1px)'
+              }}>SIMPLE!!!</span>
+            </p>
+            <p className="mb-3">
+              <span className="transition-bounce hover:scale-110 inline-block" style={{
+                transform: 'rotate(1deg)'
+              }}>Just</span>{' '}
+              <span className="transition-bounce hover:scale-110 inline-block" style={{
+                transform: 'rotate(-2deg) scale(1.02)'
+              }}>buy</span>{' '}
+              <span className="transition-bounce hover:scale-110 inline-block" style={{
+                transform: 'rotate(2deg)'
+              }}>0.1</span>{' '}
+              <span className="transition-bounce hover:scale-110 inline-block" style={{
+                transform: 'rotate(-1deg)'
+              }}>SOL</span>{' '}
+              <span className="transition-bounce hover:scale-110 inline-block" style={{
+                transform: 'rotate(3deg)'
+              }}>worth!</span>
+            </p>
+          </div>
           
-          {/* Warning - same style as desktop */}
-          <div className="bg-red-500 p-4 rounded-xl border-4 border-black transform -rotate-1 brutal-shadow-lg">
-            <p className="text-white text-sm font-black text-center crayon-text" style={{
+          {/* Warning - better sized */}
+          <div className="bg-red-500 p-3 rounded-xl border-4 border-black transform -rotate-1 brutal-shadow-lg mt-4">
+            <p className="text-white text-xs font-black text-center crayon-text leading-tight" style={{
               textShadow: '1px 1px 0px #000000'
             }}>
-              ⚠️ THIS IS A MEME! NOT FINANCIAL ADVICE! ⚠️
+              ⚠️ THIS IS A MEME!<br />NOT FINANCIAL ADVICE! ⚠️
             </p>
           </div>
         </div>
 
-        {/* Feature cards - same cartoon style as desktop */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
-          <div className="flex items-center space-x-2 meme-card px-4 py-3 rounded-xl brutal-shadow-lg transition-bounce hover:scale-110 hover:rotate-3" style={{
+        {/* Feature cards - improved spacing and sizing */}
+        <div className="flex flex-wrap justify-center gap-3 mb-8 px-2">
+          <div className="flex items-center space-x-2 meme-card px-3 py-2 rounded-xl brutal-shadow-lg transition-bounce hover:scale-110 hover:rotate-3" style={{
             transform: 'rotate(-2deg) skew(-0.5deg)'
           }}>
-            <div className="w-10 h-10 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 rounded-full flex items-center justify-center border-4 border-green-900 brutal-shadow-lg transition-bounce hover:scale-110 hover:rotate-12 glow-effect" style={{
+            <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 rounded-full flex items-center justify-center border-3 border-green-900 brutal-shadow-lg transition-bounce hover:scale-110 hover:rotate-12 glow-effect" style={{
               transform: 'rotate(-3deg) scale(1.05)'
             }}>
             </div>
-            <span className="text-black crayon-text text-sm" style={{
+            <span className="text-black crayon-text text-xs whitespace-nowrap" style={{
               transform: 'rotate(1deg)',
               letterSpacing: '1px',
               textShadow: '1px 1px 0px #ffffff'
             }}>
-              Just 0.1 SOL!
+              Just 0.1!
             </span>
           </div>
           
-          <div className="bg-green-600 hover:bg-green-700 p-3 rounded-xl border-4 border-black transform -rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:-rotate-2 text-center">
-            <span className="text-2xl transition-bounce hover:scale-125" style={{
+          <div className="bg-green-600 hover:bg-green-700 p-2 rounded-xl border-4 border-black transform -rotate-1 brutal-shadow transition-bounce hover:scale-105 hover:-rotate-2 text-center min-w-0">
+            <span className="text-xl transition-bounce hover:scale-125 block" style={{
               transform: 'rotate(-2deg)',
               display: 'inline-block'
             }}>👥</span>
-            <span className="text-white crayon-text text-sm block" style={{
+            <span className="text-white crayon-text text-xs block" style={{
               transform: 'rotate(-1deg)',
               letterSpacing: '1px',
               textShadow: '1px 1px 0px #000000'
@@ -143,12 +149,12 @@ const MobileHero = () => {
             </span>
           </div>
           
-          <div className="bg-yellow-600 hover:bg-yellow-700 p-3 rounded-xl border-4 border-black transform rotate-2 brutal-shadow transition-bounce hover:scale-105 hover:rotate-3 text-center">
-            <span className="text-2xl transition-bounce hover:scale-125" style={{
+          <div className="bg-yellow-600 hover:bg-yellow-700 p-2 rounded-xl border-4 border-black transform rotate-2 brutal-shadow transition-bounce hover:scale-105 hover:rotate-3 text-center min-w-0">
+            <span className="text-xl transition-bounce hover:scale-125 block" style={{
               transform: 'rotate(3deg)',
               display: 'inline-block'
             }}>⭐</span>
-            <span className="text-black crayon-text text-sm block" style={{
+            <span className="text-black crayon-text text-xs block" style={{
               transform: 'rotate(1deg)',
               letterSpacing: '1px',
               textShadow: '1px 1px 0px #ffffff'
@@ -166,7 +172,7 @@ const MobileHero = () => {
         </div>
 
         {/* Scroll indicator */}
-        <p className="text-white crayon-text text-sm" style={{
+        <p className="text-white crayon-text text-sm px-4 text-center" style={{
           textShadow: '1px 1px 0px #000000'
         }}>Swipe up to trade!</p>
       </div>
