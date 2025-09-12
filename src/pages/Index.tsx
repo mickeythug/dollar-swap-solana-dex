@@ -79,7 +79,7 @@ const Index = () => {
               {/* Animated cartoon boxes - Desktop grid layout */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12 max-w-6xl mx-auto">
                 {/* Vision Box */}
-                <div className="bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-2xl p-6 lg:p-8 border-4 border-black transform rotate-1 brutal-shadow-xl hover:scale-105 hover:-rotate-1 transition-all duration-300">
+                <div className="bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-2xl p-6 lg:p-8 border-4 border-black transform rotate-1 brutal-shadow-xl hover:scale-105 hover:-rotate-1 transition-all duration-500">
                   <div className="text-center mb-4">
                     <div className="bg-black text-yellow-300 px-4 py-2 rounded-full text-sm font-black inline-block">
                       THE VISION
@@ -91,7 +91,7 @@ const Index = () => {
                 </div>
 
                 {/* Rule Box */}
-                <div className="bg-gradient-to-br from-green-300 to-green-500 rounded-2xl p-6 lg:p-8 border-4 border-black transform -rotate-1 brutal-shadow-xl hover:scale-105 hover:rotate-1 transition-all duration-300">
+                <div className="bg-gradient-to-br from-green-300 to-green-500 rounded-2xl p-6 lg:p-8 border-4 border-black transform -rotate-1 brutal-shadow-xl hover:scale-105 hover:rotate-1 transition-all duration-500">
                   <div className="text-center mb-4">
                     <div className="bg-black text-green-300 px-4 py-2 rounded-full text-sm font-black inline-block">
                       THE RULE
@@ -103,7 +103,7 @@ const Index = () => {
                 </div>
 
                 {/* Dream Box */}
-                <div className="bg-gradient-to-br from-blue-300 to-blue-500 rounded-2xl p-6 lg:p-8 border-4 border-black transform rotate-2 brutal-shadow-xl hover:scale-105 hover:-rotate-2 transition-all duration-300">
+                <div className="bg-gradient-to-br from-blue-300 to-blue-500 rounded-2xl p-6 lg:p-8 border-4 border-black transform rotate-2 brutal-shadow-xl hover:scale-105 hover:-rotate-2 transition-all duration-500">
                   <div className="text-center mb-4">
                     <div className="bg-black text-blue-300 px-4 py-2 rounded-full text-sm font-black inline-block">
                       THE DREAM
@@ -115,7 +115,7 @@ const Index = () => {
                 </div>
 
                 {/* GameStop Inspiration Box */}
-                <div className="bg-gradient-to-br from-red-300 to-red-500 rounded-2xl p-6 lg:p-8 border-4 border-black transform -rotate-2 brutal-shadow-xl hover:scale-105 hover:rotate-2 transition-all duration-300 animate-bounce">
+                <div className="bg-gradient-to-br from-red-300 to-red-500 rounded-2xl p-6 lg:p-8 border-4 border-black transform -rotate-2 brutal-shadow-xl hover:scale-105 hover:rotate-2 transition-all duration-500 animate-bounce-slow">
                   <div className="text-center mb-4">
                     <div className="bg-black text-red-300 px-4 py-2 rounded-full text-sm font-black inline-block">
                       GAMESTOP INSPIRED
@@ -127,7 +127,7 @@ const Index = () => {
                 </div>
 
                 {/* Plan Box */}
-                <div className="bg-gradient-to-br from-purple-300 to-purple-500 rounded-2xl p-6 lg:p-8 border-4 border-black transform rotate-1 brutal-shadow-xl hover:scale-105 hover:-rotate-1 transition-all duration-300">
+                <div className="bg-gradient-to-br from-purple-300 to-purple-500 rounded-2xl p-6 lg:p-8 border-4 border-black transform rotate-1 brutal-shadow-xl hover:scale-105 hover:-rotate-1 transition-all duration-500">
                   <div className="text-center mb-4">
                     <div className="bg-black text-purple-300 px-4 py-2 rounded-full text-sm font-black inline-block">
                       THE PLAN
@@ -139,7 +139,7 @@ const Index = () => {
                 </div>
 
                 {/* Why We'll Win Box */}
-                <div className="bg-gradient-to-br from-orange-300 to-orange-500 rounded-2xl p-6 lg:p-8 border-4 border-black transform -rotate-1 brutal-shadow-xl hover:scale-105 hover:rotate-1 transition-all duration-300">
+                <div className="bg-gradient-to-br from-orange-300 to-orange-500 rounded-2xl p-6 lg:p-8 border-4 border-black transform -rotate-1 brutal-shadow-xl hover:scale-105 hover:rotate-1 transition-all duration-500">
                   <div className="text-center mb-4">
                     <div className="bg-black text-orange-300 px-4 py-2 rounded-full text-sm font-black inline-block">
                       WHY WE'LL WIN
@@ -153,7 +153,7 @@ const Index = () => {
 
               {/* Diamond Hands Box - Full width for emphasis */}
               <div className="max-w-2xl mx-auto mb-12">
-                <div className="bg-gradient-to-br from-emerald-300 to-emerald-500 rounded-2xl p-6 lg:p-8 border-4 border-black transform rotate-2 brutal-shadow-xl hover:scale-105 hover:-rotate-2 transition-all duration-300 animate-pulse">
+                <div className="bg-gradient-to-br from-emerald-300 to-emerald-500 rounded-2xl p-6 lg:p-8 border-4 border-black transform rotate-2 brutal-shadow-xl hover:scale-105 hover:-rotate-2 transition-all duration-500 animate-pulse-slow">
                   <div className="text-center mb-4">
                     <div className="bg-black text-emerald-300 px-4 py-2 rounded-full text-sm font-black inline-block">
                       DIAMOND HANDS
@@ -176,7 +176,7 @@ const Index = () => {
 
               {/* Community section */}
               <div className="mb-12">
-                <h3 className="text-yellow-400 font-black text-3xl lg:text-4xl mb-8 text-center crayon-text animate-wiggle transform hover:scale-110 transition-all duration-300" style={{
+                <h3 className="text-yellow-400 font-black text-3xl lg:text-4xl mb-8 text-center crayon-text animate-wiggle transform hover:scale-110 transition-all duration-500" style={{
                   textShadow: '3px 3px 0px #000000, -1px -1px 0px #000000, 1px -1px 0px #000000, -1px 1px 0px #000000',
                   letterSpacing: '3px',
                   transform: 'rotate(-2deg) skew(-1deg)',
