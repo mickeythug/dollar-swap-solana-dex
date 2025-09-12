@@ -33,11 +33,11 @@ const MobileSwapInterface = () => {
           
           <div className="bg-green-100 rounded-2xl p-3 border-4 border-black brutal-shadow transform -rotate-1">
             <div className="flex items-center gap-2">
-              <div className="flex items-center gap-1 bg-purple-600 rounded-full px-2 py-1 border-2 border-black flex-shrink-0">
-                <div className="w-5 h-5 rounded-full border-2 border-black overflow-hidden">
-                  <img src="/sol-logo.png" alt="SOL Logo" className="w-full h-full object-cover" />
+              <div className="flex items-center gap-2 bg-purple-600 rounded-full px-3 py-2 border-2 border-black flex-shrink-0">
+                <div className="w-8 h-8 rounded-full border-2 border-black overflow-hidden">
+                  <img src="/solana-logo.png" alt="SOL Logo" className="w-full h-full object-cover" />
                 </div>
-                <span className="text-white font-black text-xs">SOL</span>
+                <span className="text-white font-black text-sm">SOL</span>
               </div>
               
               <input
@@ -67,11 +67,11 @@ const MobileSwapInterface = () => {
           
           <div className="bg-yellow-100 rounded-2xl p-3 border-4 border-black brutal-shadow transform rotate-1">
             <div className="flex items-center gap-2">
-              <div className="flex items-center gap-1 bg-green-600 rounded-full px-2 py-1 border-2 border-black flex-shrink-0">
-                <div className="w-5 h-5 rounded-full border-2 border-black overflow-hidden">
+              <div className="flex items-center gap-2 bg-green-600 rounded-full px-3 py-2 border-2 border-black flex-shrink-0">
+                <div className="w-8 h-8 rounded-full border-2 border-black overflow-hidden">
                   <img src="/logo.png" alt="0.1 SOL Logo" className="w-full h-full object-cover" />
                 </div>
-                <span className="text-white font-black text-xs">0.1SOL</span>
+                <span className="text-white font-black text-sm">0.1SOL</span>
               </div>
               
               <input
