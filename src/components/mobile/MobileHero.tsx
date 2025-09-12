@@ -25,15 +25,13 @@ const MobileHero = () => {
 
       {/* Main content */}
       <div className="relative z-10 px-4 py-8 flex flex-col items-center text-center">
-        {/* Logo section - 2x bigger */}
-        <div className="mb-8 mt-16">
-          <div className="flex justify-center px-4">
-            <img 
-              src="/lovable-uploads/a2925ada-d9a1-4459-b346-251f5ca5b59d.png" 
-              alt="0.1 SOL Community Logo"
-              className="w-[48rem] h-auto max-w-full"
-            />
-          </div>
+        {/* Logo section - fullscreen */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <img 
+            src="/lovable-uploads/a2925ada-d9a1-4459-b346-251f5ca5b59d.png" 
+            alt="0.1 SOL Community Logo"
+            className="w-full h-full object-contain"
+          />
         </div>
 
         {/* Title - mobile-friendly font */}
