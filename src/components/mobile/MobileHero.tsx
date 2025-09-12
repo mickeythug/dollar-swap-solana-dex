@@ -36,11 +36,11 @@ const MobileHero = () => {
           </div>
         </div>
 
-        {/* Title - unified text style without shadows */}
+        {/* Title - mobile-friendly font */}
         <div className="mb-8 px-2">
           <div className="flex justify-center">
             <div className="max-w-sm w-full">
-              <h1 className="inline-block bg-yellow-400 text-black px-4 py-3 rounded-2xl border-4 border-black crayon-text super-thick mb-6 leading-tight drop-shadow-lg glow-effect text-center w-full" style={{
+              <h1 className="inline-block bg-yellow-400 text-black px-4 py-3 rounded-2xl border-4 border-black font-black mb-6 leading-tight drop-shadow-lg glow-effect text-center w-full" style={{
                 fontSize: 'clamp(1.5rem, 5vw, 2.5rem)',
                 transform: 'rotate(-1deg) skew(-0.5deg)',
                 letterSpacing: '2px'
@@ -71,11 +71,11 @@ const MobileHero = () => {
           </div>
         </div>
 
-        {/* Description card - unified text style */}
+        {/* Description card - mobile-friendly font */}
         <div className="meme-card bg-green-600 p-4 rounded-2xl brutal-shadow-xl max-w-xs mx-auto mb-8 transition-bounce hover:scale-105 hover:rotate-1" style={{
           transform: 'rotate(1deg) skew(-0.5deg)'
         }}>
-          <div className="text-white leading-relaxed crayon-text text-base overflow-hidden" style={{
+          <div className="text-white leading-relaxed font-black text-base overflow-hidden" style={{
             transform: 'rotate(-1deg) skew(0.5deg)',
             letterSpacing: '1px'
           }}>
@@ -106,15 +106,15 @@ const MobileHero = () => {
             </p>
           </div>
           
-          {/* Warning - unified text style */}
+          {/* Warning - mobile-friendly font */}
           <div className="bg-red-500 p-3 rounded-xl border-4 border-black transform -rotate-1 brutal-shadow-lg mt-4">
-            <p className="text-white text-xs font-black text-center crayon-text leading-tight">
+            <p className="text-white text-xs font-black text-center leading-tight">
               ⚠️ THIS IS A MEME!<br />NOT FINANCIAL ADVICE! ⚠️
             </p>
           </div>
         </div>
 
-        {/* Feature cards - unified text style */}
+        {/* Feature cards - mobile-friendly font */}
         <div className="flex flex-wrap justify-center gap-3 mb-8 px-2">
           <div className="flex items-center space-x-2 meme-card px-3 py-2 rounded-xl brutal-shadow-lg transition-bounce hover:scale-110 hover:rotate-3" style={{
             transform: 'rotate(-2deg) skew(-0.5deg)'
@@ -123,7 +123,7 @@ const MobileHero = () => {
               transform: 'rotate(-3deg) scale(1.05)'
             }}>
             </div>
-            <span className="text-black crayon-text text-xs whitespace-nowrap" style={{
+            <span className="text-black font-black text-xs whitespace-nowrap" style={{
               transform: 'rotate(1deg)',
               letterSpacing: '1px'
             }}>
@@ -136,7 +136,7 @@ const MobileHero = () => {
               transform: 'rotate(-2deg)',
               display: 'inline-block'
             }}>👥</span>
-            <span className="text-white crayon-text text-xs block" style={{
+            <span className="text-white font-black text-xs block" style={{
               transform: 'rotate(-1deg)',
               letterSpacing: '1px'
             }}>
@@ -149,7 +149,7 @@ const MobileHero = () => {
               transform: 'rotate(3deg)',
               display: 'inline-block'
             }}>⭐</span>
-            <span className="text-black crayon-text text-xs block" style={{
+            <span className="text-black font-black text-xs block" style={{
               transform: 'rotate(1deg)',
               letterSpacing: '1px'
             }}>
@@ -165,8 +165,8 @@ const MobileHero = () => {
           <ArrowDown size={32} strokeWidth={4} className="glow-effect" />
         </div>
 
-        {/* Scroll indicator - unified text style */}
-        <p className="text-white crayon-text text-sm px-4 text-center">Swipe up to trade!</p>
+        {/* Scroll indicator - mobile-friendly font */}
+        <p className="text-white font-black text-sm px-4 text-center">Swipe up to trade!</p>
       </div>
     </div>
   );

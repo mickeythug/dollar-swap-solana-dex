@@ -24,9 +24,9 @@ const MobileNavigation = ({ activeSection, onSectionChange }: MobileNavigationPr
             {/* Logo */}
             <div className="flex items-center">
               <div className="w-8 h-8 bg-yellow-400 rounded-full border-2 border-black flex items-center justify-center brutal-shadow">
-                <span className="text-black font-black text-xs crayon-text">0.1</span>
+                <span className="text-black font-black text-xs">0.1</span>
               </div>
-              <span className="ml-2 text-white font-black text-sm crayon-text">
+              <span className="ml-2 text-white font-black text-sm">
                 SOL
               </span>
             </div>
@@ -35,7 +35,7 @@ const MobileNavigation = ({ activeSection, onSectionChange }: MobileNavigationPr
             <div className="flex gap-2">
               <button 
                 onClick={() => onSectionChange('hero')}
-                className={`px-3 py-2 rounded-xl border-2 border-black font-black text-xs crayon-text brutal-shadow transition-bounce hover:scale-110 ${
+                className={`px-3 py-2 rounded-xl border-2 border-black font-black text-xs brutal-shadow transition-bounce hover:scale-110 ${
                   activeSection === 'hero' 
                     ? 'bg-yellow-400 text-black transform rotate-1' 
                     : 'bg-white/20 text-white hover:bg-white/30'
@@ -46,7 +46,7 @@ const MobileNavigation = ({ activeSection, onSectionChange }: MobileNavigationPr
               
               <button 
                 onClick={() => onSectionChange('swap')}
-                className={`px-3 py-2 rounded-xl border-2 border-black font-black text-xs crayon-text brutal-shadow transition-bounce hover:scale-110 ${
+                className={`px-3 py-2 rounded-xl border-2 border-black font-black text-xs brutal-shadow transition-bounce hover:scale-110 ${
                   activeSection === 'swap' 
                     ? 'bg-yellow-400 text-black transform -rotate-1' 
                     : 'bg-white/20 text-white hover:bg-white/30'
@@ -57,7 +57,7 @@ const MobileNavigation = ({ activeSection, onSectionChange }: MobileNavigationPr
               
               <button 
                 onClick={() => onSectionChange('about')}
-                className={`px-3 py-2 rounded-xl border-2 border-black font-black text-xs crayon-text brutal-shadow transition-bounce hover:scale-110 ${
+                className={`px-3 py-2 rounded-xl border-2 border-black font-black text-xs brutal-shadow transition-bounce hover:scale-110 ${
                   activeSection === 'about' 
                     ? 'bg-yellow-400 text-black transform rotate-1' 
                     : 'bg-white/20 text-white hover:bg-white/30'
@@ -66,7 +66,7 @@ const MobileNavigation = ({ activeSection, onSectionChange }: MobileNavigationPr
                 <Info className="w-4 h-4" strokeWidth={3} />
               </button>
 
-              <button className="px-3 py-2 rounded-xl border-2 border-black bg-green-600 hover:bg-green-700 text-white font-black text-xs crayon-text brutal-shadow transition-bounce hover:scale-110 transform rotate-2">
+              <button className="px-3 py-2 rounded-xl border-2 border-black bg-green-600 hover:bg-green-700 text-white font-black text-xs brutal-shadow transition-bounce hover:scale-110 transform rotate-2">
                 <Wallet className="w-4 h-4" strokeWidth={3} />
               </button>
             </div>
