@@ -15,7 +15,7 @@ const MobileHero = () => {
     }}>
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4">
         {/* Animated cartoon message box */}
-        <div className="mb-8 max-w-sm">
+        <div className="mb-8 max-w-sm relative z-20">
           <div className="bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-2xl p-4 border-4 border-black transform rotate-2 brutal-shadow-xl animate-bounce hover:scale-105 hover:-rotate-1 transition-all duration-300">
             <div className="text-center mb-2">
               <div className="bg-black text-yellow-300 px-3 py-1 rounded-full text-xs font-black inline-block">
@@ -31,7 +31,7 @@ const MobileHero = () => {
         <img 
           src="/lovable-uploads/a2925ada-d9a1-4459-b346-251f5ca5b59d.png" 
           alt="0.1 SOL Community Logo"
-          className="w-screen h-screen object-cover select-none pointer-events-none scale-150"
+          className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none scale-150 z-0"
         />
       </div>
     </div>
