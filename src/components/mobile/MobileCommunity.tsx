@@ -62,12 +62,12 @@ const MobileCommunity = () => {
         {/* Title */}
         <div className="text-center mb-6">
           <div className="bg-yellow-400 inline-block px-4 py-3 rounded-2xl border-4 border-black brutal-shadow transform -rotate-1">
-            <h2 className="text-lg font-black text-black crayon-text">
+            <h2 className="text-responsive-lg text-black crayon-text super-thick">
               WE WELCOME ALL COMMUNITIES!
             </h2>
           </div>
           <div className="mt-4 bg-green-600 inline-block px-3 py-2 rounded-xl border-3 border-black brutal-shadow transform rotate-1">
-            <p className="text-sm font-black text-white crayon-text">
+            <p className="text-responsive-sm text-white crayon-text super-thick">
               Come HODL with us! 🚀
             </p>
           </div>
@@ -116,7 +116,7 @@ const MobileCommunity = () => {
                     {/* Community label */}
                     <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2">
                       <div className="bg-black text-white px-2 py-1 rounded-lg border-2 border-white brutal-shadow-sm">
-                        <span className="text-xs font-black crayon-text">
+                        <span className="text-responsive-xs text-white crayon-text super-thick">
                           {community.name}
                         </span>
                       </div>
@@ -152,10 +152,10 @@ const MobileCommunity = () => {
         {/* Bottom message */}
         <div className="text-center mt-6">
           <div className="bg-gradient-to-r from-green-500 via-yellow-500 to-green-500 inline-block px-4 py-3 rounded-xl border-4 border-black brutal-shadow transform hover:scale-105 transition-all duration-300">
-            <p className="text-sm font-black text-black crayon-text">
+            <p className="text-responsive-sm text-black crayon-text super-thick">
               🤝 UNITED WE HODL! 🤝
             </p>
-            <p className="text-xs font-black text-black mt-1 crayon-text">
+            <p className="text-responsive-xs text-black mt-1 crayon-text super-thick">
               Everyone is welcome in our 0.1 SOL family!
             </p>
           </div>
@@ -163,7 +163,7 @@ const MobileCommunity = () => {
 
         {/* Swipe instruction */}
         <div className="text-center mt-4">
-          <p className="text-xs text-white font-black crayon-text">
+          <p className="text-responsive-xs text-white crayon-text super-thick">
             👆 Swipe to see more or wait for auto-scroll
           </p>
         </div>
