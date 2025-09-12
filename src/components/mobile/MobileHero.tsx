@@ -32,9 +32,9 @@ const MobileHero = () => {
                   💡 THE MESSAGE
                 </div>
               </div>
-              <p className="text-black font-black text-base leading-relaxed text-center transform rotate-1" style={{
-                textShadow: '2px 2px 0px rgba(255,255,255,0.8)',
-                letterSpacing: '0.5px'
+              <p className="text-black font-black text-xl leading-relaxed text-center transform rotate-1" style={{
+                textShadow: '3px 3px 0px rgba(255,255,255,0.9)',
+                letterSpacing: '1px'
               }}>
                 "Just buy 0.1 SOL worth of it - it's not that big of a deal!"
               </p>
