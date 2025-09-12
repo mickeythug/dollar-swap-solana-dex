@@ -35,13 +35,7 @@ const Index = () => {
     }}>
           
           <div className="absolute inset-0 bg-gradient-to-br from-green-900/80 via-yellow-600/30 to-green-700/80"></div>
-          <div className="absolute inset-0" style={{
-        backgroundImage: `
-              radial-gradient(circle at 10% 20%, rgba(0, 100, 0, 0.8) 0%, transparent 50%),
-              radial-gradient(circle at 90% 80%, rgba(255, 215, 0, 0.6) 0%, transparent 50%),
-              radial-gradient(circle at 40% 40%, rgba(34, 139, 34, 0.7) 0%, transparent 40%)
-            `
-      }}></div>
+          <div className="absolute inset-0 bg-green-900"></div>
           
           <Header />
           <Hero />
