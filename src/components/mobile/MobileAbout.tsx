@@ -123,9 +123,23 @@ const MobileAbout = () => {
 
       {/* Community section - mobile-friendly font */}
       <div className="mb-6">
-        <h3 className="text-white font-black text-lg mb-4 text-center px-2">
-          Join the FUN!<br />
-          Come hang out with other 0.1 SOL holders!
+        <h3 className="text-yellow-400 font-black text-2xl mb-4 text-center px-2 crayon-text animate-wiggle transform hover:scale-110 transition-all duration-300" style={{
+          textShadow: '3px 3px 0px #000000, -1px -1px 0px #000000, 1px -1px 0px #000000, -1px 1px 0px #000000',
+          letterSpacing: '3px',
+          transform: 'rotate(-2deg) skew(-1deg)',
+          fontFamily: '"Comic Sans MS", "Kalam", "Permanent Marker", cursive'
+        }}>
+          <span className="inline-block transform hover:rotate-3 transition-transform duration-200">Join</span>{' '}
+          <span className="inline-block transform hover:-rotate-2 transition-transform duration-200">the</span>{' '}
+          <span className="inline-block transform hover:rotate-1 transition-transform duration-200 text-3xl">FUN!</span><br />
+          <span className="inline-block transform hover:rotate-2 transition-transform duration-200">Come</span>{' '}
+          <span className="inline-block transform hover:-rotate-1 transition-transform duration-200">hang</span>{' '}
+          <span className="inline-block transform hover:rotate-3 transition-transform duration-200">out</span>{' '}
+          <span className="inline-block transform hover:-rotate-2 transition-transform duration-200">with</span>{' '}
+          <span className="inline-block transform hover:rotate-1 transition-transform duration-200">other</span>{' '}
+          <span className="inline-block transform hover:-rotate-3 transition-transform duration-200 text-3xl text-yellow-300">0.1</span>{' '}
+          <span className="inline-block transform hover:rotate-2 transition-transform duration-200 text-3xl text-yellow-300">SOL</span>{' '}
+          <span className="inline-block transform hover:-rotate-1 transition-transform duration-200">holders!</span>
         </h3>
         
         <div className="space-y-3 max-w-sm mx-auto">
