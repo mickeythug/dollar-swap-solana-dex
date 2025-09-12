@@ -32,7 +32,7 @@ const Hero = () => {
               transform: 'rotate(1deg) translateY(-3px)',
               display: 'inline-block'
             }}>Buy</span>
-            <span className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 bg-clip-text text-transparent block mt-2 sm:mt-4 transition-bounce hover:scale-110" style={{
+            <span className="text-red-600 block mt-2 sm:mt-4 transition-bounce hover:scale-110" style={{
               transform: 'rotate(2deg) skew(1deg) translateX(10px)',
               letterSpacing: '5px'
             }}>
