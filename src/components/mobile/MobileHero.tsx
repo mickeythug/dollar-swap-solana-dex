@@ -53,7 +53,7 @@ const MobileHero = () => {
                   transform: 'rotate(1deg) translateY(-1px)',
                   display: 'inline-block'
                 }}>Buy</span>
-                <span className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 bg-clip-text text-transparent block mt-2 transition-bounce hover:scale-110" style={{
+                <span className="text-red-500 block mt-2 transition-bounce hover:scale-110" style={{
                   transform: 'rotate(2deg) skew(1deg) translateX(3px)',
                   letterSpacing: '3px'
                 }}>
