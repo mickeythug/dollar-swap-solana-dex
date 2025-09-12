@@ -1,12 +1,26 @@
 import React from 'react';
 import { ConnectionProvider } from '@solana/wallet-adapter-react';
 import { WalletContextProvider } from '../contexts/WalletContextProvider';
+import { useIsMobile } from '../hooks/use-mobile';
 import SwapInterface from '../components/SwapInterface';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import MarketCapCounter from '../components/MarketCapCounter';
+import MobileApp from '../components/mobile/MobileApp';
 const Index = () => {
+  const isMobile = useIsMobile();
+
+  // Return mobile-specific app for mobile devices
+  if (isMobile) {
+    return (
+      <WalletContextProvider>
+        <MobileApp />
+      </WalletContextProvider>
+    );
+  }
+
+  // Return desktop version for non-mobile devices
   return <WalletContextProvider>
         <div className="min-h-screen bg-green-800 px-2 lg:px-6 xl:px-8" style={{
       backgroundImage: `
