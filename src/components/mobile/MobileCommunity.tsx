@@ -88,7 +88,7 @@ const MobileCommunity = () => {
           style={{ touchAction: 'pan-x' }}
         >
           <div className="flex transition-transform duration-500 ease-in-out">
-            <div className="w-full flex-shrink-0 grid grid-cols-2 gap-3 p-2">
+            <div className="w-full flex-shrink-0 grid grid-cols-2 gap-2 p-1">
               {getCurrentPair().map((community, index) => (
                 <div
                   key={`${currentIndex}-${index}`}
@@ -96,7 +96,7 @@ const MobileCommunity = () => {
                 >
                   {/* Modern 2D Cartoon Frame */}
                   <div 
-                    className="relative bg-gradient-to-br from-yellow-300 via-yellow-400 to-yellow-500 p-2 rounded-xl border-4 border-black brutal-shadow transform hover:scale-105 transition-all duration-300"
+                    className="relative bg-gradient-to-br from-yellow-300 via-yellow-400 to-yellow-500 p-1 rounded-xl border-4 border-black brutal-shadow transform hover:scale-105 transition-all duration-300"
                     style={{
                       transform: `rotate(${index % 2 === 0 ? '-' : ''}2deg)`,
                       background: `linear-gradient(135deg, 
@@ -108,12 +108,12 @@ const MobileCommunity = () => {
                     {/* Inner glow */}
                     <div className="absolute inset-1 bg-white/20 rounded-lg blur-sm"></div>
                     
-                    {/* Image container with minimal padding */}
-                    <div className="relative bg-white/90 rounded-lg p-1 border-2 border-black/20">
+                    {/* Image container with no padding */}
+                    <div className="relative bg-white/90 rounded-lg border-2 border-black/20 overflow-hidden">
                       <img
                         src={community.src}
                         alt={community.alt}
-                        className="w-full h-auto rounded-md shadow-lg"
+                        className="w-full h-48 object-cover rounded-md"
                         style={{
                           filter: 'drop-shadow(1px 1px 2px rgba(0,0,0,0.3))'
                         }}
