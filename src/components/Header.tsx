@@ -51,40 +51,37 @@ const Header = () => {
             </div>
           </div>
           
-          {/* Navigation & Wallet Section - Enhanced Responsive */}
-          <div className={`flex items-center space-x-4 lg:space-x-8 xl:space-x-12 ${isMenuOpen ? 'flex-col space-y-4 w-full md:flex-row md:space-y-0 md:w-auto' : 'hidden md:flex'} transition-smooth`}>
-            {/* Navigation Links - Enhanced */}
-            <div className={`flex items-center space-x-6 lg:space-x-8 xl:space-x-12 ${isMenuOpen ? 'flex-col space-y-3 space-x-0' : 'flex'}`}>
+          {/* Navigation & Wallet Section - Fixed Layout */}
+          <div className={`flex items-center space-x-3 lg:space-x-6 ${isMenuOpen ? 'flex-col space-y-4 w-full md:flex-row md:space-y-0 md:w-auto' : 'hidden md:flex'} transition-smooth`}>
+            {/* Navigation Links */}
+            <div className={`flex items-center space-x-3 lg:space-x-6 ${isMenuOpen ? 'flex-col space-y-3 space-x-0' : 'flex'}`}>
               <a 
                 href="#swap" 
-                className="meme-button px-3 sm:px-4 lg:px-6 py-2 sm:py-2 lg:py-3 rounded-lg sm:rounded-xl text-responsive-xs transition-bounce hover:scale-110 hover:rotate-2" 
+                className="meme-button px-3 lg:px-4 py-2 rounded-lg text-sm whitespace-nowrap transition-bounce hover:scale-105" 
                 style={{
-                  transform: 'rotate(-2deg) skew(1deg)'
+                  transform: 'rotate(-1deg)'
                 }}
               >
                 SWAP!
               </a>
               <a 
                 href="#about" 
-                className="bg-green-400 hover:bg-green-500 text-yellow-900 font-black px-3 sm:px-4 lg:px-6 py-2 sm:py-2 lg:py-3 rounded-lg sm:rounded-xl border-4 border-black brutal-shadow transition-bounce hover:scale-110 hover:rotate-2 text-responsive-xs" 
+                className="bg-green-400 hover:bg-green-500 text-yellow-900 font-black px-3 lg:px-4 py-2 rounded-lg border-4 border-black brutal-shadow transition-bounce hover:scale-105 text-sm whitespace-nowrap" 
                 style={{
-                  transform: 'rotate(3deg) skew(-1deg)',
+                  transform: 'rotate(1deg)',
                   fontFamily: 'Comic Sans MS, cursive',
                   textShadow: '1px 1px 0px #000000',
-                  letterSpacing: '2px'
+                  letterSpacing: '1px'
                 }}
               >
                 ABOUT!
               </a>
             </div>
             
-            {/* Enhanced Wallet Button */}
-            <div className="transition-bounce hover:scale-105" style={{
-              transform: 'rotate(-1deg) scale(1.02)'
-            }}>
-              <WalletMultiButton className="!bg-gradient-to-r !from-yellow-400 !to-yellow-500 hover:!from-yellow-500 hover:!to-yellow-600 !border-4 !border-black !rounded-lg sm:!rounded-xl lg:!rounded-2xl crayon-text super-thick !px-3 sm:!px-6 lg:!px-8 !py-2 sm:!py-3 lg:!py-4 text-responsive-xs !text-green-900 brutal-shadow transition-bounce hover:!scale-105 glow-effect" style={{
-                transform: 'skew(-1deg)',
-                letterSpacing: '2px',
+            {/* Wallet Button - Fixed Container */}
+            <div className="flex-shrink-0">
+              <WalletMultiButton className="!bg-gradient-to-r !from-yellow-400 !to-yellow-500 hover:!from-yellow-500 hover:!to-yellow-600 !border-4 !border-black !rounded-lg crayon-text super-thick !px-4 !py-2 !text-sm !text-green-900 brutal-shadow transition-all hover:!scale-105 !whitespace-nowrap !max-w-none" style={{
+                letterSpacing: '1px',
                 textShadow: '1px 1px 0px #000000'
               }} />
             </div>
