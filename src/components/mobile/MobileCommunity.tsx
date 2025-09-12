@@ -28,9 +28,11 @@ const MobileCommunity = () => {
   // Handle touch events for swiping
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStart(e.targetTouches[0].clientX);
+    setTouchEnd(0);
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
+    e.preventDefault();
     setTouchEnd(e.targetTouches[0].clientX);
   };
 
@@ -38,8 +40,8 @@ const MobileCommunity = () => {
     if (!touchStart || !touchEnd) return;
     
     const distance = touchStart - touchEnd;
-    const isLeftSwipe = distance > 50;
-    const isRightSwipe = distance < -50;
+    const isLeftSwipe = distance > 30;
+    const isRightSwipe = distance < -30;
 
     if (isLeftSwipe && currentIndex < communityImages.length - 2) {
       setCurrentIndex(currentIndex + 2);
@@ -47,6 +49,10 @@ const MobileCommunity = () => {
     if (isRightSwipe && currentIndex > 0) {
       setCurrentIndex(currentIndex - 2);
     }
+    
+    // Reset touch coordinates
+    setTouchStart(0);
+    setTouchEnd(0);
   };
 
   const getCurrentPair = () => {
@@ -75,10 +81,11 @@ const MobileCommunity = () => {
 
         {/* Swipeable Gallery Container */}
         <div 
-          className="relative overflow-hidden rounded-2xl"
+          className="relative overflow-hidden rounded-2xl touch-pan-x"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
+          style={{ touchAction: 'pan-x' }}
         >
           <div className="flex transition-transform duration-500 ease-in-out">
             <div className="w-full flex-shrink-0 grid grid-cols-2 gap-3 p-2">
