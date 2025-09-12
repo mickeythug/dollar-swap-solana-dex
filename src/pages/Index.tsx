@@ -7,6 +7,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import MarketCapCounter from '../components/MarketCapCounter';
+import Community from '../components/Community';
 import MobileApp from '../components/mobile/MobileApp';
 const Index = () => {
   const isMobile = useIsMobile();
@@ -131,6 +132,8 @@ const Index = () => {
               </div>
             </div>
           </section>
+
+          <Community />
           
           <Footer />
         </div>
