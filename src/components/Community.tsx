@@ -21,7 +21,7 @@ const Community = () => {
               letterSpacing: '3px',
               transform: 'rotate(1deg)'
             }}>
-              VI VÄLKOMNAR ALLA COMMUNITIES!
+              WE WELCOME ALL COMMUNITIES!
             </h2>
           </div>
           <div className="mt-6 bg-green-600 inline-block px-4 sm:px-6 py-3 sm:py-4 rounded-2xl border-4 border-black brutal-shadow transform rotate-1 hover:-rotate-1 transition-all duration-300">
@@ -29,7 +29,7 @@ const Community = () => {
               textShadow: '2px 2px 0px #000000',
               letterSpacing: '2px'
             }}>
-              Kom och HODLA tillsammans med oss! 🚀
+              Come and HODL with us! 🚀
             </p>
           </div>
         </div>
@@ -104,7 +104,7 @@ const Community = () => {
               textShadow: '1px 1px 0px #ffffff',
               letterSpacing: '1px'
             }}>
-              Alla är välkomna i vår 0.1 SOL familj!
+              Everyone is welcome in our 0.1 SOL family!
             </p>
           </div>
         </div>

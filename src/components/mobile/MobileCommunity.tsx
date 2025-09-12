@@ -66,7 +66,7 @@ const MobileCommunity = () => {
               textShadow: '2px 2px 0px #ffffff',
               letterSpacing: '2px'
             }}>
-              VI VÄLKOMNAR ALLA COMMUNITIES!
+              WE WELCOME ALL COMMUNITIES!
             </h2>
           </div>
           <div className="mt-4 bg-green-600 inline-block px-3 py-2 rounded-xl border-3 border-black brutal-shadow transform rotate-1">
@@ -74,7 +74,7 @@ const MobileCommunity = () => {
               textShadow: '1px 1px 0px #000000',
               letterSpacing: '1px'
             }}>
-              Kom och HODLA tillsammans! 🚀
+              Come HODL with us! 🚀
             </p>
           </div>
         </div>
@@ -167,7 +167,7 @@ const MobileCommunity = () => {
             <p className="text-xs font-black text-black mt-1" style={{
               textShadow: '1px 1px 0px #ffffff'
             }}>
-              Alla är välkomna i vår 0.1 SOL familj!
+              Everyone is welcome in our 0.1 SOL family!
             </p>
           </div>
         </div>
@@ -175,7 +175,7 @@ const MobileCommunity = () => {
         {/* Swipe instruction */}
         <div className="text-center mt-4">
           <p className="text-xs text-white/80 font-medium">
-            👆 Swipe för att se fler eller vänta på auto-scroll
+            👆 Swipe to see more or wait for auto-scroll
           </p>
         </div>
       </div>
