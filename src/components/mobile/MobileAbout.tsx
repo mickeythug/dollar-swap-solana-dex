@@ -4,28 +4,23 @@ import { MessageCircle, Twitter, Hash, ExternalLink } from 'lucide-react';
 const MobileAbout = () => {
   return (
     <div className="px-4 py-6">
-      {/* Title - better responsive sizing */}
+      {/* Title - unified text style */}
       <div className="text-center mb-6">
         <div className="inline-block max-w-xs">
           <h2 className="bg-yellow-400 text-black px-4 py-3 rounded-2xl border-4 border-black font-black text-xl crayon-text brutal-shadow-xl transform rotate-1" style={{
-            textShadow: '2px 2px 0px #ffffff',
             letterSpacing: '2px'
           }}>
             About Just Buy 0.1 SOL!
           </h2>
         </div>
-        <p className="text-white text-base crayon-text mt-4 px-2" style={{
-          textShadow: '1px 1px 0px #000000'
-        }}>
+        <p className="text-white text-base crayon-text mt-4 px-2">
           The simplest meme on Solana!
         </p>
       </div>
 
-      {/* Main description card - better sizing */}
+      {/* Main description card - unified text style */}
       <div className="meme-card rounded-3xl p-4 transform rotate-1 brutal-shadow-xl transition-bounce hover:scale-105 hover:-rotate-1 mb-6 max-w-sm mx-auto">
-        <div className="space-y-3 text-black crayon-text" style={{
-          textShadow: '1px 1px 0px #ffffff'
-        }}>
+        <div className="space-y-3 text-black crayon-text">
           <p className="text-base font-black leading-relaxed">
             This is just a MEME TOKEN called 0.1 SOL!
           </p>
@@ -40,20 +35,16 @@ const MobileAbout = () => {
         </div>
       </div>
 
-      {/* Warning card - same style as desktop */}
+      {/* Warning card - unified text style */}
       <div className="bg-red-500 p-4 rounded-2xl border-4 border-black transform -rotate-1 brutal-shadow-lg mb-8">
-        <p className="text-white font-black text-center text-lg crayon-text" style={{
-          textShadow: '2px 2px 0px #000000'
-        }}>
+        <p className="text-white font-black text-center text-lg crayon-text">
           ⚠️ THIS IS A MEME! NOT FINANCIAL ADVICE! ⚠️
         </p>
       </div>
 
-      {/* Community section - better button sizing */}
+      {/* Community section - unified text style */}
       <div className="mb-6">
-        <h3 className="text-white font-black text-lg mb-4 text-center crayon-text px-2" style={{
-          textShadow: '2px 2px 0px #000000'
-        }}>
+        <h3 className="text-white font-black text-lg mb-4 text-center crayon-text px-2">
           Join the FUN!<br />
           Come hang out with other 0.1 SOL holders!
         </h3>
@@ -62,7 +53,7 @@ const MobileAbout = () => {
           <button className="w-full bg-blue-600 hover:bg-blue-700 border-4 border-black rounded-xl p-3 flex items-center gap-3 brutal-shadow transition-bounce hover:scale-105 transform rotate-1 hover:rotate-2">
             <MessageCircle className="w-5 h-5 text-white flex-shrink-0" strokeWidth={3} />
             <div className="text-left flex-1 min-w-0">
-              <div className="text-white font-black crayon-text text-sm" style={{textShadow: '1px 1px 0px #000000'}}>Telegram</div>
+              <div className="text-white font-black crayon-text text-sm">Telegram</div>
               <div className="text-white/80 text-xs font-black crayon-text">LET&apos;S CHAT!</div>
             </div>
             <ExternalLink className="w-4 h-4 text-white flex-shrink-0" strokeWidth={3} />
@@ -71,7 +62,7 @@ const MobileAbout = () => {
           <button className="w-full bg-sky-600 hover:bg-sky-700 border-4 border-black rounded-xl p-3 flex items-center gap-3 brutal-shadow transition-bounce hover:scale-105 transform -rotate-1 hover:-rotate-2">
             <Twitter className="w-5 h-5 text-white flex-shrink-0" strokeWidth={3} />
             <div className="text-left flex-1 min-w-0">
-              <div className="text-white font-black crayon-text text-sm" style={{textShadow: '1px 1px 0px #000000'}}>Twitter</div>
+              <div className="text-white font-black crayon-text text-sm">Twitter</div>
               <div className="text-white/80 text-xs font-black crayon-text">FOLLOW US!</div>
             </div>
             <ExternalLink className="w-4 h-4 text-white flex-shrink-0" strokeWidth={3} />
@@ -80,7 +71,7 @@ const MobileAbout = () => {
           <button className="w-full bg-purple-600 hover:bg-purple-700 border-4 border-black rounded-xl p-3 flex items-center gap-3 brutal-shadow transition-bounce hover:scale-105 transform rotate-2 hover:rotate-3">
             <Hash className="w-5 h-5 text-white flex-shrink-0" strokeWidth={3} />
             <div className="text-left flex-1 min-w-0">
-              <div className="text-white font-black crayon-text text-sm" style={{textShadow: '1px 1px 0px #000000'}}>Discord</div>
+              <div className="text-white font-black crayon-text text-sm">Discord</div>
               <div className="text-white/80 text-xs font-black crayon-text">MEMES HERE!</div>
             </div>
             <ExternalLink className="w-4 h-4 text-white flex-shrink-0" strokeWidth={3} />
@@ -88,12 +79,10 @@ const MobileAbout = () => {
         </div>
       </div>
 
-      {/* Final reminder - same style as desktop */}
+      {/* Final reminder - unified text style */}
       <div className="text-center">
         <div className="bg-yellow-600 hover:bg-yellow-700 p-3 rounded-lg border-4 border-black inline-block brutal-shadow transform rotate-1">
-          <p className="text-black font-black text-sm crayon-text" style={{
-            textShadow: '1px 1px 0px #ffffff'
-          }}>
+          <p className="text-black font-black text-sm crayon-text">
             ALWAYS DYOR! THIS IS JUST FOR FUN!
           </p>
         </div>

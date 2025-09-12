@@ -26,9 +26,7 @@ const MobileNavigation = ({ activeSection, onSectionChange }: MobileNavigationPr
               <div className="w-8 h-8 bg-yellow-400 rounded-full border-2 border-black flex items-center justify-center brutal-shadow">
                 <span className="text-black font-black text-xs crayon-text">0.1</span>
               </div>
-              <span className="ml-2 text-white font-black text-sm crayon-text" style={{
-                textShadow: '1px 1px 0px #000000'
-              }}>
+              <span className="ml-2 text-white font-black text-sm crayon-text">
                 SOL
               </span>
             </div>
@@ -42,9 +40,6 @@ const MobileNavigation = ({ activeSection, onSectionChange }: MobileNavigationPr
                     ? 'bg-yellow-400 text-black transform rotate-1' 
                     : 'bg-white/20 text-white hover:bg-white/30'
                 }`}
-                style={{
-                  textShadow: activeSection === 'hero' ? '1px 1px 0px #ffffff' : '1px 1px 0px #000000'
-                }}
               >
                 <Home className="w-4 h-4" strokeWidth={3} />
               </button>
@@ -56,9 +51,6 @@ const MobileNavigation = ({ activeSection, onSectionChange }: MobileNavigationPr
                     ? 'bg-yellow-400 text-black transform -rotate-1' 
                     : 'bg-white/20 text-white hover:bg-white/30'
                 }`}
-                style={{
-                  textShadow: activeSection === 'swap' ? '1px 1px 0px #ffffff' : '1px 1px 0px #000000'
-                }}
               >
                 <ArrowLeftRight className="w-4 h-4" strokeWidth={3} />
               </button>
@@ -70,9 +62,6 @@ const MobileNavigation = ({ activeSection, onSectionChange }: MobileNavigationPr
                     ? 'bg-yellow-400 text-black transform rotate-1' 
                     : 'bg-white/20 text-white hover:bg-white/30'
                 }`}
-                style={{
-                  textShadow: activeSection === 'about' ? '1px 1px 0px #ffffff' : '1px 1px 0px #000000'
-                }}
               >
                 <Info className="w-4 h-4" strokeWidth={3} />
               </button>

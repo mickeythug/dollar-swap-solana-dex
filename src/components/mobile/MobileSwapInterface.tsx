@@ -8,29 +8,26 @@ const MobileSwapInterface = () => {
 
   return (
     <div className="px-4 py-6">
-      {/* Header - better sized and centered */}
+      {/* Header - unified text style */}
       <div className="mb-6 text-center">
         <div className="inline-block">
           <h2 className="text-2xl font-black text-black mb-3 crayon-text bg-yellow-400 px-4 py-2 rounded-2xl border-4 border-black brutal-shadow-lg transform rotate-1" style={{
-            textShadow: '2px 2px 0px #ffffff',
             letterSpacing: '2px'
           }}>
             Quick Swap
           </h2>
         </div>
-        <p className="text-white text-base mt-4 crayon-text px-2" style={{
-          textShadow: '1px 1px 0px #000000'
-        }}>
+        <p className="text-white text-base mt-4 crayon-text px-2">
           Trade SOL for 0.1 SOL tokens instantly!
         </p>
       </div>
 
       {/* Main swap card - better responsive sizing */}
       <div className="meme-card p-4 rounded-3xl brutal-shadow-xl mb-6 transform rotate-1 transition-bounce hover:scale-105 hover:-rotate-1 max-w-sm mx-auto">
-        {/* From section - better text sizing */}
+        {/* From section - unified text style */}
         <div className="mb-4">
           <div className="flex justify-between items-center mb-2">
-            <span className="text-black crayon-text font-black text-sm" style={{textShadow: '1px 1px 0px #ffffff'}}>From</span>
+            <span className="text-black crayon-text font-black text-sm">From</span>
             <span className="text-black/70 text-xs crayon-text">Balance: 0.0</span>
           </div>
           
@@ -38,7 +35,7 @@ const MobileSwapInterface = () => {
             <div className="flex items-center gap-2">
               <div className="flex items-center gap-1 bg-purple-600 rounded-full px-2 py-1 border-2 border-black flex-shrink-0">
                 <div className="w-5 h-5 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full border-2 border-black"></div>
-                <span className="text-white font-black text-xs crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>SOL</span>
+                <span className="text-white font-black text-xs crayon-text">SOL</span>
               </div>
               
               <input
@@ -47,7 +44,6 @@ const MobileSwapInterface = () => {
                 value={fromAmount}
                 onChange={(e) => setFromAmount(e.target.value)}
                 className="flex-1 bg-transparent text-black text-lg font-black outline-none placeholder-black/50 crayon-text min-w-0"
-                style={{textShadow: '1px 1px 0px #ffffff'}}
               />
             </div>
           </div>
@@ -60,10 +56,10 @@ const MobileSwapInterface = () => {
           </button>
         </div>
 
-        {/* To section - better text sizing */}
+        {/* To section - unified text style */}
         <div className="mb-4">
           <div className="flex justify-between items-center mb-2">
-            <span className="text-black crayon-text font-black text-sm" style={{textShadow: '1px 1px 0px #ffffff'}}>To</span>
+            <span className="text-black crayon-text font-black text-sm">To</span>
             <span className="text-black/70 text-xs crayon-text">Balance: 0.0</span>
           </div>
           
@@ -71,7 +67,7 @@ const MobileSwapInterface = () => {
             <div className="flex items-center gap-2">
               <div className="flex items-center gap-1 bg-green-600 rounded-full px-2 py-1 border-2 border-black flex-shrink-0">
                 <div className="w-5 h-5 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full border-2 border-black"></div>
-                <span className="text-white font-black text-xs crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>0.1SOL</span>
+                <span className="text-white font-black text-xs crayon-text">0.1SOL</span>
               </div>
               
               <input
@@ -80,16 +76,14 @@ const MobileSwapInterface = () => {
                 value={toAmount}
                 onChange={(e) => setToAmount(e.target.value)}
                 className="flex-1 bg-transparent text-black text-lg font-black outline-none placeholder-black/50 crayon-text min-w-0"
-                style={{textShadow: '1px 1px 0px #ffffff'}}
                 readOnly
               />
             </div>
           </div>
         </div>
 
-        {/* Swap button - better responsive text */}
+        {/* Swap button - unified text style */}
         <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-black text-base py-4 rounded-2xl border-4 border-black brutal-shadow-lg hover:scale-105 transition-bounce crayon-text transform -rotate-1 hover:rotate-1" style={{
-          textShadow: '2px 2px 0px #ffffff',
           letterSpacing: '1px'
         }}>
           <Wallet className="w-5 h-5 mr-2" strokeWidth={3} />
@@ -97,23 +91,22 @@ const MobileSwapInterface = () => {
         </Button>
       </div>
 
-      {/* Quick actions - better sizing */}
+      {/* Quick actions - unified text style */}
       <div className="grid grid-cols-2 gap-3 mb-6 max-w-sm mx-auto">
         <button className="bg-green-600 hover:bg-green-700 border-4 border-black rounded-2xl p-3 flex flex-col items-center gap-2 brutal-shadow transition-bounce hover:scale-105 transform rotate-1 hover:-rotate-1">
           <TrendingUp className="w-5 h-5 text-white" strokeWidth={3} />
-          <span className="text-white text-xs font-black crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>Price Chart</span>
+          <span className="text-white text-xs font-black crayon-text">Price Chart</span>
         </button>
         
         <button className="bg-purple-600 hover:bg-purple-700 border-4 border-black rounded-2xl p-3 flex flex-col items-center gap-2 brutal-shadow transition-bounce hover:scale-105 transform -rotate-1 hover:rotate-1">
           <Settings className="w-5 h-5 text-white" strokeWidth={3} />
-          <span className="text-white text-xs font-black crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>Settings</span>
+          <span className="text-white text-xs font-black crayon-text">Settings</span>
         </button>
       </div>
 
-      {/* Market info - better responsive sizing */}
+      {/* Market info - unified text style */}
       <div className="meme-card p-4 rounded-2xl brutal-shadow transform rotate-1 max-w-sm mx-auto">
         <h3 className="text-black font-black mb-3 crayon-text text-center text-base" style={{
-          textShadow: '1px 1px 0px #ffffff',
           letterSpacing: '1px'
         }}>Market Stats</h3>
         <div className="space-y-2">

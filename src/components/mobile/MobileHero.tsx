@@ -36,7 +36,7 @@ const MobileHero = () => {
           </div>
         </div>
 
-        {/* Title - fixed text overflow and better responsive */}
+        {/* Title - unified text style without shadows */}
         <div className="mb-8 px-2">
           <div className="flex justify-center">
             <div className="max-w-sm w-full">
@@ -71,14 +71,13 @@ const MobileHero = () => {
           </div>
         </div>
 
-        {/* Description card - fixed container overflow */}
+        {/* Description card - unified text style */}
         <div className="meme-card bg-green-600 p-4 rounded-2xl brutal-shadow-xl max-w-xs mx-auto mb-8 transition-bounce hover:scale-105 hover:rotate-1" style={{
           transform: 'rotate(1deg) skew(-0.5deg)'
         }}>
           <div className="text-white leading-relaxed crayon-text text-base overflow-hidden" style={{
             transform: 'rotate(-1deg) skew(0.5deg)',
-            letterSpacing: '1px',
-            textShadow: '2px 2px 0px #000000'
+            letterSpacing: '1px'
           }}>
             <p className="mb-3">
               <span className="transition-bounce hover:scale-110 inline-block" style={{
@@ -107,17 +106,15 @@ const MobileHero = () => {
             </p>
           </div>
           
-          {/* Warning - better sized */}
+          {/* Warning - unified text style */}
           <div className="bg-red-500 p-3 rounded-xl border-4 border-black transform -rotate-1 brutal-shadow-lg mt-4">
-            <p className="text-white text-xs font-black text-center crayon-text leading-tight" style={{
-              textShadow: '1px 1px 0px #000000'
-            }}>
+            <p className="text-white text-xs font-black text-center crayon-text leading-tight">
               ⚠️ THIS IS A MEME!<br />NOT FINANCIAL ADVICE! ⚠️
             </p>
           </div>
         </div>
 
-        {/* Feature cards - improved spacing and sizing */}
+        {/* Feature cards - unified text style */}
         <div className="flex flex-wrap justify-center gap-3 mb-8 px-2">
           <div className="flex items-center space-x-2 meme-card px-3 py-2 rounded-xl brutal-shadow-lg transition-bounce hover:scale-110 hover:rotate-3" style={{
             transform: 'rotate(-2deg) skew(-0.5deg)'
@@ -128,8 +125,7 @@ const MobileHero = () => {
             </div>
             <span className="text-black crayon-text text-xs whitespace-nowrap" style={{
               transform: 'rotate(1deg)',
-              letterSpacing: '1px',
-              textShadow: '1px 1px 0px #ffffff'
+              letterSpacing: '1px'
             }}>
               Just 0.1!
             </span>
@@ -142,8 +138,7 @@ const MobileHero = () => {
             }}>👥</span>
             <span className="text-white crayon-text text-xs block" style={{
               transform: 'rotate(-1deg)',
-              letterSpacing: '1px',
-              textShadow: '1px 1px 0px #000000'
+              letterSpacing: '1px'
             }}>
               Community!
             </span>
@@ -156,8 +151,7 @@ const MobileHero = () => {
             }}>⭐</span>
             <span className="text-black crayon-text text-xs block" style={{
               transform: 'rotate(1deg)',
-              letterSpacing: '1px',
-              textShadow: '1px 1px 0px #ffffff'
+              letterSpacing: '1px'
             }}>
               HODL!
             </span>
@@ -171,10 +165,8 @@ const MobileHero = () => {
           <ArrowDown size={32} strokeWidth={4} className="glow-effect" />
         </div>
 
-        {/* Scroll indicator */}
-        <p className="text-white crayon-text text-sm px-4 text-center" style={{
-          textShadow: '1px 1px 0px #000000'
-        }}>Swipe up to trade!</p>
+        {/* Scroll indicator - unified text style */}
+        <p className="text-white crayon-text text-sm px-4 text-center">Swipe up to trade!</p>
       </div>
     </div>
   );
