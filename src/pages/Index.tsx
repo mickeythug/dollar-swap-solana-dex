@@ -195,17 +195,17 @@ const Index = () => {
                   <span className="inline-block transform hover:-rotate-1 transition-transform duration-200">holders!</span>
                 </h3>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-                  <button className="bg-blue-600 hover:bg-blue-700 border-4 border-black rounded-xl p-6 lg:p-8 flex flex-col items-center gap-4 brutal-shadow transition-bounce hover:scale-105 transform rotate-1 hover:rotate-2">
-                    <img src="/social/telegram.png" alt="Telegram" className="w-12 h-12 lg:w-16 lg:h-16" />
-                    <div className="text-white font-black text-lg lg:text-xl">Telegram</div>
-                    <div className="text-white/80 text-sm lg:text-base font-black">LET'S CHAT!</div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+                  <button className="bg-blue-600 hover:bg-blue-700 border-4 border-black rounded-xl p-4 flex flex-col items-center gap-3 brutal-shadow transition-bounce hover:scale-105 transform rotate-1 hover:rotate-2">
+                    <img src="/social/telegram.png" alt="Telegram" className="w-8 h-8" />
+                    <div className="text-white font-black text-base">Telegram</div>
+                    <div className="text-white/80 text-sm font-black">LET'S CHAT!</div>
                   </button>
                   
-                  <button className="bg-black hover:bg-gray-800 border-4 border-black rounded-xl p-6 lg:p-8 flex flex-col items-center gap-4 brutal-shadow transition-bounce hover:scale-105 transform -rotate-1 hover:-rotate-2">
-                    <img src="/social/twitter.png" alt="Twitter/X" className="w-12 h-12 lg:w-16 lg:h-16" />
-                    <div className="text-white font-black text-lg lg:text-xl">Twitter/X</div>
-                    <div className="text-white/80 text-sm lg:text-base font-black">FOLLOW US!</div>
+                  <button className="bg-black hover:bg-gray-800 border-4 border-black rounded-xl p-4 flex flex-col items-center gap-3 brutal-shadow transition-bounce hover:scale-105 transform -rotate-1 hover:-rotate-2">
+                    <img src="/social/twitter.png" alt="Twitter/X" className="w-8 h-8" />
+                    <div className="text-white font-black text-base">Twitter/X</div>
+                    <div className="text-white/80 text-sm font-black">FOLLOW US!</div>
                   </button>
                 </div>
               </div>

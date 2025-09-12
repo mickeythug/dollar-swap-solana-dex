@@ -141,19 +141,19 @@ const MobileAbout = () => {
           <span className="inline-block transform hover:-rotate-1 transition-transform duration-200">holders!</span>
         </h3>
         
-        <div className="space-y-3 max-w-sm mx-auto">
-          <button className="w-full bg-blue-600 hover:bg-blue-700 border-4 border-black rounded-xl p-3 flex items-center gap-3 brutal-shadow transition-bounce hover:scale-105 transform rotate-1 hover:rotate-2">
-            <img src="/social/telegram.png" alt="Telegram" className="w-8 h-8 flex-shrink-0" />
+        <div className="space-y-2 max-w-xs mx-auto">
+          <button className="w-full bg-blue-600 hover:bg-blue-700 border-4 border-black rounded-xl p-2 flex items-center gap-2 brutal-shadow transition-bounce hover:scale-105 transform rotate-1 hover:rotate-2">
+            <img src="/social/telegram.png" alt="Telegram" className="w-6 h-6 flex-shrink-0" />
             <div className="text-left flex-1 min-w-0">
-              <div className="text-white font-black text-sm">Telegram</div>
+              <div className="text-white font-black text-xs">Telegram</div>
               <div className="text-white/80 text-xs font-black">LET&apos;S CHAT!</div>
             </div>
           </button>
           
-          <button className="w-full bg-black hover:bg-gray-800 border-4 border-black rounded-xl p-3 flex items-center gap-3 brutal-shadow transition-bounce hover:scale-105 transform -rotate-1 hover:-rotate-2">
-            <img src="/social/twitter.png" alt="Twitter/X" className="w-8 h-8 flex-shrink-0" />
+          <button className="w-full bg-black hover:bg-gray-800 border-4 border-black rounded-xl p-2 flex items-center gap-2 brutal-shadow transition-bounce hover:scale-105 transform -rotate-1 hover:-rotate-2">
+            <img src="/social/twitter.png" alt="Twitter/X" className="w-6 h-6 flex-shrink-0" />
             <div className="text-left flex-1 min-w-0">
-              <div className="text-white font-black text-sm">Twitter/X</div>
+              <div className="text-white font-black text-xs">Twitter/X</div>
               <div className="text-white/80 text-xs font-black">FOLLOW US!</div>
             </div>
           </button>
