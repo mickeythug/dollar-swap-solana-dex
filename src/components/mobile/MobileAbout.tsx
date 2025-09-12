@@ -18,6 +18,15 @@ const MobileAbout = () => {
         </p>
       </div>
 
+      {/* Large hero image */}
+      <div className="flex justify-center mb-8">
+        <img 
+          src="/lovable-uploads/a2925ada-d9a1-4459-b346-251f5ca5b59d.png" 
+          alt="0.1 SOL Community Logo"
+          className="w-full max-w-2xl h-auto transform rotate-1 drop-shadow-lg"
+        />
+      </div>
+
       {/* Animated cartoon boxes */}
       <div className="space-y-4 mb-6 max-w-sm mx-auto">
         {/* Vision Box */}
@@ -112,15 +121,6 @@ const MobileAbout = () => {
         </p>
       </div>
 
-      {/* Small logo before community section */}
-      <div className="flex justify-center mb-4">
-        <img 
-          src="/lovable-uploads/a2925ada-d9a1-4459-b346-251f5ca5b59d.png" 
-          alt="0.1 SOL Community Logo"
-          className="w-96 h-auto max-w-full transform rotate-1 drop-shadow-lg"
-        />
-      </div>
-      
       {/* Community section - mobile-friendly font */}
       <div className="mb-6">
         <h3 className="text-white font-black text-lg mb-4 text-center px-2">
