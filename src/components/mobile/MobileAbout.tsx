@@ -30,13 +30,13 @@ const MobileAbout = () => {
       {/* Animated cartoon boxes */}
       <div className="space-y-4 mb-6 max-w-sm mx-auto">
         {/* Vision Box */}
-        <div className="bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-2xl p-4 border-4 border-black transform rotate-1 brutal-shadow-xl animate-pulse hover:scale-105 hover:-rotate-1 transition-all duration-300">
-          <div className="text-center mb-3">
-            <div className="bg-black text-yellow-300 px-3 py-1 rounded-full text-xs font-black inline-block">
+        <div className="bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-2xl p-6 border-4 border-black transform rotate-1 brutal-shadow-xl hover:scale-105 hover:-rotate-1 transition-all duration-300 w-full max-w-lg mx-auto">
+          <div className="text-center mb-4">
+            <div className="bg-black text-yellow-300 px-4 py-2 rounded-full text-sm font-black inline-block">
               THE VISION
             </div>
           </div>
-          <p className="text-black font-black text-sm leading-relaxed text-center">
+          <p className="text-black font-black text-base leading-relaxed text-center">
             This is <span className="text-red-700">0.1 SOL TOKEN</span> - the most democratic meme on Solana!
           </p>
         </div>
