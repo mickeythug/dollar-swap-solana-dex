@@ -26,9 +26,9 @@ const MobileNavigation = ({ activeSection, onSectionChange }: MobileNavigationPr
               <img 
                 src="/lovable-uploads/ebd540f7-2201-4065-a596-39f12e74c55c.png"
                 alt="0.1 SOL Dollar Bill"
-                className="w-12 h-6 rounded border border-black"
+                className="w-16 h-8 rounded border-2 border-black shadow-lg"
               />
-              <span className="ml-2 text-white font-black text-sm">
+              <span className="ml-3 text-white font-black text-lg">
                 SOL
               </span>
             </div>
