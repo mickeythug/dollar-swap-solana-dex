@@ -31,7 +31,7 @@ const MobileHero = () => {
             <img 
               src="/lovable-uploads/a2925ada-d9a1-4459-b346-251f5ca5b59d.png" 
               alt="0.1 SOL Community Logo"
-              className="w-96 h-auto max-w-full"
+              className="w-[48rem] h-auto max-w-full"
             />
           </div>
         </div>
