@@ -1,38 +1,42 @@
 import React, { useState } from 'react';
 import { ArrowUpDown, Wallet, TrendingUp, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
 
 const MobileSwapInterface = () => {
   const [fromAmount, setFromAmount] = useState('');
   const [toAmount, setToAmount] = useState('');
 
   return (
-    <div className="px-4 py-6">
-      {/* Header */}
-      <div className="mb-6">
-        <h2 className="text-2xl font-black text-white mb-2 text-center">
+    <div className="px-4 py-8">
+      {/* Header - same cartoon style */}
+      <div className="mb-8">
+        <h2 className="text-3xl font-black text-black mb-3 text-center crayon-text bg-yellow-400 px-4 py-2 rounded-2xl border-4 border-black inline-block brutal-shadow-lg transform rotate-1" style={{
+          textShadow: '2px 2px 0px #ffffff',
+          letterSpacing: '2px'
+        }}>
           Quick Swap
         </h2>
-        <p className="text-white/70 text-center text-sm">
-          Trade SOL for 0.1 SOL tokens instantly
+        <p className="text-white text-center text-lg mt-4 crayon-text" style={{
+          textShadow: '1px 1px 0px #000000'
+        }}>
+          Trade SOL for 0.1 SOL tokens instantly!
         </p>
       </div>
 
-      {/* Main swap card */}
-      <Card className="bg-white/10 backdrop-blur-md border-white/20 p-6 rounded-3xl shadow-2xl mb-6">
-        {/* From section */}
+      {/* Main swap card - same meme style */}
+      <div className="meme-card p-6 rounded-3xl brutal-shadow-xl mb-6 transform rotate-1 transition-bounce hover:scale-105 hover:-rotate-1">
+        {/* From section - cartoon style */}
         <div className="mb-4">
           <div className="flex justify-between items-center mb-2">
-            <span className="text-white/70 text-sm font-medium">From</span>
-            <span className="text-white/50 text-xs">Balance: 0.0</span>
+            <span className="text-black crayon-text font-black" style={{textShadow: '1px 1px 0px #ffffff'}}>From</span>
+            <span className="text-black/70 text-xs crayon-text">Balance: 0.0</span>
           </div>
           
-          <div className="bg-white/5 rounded-2xl p-4 border border-white/10">
+          <div className="bg-green-100 rounded-2xl p-4 border-4 border-black brutal-shadow transform -rotate-1">
             <div className="flex items-center gap-3">
-              <div className="flex items-center gap-2 bg-white/10 rounded-full px-3 py-2">
-                <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full"></div>
-                <span className="text-white font-semibold text-sm">SOL</span>
+              <div className="flex items-center gap-2 bg-purple-600 rounded-full px-3 py-2 border-2 border-black">
+                <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full border-2 border-black"></div>
+                <span className="text-white font-black text-sm crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>SOL</span>
               </div>
               
               <input
@@ -40,31 +44,32 @@ const MobileSwapInterface = () => {
                 placeholder="0.1"
                 value={fromAmount}
                 onChange={(e) => setFromAmount(e.target.value)}
-                className="flex-1 bg-transparent text-white text-xl font-semibold outline-none placeholder-white/30"
+                className="flex-1 bg-transparent text-black text-xl font-black outline-none placeholder-black/50 crayon-text"
+                style={{textShadow: '1px 1px 0px #ffffff'}}
               />
             </div>
           </div>
         </div>
 
-        {/* Swap icon */}
+        {/* Swap icon - cartoon style */}
         <div className="flex justify-center mb-4">
-          <button className="bg-gradient-to-r from-purple-500 to-blue-500 p-3 rounded-full shadow-lg hover:scale-110 transition-transform">
-            <ArrowUpDown className="w-5 h-5 text-white" />
+          <button className="bg-yellow-400 hover:bg-yellow-500 p-3 rounded-full border-4 border-black brutal-shadow-lg hover:scale-110 transition-bounce transform rotate-45 hover:rotate-90">
+            <ArrowUpDown className="w-6 h-6 text-black" strokeWidth={3} />
           </button>
         </div>
 
-        {/* To section */}
+        {/* To section - cartoon style */}
         <div className="mb-6">
           <div className="flex justify-between items-center mb-2">
-            <span className="text-white/70 text-sm font-medium">To</span>
-            <span className="text-white/50 text-xs">Balance: 0.0</span>
+            <span className="text-black crayon-text font-black" style={{textShadow: '1px 1px 0px #ffffff'}}>To</span>
+            <span className="text-black/70 text-xs crayon-text">Balance: 0.0</span>
           </div>
           
-          <div className="bg-white/5 rounded-2xl p-4 border border-white/10">
+          <div className="bg-yellow-100 rounded-2xl p-4 border-4 border-black brutal-shadow transform rotate-1">
             <div className="flex items-center gap-3">
-              <div className="flex items-center gap-2 bg-white/10 rounded-full px-3 py-2">
-                <div className="w-6 h-6 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"></div>
-                <span className="text-white font-semibold text-sm">0.1SOL</span>
+              <div className="flex items-center gap-2 bg-green-600 rounded-full px-3 py-2 border-2 border-black">
+                <div className="w-6 h-6 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full border-2 border-black"></div>
+                <span className="text-white font-black text-sm crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>0.1SOL</span>
               </div>
               
               <input
@@ -72,51 +77,58 @@ const MobileSwapInterface = () => {
                 placeholder="0.0"
                 value={toAmount}
                 onChange={(e) => setToAmount(e.target.value)}
-                className="flex-1 bg-transparent text-white text-xl font-semibold outline-none placeholder-white/30"
+                className="flex-1 bg-transparent text-black text-xl font-black outline-none placeholder-black/50 crayon-text"
+                style={{textShadow: '1px 1px 0px #ffffff'}}
                 readOnly
               />
             </div>
           </div>
         </div>
 
-        {/* Swap button */}
-        <Button className="w-full bg-gradient-to-r from-yellow-400 to-orange-400 hover:from-yellow-500 hover:to-orange-500 text-black font-black text-lg py-6 rounded-2xl shadow-lg hover:scale-105 transition-all">
-          <Wallet className="w-5 h-5 mr-2" />
+        {/* Swap button - same cartoon style */}
+        <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-black text-lg py-6 rounded-2xl border-4 border-black brutal-shadow-lg hover:scale-105 transition-bounce crayon-text transform -rotate-1 hover:rotate-1" style={{
+          textShadow: '2px 2px 0px #ffffff',
+          letterSpacing: '2px'
+        }}>
+          <Wallet className="w-6 h-6 mr-2" strokeWidth={3} />
           Connect Wallet & Swap
         </Button>
-      </Card>
+      </div>
 
-      {/* Quick actions */}
-      <div className="grid grid-cols-2 gap-3 mb-6">
-        <button className="bg-white/5 border border-white/10 rounded-2xl p-4 flex flex-col items-center gap-2 hover:bg-white/10 transition-colors">
-          <TrendingUp className="w-6 h-6 text-green-400" />
-          <span className="text-white text-sm font-medium">Price Chart</span>
+      {/* Quick actions - cartoon style */}
+      <div className="grid grid-cols-2 gap-4 mb-6">
+        <button className="bg-green-600 hover:bg-green-700 border-4 border-black rounded-2xl p-4 flex flex-col items-center gap-2 brutal-shadow transition-bounce hover:scale-105 transform rotate-1 hover:-rotate-1">
+          <TrendingUp className="w-6 h-6 text-white" strokeWidth={3} />
+          <span className="text-white text-sm font-black crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>Price Chart</span>
         </button>
         
-        <button className="bg-white/5 border border-white/10 rounded-2xl p-4 flex flex-col items-center gap-2 hover:bg-white/10 transition-colors">
-          <Settings className="w-6 h-6 text-gray-400" />
-          <span className="text-white text-sm font-medium">Settings</span>
+        <button className="bg-purple-600 hover:bg-purple-700 border-4 border-black rounded-2xl p-4 flex flex-col items-center gap-2 brutal-shadow transition-bounce hover:scale-105 transform -rotate-1 hover:rotate-1">
+          <Settings className="w-6 h-6 text-white" strokeWidth={3} />
+          <span className="text-white text-sm font-black crayon-text" style={{textShadow: '1px 1px 0px #000000'}}>Settings</span>
         </button>
       </div>
 
-      {/* Market info */}
-      <Card className="bg-white/5 border-white/10 p-4 rounded-2xl">
-        <h3 className="text-white font-semibold mb-3">Market Stats</h3>
-        <div className="space-y-2">
-          <div className="flex justify-between">
-            <span className="text-white/70 text-sm">Price</span>
-            <span className="text-green-400 text-sm font-semibold">$0.00001</span>
+      {/* Market info - cartoon style */}
+      <div className="meme-card p-4 rounded-2xl brutal-shadow transform rotate-1">
+        <h3 className="text-black font-black mb-3 crayon-text text-center" style={{
+          textShadow: '1px 1px 0px #ffffff',
+          letterSpacing: '1px'
+        }}>Market Stats</h3>
+        <div className="space-y-3">
+          <div className="flex justify-between bg-white/20 p-2 rounded-lg border-2 border-black/20">
+            <span className="text-black font-black text-sm crayon-text">Price</span>
+            <span className="text-green-600 text-sm font-black crayon-text">$0.00001</span>
           </div>
-          <div className="flex justify-between">
-            <span className="text-white/70 text-sm">24h Change</span>
-            <span className="text-green-400 text-sm font-semibold">+12.5%</span>
+          <div className="flex justify-between bg-white/20 p-2 rounded-lg border-2 border-black/20">
+            <span className="text-black font-black text-sm crayon-text">24h Change</span>
+            <span className="text-green-600 text-sm font-black crayon-text">+12.5%</span>
           </div>
-          <div className="flex justify-between">
-            <span className="text-white/70 text-sm">Market Cap</span>
-            <span className="text-white text-sm font-semibold">$1.2M</span>
+          <div className="flex justify-between bg-white/20 p-2 rounded-lg border-2 border-black/20">
+            <span className="text-black font-black text-sm crayon-text">Market Cap</span>
+            <span className="text-black text-sm font-black crayon-text">$1.2M</span>
           </div>
         </div>
-      </Card>
+      </div>
     </div>
   );
 };
