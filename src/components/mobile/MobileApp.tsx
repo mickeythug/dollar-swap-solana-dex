@@ -3,6 +3,7 @@ import MobileNavigation from './MobileNavigation';
 import MobileHero from './MobileHero';
 import MobileSwapInterface from './MobileSwapInterface';
 import MobileAbout from './MobileAbout';
+import MobileCommunity from './MobileCommunity';
 
 const MobileApp = () => {
   const [activeSection, setActiveSection] = useState<'hero' | 'swap' | 'about'>('hero');
@@ -56,6 +57,11 @@ const MobileApp = () => {
         {/* About Section */}
         <div id="mobile-about">
           <MobileAbout />
+        </div>
+        
+        {/* Community Section */}
+        <div id="mobile-community">
+          <MobileCommunity />
         </div>
         
         {/* Bottom safe area */}

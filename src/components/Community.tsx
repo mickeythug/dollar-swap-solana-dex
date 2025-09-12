@@ -46,7 +46,7 @@ const Community = () => {
             >
               {/* Modern 2D Cartoon Frame */}
               <div 
-                className="relative bg-gradient-to-br from-yellow-300 via-yellow-400 to-yellow-500 p-3 sm:p-4 lg:p-6 rounded-2xl sm:rounded-3xl border-4 sm:border-6 border-black brutal-shadow-lg transform hover:scale-105 hover:rotate-2 transition-all duration-300 animate-fade-in"
+                className="relative bg-gradient-to-br from-yellow-300 via-yellow-400 to-yellow-500 p-2 sm:p-3 lg:p-4 rounded-2xl sm:rounded-3xl border-4 sm:border-6 border-black brutal-shadow-lg transform hover:scale-105 hover:rotate-2 transition-all duration-300 animate-fade-in"
                 style={{
                   transform: `rotate(${index % 2 === 0 ? '-' : ''}${(index % 3) + 1}deg)`,
                   background: `linear-gradient(135deg, 
@@ -58,8 +58,8 @@ const Community = () => {
                 {/* Inner glow effect */}
                 <div className="absolute inset-2 bg-white/20 rounded-xl sm:rounded-2xl blur-sm"></div>
                 
-                {/* Image container */}
-                <div className="relative bg-white/90 rounded-xl sm:rounded-2xl p-2 sm:p-3 border-2 sm:border-3 border-black/20">
+                {/* Image container with minimal padding */}
+                <div className="relative bg-white/90 rounded-xl sm:rounded-2xl p-1 sm:p-2 border-2 sm:border-3 border-black/20">
                   <img
                     src={community.src}
                     alt={community.alt}
