@@ -12,7 +12,7 @@ const Hero = () => {
             <img 
               src="/lovable-uploads/a2925ada-d9a1-4459-b346-251f5ca5b59d.png" 
               alt="0.1 SOL Community Logo"
-              className="w-[120rem] h-auto sm:w-[144rem] lg:w-[168rem] xl:w-[192rem]"
+              className="w-96 h-auto sm:w-[32rem] lg:w-[40rem] xl:w-[48rem]"
             />
           </div>
           
