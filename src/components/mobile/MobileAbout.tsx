@@ -47,7 +47,7 @@ const MobileAbout = () => {
         <img 
           src="/lovable-uploads/a2925ada-d9a1-4459-b346-251f5ca5b59d.png" 
           alt="0.1 SOL Community Logo"
-          className="w-32 h-auto max-w-full transform rotate-1 drop-shadow-lg"
+          className="w-96 h-auto max-w-full transform rotate-1 drop-shadow-lg"
         />
       </div>
       
