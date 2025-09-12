@@ -63,7 +63,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
         <div className="mb-8 sm:mb-12">
           <div className="loading-logo-container">
             <div className="w-32 h-32 sm:w-48 sm:h-48 lg:w-64 lg:h-64 mx-auto rounded-full flex items-center justify-center border-8 border-black brutal-shadow-xl transition-bounce hover:scale-110 overflow-hidden">
-              <img src="/src/assets/logo.png" alt="0.1 SOL Logo" className="w-full h-full object-cover" />
+              <img src="/logo.png" alt="0.1 SOL Logo" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

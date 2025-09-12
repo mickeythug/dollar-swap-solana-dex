@@ -36,7 +36,7 @@ const Header = () => {
           {/* Logo Section - Static */}
           <div className="flex items-center space-x-2 sm:space-x-3">
             <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full flex items-center justify-center border-4 sm:border-6 lg:border-8 border-green-900 brutal-shadow-lg overflow-hidden">
-              <img src="/src/assets/logo.png" alt="0.1 SOL Logo" className="w-full h-full object-cover" />
+              <img src="/logo.png" alt="0.1 SOL Logo" className="w-full h-full object-cover" />
             </div>
             <div className="meme-card p-2 sm:p-3 lg:p-4 rounded-xl sm:rounded-2xl">
               <h1 className="text-responsive-md crayon-text super-thick text-green-900" style={{

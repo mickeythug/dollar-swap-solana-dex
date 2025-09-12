@@ -24,7 +24,7 @@ const MobileNavigation = ({ activeSection, onSectionChange }: MobileNavigationPr
             {/* Logo */}
             <div className="flex items-center">
               <div className="w-8 h-8 rounded-full border-2 border-black flex items-center justify-center brutal-shadow overflow-hidden">
-                <img src="/src/assets/logo.png" alt="0.1 SOL Logo" className="w-full h-full object-cover" />
+                <img src="/logo.png" alt="0.1 SOL Logo" className="w-full h-full object-cover" />
               </div>
               <span className="ml-2 text-white font-black text-sm">
                 SOL
