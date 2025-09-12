@@ -126,20 +126,13 @@
 
 .super-thick {
   font-weight: 900;
-  -webkit-text-stroke: 2px black;
-  text-stroke: 2px black;
 }
 
 .crayon-text {
-  font-family: "Kalam", "Schoolbell", "Caveat", "Permanent Marker", cursive;
-  font-weight: 800;
-  letter-spacing: 4px;
-  text-shadow: 
-    2px 2px 0px #000,
-    -1px -1px 0px #000,
-    1px -1px 0px #000,
-    -1px 1px 0px #000,
-    4px 4px 8px rgba(0,0,0,0.3);
+  font-family: inherit;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-shadow: none;
 }
 
 /* Enhanced Utility Classes */

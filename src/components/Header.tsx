@@ -10,7 +10,7 @@ const Header = () => {
         <div className="inline-block bg-red-500 hover:bg-red-600 px-3 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-2xl sm:rounded-3xl border-4 sm:border-6 lg:border-8 border-black brutal-shadow transition-bounce transform hover:scale-105 hover:rotate-1" style={{
           transform: 'rotate(-3deg) skew(-2deg)'
         }}>
-          <span className="text-white kid-text super-thick text-responsive-sm" style={{
+          <span className="text-white font-black text-responsive-sm" style={{
             transform: 'rotate(2deg) scale(1.1)',
             display: 'inline-block'
           }}>
@@ -28,7 +28,7 @@ const Header = () => {
               <img src="/logo.png" alt="0.1 SOL Logo" className="w-full h-full object-cover" />
             </div>
             <div className="meme-card p-2 rounded-xl">
-              <h1 className="text-lg font-black text-green-900 crayon-text" style={{
+              <h1 className="text-lg font-black text-green-900 tracking-wider" style={{
                 letterSpacing: '2px'
               }}>
                 0.1 SOL
@@ -72,12 +72,12 @@ const Header = () => {
                 <img src="/logo.png" alt="0.1 SOL Logo" className="w-full h-full object-cover scale-110" />
               </div>
               <div className="meme-card p-2 rounded-xl">
-                <h1 className="text-responsive-md crayon-text super-thick text-green-900" style={{
+                <h1 className="text-responsive-md font-black tracking-wider text-green-900" style={{
                   letterSpacing: '2px'
                 }}>
                   0.1 SOL
                 </h1>
-                <p className="text-responsive-xs text-green-800 crayon-text super-thick" style={{
+                <p className="text-responsive-xs font-black text-green-800 tracking-wide" style={{
                   letterSpacing: '3px'
                 }}>
                   MEME COIN!
@@ -97,7 +97,7 @@ const Header = () => {
               }}>
                 ABOUT!
               </button>
-              <WalletMultiButton className="!bg-gradient-to-r !from-yellow-400 !to-yellow-500 hover:!from-yellow-500 hover:!to-yellow-600 !border-4 !border-black !rounded-lg crayon-text super-thick !px-4 !py-2 !text-sm !text-green-900 brutal-shadow transition-all hover:!scale-105" style={{
+              <WalletMultiButton className="!bg-gradient-to-r !from-yellow-400 !to-yellow-500 hover:!from-yellow-500 hover:!to-yellow-600 !border-4 !border-black !rounded-lg !font-black !px-4 !py-2 !text-sm !text-green-900 brutal-shadow transition-all hover:!scale-105" style={{
                 letterSpacing: '1px',
                 textShadow: '1px 1px 0px #000000'
               }} />
