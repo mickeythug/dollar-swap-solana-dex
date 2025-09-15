@@ -42,6 +42,16 @@ const Index = () => {
           backdropFilter: 'blur(10px)'
         }}>
           <div className="max-w-7xl mx-auto">
+            {/* Header for swap section */}
+            <div className="flex justify-center mb-12 lg:mb-16">
+              <div className="bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 text-black px-8 py-6 rounded-3xl border-6 border-black font-black text-2xl lg:text-3xl xl:text-4xl brutal-shadow-xl transform rotate-1 hover:rotate-2 transition-all duration-500 hover:scale-105" style={{
+                letterSpacing: '3px',
+                textShadow: '3px 3px 0px rgba(0,0,0,0.4)'
+              }}>
+                <span className="crayon-text">SWAP RIGHT AWAY</span>
+              </div>
+            </div>
+            
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 xl:gap-20 items-start">
               <MarketCapCounter />
               <SwapInterface />
