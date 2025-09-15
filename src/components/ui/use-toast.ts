@@ -1,3 +1,8 @@
-import { useToast, toast } from "@/hooks/use-toast";
+// Toast notifications disabled
+export const useToast = () => ({
+  toast: () => null,
+  dismiss: () => null,
+  toasts: []
+});
 
-export { useToast, toast };
+export const toast = () => null;

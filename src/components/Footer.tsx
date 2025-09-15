@@ -1,99 +1,121 @@
 import React from 'react';
+
 const Footer = () => {
-  return <footer className="relative z-10 px-2 sm:px-4 lg:px-8 py-8 sm:py-12 mt-8 sm:mt-16">
-      <div className="max-w-7xl mx-auto">
-        <div className="meme-card rounded-2xl sm:rounded-3xl border-4 sm:border-6 lg:border-8 border-black border-dashed p-4 sm:p-6 lg:p-10 brutal-shadow-xl transition-bounce hover:scale-105 hover:rotate-1" style={{
-        transform: 'rotate(-1deg) skew(-0.5deg)'
-      }}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
-            {/* Enhanced About Section */}
-            <div id="about" style={{
-            transform: 'rotate(2deg) skew(0.5deg)',
-            animationDelay: '0.2s'
-          }}>
-              <div className="bg-green-600 hover:bg-green-700 rounded-xl sm:rounded-2xl border-4 sm:border-6 border-black p-3 sm:p-4 lg:p-6 brutal-shadow-lg transition-bounce hover:scale-105 hover:rotate-2" style={{
-              transform: 'rotate(-1deg) skew(-0.5deg)'
-            }}>
-                <h3 className="text-yellow-900 crayon-text super-thick text-responsive-lg mb-3 sm:mb-4 lg:mb-6">
-                  About Just Buy 0.1 SOL!
-                </h3>
-                <div className="space-y-3 text-responsive-sm">
-                  <p className="text-green-900 leading-relaxed font-black crayon-text super-thick">
-                    This is just a MEME TOKEN called 0.1 SOL!
-                  </p>
-                  <p className="text-green-900 leading-relaxed font-black crayon-text super-thick">
-                    The idea is SUPER EASY — just buy 0.1 SOL worth! That's it!
-                  </p>
-                  <p className="text-green-900 leading-relaxed font-black crayon-text super-thick">
-                    No complicated stuff! Just holding together as a community!
-                  </p>
-                </div>
-                <div className="bg-red-600 hover:bg-red-700 p-3 sm:p-4 lg:p-6 rounded-lg sm:rounded-xl border-4 sm:border-6 border-black border-dashed brutal-shadow mt-4 transition-bounce hover:scale-105 hover:rotate-3" style={{
-                transform: 'rotate(-2deg) skew(1deg)'
-              }}>
-                  <p className="text-yellow-100 text-responsive-sm crayon-text super-thick">
-                    ⚠️ THIS IS A MEME! NOT FINANCIAL ADVICE! ⚠️
-                  </p>
-                </div>
+  return (
+    <footer className="relative z-10 px-2 sm:px-4 lg:px-8 py-16 sm:py-20">
+      <div className="max-w-6xl mx-auto">
+        {/* Ultra-Enhanced Main Footer Content */}
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="bg-gradient-to-br from-green-600 via-green-700 to-green-800 rounded-[2rem] border-10 border-black p-12 sm:p-16 brutal-shadow-xl transform hover:scale-105 transition-all duration-700 hover:shadow-2xl">
+            
+            {/* Ultra-Enhanced Logo Section */}
+            <div className="flex justify-center mb-12">
+              <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full flex items-center justify-center border-8 border-black overflow-hidden brutal-shadow-xl glow-strong transform hover:scale-110 hover:rotate-12 transition-all duration-700">
+                <img src="/logo.png" alt="0.1 SOL Logo" className="w-full h-full object-cover" />
               </div>
             </div>
 
-            {/* Enhanced Community Section */}
-            <div style={{
-            transform: 'rotate(-1deg) skew(0.5deg)',
-            animationDelay: '0.4s'
-          }}>
-              <div className="bg-green-600 hover:bg-green-700 rounded-xl sm:rounded-2xl border-4 sm:border-6 border-black p-3 sm:p-4 lg:p-6 brutal-shadow-lg transition-bounce hover:scale-105 hover:-rotate-2" style={{
-              transform: 'rotate(1deg) skew(-0.5deg)'
+            {/* Ultra-Enhanced Main Message */}
+            <h3 className="text-white font-black text-3xl sm:text-4xl lg:text-5xl mb-8 crayon-text" style={{
+              textShadow: '5px 5px 0px #000000, -2px -2px 0px rgba(255,255,255,0.2)',
+              letterSpacing: '4px'
             }}>
-                <h3 className="text-yellow-900 crayon-text super-thick text-responsive-lg mb-3 sm:mb-4 lg:mb-6">
-                  Join the FUN!
-                </h3>
-                <p className="text-green-900 text-responsive-sm mb-3 sm:mb-4 lg:mb-6 font-black crayon-text super-thick">
-                  Come hang out with other 0.1 SOL holders!
-                </p>
-                <div className="space-y-2 sm:space-y-3 lg:space-y-4">
-                  {[{
-                  icon: '',
-                  text: 'Telegram - LET\'S CHAT!',
-                  delay: '0.6s'
-                }, {
-                  icon: '',
-                  text: 'Twitter - FOLLOW US!',
-                  delay: '0.8s'
-                }, {
-                  icon: '',
-                  text: 'Discord - MEMES HERE!',
-                  delay: '1s'
-                }].map((social, index) => <a key={index} href="#" className="block meme-card p-2 sm:p-3 lg:p-4 rounded-lg sm:rounded-xl border-3 sm:border-4 border-black border-dashed brutal-shadow transition-bounce hover:scale-110 hover:rotate-3" style={{
-                  transform: `rotate(${index % 2 === 0 ? '1deg' : '-1deg'}) skew(-0.5deg)`,
-                  animationDelay: social.delay
+              0.1 SOL TOKEN
+            </h3>
+            
+            <p className="text-yellow-400 font-black text-xl sm:text-2xl mb-12 crayon-text" style={{
+              textShadow: '4px 4px 0px #000000',
+              letterSpacing: '3px'
+            }}>
+              The Democratic Meme Revolution!
+            </p>
+
+            {/* Ultra-Enhanced Key Points */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+              <div className="bg-gradient-to-br from-yellow-500 to-yellow-400 hover:from-yellow-400 hover:to-yellow-300 p-6 rounded-3xl border-6 border-black transform rotate-1 brutal-shadow-xl transition-all duration-700 hover:scale-110 hover:-rotate-1">
+                <div className="text-black font-black text-lg crayon-text" style={{
+                  textShadow: '3px 3px 0px #ffffff'
                 }}>
-                      <span className="text-green-900 text-responsive-sm crayon-text super-thick">
-                        {social.text}
-                      </span>
-                    </a>)}
+                  💰 Just 0.1 SOL!
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 p-6 rounded-3xl border-6 border-black transform -rotate-1 brutal-shadow-xl transition-all duration-700 hover:scale-110 hover:rotate-1">
+                <div className="text-black font-black text-lg crayon-text" style={{
+                  textShadow: '3px 3px 0px #ffffff'
+                }}>
+                  👥 Strong Community
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-blue-500 to-blue-400 hover:from-blue-400 hover:to-blue-300 p-6 rounded-3xl border-6 border-black transform rotate-2 brutal-shadow-xl transition-all duration-700 hover:scale-110 hover:-rotate-2 sm:col-span-2 lg:col-span-1">
+                <div className="text-black font-black text-lg crayon-text" style={{
+                  textShadow: '3px 3px 0px #ffffff'
+                }}>
+                  💎 Diamond Hands
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Enhanced Footer Bottom */}
-          <div className="border-t-4 sm:border-t-6 lg:border-t-8 border-dashed border-black mt-4 sm:mt-6 lg:mt-8 pt-4 sm:pt-6 lg:pt-8 text-center" style={{
-          transform: 'rotate(1deg)',
-          animationDelay: '1.2s'
-        }}>
-            <div className="bg-green-600 hover:bg-green-700 p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl border-3 sm:border-4 border-black inline-block brutal-shadow-lg transition-bounce hover:scale-105 hover:rotate-3" style={{
-            transform: 'rotate(-1deg) skew(-0.5deg)'
-          }}>
-              <p className="text-yellow-900 text-responsive-sm crayon-text super-thick">  0.1 SOL MEME TOKEN! Made with LOVE and MEMES!</p>
-              <p className="text-green-900 text-responsive-xs mt-1 sm:mt-2 crayon-text super-thick">
-                ALWAYS DYOR! THIS IS JUST FOR FUN!
+            {/* Ultra-Enhanced Contract Address */}
+            <div className="bg-black p-8 rounded-3xl border-6 border-white mb-12 transform hover:scale-105 transition-all duration-700">
+              <p className="text-white font-black text-lg mb-4" style={{
+                textShadow: '2px 2px 0px rgba(255,255,255,0.2)'
+              }}>Contract Address:</p>
+              <code className="text-yellow-400 font-mono text-sm sm:text-base break-all font-black bg-gray-900 p-4 rounded-2xl border-4 border-yellow-400" style={{
+                textShadow: '2px 2px 0px rgba(0,0,0,0.5)'
+              }}>
+                AkKKEZCQt75pm9JwughvPcVXLvXSraVGWbqwNB9Ppump
+              </code>
+            </div>
+
+            {/* Ultra-Enhanced Social Links */}
+            <div className="flex justify-center space-x-8 mb-12">
+              <button className="bg-gradient-to-br from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 p-6 rounded-3xl border-6 border-black brutal-shadow-xl transition-all duration-700 hover:scale-110 transform rotate-1 hover:rotate-2">
+                <img src="/social/telegram.png" alt="Telegram" className="w-12 h-12 drop-shadow-lg" />
+              </button>
+              <button className="bg-gradient-to-br from-gray-900 to-black hover:from-black hover:to-gray-800 p-6 rounded-3xl border-6 border-white brutal-shadow-xl transition-all duration-700 hover:scale-110 transform -rotate-1 hover:-rotate-2">
+                <img src="/social/twitter.png" alt="Twitter/X" className="w-12 h-12 drop-shadow-lg" />
+              </button>
+            </div>
+
+            {/* Ultra-Enhanced Disclaimer */}
+            <div className="bg-gradient-to-br from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 p-8 rounded-3xl border-6 border-black mb-8 transform -rotate-1 brutal-shadow-xl transition-all duration-700 hover:scale-105 hover:rotate-1">
+              <p className="text-white font-black text-lg sm:text-xl crayon-text" style={{
+                textShadow: '3px 3px 0px #000000'
+              }}>
+                ⚠️ MEME TOKEN - NOT FINANCIAL ADVICE! ⚠️
+              </p>
+              <p className="text-white font-black text-base mt-3" style={{
+                textShadow: '2px 2px 0px #000000'
+              }}>
+                Always Do Your Own Research (DYOR)
               </p>
             </div>
           </div>
         </div>
+
+        {/* Ultra-Enhanced Copyright Section */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-yellow-600 via-green-600 to-yellow-600 inline-block px-12 py-6 rounded-3xl border-8 border-black brutal-shadow-xl transform hover:scale-105 transition-all duration-700">
+            <p className="text-black font-black text-lg crayon-text" style={{
+              textShadow: '3px 3px 0px #ffffff',
+              letterSpacing: '3px'
+            }}>
+              © 2024 0.1 SOL Community • Made with 💚 for the Memes
+            </p>
+          </div>
+        </div>
+
+        {/* Ultra-Enhanced Fun Animation */}
+        <div className="flex justify-center mt-12">
+          <div className="text-8xl animate-bounce-slow transform hover:scale-125 transition-all duration-700">
+            🚀
+          </div>
+        </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
