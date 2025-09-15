@@ -2,6 +2,13 @@ import React from 'react';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
 const Header = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="relative z-10 px-2 sm:px-4 py-4 sm:py-8">
       {/* Enhanced WAGMI Sign with improved styling */}
@@ -40,12 +47,14 @@ const Header = () => {
           {/* Enhanced Navigation Buttons */}
           <div className="flex items-center space-x-8">
             <button 
+              onClick={() => scrollToSection('swap')}
               className="meme-button px-8 py-4 rounded-xl text-lg font-black transition-all duration-500 hover:scale-110 transform hover:rotate-2" 
               style={{ transform: 'rotate(-1deg)' }}
             >
               SWAP
             </button>
             <button 
+              onClick={() => scrollToSection('about')}
               className="bg-gradient-to-br from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-yellow-900 font-black px-8 py-4 rounded-xl border-6 border-black brutal-shadow-lg transition-all duration-500 hover:scale-110 text-lg" 
               style={{
                 transform: 'rotate(1deg)',
@@ -90,14 +99,21 @@ const Header = () => {
             
             {/* Enhanced Mobile Navigation */}
             <div className="flex items-center space-x-4 w-full justify-center">
-              <button className="meme-button px-6 py-3 rounded-xl text-base font-black transition-all duration-500 hover:scale-110 hover:rotate-2">
+              <button 
+                onClick={() => scrollToSection('swap')}
+                className="meme-button px-6 py-3 rounded-xl text-base font-black transition-all duration-500 hover:scale-110 hover:rotate-2"
+              >
                 SWAP!
               </button>
-              <button className="bg-gradient-to-br from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-yellow-900 font-black px-6 py-3 rounded-xl border-6 border-black brutal-shadow-lg text-base transition-all duration-500 hover:scale-110" style={{
-                fontFamily: 'Comic Sans MS, cursive',
-                textShadow: '2px 2px 0px #000000',
-                letterSpacing: '2px'
-              }}>
+              <button 
+                onClick={() => scrollToSection('about')}
+                className="bg-gradient-to-br from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-yellow-900 font-black px-6 py-3 rounded-xl border-6 border-black brutal-shadow-lg text-base transition-all duration-500 hover:scale-110" 
+                style={{
+                  fontFamily: 'Comic Sans MS, cursive',
+                  textShadow: '2px 2px 0px #000000',
+                  letterSpacing: '2px'
+                }}
+              >
                 ABOUT!
               </button>
               <WalletMultiButton className="!bg-gradient-to-br !from-yellow-400 !to-yellow-500 hover:!from-yellow-500 hover:!to-yellow-600 !border-6 !border-black !rounded-xl !font-black !px-6 !py-3 !text-base !text-green-900 brutal-shadow-lg transition-all duration-500 hover:!scale-110" style={{
