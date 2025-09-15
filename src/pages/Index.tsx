@@ -33,17 +33,6 @@ const Index = () => {
         backgroundAttachment: 'fixed'
       }}>
         
-        {/* Enhanced gradient overlays with depth */}
-        <div className="absolute inset-0 bg-gradient-to-br from-green-900/80 via-yellow-600/30 to-green-700/80"></div>
-        <div className="absolute inset-0 bg-gradient-to-tr from-green-800/40 via-transparent to-yellow-500/20"></div>
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
-            radial-gradient(circle at 15% 25%, rgba(0, 100, 0, 0.7) 0%, transparent 45%),
-            radial-gradient(circle at 85% 75%, rgba(255, 215, 0, 0.5) 0%, transparent 40%),
-            radial-gradient(circle at 50% 50%, rgba(34, 139, 34, 0.6) 0%, transparent 35%)
-          `
-        }}></div>
-        
         <Header />
         <Hero />
         
