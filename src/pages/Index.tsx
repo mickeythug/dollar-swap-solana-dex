@@ -47,8 +47,11 @@ const Index = () => {
         <Header />
         <Hero />
         
-        {/* Enhanced side by side layout with improved spacing */}
-        <section id="swap" className="relative z-10 px-2 sm:px-4 lg:px-8 py-12 sm:py-20">
+        {/* Enhanced side by side layout with dark solid background */}
+        <section id="swap" className="relative z-10 px-2 sm:px-4 lg:px-8 py-12 sm:py-20 bg-gray-900" style={{
+          backgroundColor: 'rgba(17, 24, 39, 0.95)',
+          backdropFilter: 'blur(10px)'
+        }}>
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 xl:gap-20 items-start">
               <MarketCapCounter />
