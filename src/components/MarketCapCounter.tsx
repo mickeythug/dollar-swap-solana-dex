@@ -7,15 +7,15 @@ const MarketCapCounter = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [animationSpeed, setAnimationSpeed] = useState(100);
 
-  // Ultra-Enhanced Milestones for celebrations
+  // Milestones for celebrations
   const milestones = [
-    { value: 1_000_000, label: '1M!', emoji: '🎉', color: 'bg-gradient-to-br from-green-500 to-green-600' },
-    { value: 5_000_000, label: '5M!', emoji: '🔥', color: 'bg-gradient-to-br from-blue-500 to-blue-600' },
-    { value: 10_000_000, label: '10M!', emoji: '💎', color: 'bg-gradient-to-br from-red-500 to-red-600' },
-    { value: 25_000_000, label: '25M!', emoji: '⭐', color: 'bg-gradient-to-br from-purple-500 to-purple-600' },
-    { value: 50_000_000, label: '50M!', emoji: '🌟', color: 'bg-gradient-to-br from-yellow-500 to-yellow-600' },
-    { value: 75_000_000, label: '75M!', emoji: '🚀', color: 'bg-gradient-to-br from-pink-500 to-pink-600' },
-    { value: 100_000_000, label: '100M!', emoji: '🏆', color: 'bg-gradient-to-br from-yellow-400 to-yellow-500' }
+    { value: 1_000_000, label: '1M!', color: 'bg-gradient-to-br from-green-500 to-green-600' },
+    { value: 5_000_000, label: '5M!', color: 'bg-gradient-to-br from-blue-500 to-blue-600' },
+    { value: 10_000_000, label: '10M!', color: 'bg-gradient-to-br from-red-500 to-red-600' },
+    { value: 25_000_000, label: '25M!', color: 'bg-gradient-to-br from-purple-500 to-purple-600' },
+    { value: 50_000_000, label: '50M!', color: 'bg-gradient-to-br from-yellow-500 to-yellow-600' },
+    { value: 75_000_000, label: '75M!', color: 'bg-gradient-to-br from-pink-500 to-pink-600' },
+    { value: 100_000_000, label: '100M!', color: 'bg-gradient-to-br from-yellow-400 to-yellow-500' }
   ];
 
   const [reachedMilestones, setReachedMilestones] = useState<number[]>([]);
@@ -32,12 +32,12 @@ const MarketCapCounter = () => {
         const increment = baseIncrement * speedMultiplier;
         const newValue = Math.min(prev + increment, targetMarketCap);
         
-        // Check for milestone achievements with ultra-enhanced celebration
+        // Check for milestone achievements with celebration
         milestones.forEach(milestone => {
           if (newValue >= milestone.value && !reachedMilestones.includes(milestone.value)) {
             setReachedMilestones(prevReached => [...prevReached, milestone.value]);
             setCelebrationText(milestone.label);
-            setCelebrationEmoji(milestone.emoji);
+            setCelebrationEmoji('');
             setShowCelebration(true);
             setTimeout(() => setShowCelebration(false), 4000); // Even longer celebration
           }
@@ -69,13 +69,10 @@ const MarketCapCounter = () => {
     <div className="max-w-md mx-auto w-full">
       <div className="meme-card rounded-[2rem] sm:rounded-[2.5rem] border-8 sm:border-10 lg:border-12 border-black border-dashed p-6 sm:p-8 lg:p-10 transform rotate-1 brutal-shadow-xl relative overflow-hidden transition-all duration-700 hover:scale-105 hover:rotate-2 hover:shadow-2xl">
         
-        {/* Ultra-Enhanced Celebration overlay */}
+        {/* Celebration overlay */}
         {showCelebration && (
           <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 via-green-400 to-blue-400 rounded-[2rem] sm:rounded-[2.5rem] flex items-center justify-center z-20 border-8 sm:border-10 lg:border-12 border-red-500 glow-strong animate-pulse">
-              <div className="text-center transform rotate-12 animate-bounce">
-                <div className="text-6xl mb-4 animate-spin">
-                  {celebrationEmoji}
-                </div>
+              <div className="text-center transform rotate-12">
                 <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-green-900 crayon-text super-thick mb-4" style={{
                   textShadow: '5px 5px 0px #000000'
                 }}>
@@ -111,7 +108,7 @@ const MarketCapCounter = () => {
               textShadow: '3px 3px 0px #000000',
               letterSpacing: '2px'
             }}>
-              CURRENT MARKETCAP! 💰
+              CURRENT MARKETCAP!
             </div>
             <div className="text-responsive-xl font-black text-white mb-3 sm:mb-4 transform rotate-2 crayon-text glow-strong" style={{
               textShadow: '5px 5px 0px #000000',
@@ -123,7 +120,7 @@ const MarketCapCounter = () => {
               textShadow: '3px 3px 0px #000000',
               letterSpacing: '1px'
             }}>
-              TARGET: {formatMarketCap(targetMarketCap)} 🎯
+              TARGET: {formatMarketCap(targetMarketCap)}
             </div>
           </div>
         </div>
@@ -135,7 +132,7 @@ const MarketCapCounter = () => {
               textShadow: '3px 3px 0px #000000',
               letterSpacing: '2px'
             }}>
-              PROGRESS: {progressPercentage.toFixed(1)}% 📈
+              PROGRESS: {progressPercentage.toFixed(1)}%
             </span>
           </div>
           <div className="relative">
@@ -156,7 +153,7 @@ const MarketCapCounter = () => {
             textShadow: '2px 2px 0px #ffffff',
             letterSpacing: '2px'
           }}>
-            MILESTONES! 🏆
+            MILESTONES!
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4">
             {milestones.slice(0, 6).map((milestone, index) => (
@@ -164,7 +161,7 @@ const MarketCapCounter = () => {
                 key={milestone.value}
                 className={`p-3 sm:p-4 rounded-xl sm:rounded-2xl border-4 sm:border-6 border-black text-center transform transition-all duration-700 ${
                   reachedMilestones.includes(milestone.value) 
-                    ? `${milestone.color} text-white rotate-3 scale-110 glow-strong animate-bounce` 
+                    ? `${milestone.color} text-white rotate-3 scale-110 glow-strong` 
                     : 'bg-yellow-200 text-green-900 -rotate-1 hover:scale-105'
                 } transition-bounce hover:rotate-6`}
                 style={{
@@ -173,7 +170,7 @@ const MarketCapCounter = () => {
                 }}
               >
                 <div className="text-lg sm:text-xl mb-2">
-                  {reachedMilestones.includes(milestone.value) ? milestone.emoji : '🎯'}
+                  {reachedMilestones.includes(milestone.value) ? '✓' : '○'}
                 </div>
                 <div className="text-sm sm:text-base font-black crayon-text" style={{
                   textShadow: reachedMilestones.includes(milestone.value) ? '2px 2px 0px #000000' : '2px 2px 0px #ffffff',
@@ -193,7 +190,7 @@ const MarketCapCounter = () => {
                   textShadow: '2px 2px 0px #ffffff',
                   letterSpacing: '2px'
                 }}>
-                  <span className="animate-spin inline-block text-2xl">🔄</span> LOADING... MEME POWER CHARGING!
+                  LOADING... MEME POWER CHARGING!
                 </div>
               </div>
         )}
