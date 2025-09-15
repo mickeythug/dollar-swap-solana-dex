@@ -68,6 +68,12 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			borderWidth: {
+				'6': '6px',
+				'8': '8px',
+				'10': '10px',
+				'12': '12px'
+			},
 			keyframes: {
 				'accordion-down': {
 					from: {
