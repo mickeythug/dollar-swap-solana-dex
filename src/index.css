@@ -207,10 +207,10 @@
 /* Enhanced Input Styles */
 .meme-input {
   @apply bg-gradient-to-br from-yellow-200 to-yellow-300 border-6 border-black;
-  @apply text-green-900 font-black;
+  @apply text-black font-black;
   @apply transition-smooth;
   font-family: "Comic Sans MS", cursive;
-  text-shadow: 2px 2px 0px #000000;
+  text-shadow: 2px 2px 0px #ffffff;
   box-shadow: var(--shadow-inset-brutal);
   letter-spacing: 1px;
 }
