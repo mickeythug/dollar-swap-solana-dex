@@ -25,15 +25,12 @@ const Index = () => {
   // Return desktop version for non-mobile devices
   return (
     <WalletContextProvider>
-      <div className="min-h-screen bg-green-800 px-2 lg:px-6 xl:px-8" style={{
-        backgroundImage: `
-          linear-gradient(45deg, #166534 25%, transparent 25%),
-          linear-gradient(-45deg, #166534 25%, transparent 25%),
-          linear-gradient(45deg, transparent 75%, #166534 75%),
-          linear-gradient(-45deg, transparent 75%, #166534 75%)
-        `,
-        backgroundSize: '60px 60px',
-        backgroundPosition: '0 0, 0 30px, 30px -30px, -30px 0px'
+      <div className="min-h-screen px-2 lg:px-6 xl:px-8" style={{
+        backgroundImage: 'url(/bgbild.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
       }}>
         
         {/* Enhanced gradient overlays with depth */}

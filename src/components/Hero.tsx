@@ -6,14 +6,6 @@ const Hero = () => {
     <section className="relative z-10 px-2 sm:px-4 lg:px-8 py-12 sm:py-16 lg:py-20 text-center">
       <div className="max-w-6xl mx-auto">
         <div className="mb-8 sm:mb-12">
-          {/* Enhanced Static Logo with improved hover effects */}
-          <div className="flex justify-center mb-12 sm:mb-16 lg:mb-20">
-            <img 
-              src="/lovable-uploads/a2925ada-d9a1-4459-b346-251f5ca5b59d.png" 
-              alt="0.1 SOL Community Logo"
-              className="w-[30rem] h-auto sm:w-[42rem] lg:w-[56rem] xl:w-[68rem] 2xl:w-[76rem] transform hover:scale-105 transition-all duration-700 drop-shadow-2xl"
-            />
-          </div>
           
           {/* Enhanced Main Title with better micro typography */}
           <div className="flex justify-center">
