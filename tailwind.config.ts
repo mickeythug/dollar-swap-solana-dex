@@ -74,6 +74,12 @@ export default {
 				'10': '10px',
 				'12': '12px'
 			},
+			ringWidth: {
+				'6': '6px',
+				'8': '8px',
+				'10': '10px',
+				'12': '12px'
+			},
 			keyframes: {
 				'accordion-down': {
 					from: {
