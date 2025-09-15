@@ -9,45 +9,41 @@ import Hero from '../components/Hero';
 import MarketCapCounter from '../components/MarketCapCounter';
 import Community from '../components/Community';
 import MobileApp from '../components/mobile/MobileApp';
-
 const Index = () => {
   const isMobile = useIsMobile();
 
   // Return mobile-specific app for mobile devices
   if (isMobile) {
-    return (
-      <WalletContextProvider>
+    return <WalletContextProvider>
         <MobileApp />
-      </WalletContextProvider>
-    );
+      </WalletContextProvider>;
   }
 
   // Return desktop version for non-mobile devices
-  return (
-    <WalletContextProvider>
+  return <WalletContextProvider>
       <div className="min-h-screen px-2 lg:px-6 xl:px-8" style={{
-        backgroundImage: 'url(/bgbild.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
-      }}>
+      backgroundImage: 'url(/bgbild.png)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'fixed'
+    }}>
         
         <Header />
         <Hero />
         
         {/* Enhanced side by side layout with dark solid background */}
         <section id="swap" className="relative z-10 px-2 sm:px-4 lg:px-8 py-12 sm:py-20 bg-gray-900" style={{
-          backgroundColor: 'rgba(17, 24, 39, 0.95)',
-          backdropFilter: 'blur(10px)'
-        }}>
+        backgroundColor: 'rgba(17, 24, 39, 0.95)',
+        backdropFilter: 'blur(10px)'
+      }}>
           <div className="max-w-7xl mx-auto">
             {/* Header for swap section */}
             <div className="flex justify-center mb-12 lg:mb-16">
               <div className="bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 text-black px-8 py-6 rounded-3xl border-6 border-black font-black text-2xl lg:text-3xl xl:text-4xl brutal-shadow-xl transform rotate-1 hover:rotate-2 transition-all duration-500 hover:scale-105" style={{
-                letterSpacing: '3px',
-                textShadow: '3px 3px 0px rgba(0,0,0,0.4)'
-              }}>
+              letterSpacing: '3px',
+              textShadow: '3px 3px 0px rgba(0,0,0,0.4)'
+            }}>
                 <span className="crayon-text">SWAP RIGHT AWAY</span>
               </div>
             </div>
@@ -66,9 +62,9 @@ const Index = () => {
             <div className="text-center mb-12 lg:mb-16">
               <div className="inline-block">
                 <h2 className="bg-gradient-to-br from-yellow-400 to-yellow-500 text-black px-8 py-6 rounded-3xl border-6 border-black font-black text-3xl lg:text-4xl brutal-shadow-xl transform rotate-1 hover:rotate-2 transition-all duration-500" style={{
-                  letterSpacing: '2px',
-                  textShadow: '2px 2px 0px rgba(0,0,0,0.3)'
-                }}>
+                letterSpacing: '2px',
+                textShadow: '2px 2px 0px rgba(0,0,0,0.3)'
+              }}>
                   About Just Buy 0.1 SOL!
                 </h2>
               </div>
@@ -79,11 +75,7 @@ const Index = () => {
 
             {/* Enhanced hero image with better positioning */}
             <div className="flex justify-center mb-16 lg:mb-20">
-              <img 
-                src="/lovable-uploads/a2925ada-d9a1-4459-b346-251f5ca5b59d.png" 
-                alt="0.1 SOL Community Logo"
-                className="w-full max-w-5xl h-auto transform rotate-1 drop-shadow-2xl hover:rotate-2 transition-all duration-700"
-              />
+              <img src="/lovable-uploads/a2925ada-d9a1-4459-b346-251f5ca5b59d.png" alt="0.1 SOL Community Logo" className="w-full max-w-5xl h-auto transform rotate-1 drop-shadow-2xl hover:rotate-2 transition-all duration-700" />
             </div>
 
             {/* Enhanced animated cartoon boxes with improved styling */}
@@ -177,21 +169,17 @@ const Index = () => {
 
             {/* Enhanced warning card */}
             <div className="max-w-3xl mx-auto mb-16">
-              <div className="bg-gradient-to-br from-red-500 to-red-600 p-8 lg:p-10 rounded-3xl border-6 border-black transform -rotate-1 brutal-shadow-xl hover:scale-105 hover:rotate-1 transition-all duration-500">
-                <p className="text-white font-black text-center text-2xl lg:text-3xl drop-shadow-lg">
-                  ⚠️ THIS IS A MEME! NOT FINANCIAL ADVICE! ⚠️
-                </p>
-              </div>
+              
             </div>
 
             {/* Enhanced community section */}
             <div className="mb-16">
               <h3 className="text-yellow-400 font-black text-4xl lg:text-5xl mb-12 text-center crayon-text animate-wiggle transform hover:scale-110 transition-all duration-600" style={{
-                textShadow: '4px 4px 0px #000000, -2px -2px 0px #000000, 2px -2px 0px #000000, -2px 2px 0px #000000',
-                letterSpacing: '4px',
-                transform: 'rotate(-2deg) skew(-1deg)',
-                fontFamily: '"Comic Sans MS", "Kalam", "Permanent Marker", cursive'
-              }}>
+              textShadow: '4px 4px 0px #000000, -2px -2px 0px #000000, 2px -2px 0px #000000, -2px 2px 0px #000000',
+              letterSpacing: '4px',
+              transform: 'rotate(-2deg) skew(-1deg)',
+              fontFamily: '"Comic Sans MS", "Kalam", "Permanent Marker", cursive'
+            }}>
                 <span className="inline-block transform hover:rotate-3 transition-transform duration-300">Join</span>{' '}
                 <span className="inline-block transform hover:-rotate-2 transition-transform duration-300">the</span>{' '}
                 <span className="inline-block transform hover:rotate-1 transition-transform duration-300 text-5xl lg:text-6xl">FUN!</span><br />
@@ -236,8 +224,6 @@ const Index = () => {
         
         <Footer />
       </div>
-    </WalletContextProvider>
-  );
+    </WalletContextProvider>;
 };
-
 export default Index;
